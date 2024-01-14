@@ -1,0 +1,33 @@
+﻿<div id="job-container">
+    <ul class="nav nav-pills">
+        <li class="active">
+            <a data-toggle="tab" href="#job-search" class="active">Search</a>
+        </li>
+        <li>
+            <a data-toggle="tab" href="#job-myjobs">My</a>
+        </li>
+        <li>
+            <a data-toggle="tab" href="#job-history">History</a>
+        </li>
+        <li>
+            <a data-toggle="tab" href="#job-summary">Summary</a>
+        </li>
+
+    </ul>
+    <div class="tab-content">
+        <div id="job-search" class="tab-pane fade in active padding3centt autoheight">
+            @Html.Partial("_JobSearch")
+        </div>
+        <div id="job-myjobs" class="tab-pane fade padding3centt autoheight">
+            @Html.Partial("_MyJobHome")
+        </div>
+        <div id="job-history" class="tab-pane fade padding3centt autoheight">
+            @Html.Partial("_JobHistory")
+        </div>
+        <div id="job-summary" class="tab-pane fade padding3centt autoheight">
+            @Html.Partial("_JobSummary")
+        </div>
+    </div>
+</div>
+
+

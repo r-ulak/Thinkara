@@ -1,0 +1,76 @@
+﻿<div class="row" id="bankbuycontainer">
+    <div class="col-xs-12">
+        <div class="panel panel-primary" id="bankbuy-box">
+            <div class="panel-heading1 panel-heading">
+                <div class="flagsprite pull-right btn-link"
+                     data-bind="css: 'flagsprite-' + CountryId().toLowerCase(), click: function(){viewCountryProfile(CountryId().toLowerCase())}"></div>
+                <span class="fa icon-piggy7 marginright6"></span> Buy metal
+            </div>
+            <div class="panel-body"
+                 data-bind="foreach: { data: capitalTypecodes, afterRender: $root.afterCapitalRender}">
+                @Html.Partial("_BuyMetalItem")
+            </div>
+            <div class="panel-footer">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <strong> Total</strong>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="pull-right">
+                            <span class="fa icon-money28 text-success"></span>
+                            <span class="label label-success text-right fontsize110" data-bind="text:numeral(amount()).format('0,0.00')"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row padding3centt">
+
+                    <div class="col-xs-6 fontsize90">
+                        <strong> Avaliable Cash </strong>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="pull-right">
+                            <span class="fa icon-money28 text-success"></span>
+                            <span data-bind="text: numeral(amountAvailable()).format('0,0.00')"></span>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <span class="fontsize90 pull-right text-warning padding3centt"
+                              data-bind="visible:amount()> amountAvailable()">
+                            Not Enough Money to Buy
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-primary hidden" id="bankbuy-submit">
+            <div class="panel-heading1 panel-heading">
+                <span>Buy</span>
+            </div>
+            <div class="panel-body">
+                <div class="col-xs-12">
+                    <span data-bind="text:Message">
+
+                    </span>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-default backbtn pull-right hidden">
+            <span><i class="fa fa-home"></i> Home</span>
+        </button>
+        <button class="btn btn-default  pull-left hidden" id="buymoremetal">
+            <span><i class="fa fa-home"></i> Buy More</span>
+        </button>
+        <button type="submit" id="buymetal" data-bind="disable: amount()>amountAvailable()"
+                data-loading-text='
+                <i class="fa fa-spinner fa-spin"></i> Buying...'
+                class="btn btn-default pull-right">Buy
+            </button>
+    </div>
+</div>
+
+
+

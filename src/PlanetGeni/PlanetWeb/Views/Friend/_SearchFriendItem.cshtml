@@ -1,0 +1,46 @@
+﻿<div class="row padding3centb">
+    <div class="col-xs-12">
+        <div class="input-group input-group-md">
+            <input class="form-control input-md" placeholder="Search By Name or Email" id="friend-term" type="text">
+            <div class="input-group-btn">
+                <button class="btn btn-default" id="searchfriends" data-loading-text='
+                <i class="fa fa-spinner fa-spin"></i>'><i class="glyphicon glyphicon-search"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row padding3centt">
+    <div class="col-xs-12">
+
+        <div class="panel panel-primary recipients fontsize120" data-bind="visible: filteredsearchlist().length>0">
+            <div class="panel-heading1 panel-heading">
+                <span class="btn btn-default btn-sm margintop-5 pull-right" title="follow all" data-bind="click:followallsearchfriend" data-loading-text="updating...">
+                    <i class="fa fa-user-plus"></i> Follow All
+                </span>
+                <span>
+                    Grow Social Capital
+                </span>
+            </div>
+            <div class="panel-body recipients" id="firendsearchprofile" data-bind="foreach: { data: filteredsearchlist}">
+                @Html.Partial("_FriendRow")
+            </div>
+            <div class="panel-footer">
+                <div class="row ">
+                    <div class="row ">
+                        <div class="col-xs-6">
+                            <h6 class="marginleft15">
+                                <span class="label label-info" data-bind="text: filteredsearchlist().length"></span>
+                            </h6>
+                        </div>
+                        <div class="col-xs-6">
+                            <span id="searchshowmore" class="marginright16 hidden btn btn-shadow btn-success btn-sm pull-right"><i class="fa fa-plus"></i> </span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>

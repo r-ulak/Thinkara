@@ -1,0 +1,3 @@
+mysql -h UbuntuServer1 -u root -psqlapps planetgeni < minibootstrap.sql 
+"C:\Program Files\MySQL\MySQL Workbench 6.2 CE\mysql" -h UbuntuServer1 -u root -psqlapps planetgeni < "C:\\Home\CodeBack\\PlanetGeni\\DAL\\DbScripts\\StoredProcedure\\StoredProcedure.sql"
+"C:\Program Files\MySQL\MySQL Workbench 6.2 CE\mysql" -h UbuntuServer1 -u root -psqlapps planetgeni < "C:\\Home\CodeBack\\PlanetGeni\\DAL\\DbScripts\\StoredProcedure\\CURDStoredProcedure.sql"

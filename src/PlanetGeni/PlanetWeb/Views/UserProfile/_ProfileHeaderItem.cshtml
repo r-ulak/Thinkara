@@ -1,0 +1,155 @@
+﻿<div class="row hidden" id="profileitemHeader">
+    <div class="row text-success padding3centb">
+        <div class="col-xs-12 text-right ">
+            <div class="col-xs-3 ">
+            </div>
+            <div class="col-xs-9" id="profilenetworth">
+                <h4>
+                    Net Worth: <i class="fa icon-money28 marginright6"></i>
+                    <strong data-bind="text: numeral(NetWorth()).format('0,0.00'), attr:{title:numeral(NetWorth()).format('0,0.00a')},css:cashTextCss(NetWorth())"> </strong>
+                </h4>
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12  text-right" id="profilestat">
+            <div class="col-xs-3  emphasis">
+            </div>
+            <div class="col-xs-3  emphasis">
+                <h4><strong data-bind="text:TotalProperty">  </strong></h4>
+                <p><small>Property</small></p>
+
+            </div>
+            <div class="col-xs-3 emphasis">
+                <h4><strong data-bind="text:TotalDegree"></strong></h4>
+                <p><small>Degrees</small></p>
+            </div>
+            <div class="col-xs-3 emphasis">
+                <h4><strong data-bind="text:TotalAwards"></strong></h4>
+                <p><small>Awards</small></p>
+            </div>
+        </div>
+    </div>
+    <div class="row dividertop" id="profilename">
+        <div class="col-xs-12 ">
+            <div class="col-xs-5">
+                <img class="img-128responsive thumbnail profilepic-img" data-bind="attr: {src: profilepicContainer + Picture() , title: FullName }">
+
+            </div>
+            <div class="col-xs-4 padding10centt pull-left">
+                <span class="text-left" data-bind="text:FullName"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row" id="profilerelation">
+        <div class="col-xs-12 ">
+            <div data-bind="visible:ProfileId() != UserId()" class="pull-right">
+                <span class="btn btn-shadow btn-warning  btn-sm " data-loading-text="updating..." data-bind="visible:RelationDirection() == 'FG', click: unfollowfriend">
+                    <i class="fa fa-user-times"></i> UnFollow
+                </span>
+                <span class="btn btn-shadow btn-success  btn-sm " data-loading-text="updating..." data-bind="visible:RelationDirection() == '', click: followfriend">
+                    <i class="fa fa-user-plus"></i> Follow
+                </span>
+                <div data-bind="visible: RelationDirection() == 'FD'">
+                    <span class="btn btn-shadow btn-success  btn-sm " data-loading-text="updating..." data-bind="click: followfriend">
+                        <i class="fa fa-user-plus"></i> Follow
+                    </span>
+                    <span class="btn btn-shadow btn-danger  btn-sm " data-loading-text="updating..." data-bind="click: blockfriend">
+                        <i class="fa fa-ban"></i> Block
+                    </span>
+                </div>
+                <div data-bind="visible: RelationDirection() == 'B'">
+                    <span class="btn btn-shadow btn-warning btn-sm " data-loading-text="updating..." data-bind="click: unfollowfriend">
+                        <i class="fa fa-user-times"></i> UnFollow
+                    </span>
+                    <span class="btn btn-shadow btn-danger  btn-sm " data-loading-text="updating..." data-bind="click: blockfriend">
+                        <i class="fa fa-ban"></i> Block
+                    </span>
+                </div>
+
+            </div>
+            <span class="btn btn-shadow btn-success pull-right btn-sm margintop10 " data-bind="visible:ProfileId() == UserId()" onclick="manageProfile()">
+                <i class="marginright6 fa fa-cog"></i> Manage
+            </span>
+        </div>
+    </div>
+    <div class="padding3centt" data-bind="foreach: friendRelationResult" id="friendrelation">
+        <div class="row">
+            <div class="col-xs-1">
+            </div>
+            <div class="col-xs-11 fontsize90 ">
+                <div class="alert alert-success">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+                        ×
+                    </button>
+                    <p class="fontsize90">
+                        <span>Soical Circle Update Successfully Submitted</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr />
+    <div class="row padding3centt" id="profileuserLevel">
+        <div class="col-xs-12 text-right ">
+            <strong class="marginright6 goldcolor fa fa-star fa-2x"></strong><span class="fontsize90" data-bind="text:UserLevel()"></span>
+        </div>
+        <div class="col-xs-12 padding3centt">
+            <div class="process ">
+                <div class="process-row">
+                    <div class="process-step">
+                        <button type="button" data-bind="css:getUserLevelCss(0, UserId()), disable: UserLevel()<0" class="btn btn-circle"><i class="fa fa-2x" data-bind="css:getUserLevelAvatar(0)"></i></button>
+                        <p>
+                            Novitiate
+                        </p>
+                        <span class="badge fontsize70">0</span>
+                    </div>
+                    <div class="process-step">
+                        <button type="button" data-bind="css:getUserLevelCss(1000, UserId()), disable: UserLevel()<1000" class="btn btn-circle"><i class="fa fa-2x" data-bind="css:getUserLevelAvatar(1)"></i></button>
+                        <p>
+                            Pioneer
+                        </p>
+                        <span class="badge fontsize70">1000</span>
+                    </div>
+                    <div class="process-step">
+                        <button type="button" data-bind="css:getUserLevelCss(2500, UserId()), disable: UserLevel()<2500" class="btn  btn-circle"><i class="fa fa-2x" data-bind="css:getUserLevelAvatar(2)"></i></button>
+                        <p>
+                            Dime a Dozen
+                        </p>
+                        <span class="badge fontsize70">2500</span>
+                    </div>
+                    <div class="process-step">
+                        <button type="button" data-bind="css:getUserLevelCss(4000, UserId()), disable: UserLevel()<4000" class="btn  btn-circle"><i class="fa  fa-2x" data-bind="css:getUserLevelAvatar(3)"></i></button>
+                        <p>
+                            Au-courant
+                        </p>
+                        <span class="badge fontsize70">4000</span>
+                    </div>
+                    <div class="process-step">
+                        <button type="button" data-bind="css:getUserLevelCss(5000, UserId()), disable: UserLevel()<5000" class="btn  btn-circle"><i class="fa fa-2x" data-bind="css:getUserLevelAvatar(4)"></i></button>
+                        <p>
+                            Avant-garde
+                        </p>
+                        <span class="badge fontsize70">5000</span>
+                    </div>
+                    <div class="process-step">
+                        <button type="button" data-bind="css:getUserLevelCss(6000, UserId()), disable: UserLevel()<6000" class="btn  btn-circle"><i class="fa fa-2x" data-bind="css:getUserLevelAvatar(5)"></i></button>
+                        <p>
+                            Whiz
+                        </p>
+                        <span class="badge fontsize70">6000</span>
+                    </div>
+                    <div class="process-step">
+                        <button type="button" data-bind="css:getUserLevelCss(7000, UserId()), disable: UserLevel()<7000" class="btn  btn-circle"><i class="fa fa-2x" data-bind="css:getUserLevelAvatar(6)"></i></button>
+                        <p>
+                            Elixir
+                        </p>
+                        <span class="badge fontsize70">7000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

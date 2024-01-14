@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://web.planetgeni.com/" />
+<title>UploadLogoManageparty</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">UploadLogoManageparty</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>https://web.planetgeni.com/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=webUserId</td>
+	<td>9930</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=webPassword</td>
+	<td>Kathmandu35</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=My</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=My</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Manage</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='partyMyItemcontent-wrapper']/div/ul/li[5]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=managepartymembershipFee</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=managepartyfileupload</td>
+	<td>C:\Users\ulak\Desktop\Capture.PNG</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=managepartyupload</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=managepartyupload</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=div.alert.alert-success</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=p.fontsize90 &gt; span</td>
+	<td>Upload Submitted Successfully</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=p.fontsize90 &gt; span</td>
+	<td>Upload Submitted Successfully</td>
+</tr>
+</tbody></table>
+</body>
+</html>

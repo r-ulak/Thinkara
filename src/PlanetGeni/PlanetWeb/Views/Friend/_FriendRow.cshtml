@@ -1,0 +1,14 @@
+﻿<div class="recipient col-xs-7" data-bind="attr: {title: FullName}">
+    <img class="img-full" height="56px" data-bind="attr: {src: profilepicContainer+Picture , title: FullName }, click: function(){viewUserProfile(UserId)}">
+    <p data-bind="text: FullName, click: function(){viewUserProfile(UserId)}"></p>
+</div>
+<div class="col-xs-1">
+    <a class="btn-link pull-right " data-bind="click: function(){viewCountryProfile(CountryId.toLowerCase())}">
+        <div class="flagsprite btn-link" data-bind="css: 'flagsprite-' + CountryId.toLowerCase(), attr:{title: getCountryName(CountryId.toLowerCase())}"></div>
+    </a>
+</div>
+<div class="col-xs-3">
+    <span class="btn btn-default  btn-sm  pull-right" title="follow" data-loading-text="updating..." data-bind="click:followsearchfriend, attr:{'data-userid': UserId}">
+        <i class="fa fa-user-plus text-success"></i> Follow
+    </span>
+</div>

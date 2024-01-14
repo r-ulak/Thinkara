@@ -1,0 +1,56 @@
+﻿<div id="stockordercontainer">
+    <div class=" row">
+        <div class="col-xs-12">
+            <div class="panel panel-primary" id="stockOrdercontent-box">
+                <div class="panel-heading1 panel-heading">
+                    <div class="flagsprite pull-right btn-link"
+                         data-bind="css: 'flagsprite-' + CountryId().toLowerCase(), click: function(){viewCountryProfile(CountryId().toLowerCase())}"></div>
+                    <span class="fa icon-man254 marginright6"></span> Order Stock
+
+                </div>
+                <div class="panel-body">
+                    @Html.Partial("_StockOrderItem")
+                </div>
+                <div class="panel-footer">
+
+                    <div class="row padding3centt">
+                        <div class="col-xs-6">
+                            <h6>
+                                <span class="label label-info" data-bind="text: stockCodes().length"></span>
+                            </h6>
+                        </div>
+                        <div class="col-xs-6">
+                            <span id="stockorderrefresh" class="btn btn-shadow btn-success btn-sm pull-right"><i class="fa fa-refresh"></i> </span>
+                            <span id="stockordershowmore" class="marginright16 btn btn-shadow btn-success btn-sm pull-right"><i class="fa fa-plus"></i> </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-primary hidden" id="stockOrdercontent-submit">
+                <div class="panel-heading1 panel-heading">
+                    <span class="fa fa-signal"></span> Order Stock
+                </div>
+                <div class="panel-body">
+                    <div class="col-xs-12">
+                        <span data-bind="text:Message">
+
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-default backbtn pull-right hidden">
+                <span><i class="fa fa-home"></i> Home</span>
+            </button>
+            <button class="btn btn-default  pull-left hidden" id="ordermorestock">
+                <span><i ></i> Cancel More</span>
+            </button>
+            <button type="submit" id="orderstock" data-bind="disable: showOrderValidation()"
+                    data-loading-text='
+                <i class="fa fa-spinner fa-spin"></i> Ordering...'
+                class="btn btn-default pull-right">Cancel
+                <span class=" text-warning " data-bind="text: orderingItems().length"></span> Order
+            </button>
+        </div>
+    </div>
+</div>

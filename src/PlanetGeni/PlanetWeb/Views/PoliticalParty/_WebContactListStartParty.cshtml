@@ -1,0 +1,43 @@
+﻿<div class="padding3centt" id="startpartyinviteemailcontacts">
+    <div class="col-xs-12">
+        <div class="panel panel-default recipients">
+            <div class="panel-heading">
+                <span class="button-checkbox pull-right invitepartyEmail">
+                    <button type="button" class="btn btn-sm" data-color="default">All</button>
+                    <input type="checkbox" id="partyinvitestartwebcontactall" class="hidden" />
+                </span>
+                <span class="colorwhite">
+                    Contacts
+                </span>
+            </div>
+            <div class="panel-body col-xs-12 partyinviteEmailList" data-bind="foreach: emailInviteeIdList">
+                <div class="recipient col-xs-6" data-bind="attr: {title: FullName}, click: clickpartystartinviteemailcontact">
+                    <i class="fa fa-user fa-3x img-check web-contact pull-left text-success" data-bind="attr: {title: FriendEmailId }"> </i>
+                    <p>
+                        <span class="text-ellipsis" data-bind="text: FullName"></span>
+                        <!-- ko if: FullName.length<2 -->
+                        <span>N/A</span>
+                        <!-- /ko -->
+                    <p>
+                    <p>
+                        <span class="text-ellipsis" data-bind="text: FriendEmailId"></span>
+                    </p>
+                    <input type="checkbox" data-bind="value: FriendEmailId" class="hidden">
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="panel-footer fontsize80 emailListFooter">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <span class="marginright6" data-bind="text: emailInviteeId().length"></span>/
+                        <span data-bind="text: emailInviteeIdList().length"></span>
+                        <span class="text-muted"> contact(s) selected</span>
+                        <span class="btn btn-shadow btn-success btn-sm pull-right" id="partystartWebContactshowmore"><i class="fa fa-plus"></i> </span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

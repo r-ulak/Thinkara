@@ -1,0 +1,75 @@
+﻿@model PlanetX2012.Models.ContentModel.HomeContent
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/css/site.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/css/chat.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/css/popover.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/css/jquery-ui.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/css/business.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/css/location.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/css/school.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/css/jquery.mCustomScrollbar.css")" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/flick/jquery-ui.css">
+    <link href="@Url.Content("~/Content/css/jquery.tagit.css")" rel="stylesheet" type="text/css" />
+
+
+    <script src="@Url.Content("~/Scripts/jquery-1.8.3.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery-ui-1.8.24.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")"></script>
+    <script src="@Url.Content("~/Content/js/ajax-dialogs.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/js/popover.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/js/dropDown.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/js/jquery.mCustomScrollbar.concat.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/js/tag-it.js")" type="text/javascript"></script>
+
+
+
+    @*    @if (IsSectionDefined("AddToHead"))
+    {
+        @RenderSection("AddToHead", required: false)
+    }*@
+
+
+</head>
+<body>
+    <div id="header">
+    </div>
+    <div id="contmain">
+    </div>
+    <div class="page">
+        <div id="main">
+            <div id="newsbar">
+                @Html.Partial("../PartialViews/User/Avatar", Model)
+                <div id="friendsList" class="box">
+                    @Html.Action("ListFriends", "Friend", new { webUserId = @Model.useraccount.UserId })
+                </div>
+            </div>
+            <div id="content">
+                @RenderBody()
+            </div>
+        </div>
+        <div id="footer">
+            <p>
+                Design: <a href="http://www.solucija.com/" title="Information Architecture and Web Design">Luka Cvrk</a> &middot; Adaptation: <a href="http://blendworld.net" title="Blend World">Blend World</a>
+            </p>
+        </div>
+    </div>
+    <div id="loadingmessage" style="display: none; width: 69px; height: 89px; position: fixed; top: 50%; left: 50%; padding: 2px;">
+        <img src="../../images/ajax-loader.gif" />
+    </div>
+
+    @if (IsSectionDefined("scripts"))
+    {
+        @RenderSection("scripts", false)
+    }
+    else
+    {
+        <p>No scripts setup!</p>
+    }
+
+</body>
+</html>

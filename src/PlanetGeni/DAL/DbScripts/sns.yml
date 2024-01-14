@@ -1,0 +1,810 @@
+Address:
+  tableName: address
+  options:
+    type: InnoDB
+    collate: utf8_unicode_ci
+    charset: utf8
+  columns:
+    address_id:
+      type: integer(3)
+      primary: true
+      autoincrement: true
+    privacy:
+      type: integer(1)
+      default: '0'
+      notnull: true
+    address: string(45)
+    city_id: integer(3)
+    profile_id: integer(8)
+  relations:
+    City:
+      local: city_id
+      foreign: city_id
+      type: one
+    Profile:
+      local: profile_id
+      foreign: profile_id
+      type: one
+      onDelete: CASCADE
+Blog:
+  tableName: blog
+  options:
+    type: InnoDB
+    collate: utf8_unicode_ci
+    charset: utf8
+  columns:
+    blog_id:
+      type: integer(3)
+      primary: true
+      autoincrement: true
+    message:
+      type: string(45)
+      notnull: true
+    author: string(45)
+    user_id: integer(3)
+    created_at: timestamp(25)   
+      
+Chat:
+  tableName: chat
+  options:
+    type: InnoDB
+    collate: utf8_unicode_ci
+    charset: utf8  
+  columns:
+    chat_id:
+      type: integer(3)
+      primary: true
+      autoincrement: true
+    to_user:
+      type: integer(3)
+      notnull: true
+    msg:
+      type: string(100)
+      notnull: true
+    user_id: integer(3)
+    created_at: timestamp(25)     
+  relations:
+    User:
+      local: user_id
+      foreign: user_id
+      type: one
+City:
+  tableName: city
+  options:
+    type: InnoDB
+    collate: utf8_unicode_ci
+    charset: utf8
+  columns:
+    city_id:
+      type: integer(3)
+      primary: true
+      autoincrement: true
+    country_id: integer(3)
+    city: string(45)
+  relations:
+    Country:
+      local: country_id
+      foreign: country_id
+      type: one
+    Address:
+      local: city_id
+      foreign: city_id
+      type: many
+Country:
+  tableName: country
+  options:
+    type: InnoDB
+    collate: utf8_unicode_ci
+    charset: utf8
+  columns:
+    country_id:
+      type: integer(3)
+      primary: true
+      autoincrement: true
+    country:
+      type: string(45)
+      default: np
+  relations:
+    City:
+      local: country_id
+      foreign: country_id
+      type: many
+Feed:
+  tableName: feed
+  options:
+    type: InnoDB
+    collate: utf8_unicode_ci
+    charset: utf8
+  columns:
+    feed_id:
+      type: integer(8)
+      primary: true
+      autoincrement: true
+    privacy:
+      type: integer(1)
+      default: '2'
+      notnull: true
+    feed_url: string(255)
+    feed_desc: string(255)
+    rating: integer(2)
+    feed_category_id: integer(2)
+    feed_sub_category_id: integer(2)
+    created_at: timestamp(25)   
+  relations:
+    FeedCategory:
+      local: feed_category_id
+      foreign: feed_category_id
+      type: one
+    FeedSubCategory:
+      local: feed_sub_category_id
+      foreign: feed_sub_category_id
+      type: one
+    FeedInfo:
+      local: feed_id
+      foreign: feed_id
+      type: many
+FeedCategory:
+  tableName: feed_category
+  options:
+    type: InnoDB
+    collate: utf8_unicode_ci
+    charset: utf8
+  columns:
+    feed_category_id:
+      type: integer(2)
+      primary: true
+      autoincrement: true
+    name: string(45)
+  relations:
+    Feed:
+      local: feed_category_id
+      foreign: feed_category_id
+      type: many
+    FeedSubCategory:
+      local: feed_category_id
+      foreign: feed_category_id
+      type: many
+FeedInfo:
+  tableName: feed_info
+  options:
+    type: InnoDB
+    collate: utf8_unicode_ci
+    charset: utf8
+  columns:
+    feed_info_id:
+      type: integer(8)
+      primary: true
+      autoincrement: true
+    favorite:
+      type: integer(1)
+      default: '0'
+      notnull: true
+    privacy:
+      type: integer(1)
+      default: '2'
+      notnull: true
+    feed_id: integer(8)
+    user_id: integer(3)
+    clicks: integer(2)
+  relations:
+    Feed:
+      local: feed_id
+      foreign: feed_id
+      type: one
+    User:
+      local: user_id
+      foreign: user_id
+      type: one
+FeedSubCategory:
+  tableName: feed_sub_category
+  options:
+    type: InnoDB
+    collate: utf8_unicode_ci
+    charset: utf8
+  columns:
+    feed_sub_category_id:
+      type: integer(2)
+      primary: true
+      autoincrement: true
+    name: string(45)
+    feed_category_id: integer(2)
+  relations:
+    FeedCategory:
+      local: feed_category_id
+      foreign: feed_category_id
+      type: one
+    Feed:
+      local: feed_sub_category_id
+      foreign: feed_sub_category_id
+      type: many
+Friend:
+  options:
+    type: InnoDB
+    collate: utf8_unicode_ci
+    charset: utf8
+  tableName: friend
+  columns:
+    friend_id:
+      type: integer(3)
+      primary: true
+      autoincrement: true
+    is_subscriber:
+      type: integer(1)
+      default: '1'
+      notnull: true
+    privacy:
+      type: integer(1)
+      default: '0'
+      notnull: true
+    user_id:
+      type: integer(3)
+      notnull: true
+    friend_user_id: integer(3)
+    friend_list_id: integer(2)
+    created_at: timestamp(25)  
+  relations:
+    FriendList:
+      local: friend_list_id
+      foreign: friend_list_id
+      type: one
+    User:
+      local: user_id
+      foreign: user_id
+      type: one
+    FriendList_1:
+      class: FriendList
+      local: friend_id
+      foreign: friend_id
+      type: many
+    Reply:
+      local: friend_id
+      foreign: friend_id
+      type: many
+    ThumbUpDown:
+      local: friend_id
+      foreign: friend_id
+      type: many
+FriendList:
+  tableName: friend_list
+  options:
+    type: InnoDB
+    collate: utf8_unicode_ci
+    charset: utf8
+  columns:
+    friend_list_id:
+      type: integer(2)
+      primary: true
+      autoincrement: true
+    privacy:
+      type: integer(1)
+      default: '0'
+      notnull: true
+    name: string(45)
+    friend_id: integer(3)
+    user_id: integer(3)
+  relations:
+    Friend:
+      local: friend_id
+      foreign: friend_id
+      type: one
+    User:
+      local: user_id
+      foreign: user_id
+      type: one
+    Friend_1:
+      class: Friend
+      local: friend_list_id
+      foreign: friend_list_id
+      type: many
+Lang:
+  tableName: lang
+  options:
+    type: InnoDB
+    collate: utf8_unicode_ci
+    charset: utf8
+  columns:
+    language_id:
+      type: integer(1)
+      primary: true
+      autoincrement: true
+    lang:
+      type: string(45)
+      default: en
+      notnull: true
+    user_id: integer(3)
+  relations:
+    User:
+      local: user_id
+      foreign: user_id
+      type: one
+Mark:
+  tableName: mark
+  options:
+    type: InnoDB
+    collate: utf8_unicode_ci
+    charset: utf8
+  columns:
+    mark_id:
+      type: integer(8)
+      primary: true
+      autoincrement: true
+    privacy:
+      type: integer(1)
+      default: '2'
+      notnull: true
+    url: string(255)
+    feed_desc: string(255)
+    rating: integer(2)
+    mark_category_id:
+      type: integer(2)
+      notnull: true
+    mark_sub_category_id: integer(2)
+    created_at: timestamp(25)          
+  relations:
+    MarkCategory:
+      local: mark_category_id
+      foreign: mark_category_id
+      type: one
+    MarkSubCategory:
+      local: mark_sub_category_id
+      foreign: mark_sub_category_id
+      type: one
+    MarkInfo:
+      local: mark_id
+      foreign: mark_id
+      type: many
+MarkCategory:
+  tableName: mark_category
+  options:
+    type: InnoDB
+    collate: utf8_unicode_ci
+    charset: utf8
+  columns:
+    mark_category_id:
+      type: integer(2)
+      primary: true
+      autoincrement: true
+    name: string(45)
+  relations:
+    Mark:
+      local: mark_category_id
+      foreign: mark_category_id
+      type: many
+    MarkSubCategory:
+      local: mark_category_id
+      foreign: mark_category_id
+      type: many
+      onDelete: CASCADE
+MarkInfo:
+  tableName: mark_info
+  options:
+    type: InnoDB
+    collate: utf8_unicode_ci
+    charset: utf8
+  columns:
+    mark_info_id:
+      type: integer(8)
+      primary: true
+      autoincrement: true
+    favorite:
+      type: integer(1)
+      default: '0'
+      notnull: true
+    privacy:
+      type: integer(1)
+      default: '2'
+      notnull: true
+    mark_id: integer(8)
+    user_id: integer(3)
+    clicks: integer(2)
+  relations:
+    Mark:
+      local: mark_id
+      foreign: mark_id
+      type: one
+    User:
+      local: user_id
+      foreign: user_id
+      type: one
+MarkSubCategory:
+  tableName: mark_sub_category
+  options:
+    type: InnoDB
+    collate: utf8_unicode_ci
+    charset: utf8
+  columns:
+    mark_sub_category_id:
+      type: integer(2)
+      primary: true
+      autoincrement: true
+    name: string(45)
+    mark_category_id: integer(2)
+  relations:
+    MarkCategory:
+      local: mark_category_id
+      foreign: mark_category_id
+      type: one
+    Mark:
+      local: mark_sub_category_id
+      foreign: mark_sub_category_id
+      type: many
+Message:
+  options:
+    type: InnoDB
+    collate: utf8_unicode_ci
+    charset: utf8
+  tableName: message
+  columns:
+    message_id:
+      type: integer(3)
+      primary: true
+      autoincrement: true
+    message:
+      type: string()
+      notnull: true
+    is_read:
+      type: integer(1)
+      default: '0'
+      notnull: true
+    is_spam:
+      type: integer(1)
+      default: '0'
+      notnull: true
+    isreply:
+      type: integer(1)
+      default: '0'
+    to_user: integer(3)
+    user_id: integer(3)
+    created_at: timestamp(25)      
+  relations:
+    User:
+      local: user_id
+      foreign: user_id
+      type: one
+Nickname:
+  tableName: nickname
+  options:
+    type: InnoDB
+    collate: utf8_unicode_ci
+    charset: utf8
+  columns:
+    nickname_id:
+      type: integer(1)
+      primary: true
+      autoincrement: true
+    privacy:
+      type: integer(1)
+      default: '0'
+      notnull: true
+    nickname: string(45)
+    user_id: integer(3)
+    created_at: timestamp(25)        
+  relations:
+    User:
+      local: user_id
+      foreign: user_id
+      type: one
+Notification:
+  tableName: notification
+  options:
+    type: InnoDB
+    collate: utf8_unicode_ci
+    charset: utf8
+  columns:
+    notification_id:
+      type: integer(3)
+      primary: true
+      autoincrement: true
+    privacy:
+      type: integer(1)
+      default: '0'
+      notnull: true
+    msg: string(255)
+    type: integer(2)
+    user_id: integer(3)
+    created_at: timestamp(25)      
+  relations:
+    User:
+      local: user_id
+      foreign: user_id
+      type: one
+Privacy:
+  tableName: privacy
+  options:
+    type: InnoDB
+    collate: utf8_unicode_ci
+    charset: utf8
+  columns:
+    privacy_id:
+      type: integer(3)
+      primary: true
+      autoincrement: true
+    profile:
+      type: integer(1)
+      default: '1'
+      notnull: true
+    address:
+      type: integer(1)
+      default: '2'
+      notnull: true
+    status:
+      type: integer(1)
+      default: '1'
+      notnull: true
+    mark:
+      type: integer(1)
+      default: '1'
+      notnull: true
+    feed:
+      type: integer(1)
+      default: '1'
+      notnull: true
+    activity:
+      type: integer(1)
+      default: '1'
+      notnull: true
+    friend:
+      type: integer(1)
+      default: '1'
+      notnull: true
+    friend_list:
+      type: integer(1)
+      default: '0'
+      notnull: true
+    nickname:
+      type: integer(1)
+      default: '1'
+      notnull: true
+    user_id: integer(3)
+  relations:
+    User:
+      local: user_id
+      foreign: user_id
+      type: one
+PrivacyType:
+  tableName: privacy_type
+  options:
+    type: InnoDB
+    collate: utf8_unicode_ci
+    charset: utf8
+  columns:
+    privacy_type_id:
+      type: integer(3)
+      primary: true
+      autoincrement: true
+    name: string(45)
+Profile:
+  tableName: profile
+  options:
+    type: InnoDB
+    collate: utf8_unicode_ci
+    charset: utf8
+  columns:
+    profile_id:
+      type: integer(8)
+      primary: true
+      autoincrement: true
+    user_id:
+      type: integer(3)
+      notnull: true
+    privacy:
+      type: integer(1)
+      default: '1'
+      notnull: true
+    rating:
+      type: integer(1)
+      default: '1'
+    name_nepali: string(255)
+    dob: timestamp(25)
+    about_me: string(160)
+    url: string(160)
+    relationship: string(45)
+    looking_for: string(45)
+    phone: string(45)
+    interests: string(255)
+    education: string(255)
+    hobbies: string(255)
+    fav_movies: string(255)
+    fav_artists: string(255)
+    fav_books: string(255)
+    fav_animals: string(255)
+    religion: string(45)
+    everything_else: string(255)
+    created_at: timestamp(25)       
+  relations:
+    User:
+      local: user_id
+      foreign: user_id
+      type: one
+    Address:
+      local: profile_id
+      foreign: profile_id
+      type: many
+Reply:
+  tableName: reply
+  options:
+    type: InnoDB
+    collate: utf8_unicode_ci
+    charset: utf8
+  columns:
+    reply_id:
+      type: integer(3)
+      primary: true
+      autoincrement: true
+    message: string(255)    
+    status_id: integer(3)
+    friend_id: integer(3)
+    created_at: timestamp(25)   
+  relations:
+    Status:
+      local: status_id
+      foreign: status_id
+      type: one
+    Friend:
+      local: friend_id
+      foreign: friend_id
+      type: one
+Status:
+  tableName: status
+  options:
+    type: InnoDB
+    collate: utf8_unicode_ci
+    charset: utf8
+  columns:
+    status_id:
+      type: integer(3)
+      primary: true
+      autoincrement: true
+    message:
+      type: string(255)
+      notnull: true
+    privacy:
+      type: integer(1)
+      default: '0'
+      notnull: true
+    is_reply:
+      type: integer(1)
+      default: '0'
+      notnull: true
+    to_fb:
+      type: integer(1)
+      default: '0'
+      notnull: true
+    to_twitter:
+      type: integer(1)
+      default: '0'
+      notnull: true
+    user_id:
+      type: integer(3)
+      notnull: true
+    thumbs_up: integer(2)
+    thumbs_down: integer(2)
+    created_at: 
+      type: timestamp(25) 
+      notnull: true
+      default: CURRENT_TIMESTAMP      
+  relations:
+    User:
+      local: user_id
+      foreign: user_id
+      type: one
+    Reply:
+      local: status_id
+      foreign: status_id
+      type: many
+    ThumbUpDown:
+      local: status_id
+      foreign: status_id
+      type: many
+      onDelete: CASCADE
+ThumbUpDown:
+  tableName: thumb_up_down
+  options:
+    type: InnoDB
+    collate: utf8_unicode_ci
+    charset: utf8
+  columns:
+    thumb_up_down_id:
+      type: integer(3)
+      primary: true
+      autoincrement: true
+    flag:
+      type: integer(1)
+      default: '1'
+    status_id: integer(3)
+    friend_id: integer(3)
+    created_at: timestamp(25)       
+  relations:
+    Friend:
+      local: friend_id
+      foreign: friend_id
+      type: one
+    Status:
+      local: status_id
+      foreign: status_id
+      type: one
+User:
+  tableName: user
+  options:
+    type: InnoDB
+    collate: utf8_unicode_ci
+    charset: utf8
+  columns:
+    user_id:
+      type: integer(3)
+      primary: true
+      autoincrement: true
+    token: string(45)      
+    username:
+      type: string(45)
+      notnull: true      
+    password:
+      type: string(45)
+      notnull: true
+    name_first: string(45)      
+    name_middle: string(45) 
+    name_last: string(45)      
+    email_id:
+      type: string(100)
+      notnull: true      
+    picture:
+      type: string(255)
+      default: default.jpg      
+    active:
+      type: integer(1)
+      default: '1'
+      notnull: true
+    online:
+      type: integer(1)
+      default: '1'
+      notnull: true
+    created_at: timestamp(25)           
+  relations:
+    Chat:
+      local: user_id
+      foreign: user_id
+      type: many
+    FeedInfo:
+      local: user_id
+      foreign: user_id
+      type: many
+    Friend:
+      local: user_id
+      foreign: user_id
+      type: many
+    FriendList:
+      local: user_id
+      foreign: user_id
+      type: many
+    Lang:
+      local: user_id
+      foreign: user_id
+      type: many
+    MarkInfo:
+      local: user_id
+      foreign: user_id
+      type: many
+    Message:
+      local: user_id
+      foreign: user_id
+      type: many
+    Nickname:
+      local: user_id
+      foreign: user_id
+      type: many
+    Notification:
+      local: user_id
+      foreign: user_id
+      type: many
+    Privacy:
+      local: user_id
+      foreign: user_id
+      type: many
+    Profile:
+      local: user_id
+      foreign: user_id
+      type: many
+    Status:
+      local: user_id
+      foreign: user_id
+      type: many

@@ -1,0 +1,19 @@
+﻿@model PlanetX2012.Models.ContentModel.HomeContent
+<div class="container">
+    <p>
+        <span>
+            <img src="../../Content/css/images/image.gif" width="20px" height="10px" /></span>
+        <span>Has 28 Profile Views</span>
+    </p>
+    <p>
+        <span>
+            <img src="../../Content/css/images/image.gif" width="20px" height="10px" /></span>
+        <span>Has 28 Friends</span>
+    </p>
+        <p>
+        <span>
+            <img src="../../Content/css/images/image.gif" width="20px" height="10px" /></span>
+        <span>Member Since @String.Format("{0:MMMM, yyyy}",Model.useraccount.CreatedAt)</span>
+    </p>
+</div>
+

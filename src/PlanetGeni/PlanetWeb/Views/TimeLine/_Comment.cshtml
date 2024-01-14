@@ -1,0 +1,23 @@
+﻿<div class="row">
+</div>
+<article class="feedcomment" data-bind="attr:{'data-commentId': PostCommentId(),
+    'data-parentPostId': PostId(),
+    'data-lastDateTime':CreatedAt(),
+    'data-parentCommentId':ParentCommentId(),
+    'data-child': ChildCommentCount()}">
+    <header class="clearfix">
+        <a class="btn-link" data-bind="click: function(){viewUserProfile(UserId())}">
+            <img data-bind="attr:{src: profilepicContainer + Picture()}" class="avatar" alt="" />
+        </a>
+        <h6>
+            <a class="btn-link" data-bind="click: function(){viewUserProfile(UserId())}">
+                <span data-bind="text: FullName()"></span>
+            </a> 	&nbsp; 	&nbsp;
+            <span class="body marginright16" data-bind="text: CommentText()"></span>
+            <small class="text-muted pull-right" data-bind="text: moment.utc(CreatedAt()).local().fromNow(), attr:{title:moment.utc(CreatedAt()).local().format()}">
+                <i class="glyphicon glyphicon-time"></i>
+            </small>
+        </h6>
+    </header>
+    @Html.Partial("../TimeLine/_CommentFooter")
+</article>

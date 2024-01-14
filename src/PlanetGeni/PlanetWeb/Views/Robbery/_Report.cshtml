@@ -1,0 +1,25 @@
+﻿<div id="crimereportcontainer">
+    <div class=" row">
+        <div class="col-xs-12">
+            <div class="panel panel-primary" id="mycrimereportcontent-box">
+                <div class="panel-heading1 panel-heading">
+                    <div class="flagsprite pull-right btn-link"
+                         data-bind="css: 'flagsprite-' + CountryId().toLowerCase(), click: function(){viewCountryProfile(CountryId().toLowerCase())}"></div>
+                    <span class="fa icon-robber4  marginright6"></span> Crime Report
+                </div>
+                <div class="panel-body">
+                    @Html.Partial("_ReportItem")
+                </div>
+                <div class="panel-footer">
+                    <div class="row">
+                        <div class="col-xs-12 text-right fontsize90">
+                            <p>
+                                5 Stars and you are in Statesville, stay low for stars to slowly fade.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

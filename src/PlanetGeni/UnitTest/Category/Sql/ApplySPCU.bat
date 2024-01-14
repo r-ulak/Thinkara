@@ -1,0 +1,2 @@
+"C:\Program Files (x86)\MySQL\MySQL Workbench CE 6.0.8\mysql" -h UbuntuServer1 -u root -psqlapps %1  < %2
+"C:\Program Files (x86)\MySQL\MySQL Workbench CE 6.0.8\mysql" -h UbuntuServer1 -u root -psqlapps %1  < %3

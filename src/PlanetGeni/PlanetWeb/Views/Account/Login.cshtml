@@ -1,0 +1,77 @@
+﻿@using PlanetWeb.Models
+@model LoginViewModel
+<div class="row ">
+    <div class="col-xs-12 ">
+        <div class="col-md-6 register-form">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/CA72E_tQczk" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-5">
+            <div class="panel panel-primary login-form">
+                <img width="66%" align="middle" src="https://thinkaraimages.blob.core.windows.net/misc/Logo.png" />
+                <div class="panel-heading1 panel-heading">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <strong>Login</strong>
+                        </div>
+                        <div class="col-xs-6 text-right">
+                            <strong><i class="fa fa-lock fa-2x"></i> </strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body padding3centt">
+                    <div class="row ">
+                        <div class="col-xs-12 ">
+
+                            <section>
+                                @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { role = "login" }))
+                                {
+                                    @Html.AntiForgeryToken()
+                                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                    <div class="input-group padding5centt">
+                                        <span class="input-group-addon"><span class="fa fa-envelope"></span></span>
+                                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control ", placeholder = "Email" })
+                                    </div>
+                                    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger fontsize90" })
+                                    <div class="input-group padding5centt">
+                                        <span class="input-group-addon"><span class="fa fa-key"></span></span>
+                                        @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Password" })
+                                    </div>
+                                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger fontsize90" })
+                                    <div class="input-group fontsize90 padding5centt">
+                                        <div class="checkbox">
+                                            @Html.CheckBoxFor(m => m.RememberMe)
+                                            @Html.LabelFor(m => m.RememberMe, new { @class = "text-black" })
+                                        </div>
+                                    </div>
+                                    <div class="input-group  clearfix">
+                                        <div class="pull-right">
+                                            <button type="submit" class="btn btn-shadow btn-lg btn-success fontsize90">
+                                                Sign in  <i class="fa fa-sign-in"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                }
+                                <section id="socialLoginForm">
+                                    @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
+                                </section>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer ">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <a class="btn-link fontsize90 pull-left text-black" href="/Account/ForgotPassword">Forgot your password?</a>
+                            <a class="btn-link fontsize90 pull-right text-black" href="/Account/Register">Need an Account?</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

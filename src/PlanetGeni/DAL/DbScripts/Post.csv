@@ -1,0 +1,5 @@
+UserId,PostId,PostContent,CommentEnabled,Raters,Rating,Slug,UserACL,ClubACL,CreatedAt,UpdatedAt
+1,1,"The ASP.NET MVC Previews on CodePlex demonstrate new features that might be included in future ASP.NET MVC releases. Unless otherwise stated, the source code and binary files in this project should be considered early alpha builds and as such are intended for experimentation only",1,2,2,,0,0,,
+1,2,A household member who moves from one case to another should maintain his previous relationship with the payee of the first ,1,5,5,,0,0,,
+1,3,"The .ready() method can only be called on a jQuery object matching the current document, so the selector can be omitte",1,2,5,,0,0,,
+1,4,"Bulletin board, projects, resources and activities covering a wide range of Wikipedia areas.",1,2,5,,0,0,,

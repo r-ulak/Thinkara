@@ -1,0 +1,90 @@
+﻿<div id="loanviewcontainer">
+    <div class=" row">
+        <div class="col-xs-12">
+            <div class="panel panel-primary" id="myloanviewcontent-box">
+                <div class="panel-heading1 panel-heading">
+                    <div class="flagsprite pull-right btn-link"
+                         data-bind="css: 'flagsprite-' + CountryId().toLowerCase(), click: function(){viewCountryProfile(CountryId().toLowerCase())}"></div>
+                    <span class="fa icon-businessman90 marginright6"></span> Loan Details
+                </div>
+                <div class="panel-body">
+                    @Html.Partial("_LoanItem")
+                </div>
+                <div class="panel-footer" id="loanviewfooter">
+                    <div class="row">
+                        <div class="col-xs-9 fontsize80">
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <span>Total Borrowed:</span>
+                                </div>
+                                <div class="col-xs-6 text-danger">
+                                    <span class="fa icon-money28 fa-1x "></span>
+                                    <span data-bind="text:numeral(totalBorrowed()).format('0,0.00a')"></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <span>Total Lended:</span>
+                                </div>
+                                <div class="col-xs-6 text-success">
+                                    <span class="fa icon-money28 fa-1x text-success"></span>
+                                    <span data-bind="text:numeral(totalLended()).format('0,0.00a')"></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <span>Total Borrowed Left:</span>
+                                </div>
+                                <div class="col-xs-6 text-danger">
+                                    <span class="fa icon-money28 fa-1x text-danger"></span>
+                                    <span data-bind="text:numeral(totalBorrowedLeft()).format('0,0.00a')"></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <span>Total Lended Left:</span>
+                                </div>
+                                <div class="col-xs-6 text-success">
+                                    <span class="fa icon-money28 fa-1x text-success"></span>
+                                    <span data-bind="text:numeral(totalLendedLeft()).format('0,0.00a')"></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <span>Total Borrowed Paid:</span>
+                                </div>
+                                <div class="col-xs-6 text-success">
+                                    <span class="fa icon-money28 fa-1x text-success"></span>
+                                    <span data-bind="text:numeral(totalBorrowedPaid()).format('0,0.00a')"></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <span>Total Lended Paid:</span>
+                                </div>
+                                <div class="col-xs-6 text-success">
+                                    <span class="fa icon-money28 fa-1x text-success"></span>
+                                    <span data-bind="text:numeral(totalLendedPaid()).format('0,0.00a')"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-xs-3">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <span id="loanviewshowmore" class="marginright16 text-right margintop5 btn btn-shadow btn-success btn-sm pull-right"><i class="fa fa-plus"></i> </span>
+                                    <span id="loanrefresh" class="marginright16 margintop5 btn btn-shadow btn-success btn-sm pull-right"><i class="fa fa-refresh"></i> </span>
+                                </div>
+                            </div>
+                            <div class="row  padding10centt ">
+                                <div class="col-xs-12 text-right">
+                                    <span class="marginright16 label label-info " data-bind="text: userLoanMyDetailsDTO().length"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

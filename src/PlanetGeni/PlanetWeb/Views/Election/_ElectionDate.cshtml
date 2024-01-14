@@ -1,0 +1,48 @@
+﻿<div class="row margintop5 fontsize90">
+    <div class="col-xs-3 text-success">
+        <span>
+            Start
+        </span>
+    </div>
+    <div class="col-xs-9">
+        <div class="col-xs-7">
+        </div>
+        <div class="col-xs-5">
+            <i class="fa fa-clock-o fa-1x"></i>
+            <span class="pull-right" data-bind="text: ' ' + moment.utc(StartDate()).local().calendar()"> </span>
+        </div>
+
+    </div>
+</div>
+<div class="row margintop5 fontsize90">
+    <div class="col-xs-3 text-success">
+        <span>
+            Voting
+        </span>
+    </div>
+    <div class="col-xs-9">
+        <div class="col-xs-7">
+        </div>
+        <div class="col-xs-5">
+            <i class="fa fa-clock-o fa-1x"></i>
+            <span class="pull-right" data-bind="text: ' ' + moment.utc(VotingStartDate()).local().calendar()"> </span>
+        </div>
+
+    </div>
+</div>
+<div class="row margintop5 fontsize90">
+    <div class="col-xs-3 text-success">
+        <span>
+            End
+        </span>
+    </div>
+    <div class="col-xs-9">
+        <div class="col-xs-7">
+        </div>
+        <div class="col-xs-5">
+            <i class="fa fa-clock-o fa-1x"></i>
+            <span class="pull-right" data-bind="text: ' ' + moment.utc(EndDate()).local().calendar()"> </span>
+        </div>
+
+    </div>
+</div>

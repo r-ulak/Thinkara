@@ -1,0 +1,41 @@
+﻿<div class="row">
+    <div class="col-md-12">
+        <fieldset>
+            <legend class="text-warning fontsize120">As</legend>
+            <div class="col-xs-12">
+                <div class="input-group bottomMarging15">
+                    <span class="input-group-addon">
+                        <input id="radioParty" type="radio" name="candidateType" value="P" data-bind="checked:$root.runasSelected, enable: $root.userParty()!=''">
+                    </span>
+                    <span class="form-control" id="candidateParty" data-bind="text:$root.userParty"> </span>
+                    <span class="input-group-addon">Party</span>
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <div class="input-group bottomMarging15">
+                    <span class="input-group-addon">
+                        <input type="radio" checked id="radioIndependet" name="candidateType" value="I" data-bind="checked:$root.runasSelected">
+                    </span>
+                    <span class="form-control" id="candidateIndependent"> Independent</span>
+                </div>
+            </div>
+            <div class="form-group paddingl14 paddingr14" id="uploadrunoffice" data-bind="visible:$root.runasSelected()=='I'">
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <i class="fa icon-man371 fa-1x"></i>
+                    </span>
+                    <input type="text" class="form-control" placeholder="Upload Election Logo">
+                    <span class="input-group-btn">
+                        <span class="btn btn-default btn-file">
+                            Browse… <input type="file" id="runofficefileupload">
+                        </span>
+                    </span>
+                </div>
+                <div class="input-group">
+                    <div id="elepicprw" class="pull-left marginright16 margintop10">
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+</div>

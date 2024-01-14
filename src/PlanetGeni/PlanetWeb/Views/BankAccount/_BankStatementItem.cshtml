@@ -1,0 +1,45 @@
+﻿<div class="container">
+    <div class="row" data-bind="foreach: { data: bankstmtlist}">
+        <div class="well well-sm">
+            <div class="row">
+                <div class="col-xs-12">
+                    <p class="fontsize80" data-bind="text:moment.utc(CreatedAT).local().calendar()"></p>
+                    <!-- ko if: (!(SourceId==0 || RecipentId ==0) && CountryId !=null )-->
+                    <div data-bind="css: 'flagsprite-' + CountryId.toLowerCase(), click: function(){viewCountryProfile(CountryId.toLowerCase())}"
+                         class="flagsprite pull-right"></div>
+                    <!-- /ko -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="col-xs-2 pull-left text-success">
+                        <i class="fa-3x" data-bind="css:ImageFont"></i>
+                    </div>
+                    <div class="col-xs-1 pull-left">
+                        <span class="fa-2x" data-bind="css:TrnCss"></span>
+                    </div>
+                    <div class="col-xs-3 pull-left text-ellipsis">
+                        <p class="fontsize80 " data-bind="text:FundCode, attr:{title:FundCode}"></p>
+                    </div>
+                    <div class="col-xs-3 fontsize80 ">
+                        <div class="pull-right">
+                            <i class="fa icon-money28" title="Total Amount"></i>
+                            <span class="text-left" data-bind="text:numeral(Amount).format('0,0.00a'),css:cashTextCss(Amount), attr:{title: Amount}"></span>
+                            <br />
+                            <i class="fa icon-man249 marginright6" title="Total Tax"></i>
+                            <span class="text-left" data-bind="text:numeral(TaxAmount).format('0,0.00a'),css:cashTextCss(TaxAmount), attr:{title: TaxAmount}"></span>
+                        </div>
+                    </div>
+                    <div class="col-xs-3 pull-right text-ellipsis btn-link">
+                        <!-- ko if: !(SourceId==0 || RecipentId ==0) -->
+                        <a data-bind="attr:{title: FullName}, click: function(){viewUserProfile(UserId)}">
+                            <img class="img-responsive img-circle" data-bind="attr:{src: profilepicContainer+Picture}" />
+                            <span data-bind="text:FullName" class="fontsize70"></span>
+                        </a>
+                        <!-- /ko -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

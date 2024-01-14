@@ -1,0 +1,66 @@
+﻿<div id="warRequestcontainer">
+    <div class=" row">
+        <div class="col-xs-12">
+            <div class="panel panel-primary" id="mywarRequestcontent-box">
+                <div class="panel-heading1 panel-heading">
+                    <span class="fa icon-base1 marginright6"></span> Request War Key
+                    <div class="flagsprite pull-right btn-link"
+                         data-bind="css: 'flagsprite-' + CountryId().toLowerCase(), click: function(){viewCountryProfile(CountryId().toLowerCase())}"></div>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            War Key For
+                        </div>
+                        <div class="col-xs-8">
+                            @Html.Partial("_WarKeyDropDown")
+                        </div>
+                        <div class="col-xs-1" id="targetCountryIdSprite">
+                            <div class="flagsprite pull-right btn-link"
+                                 data-bind="css: 'flagsprite-' + targetCountryId().toLowerCase()"></div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>
+                                Requesting War Key will send an message to all Senators in your nation. It Shall also
+                                create a task to vote on this request for this proposal.
+                                <strong> You will need 60% of the vote to authorize a War </strong> against another Country. Once 60% is reached an
+                                automatic War is invoked against the target nation.
+                                It can result in economy downfall of both countries win or loose. Wining Nation
+                                shall enjoy raise in their cash reserve from loosing nation. Weapons conditions shall
+                                also deteriorate in this process.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-primary hidden" id="mywarRequestcontent-submit">
+                <div class="panel-heading1 panel-heading">
+                    <span>Request War Key</span>
+                </div>
+                <div class="panel-body">
+                    <div class="col-xs-12">
+                        <span data-bind="text:Message">
+
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-default backbtn pull-right hidden">
+                <span><i class="fa fa-home"></i> Home</span>
+            </button>
+
+            <button type="submit" id="requestWarKey"
+                    data-loading-text='
+                <i class="fa fa-spinner fa-spin"></i> Saving...'
+                class="btn btn-default pull-right">Request War Key
+            </button>
+        </div>
+    </div>
+</div>

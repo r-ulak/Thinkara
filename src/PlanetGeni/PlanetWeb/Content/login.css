@@ -1,0 +1,121 @@
+﻿body {
+    background-color: #f2f2f2;
+}
+
+.panel-primary {
+    border-color: #5cb85c;
+}
+
+.input-group {
+    width: 100%;
+}
+
+.colorwhite {
+    color: white;
+}
+
+.padding5centt {
+    padding-top: 5%;
+}
+
+.panel-footer {
+    background-color: #5cb85c;
+}
+
+.btn-link {
+    color: floralwhite;
+}
+
+.fontsize90 {
+    font-size: 90%;
+}
+
+.login-form {
+    margin-top: 30%;
+    color: #5d5d5d;
+    background: #fff;
+    /*padding: 26px;*/
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+.register-form {
+    margin-top: 20%;
+    color: #5d5d5d;
+    background: #fff;
+    /*padding: 26px;*/
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+
+form[role=login] img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 35px;
+}
+
+.btn-google {
+    color: #fff;
+    background-color: #dd4b39;
+    border-color: rgba(0,0,0,0.2);
+}
+
+    .btn-google:hover, .btn-google:focus, .btn-google:active, .btn-google.active, .open .dropdown-toggle.btn-google {
+        color: #fff;
+        background-color: #ca3523;
+        border-color: rgba(0,0,0,0.2);
+    }
+
+    .btn-google:active, .btn-google.active, .open .dropdown-toggle.btn-google {
+        background-image: none;
+    }
+
+    .btn-google.disabled, .btn-google[disabled], fieldset[disabled] .btn-google, .btn-google.disabled:hover, .btn-google[disabled]:hover, fieldset[disabled] .btn-google:hover, .btn-google.disabled:focus, .btn-google[disabled]:focus, fieldset[disabled] .btn-google:focus, .btn-google.disabled:active, .btn-google[disabled]:active, fieldset[disabled] .btn-google:active, .btn-google.disabled.active, .btn-google[disabled].active, fieldset[disabled] .btn-google.active {
+        background-color: #dd4b39;
+        border-color: rgba(0,0,0,0.2);
+    }
+
+    .btn-google .badge {
+        color: #dd4b39;
+        background-color: #fff;
+    }
+
+.fa-microsoft:before {
+    content: "\f17a";
+}
+
+.panel-primary > .panel-heading1 {
+    background-color: #5CB85C;
+    border-color: #333333;
+}
+
+#ddCountrycdregister ul {
+    max-height: 300px;
+    overflow: hidden;
+    z-index: 11;
+}
+
+.marginright6 {
+    margin-right: 6px;
+}
+
+.or-box
+{
+    position: relative;
+    border-top: 1px solid #dfdfdf;
+    padding-top: 20px;
+    margin-top:20px;
+}
+.or
+{
+    color: #666666;
+    background-color: #ffffff;
+    position: absolute;
+    text-align: center;
+    top: -8px;
+    width: 40px;
+    left: 40%;
+}

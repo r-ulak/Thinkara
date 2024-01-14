@@ -1,0 +1,81 @@
+﻿<div id="buystockcontainer">
+    <div class=" row">
+        <div class="col-xs-12">
+            <div class="panel panel-primary" id="mybuystockcontent-box">
+                <div class="panel-heading1 panel-heading">
+                    <div class="flagsprite pull-right btn-link"
+                         data-bind="css: 'flagsprite-' + CountryId().toLowerCase(), click: function(){viewCountryProfile(CountryId().toLowerCase())}"></div>
+
+                    <span class="fa icon-man254 marginright6"></span> Buy Stock
+                </div>
+                <div class="panel-body" id="stockbuypanelbody">
+                    <div data-bind="foreach: { data: stockCodes, afterRender: $root.AfterStockRenderAction}">
+                        @Html.Partial("_BuyStockItem")
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <strong> Total <small>(approx)</small></strong>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="pull-right">
+                                <span class="fa icon-money28 text-success"></span>
+                                <span class="label label-success text-right
+                                  fontsize110" data-bind="text:numeral(Amount()).format('0,0.00')"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row padding3centt">
+
+                        <div class="col-xs-6">
+                            <strong> Avaliable Cash </strong>
+
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="pull-right">
+                                <span class="fa icon-money28 text-success"></span>
+                                <span data-bind="text: numeral(AmountAvailable()).format('0,0.00')"></span>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <span class="fontsize90 pull-right text-warning padding3centt" data-bind="visible: ShowValidation()">
+                                Not Enough Money to Buy
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="panel panel-primary hidden" id="mybuystockcontent-submit">
+                <div class="panel-heading1 panel-heading">
+                    <span class="fa fa-signal"></span> Buy Stock
+                </div>
+                <div class="panel-body">
+                    <div class="col-xs-12">
+                        <span data-bind="text:Message">
+
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-default backbtn pull-right hidden">
+                <span><i class="fa fa-home"></i> Home</span>
+            </button>
+            <button class="btn btn-default  pull-left hidden" id="buymorestock">
+                <span><i class="fa fa-home"></i> Buy More</span>
+            </button>
+            <button type="submit" id="buystock" data-bind="disable: ShowValidation()"
+                    data-loading-text='
+                <i class="fa fa-spinner fa-spin"></i> Saving...'
+                class="btn btn-default pull-right">Buy
+            </button>
+        </div>
+    </div>
+</div>

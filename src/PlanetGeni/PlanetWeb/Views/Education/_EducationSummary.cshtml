@@ -1,0 +1,58 @@
+﻿<div id="educationSummarycontainer">
+    <div class=" row">
+        <div class="col-xs-12">
+            <div class="panel panel-primary" id="myeducationsummarycontent-box">
+                <div class="panel-heading1 panel-heading">
+                    <div class="flagsprite pull-right btn-link"
+                         data-bind="css: 'flagsprite-' + CountryId().toLowerCase(), click: function(){viewCountryProfile(CountryId().toLowerCase())}"></div>
+                    <span class="fa icon-graduation22 marginright6">
+                    </span> Education Summary
+                </div>
+                <div class="panel-body">
+                    <div id="educationSummaryInprogresscontent" data-bind="visible:educationSummaryDTO().length>0" class=" container well">
+                        <fieldset>
+                            <legend class="text-warning fontsize120">Currently Enrolled</legend>
+                            <div data-bind="foreach: educationSummaryDTO">
+                                <!-- ko if: Status == 'I' -->
+                                @Html.Partial("_SummaryItem")
+                                <!-- /ko -->
+                            </div>
+                        </fieldset>
+
+                    </div>
+                    <div class="container  well padding3centb" id="educationSummaryCompletedcontent" data-bind="visible:educationSummaryDTO().length>0">
+                        <fieldset>
+                            <legend class="text-warning fontsize120">Completed</legend>
+                            <div data-bind="foreach: educationSummaryDTO">
+                                <!-- ko if: Status == 'C' -->
+                                @Html.Partial("_SummaryItem")
+                                <!-- /ko -->
+                            </div>
+                        </fieldset>
+
+                    </div>
+                    <div class="container well" id="degreeScore" data-bind="visible:educationSummaryDTO().length>0">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="col-xs-3">
+                                    <span class="pull-left fa fa-cubes fa-2x"></span>
+                                </div>
+                                <div class="col-xs-6 text-success text-right">
+                                    <span class="pull-left">Degree Score</span>
+                                </div>
+                                <div class="col-xs-3 text-success text-right">
+                                    <span class="pull-right" data-bind="text: DegreeScore"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+
+                    <div id="educationTopNSummary" data-bind="visible:educationTopN().length>0" class=" well padding3centt">
+                        @Html.Partial("_SummaryTop10")
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+﻿<div class="col-sm-3">
+    <div class="hero-widget well well-sm">
+        <div class="icon" data-bind="style: {opacity: AchievedPercent <= 20 ? 0.2: AchievedPercent/100,
+    color:  AchievedPercent <= 20 ? '#808080': ''}">
+            <i class="fa fa-trophy"></i>
+        </div>
+        <div class="text" >
+            <label class="text-muted" data-bind="text: AchievementName"></label>
+            <label class="text-muted text-success" data-bind="text: AchievedPercent"></label>
+            <label class="text-muted text-success" >%</label>
+        </div>
+
+    </div>
+</div>

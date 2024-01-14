@@ -1,0 +1,17 @@
+1,National Defense ,icon icon-base1 text-danger
+2,Internal Security,icon icon-policeman2 text-warning
+3,Jobs,icon icon-online32 text-success
+4,Education,icon icon-graduation22 text-success
+5,Leaders Salary,icon icon-money28 text-success
+6,Increase Army Jobs,icon icon-male106 text-danger
+7,Gold Investment,icon icon-gold2 goldcolor
+8,Silver Investment,icon-coins2 silvercolor
+9,Technology Investment,icon-server20 text-success
+10,Utilities Investment,icon-idea13 text-success
+11,TeleCom Investment,icon-telephone34 text-success
+12,RealState Investment,icon-urban text-success
+13,Industrial Investment,icon-factory1 text-success
+14,HealthCare Investment,icon-hospital17 text-success
+15,Financial Investment,icon-financial text-success
+16,Energy Investment,icon-science2 text-success
+17,Casino Investment,icon-poker4 text-success

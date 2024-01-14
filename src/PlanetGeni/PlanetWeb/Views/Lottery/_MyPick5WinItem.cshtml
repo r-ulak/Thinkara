@@ -1,0 +1,100 @@
+﻿<div class="container padding3centt" id="lotteryMyPick5WinItemcontent-box">
+    <fieldset>
+        <legend class="text-warning fontsize120">
+            Winning Numbers
+        </legend>
+        <div id="lotteryMyPick5Wincontent-wrapper" data-bind="foreach: { data: myPick5}">
+            <div class="row padding3centb">
+                <div class="col-xs-12 fontsize80">
+                    <div class="col-xs-6">
+                    </div>
+                    <div class="col-xs-6 text-right">
+                        <span title="DrawingDate" data-bind="text: ' ' + moment.utc(DrawingDate).local().calendar()"> </span>
+                    </div>
+                </div>
+            </div>
+            <div class="row padding3centb">
+                <div class="col-xs-12 fa-1_5x text-warning">
+                    <div class="col-xs-2">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle-o fa-stack-2x"></i>
+                            <i class="fa fa-stack-1x text-success" data-bind="text:Number1"></i>
+                        </span>
+                    </div>
+                    <div class="col-xs-2">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle-o fa-stack-2x"></i>
+                            <i class="fa fa-stack-1x text-success" data-bind="text:Number2"></i>
+                        </span>
+                    </div>
+                    <div class="col-xs-2">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle-o fa-stack-2x"></i>
+                            <i class="fa fa-stack-1x text-success" data-bind="text:Number3"></i>
+                        </span>
+                    </div>
+                    <div class="col-xs-2">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle-o fa-stack-2x"></i>
+                            <i class="fa fa-stack-1x text-success" data-bind="text:Number4"></i>
+                        </span>
+                    </div>
+                    <div class="col-xs-2">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle-o fa-stack-2x"></i>
+                            <i class="fa fa-stack-1x text-success" data-bind="text:Number5"></i>
+                        </span>
+                    </div>
+                    <div class="col-xs-2">
+                        <span class="fontsize70"></span>
+                    </div>
+                </div>
+            </div>
+            <!-- ko if: MyPick5s().length >0 -->
+            <div class="row padding3centb">
+                <div class="col-xs-12 fontsize80">
+                    <div class="col-xs-6">
+                        <span>Your Picks</span>
+                    </div>
+                    <div class="col-xs-4">
+                    </div>
+                    <div class="col-xs-2">
+                        <span>Win</span>
+                    </div>
+                </div>
+            </div>
+            <!-- /ko -->
+            <div data-bind="foreach: { data: MyPick5s}">
+                <div class="row">
+                    <div class="col-xs-12 fontsize80 text-center">
+                        <div class="col-xs-2">
+                            <span data-bind="text:Number1, css:Number1Css"></span>
+                        </div>
+                        <div class="col-xs-2">
+                            <span class="" data-bind="text:Number2, css:Number2Css"></span>
+                        </div>
+                        <div class="col-xs-2">
+                            <span class="" data-bind="text:Number3, css:Number3Css"></span>
+                        </div>
+                        <div class="col-xs-2">
+                            <span class="" data-bind="text:Number4, css:Number4Css"></span>
+                        </div>
+                        <div class="col-xs-2">
+                            <span class="" data-bind="text:Number5, css:Number5Css"></span>
+                        </div>
+                        <div class="col-xs-2">
+                            <i class="fa icon-money28 text-success"></i>
+                            <span class="text-success" data-bind=" text: Amount"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ko if: MyPick5s().length==0 -->
+            <div class="fontsize80">
+                <small>Picks not bought</small>
+            </div>
+            <!-- /ko -->
+            <hr />
+        </div>
+    </fieldset>
+</div>

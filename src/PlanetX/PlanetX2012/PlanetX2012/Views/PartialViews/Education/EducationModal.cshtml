@@ -1,0 +1,29 @@
+﻿<div id="accordionEducation" class="accord">
+    <h2 id="joinSchool">
+        <a href="#">Go To School</a></h2>
+    <div>
+        @Html.Partial("../PartialViews/Education/EnrollToSchool")
+    </div>
+    <h2 id="manageEducation">
+        <a href="#">Manage Education</a></h2>
+    <div>
+    </div>
+
+
+</div>
+<script type="text/javascript">
+    $(function () {
+        $("#accordionEducation").accordion({
+            autoHeight: false,
+            animated: 'bounceslide',
+            icons: { "header": "ui-icon-plus", "headerSelected": "ui-icon-minus" }
+        });
+
+        $("#manageEducation").click(function () {
+            $(this).next().load('/Education/Manage');
+        });
+        
+    });
+
+
+</script>

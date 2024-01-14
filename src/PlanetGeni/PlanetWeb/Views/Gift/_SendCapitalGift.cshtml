@@ -1,0 +1,38 @@
+﻿<div id="sendGiftcontainer">
+    <div class=" row">
+        <div class="col-xs-12">
+            <div class="col-xs-12">
+                <div class="panel panel-primary" id="mysendGiftcontent-box">
+                    <div class="panel-heading1 panel-heading">
+                        <span class="fa icon-present3 marginright6">
+                        </span> Send Gift
+                        <div class="flagsprite pull-right btn-link" id="capitalGiftFlagHeader"
+                             data-bind="css: 'flagsprite-' + CountryId().toLowerCase(), click: function(){viewCountryProfile(CountryId().toLowerCase())}"></div>
+                    </div>
+                    <div class="panel-body">
+                        @Html.Partial("_SendCaptitalBody")
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-primary hidden" id="mysendGiftcontent-submit">
+                <div class="panel-heading1 panel-heading">
+                    <span>Send Gift</span>
+                </div>
+                <div class="panel-body">
+                    <div class="col-xs-12">
+                        <span data-bind="text:Message">
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-default backbtn pull-right hidden">
+                <span><i class="fa fa-home"></i> Home</span>
+            </button>
+            <button type="submit" id="sendGift" data-bind="disable:TotalGiftInCash()<=0 "
+                    data-loading-text='
+                <i class="fa fa-spinner fa-spin"></i> Saving...'
+                class="btn btn-default pull-right">Send Gift
+            </button>
+        </div>
+    </div>
+</div>

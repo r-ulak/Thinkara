@@ -1,0 +1,28 @@
+﻿<div class="row" id="contactviewcontainer">
+    <div class="col-xs-12">
+        <div class="panel panel-primary" id="contactview-box">
+            <div class="panel-heading1 panel-heading">
+                <div class="flagsprite pull-right btn-link"
+                     data-bind="css: 'flagsprite-' + CountryId().toLowerCase(), click: function(){viewCountryProfile(CountryId().toLowerCase())}"></div>
+                <span class="fa fa-envelope marginright6"></span>Social Assets
+            </div>
+            <div class="panel-body">
+                <fieldset>
+                    <legend class="text-warning fontsize120">Import Friends</legend>
+                    @Html.Partial("_ContactsProviderItem")
+                </fieldset>
+                <fieldset>
+                    <legend class="text-warning fontsize120">Search Social Asset</legend>
+                    @Html.Partial("_SearchFriendItem")
+                </fieldset>
+                <fieldset data-bind="visible: suggestlist().length>0">
+                    <legend class="text-warning fontsize120">Suggestion</legend>
+                    @Html.Partial("_SuggestFriend")
+                </fieldset>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

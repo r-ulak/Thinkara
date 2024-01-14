@@ -1,0 +1,24 @@
+﻿<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+    <div class="mobile-social-share">
+        <div id="socialHolder">
+            <div id="socialShare" class="btn-group share-group">
+                <a href="asdf" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="true">
+                    <i class="fa fa-share-alt"></i>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a target="_blank" class="btn btn-social-icon btn-sm btn-twitter" title="Twitter" data-bind="attr: {href: 'https://twitter.com/intent/tweet?text=' + striphtml(PostContent()) + '&url=https://www.thinkara.com&hashtags=thinkara' }">
+                            <i class="social fa fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" data-original-title="Facebook" rel="Share Facebook" href="#" class="btn btn-social-icon btn-sm btn-facebook" data-placement="left" data-bind="click: function(){postToFB(PostContent(), ShortDescription())}">
+                            <i class="social fa fa-facebook"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

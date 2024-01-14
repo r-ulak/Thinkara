@@ -1,0 +1,29 @@
+﻿@model DAO.Models.Post
+@using (Ajax.BeginForm("AddPostsForUser", "Post", new AjaxOptions { OnSuccess = "PostAdded" }))
+{   @Html.ValidationSummary(false)
+    
+    <div class="newpost">
+        @Html.TextAreaFor(model => model.PostContent, new { size = 35, placeholder = "Share What's New...", rows = 5, cols = 30 })
+
+        <div data-role="textarea" class="textarea-wrapper">
+            <div contenteditable="true" class="textarea"
+                tabindex="0" role="textbox" aria-multiline="true"
+                style="overflow: auto; max-height: 350px;">
+                <span class="placeholder">Share What's New...</span>
+            </div>
+
+        </div>
+
+        <br>
+        <ul id="positiveTags"></ul>
+
+        <br>
+        <ul id="negativeTags"></ul>
+        <div id="posturlconetnt">
+
+        </div>
+        <input type="submit" value="Share" id="submitPost" class="demo-button ui-state-default ui-corner-all" />
+    </div>
+    <div id="postList"></div>
+}
+

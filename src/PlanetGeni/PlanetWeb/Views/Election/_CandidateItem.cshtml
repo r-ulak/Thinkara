@@ -1,0 +1,76 @@
+﻿<div class="row padding3centt">
+    <div class="col-xs-12">
+        <fieldset>
+            <legend class="text-warning fontsize120">Candidates</legend>
+            <div data-bind="foreach: { data: filteredcandidates, afterRender:$root.aftereleCandidateRender}" class="candidates col-xs-12">
+                <div class=" row marginbottom5">
+                    <div class="well well-sm margintop5">
+                        <div class="row">
+                            <div class="col-xs-9">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <img class="img-full btn-link" width="28px" height="28px" data-bind="attr: {src: profilepicContainer+Picture , title: FullName }, click: function(){viewUserProfile(UserId)}">
+                                        <h5 class="btn-link" data-bind="text:FullName, click: function(){viewUserProfile(UserId)}"></h5>
+                                    </div>
+                                </div>
+                                <hr />
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <strong>Position:  </strong><span data-bind="text:ElectionPositionName"></span>
+                                        <div class="flagsprite pull-right btn-link"
+                                             data-bind="css: 'flagsprite-' + CountryId.toLowerCase(), click: function(){viewCountryProfile(CountryId.toLowerCase())}"></div>
+                                        <!-- ko if: CandidateTypeId == 'P' -->
+                                        <p class="padding3centt">
+                                            <strong>PartyName: </strong>
+                                            <a class="btn-link" data-bind="text:PartyName, click: function(){getPartyInfo(PartyId)}"></a>
+                                        </p>
+                                        <!-- /ko -->
+                                        <!-- ko if: CandidateTypeId == 'I' -->
+                                        <p class="padding3centt">
+                                            <span>Independent </span>
+                                        </p>
+                                        <!-- /ko -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-3 padding3centt">
+                                <!-- ko if: LogoPictureId.indexOf(".")==-1  -->
+                                <i class="fa-6x text-info pull-right" data-bind="css: LogoPictureId"></i>
+                                <!-- /ko -->
+                                <!-- ko if: LogoPictureId.indexOf(".") != -1 -->
+                                <img class="pull-right img-responsive img-64 " data-bind="attr:{src:LogoPictureId, title: PartyName}" />
+                                <!-- /ko -->
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 dividertop text-center">
+                                <div class="col-xs-4  emphasis">
+                                    <h4><strong data-bind="css:ElectionResultCss, text:ElectionResult">  </strong></h4>
+                                    <p><small>Result</small></p>
+
+                                </div>
+                                <div class="col-xs-4 emphasis">
+                                    <h4><strong data-bind="text:Score"></strong></h4>
+                                    <p><small>Votes</small></p>
+                                </div>
+                                <div class="col-xs-4 emphasis">
+                                    <h4><strong data-bind="text:ordinal_suffix_of($index()+1)"></strong></h4>
+                                    <p><small>Rank</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ko if: peopleInfo.UserId()== UserId && Status == 'A'  -->
+                        <div class="row padding3centt">
+                            <div class="col-xs-12">
+                                <span title="Quit Election" data-bind="click:$root.quitElection, attr:{'data-index':$index}" data-loading-text="Quitting..." class="btn btn-shadow btn-danger btn-sm pull-right"><i class="fa fa-power-off"></i> </span>
+                            </div>
+                        </div>
+                        <!-- /ko -->
+
+                    </div>
+                    @Html.Partial("_CandidateMenu")
+                </div>
+            </div>
+        </fieldset>
+    </div>
+</div>

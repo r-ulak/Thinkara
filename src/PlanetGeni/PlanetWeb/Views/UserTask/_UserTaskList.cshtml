@@ -1,0 +1,70 @@
+﻿<div id="userTaskcontainer">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="panel panel-primary" id="myuserTaskcontent-box">
+                <div class="panel-heading1 panel-heading">
+                    <div class="flagsprite pull-right btn-link"
+                         data-bind="css: 'flagsprite-' + CountryId().toLowerCase(), click: function(){viewCountryProfile(CountryId().toLowerCase())}"></div>
+                    <span class="fa icon-task  marginright6"></span>Tasks Lists
+                </div>
+                <div class="panel-body" data-bind="visible:userTaskMyDetailsDTO().length>0">
+                    <ul class="list-group" data-bind="foreach: userTaskMyDetailsDTO()">
+                        <li class="list-group-item" data-bind="css: taskCss">
+                            <div class="pull-right action-buttons">
+                                <a class="jsaction" title="Take Action on this task" data-bind="click: function(){voteOnTask(TaskId)}">
+                                    <i class=" fa fa-pencil-square-o fa-2x text-danger">
+                                    </i>
+                                </a>
+                                <a class="trash" data-bind="attr:{'data-index': $index}, click: trashClicked">
+                                    <span class="glyphicon glyphicon-trash colorred"></span>
+                                </a>
+                                <a class="flagged">
+                                    <i class="fa" data-bind="css: flagCss, attr:{'data-index': $index}, click: flagClicked"></i>
+                                    <input type="checkbox"
+                                           class="hidden">
+                                </a>
+
+                            </div>
+                            <div class="itemtask">
+                                <div class="pull-left taskcomplete">
+
+                                    <input type="text"
+                                           data-bind="attr: {value: CompletionPercent , 'data-fgcolor': dialColor()}"
+                                           data-fgcolor="#9ABC32"
+                                           data-width="35" class="dial">
+
+                                </div>
+
+                                <div class="taskdetails">
+                                    <span data-bind="text: ShortDescription"></span>
+                                    <p class="fontsize80" data-bind="html:Description">
+                                    </p>
+                                    <p>
+                                        <span class="fontsize70"> Date Due:</span>
+                                        <span class="label fontsize70 "
+                                              data-bind="text: moment(DueDate).format('MM/DD/YYYY'), css: dueDateCss "></span>
+                                    </p>
+                                </div>
+                            </div>
+
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="panel-footer">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <h6>
+                                <span class="label label-info" title="Total Count" data-bind="text: taskCount()"></span>
+                            </h6>
+                        </div>
+                        <div class="col-xs-6">
+                            <span id="tasksrefresh" class="btn btn-shadow btn-success btn-sm pull-right"><i class="fa fa-refresh"></i> </span>
+                            <span id="taskshowmore" class="marginright16 btn btn-shadow btn-success btn-sm pull-right"><i class="fa fa-plus"></i> </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

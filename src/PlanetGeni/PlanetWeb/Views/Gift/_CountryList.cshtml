@@ -1,0 +1,29 @@
+﻿<div class="row padding3centt" id="sendGiftCountry">
+    <div class="col-xs-12">
+        <div class="panel panel-default recipients">
+            <div class="panel-heading">
+                <span class="button-checkbox pull-right margintop-5">
+                    <button type="button" class="btn btn-sm" data-color="default">All</button>
+                    <input type="checkbox" id="giftcountryall" class="hidden countryall" />
+                </span>
+                <span class="colorwhite">
+                    Nations
+                </span>
+            </div>
+            <div class="panel-body col-xs-12" id="giftcountryList" data-bind="foreach: countries">
+                <div class="recipient col-xs-6"
+                     data-bind="attr: {title: Code}, click: $root.clickgiftnation">
+                        <span class="img-check flag-wrapper flag flag-icon-background"
+                              data-bind="css: 'flag-icon-' + CountryId.toLowerCase()"></span>
+                    <span  data-bind="text: Code"></span>
+                    <input type="checkbox" data-bind="value: CountryUserId" class="hidden">
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="panel-footer fontsize80" id="countryListFooter">
+                <span data-bind="text: NationId().length"></span>
+                <span class="text-muted"> country(s) selected</span>
+            </div>
+        </div>
+    </div>
+</div>

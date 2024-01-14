@@ -1,0 +1,645 @@
+/*
+  Icon Font: customfont
+*/
+
+@font-face {
+  font-family: "customfont";
+  src: url("fonts/customfont.eot");
+  src: url("fonts/customfont.eot?#iefix") format("embedded-opentype"),
+       url("fonts/customfont.woff") format("woff"),
+       url("fonts/customfont.ttf") format("truetype"),
+       url("fonts/customfont.svg#customfont") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "customfont";
+    src: url("fonts/customfont.svg#customfont") format("svg");
+  }
+}
+
+[data-icon]:before { content: attr(data-icon); }
+
+[data-icon]:before,
+.icon-accounting1:before,
+.icon-airplane24:before,
+.icon-airplane25:before,
+.icon-airplane26:before,
+.icon-airplane27:before,
+.icon-airplane28:before,
+.icon-airplane29:before,
+.icon-airplane30:before,
+.icon-airplane31:before,
+.icon-airplane32:before,
+.icon-airplane33:before,
+.icon-airplane34:before,
+.icon-airplane35:before,
+.icon-airplane36:before,
+.icon-airplane37:before,
+.icon-airplane38:before,
+.icon-airplane52:before,
+.icon-all3:before,
+.icon-army:before,
+.icon-army1:before,
+.icon-army2:before,
+.icon-army3:before,
+.icon-army4:before,
+.icon-ascending24:before,
+.icon-base1:before,
+.icon-big1:before,
+.icon-big100:before,
+.icon-big101:before,
+.icon-billboard:before,
+.icon-black186:before,
+.icon-black187:before,
+.icon-blunderbuss1:before,
+.icon-bomb3:before,
+.icon-bomb4:before,
+.icon-bomb5:before,
+.icon-budget:before,
+.icon-building30:before,
+.icon-building31:before,
+.icon-building34:before,
+.icon-building35:before,
+.icon-building36:before,
+.icon-building40:before,
+.icon-building41:before,
+.icon-building6:before,
+.icon-building7:before,
+.icon-buildings10:before,
+.icon-buildings2:before,
+.icon-buildings9:before,
+.icon-bull:before,
+.icon-bullhorn1:before,
+.icon-burj:before,
+.icon-business108:before,
+.icon-businessman120:before,
+.icon-businessman90:before,
+.icon-call36:before,
+.icon-candidate:before,
+.icon-cannon1:before,
+.icon-canon:before,
+.icon-car148:before,
+.icon-car61:before,
+.icon-car62:before,
+.icon-car63:before,
+.icon-car64:before,
+.icon-car65:before,
+.icon-car66:before,
+.icon-car67:before,
+.icon-car69:before,
+.icon-car70:before,
+.icon-car71:before,
+.icon-car72:before,
+.icon-cards11:before,
+.icon-cartoon3:before,
+.icon-castle8:before,
+.icon-city21:before,
+.icon-city5:before,
+.icon-city8:before,
+.icon-coffee15:before,
+.icon-coins2:before,
+.icon-commercial8:before,
+.icon-commercial9:before,
+.icon-convertible1:before,
+.icon-convertible2:before,
+.icon-credit31:before,
+.icon-criminal26:before,
+.icon-criminal32:before,
+.icon-cup14:before,
+.icon-cylindrical1:before,
+.icon-cylindrical2:before,
+.icon-daily-calendar1:before,
+.icon-data13:before,
+.icon-deliver:before,
+.icon-delivery13:before,
+.icon-delivery18:before,
+.icon-delivery41:before,
+.icon-delivery8:before,
+.icon-denied1:before,
+.icon-dice5:before,
+.icon-dislike:before,
+.icon-donation2:before,
+.icon-doubledecker:before,
+.icon-drugs5:before,
+.icon-dynamite:before,
+.icon-educative2:before,
+.icon-emoticon101:before,
+.icon-emoticon120:before,
+.icon-emoticon37:before,
+.icon-empire:before,
+.icon-empire1:before,
+.icon-factory1:before,
+.icon-fencing1:before,
+.icon-fencing2:before,
+.icon-fighter:before,
+.icon-fighter3:before,
+.icon-financial:before,
+.icon-flowers12:before,
+.icon-for4:before,
+.icon-frontal19:before,
+.icon-fuel:before,
+.icon-gambler:before,
+.icon-geolocate:before,
+.icon-gold2:before,
+.icon-graduation22:before,
+.icon-gun2:before,
+.icon-gun7:before,
+.icon-gun9:before,
+.icon-hairdresser5:before,
+.icon-halloween56:before,
+.icon-handshake1:before,
+.icon-happy24:before,
+.icon-happy38:before,
+.icon-hatchback:before,
+.icon-hatchback1:before,
+.icon-heart297:before,
+.icon-helicopter10:before,
+.icon-helicopter11:before,
+.icon-helicopter12:before,
+.icon-helicopter13:before,
+.icon-helicopter8:before,
+.icon-helicopter9:before,
+.icon-home119:before,
+.icon-hospital:before,
+.icon-hospital11:before,
+.icon-hospital17:before,
+.icon-hospital28:before,
+.icon-hotel16:before,
+.icon-hotel39:before,
+.icon-house104:before,
+.icon-house110:before,
+.icon-house111:before,
+.icon-house112:before,
+.icon-house133:before,
+.icon-idea13:before,
+.icon-information2:before,
+.icon-jewel10:before,
+.icon-law:before,
+.icon-longa:before,
+.icon-lowered:before,
+.icon-male104:before,
+.icon-male106:before,
+.icon-man244:before,
+.icon-man249:before,
+.icon-man254:before,
+.icon-man318:before,
+.icon-man371:before,
+.icon-man373:before,
+.icon-mathematical4:before,
+.icon-mechanic3:before,
+.icon-medical59:before,
+.icon-men16:before,
+.icon-militar:before,
+.icon-militar3:before,
+.icon-military6:before,
+.icon-military7:before,
+.icon-missile1:before,
+.icon-missile3:before,
+.icon-modern13:before,
+.icon-money194:before,
+.icon-money28:before,
+.icon-mortar:before,
+.icon-motorcycle10:before,
+.icon-motorcycle2:before,
+.icon-motorcycle3:before,
+.icon-motorcycle4:before,
+.icon-new27:before,
+.icon-news17:before,
+.icon-newspaper20:before,
+.icon-ninja7:before,
+.icon-ninja8:before,
+.icon-non1:before,
+.icon-numbers16:before,
+.icon-oil19:before,
+.icon-online:before,
+.icon-online22:before,
+.icon-online32:before,
+.icon-over1:before,
+.icon-passengers:before,
+.icon-personal7:before,
+.icon-pick2:before,
+.icon-pickup:before,
+.icon-piggy7:before,
+.icon-planet1:before,
+.icon-plant14:before,
+.icon-poker4:before,
+.icon-police10:before,
+.icon-police19:before,
+.icon-police8:before,
+.icon-police9:before,
+.icon-policeman1:before,
+.icon-policeman2:before,
+.icon-present3:before,
+.icon-professor8:before,
+.icon-public6:before,
+.icon-racing:before,
+.icon-racing1:before,
+.icon-real11:before,
+.icon-robber4:before,
+.icon-robot3:before,
+.icon-rocket:before,
+.icon-rocket10:before,
+.icon-rocket16:before,
+.icon-rocket20:before,
+.icon-rocket5:before,
+.icon-royalcrown:before,
+.icon-sand15:before,
+.icon-school23:before,
+.icon-school37:before,
+.icon-school47:before,
+.icon-school49:before,
+.icon-school7:before,
+.icon-science2:before,
+.icon-search15:before,
+.icon-sedan:before,
+.icon-sedan1:before,
+.icon-sedan2:before,
+.icon-sedan3:before,
+.icon-server20:before,
+.icon-set2:before,
+.icon-shield66:before,
+.icon-shop3:before,
+.icon-single17:before,
+.icon-skyscraper:before,
+.icon-skyscraper1:before,
+.icon-skyscrapers:before,
+.icon-slot-machine:before,
+.icon-small149:before,
+.icon-small150:before,
+.icon-small59:before,
+.icon-smartphone54:before,
+.icon-sniper:before,
+.icon-soldier:before,
+.icon-soldier1:before,
+.icon-soldiers:before,
+.icon-space12:before,
+.icon-space16:before,
+.icon-space32:before,
+.icon-space7:before,
+.icon-spacecraft2:before,
+.icon-sport8:before,
+.icon-sport9:before,
+.icon-sportive19:before,
+.icon-sportive21:before,
+.icon-sports2:before,
+.icon-sports25:before,
+.icon-spy:before,
+.icon-star72:before,
+.icon-stepped:before,
+.icon-suv:before,
+.icon-swiss:before,
+.icon-tai1:before,
+.icon-tall2:before,
+.icon-tall8:before,
+.icon-targets9:before,
+.icon-task:before,
+.icon-taxi1:before,
+.icon-taxi13:before,
+.icon-taxi8:before,
+.icon-telephone34:before,
+.icon-temple6:before,
+.icon-thread2:before,
+.icon-three58:before,
+.icon-torpedo:before,
+.icon-tow:before,
+.icon-tractor4:before,
+.icon-trailer3:before,
+.icon-tram4:before,
+.icon-trolleybus:before,
+.icon-trophy42:before,
+.icon-truck:before,
+.icon-truck13:before,
+.icon-truck14:before,
+.icon-truck21:before,
+.icon-truck31:before,
+.icon-truck5:before,
+.icon-united3:before,
+.icon-up74:before,
+.icon-urban:before,
+.icon-van:before,
+.icon-van11:before,
+.icon-van12:before,
+.icon-van13:before,
+.icon-war5:before,
+.icon-war6:before,
+.icon-white1:before {
+  display: inline-block;
+  font-family: "customfont";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.icon-accounting1:before { content: "\f227"; }
+.icon-airplane24:before { content: "\f228"; }
+.icon-airplane25:before { content: "\f229"; }
+.icon-airplane26:before { content: "\f22a"; }
+.icon-airplane27:before { content: "\f22b"; }
+.icon-airplane28:before { content: "\f22c"; }
+.icon-airplane29:before { content: "\f22d"; }
+.icon-airplane30:before { content: "\f22e"; }
+.icon-airplane31:before { content: "\f22f"; }
+.icon-airplane32:before { content: "\f230"; }
+.icon-airplane33:before { content: "\f231"; }
+.icon-airplane34:before { content: "\f232"; }
+.icon-airplane35:before { content: "\f233"; }
+.icon-airplane36:before { content: "\f234"; }
+.icon-airplane37:before { content: "\f235"; }
+.icon-airplane38:before { content: "\f236"; }
+.icon-airplane52:before { content: "\f237"; }
+.icon-all3:before { content: "\f238"; }
+.icon-army:before { content: "\f239"; }
+.icon-army1:before { content: "\f23a"; }
+.icon-army2:before { content: "\f23b"; }
+.icon-army3:before { content: "\f23c"; }
+.icon-army4:before { content: "\f23d"; }
+.icon-ascending24:before { content: "\f23e"; }
+.icon-base1:before { content: "\f23f"; }
+.icon-big1:before { content: "\f240"; }
+.icon-big100:before { content: "\f241"; }
+.icon-big101:before { content: "\f242"; }
+.icon-billboard:before { content: "\f243"; }
+.icon-black186:before { content: "\f244"; }
+.icon-black187:before { content: "\f245"; }
+.icon-blunderbuss1:before { content: "\f246"; }
+.icon-bomb3:before { content: "\f247"; }
+.icon-bomb4:before { content: "\f248"; }
+.icon-bomb5:before { content: "\f249"; }
+.icon-budget:before { content: "\f24a"; }
+.icon-building30:before { content: "\f24b"; }
+.icon-building31:before { content: "\f24c"; }
+.icon-building34:before { content: "\f24d"; }
+.icon-building35:before { content: "\f24e"; }
+.icon-building36:before { content: "\f24f"; }
+.icon-building40:before { content: "\f250"; }
+.icon-building41:before { content: "\f251"; }
+.icon-building6:before { content: "\f252"; }
+.icon-building7:before { content: "\f253"; }
+.icon-buildings10:before { content: "\f254"; }
+.icon-buildings2:before { content: "\f255"; }
+.icon-buildings9:before { content: "\f256"; }
+.icon-bull:before { content: "\f257"; }
+.icon-bullhorn1:before { content: "\f258"; }
+.icon-burj:before { content: "\f259"; }
+.icon-business108:before { content: "\f25a"; }
+.icon-businessman120:before { content: "\f25b"; }
+.icon-businessman90:before { content: "\f25c"; }
+.icon-call36:before { content: "\f25d"; }
+.icon-candidate:before { content: "\f25e"; }
+.icon-cannon1:before { content: "\f25f"; }
+.icon-canon:before { content: "\f260"; }
+.icon-car148:before { content: "\f261"; }
+.icon-car61:before { content: "\f262"; }
+.icon-car62:before { content: "\f263"; }
+.icon-car63:before { content: "\f264"; }
+.icon-car64:before { content: "\f265"; }
+.icon-car65:before { content: "\f266"; }
+.icon-car66:before { content: "\f267"; }
+.icon-car67:before { content: "\f268"; }
+.icon-car69:before { content: "\f269"; }
+.icon-car70:before { content: "\f26a"; }
+.icon-car71:before { content: "\f26b"; }
+.icon-car72:before { content: "\f26c"; }
+.icon-cards11:before { content: "\f348"; }
+.icon-cartoon3:before { content: "\f26d"; }
+.icon-castle8:before { content: "\f26e"; }
+.icon-city21:before { content: "\f26f"; }
+.icon-city5:before { content: "\f270"; }
+.icon-city8:before { content: "\f271"; }
+.icon-coffee15:before { content: "\f272"; }
+.icon-coins2:before { content: "\f273"; }
+.icon-commercial8:before { content: "\f274"; }
+.icon-commercial9:before { content: "\f275"; }
+.icon-convertible1:before { content: "\f276"; }
+.icon-convertible2:before { content: "\f277"; }
+.icon-credit31:before { content: "\f278"; }
+.icon-criminal26:before { content: "\f34f"; }
+.icon-criminal32:before { content: "\f353"; }
+.icon-cup14:before { content: "\f279"; }
+.icon-cylindrical1:before { content: "\f27a"; }
+.icon-cylindrical2:before { content: "\f27b"; }
+.icon-daily-calendar1:before { content: "\f27c"; }
+.icon-data13:before { content: "\f27d"; }
+.icon-deliver:before { content: "\f27e"; }
+.icon-delivery13:before { content: "\f27f"; }
+.icon-delivery18:before { content: "\f280"; }
+.icon-delivery41:before { content: "\f281"; }
+.icon-delivery8:before { content: "\f282"; }
+.icon-denied1:before { content: "\f283"; }
+.icon-dice5:before { content: "\f284"; }
+.icon-dislike:before { content: "\f285"; }
+.icon-donation2:before { content: "\f286"; }
+.icon-doubledecker:before { content: "\f34b"; }
+.icon-drugs5:before { content: "\f287"; }
+.icon-dynamite:before { content: "\f288"; }
+.icon-educative2:before { content: "\f289"; }
+.icon-emoticon101:before { content: "\f28a"; }
+.icon-emoticon120:before { content: "\f28b"; }
+.icon-emoticon37:before { content: "\f28c"; }
+.icon-empire:before { content: "\f28d"; }
+.icon-empire1:before { content: "\f28e"; }
+.icon-factory1:before { content: "\f28f"; }
+.icon-fencing1:before { content: "\f290"; }
+.icon-fencing2:before { content: "\f291"; }
+.icon-fighter:before { content: "\f292"; }
+.icon-fighter3:before { content: "\f293"; }
+.icon-financial:before { content: "\f294"; }
+.icon-flowers12:before { content: "\f295"; }
+.icon-for4:before { content: "\f34c"; }
+.icon-frontal19:before { content: "\f296"; }
+.icon-fuel:before { content: "\f297"; }
+.icon-gambler:before { content: "\f298"; }
+.icon-geolocate:before { content: "\f299"; }
+.icon-gold2:before { content: "\f29a"; }
+.icon-graduation22:before { content: "\f29b"; }
+.icon-gun2:before { content: "\f29c"; }
+.icon-gun7:before { content: "\f29d"; }
+.icon-gun9:before { content: "\f29e"; }
+.icon-hairdresser5:before { content: "\f29f"; }
+.icon-halloween56:before { content: "\f2a0"; }
+.icon-handshake1:before { content: "\f2a1"; }
+.icon-happy24:before { content: "\f34d"; }
+.icon-happy38:before { content: "\f2a2"; }
+.icon-hatchback:before { content: "\f2a3"; }
+.icon-hatchback1:before { content: "\f2a4"; }
+.icon-heart297:before { content: "\f349"; }
+.icon-helicopter10:before { content: "\f2a5"; }
+.icon-helicopter11:before { content: "\f2a6"; }
+.icon-helicopter12:before { content: "\f2a7"; }
+.icon-helicopter13:before { content: "\f2a8"; }
+.icon-helicopter8:before { content: "\f2a9"; }
+.icon-helicopter9:before { content: "\f2aa"; }
+.icon-home119:before { content: "\f2ab"; }
+.icon-hospital:before { content: "\f2ac"; }
+.icon-hospital11:before { content: "\f2ad"; }
+.icon-hospital17:before { content: "\f2ae"; }
+.icon-hospital28:before { content: "\f2af"; }
+.icon-hotel16:before { content: "\f2b0"; }
+.icon-hotel39:before { content: "\f2b1"; }
+.icon-house104:before { content: "\f2b2"; }
+.icon-house110:before { content: "\f2b3"; }
+.icon-house111:before { content: "\f2b4"; }
+.icon-house112:before { content: "\f2b5"; }
+.icon-house133:before { content: "\f2b6"; }
+.icon-idea13:before { content: "\f2b7"; }
+.icon-information2:before { content: "\f2b8"; }
+.icon-jewel10:before { content: "\f2b9"; }
+.icon-law:before { content: "\f2ba"; }
+.icon-longa:before { content: "\f2bb"; }
+.icon-lowered:before { content: "\f2bc"; }
+.icon-male104:before { content: "\f2bd"; }
+.icon-male106:before { content: "\f2be"; }
+.icon-man244:before { content: "\f2bf"; }
+.icon-man249:before { content: "\f2c0"; }
+.icon-man254:before { content: "\f2c1"; }
+.icon-man318:before { content: "\f2c2"; }
+.icon-man371:before { content: "\f2c3"; }
+.icon-man373:before { content: "\f34e"; }
+.icon-mathematical4:before { content: "\f2c4"; }
+.icon-mechanic3:before { content: "\f2c5"; }
+.icon-medical59:before { content: "\f2c6"; }
+.icon-men16:before { content: "\f2c7"; }
+.icon-militar:before { content: "\f2c8"; }
+.icon-militar3:before { content: "\f2c9"; }
+.icon-military6:before { content: "\f2ca"; }
+.icon-military7:before { content: "\f2cb"; }
+.icon-missile1:before { content: "\f2cc"; }
+.icon-missile3:before { content: "\f2cd"; }
+.icon-modern13:before { content: "\f2ce"; }
+.icon-money194:before { content: "\f354"; }
+.icon-money28:before { content: "\f2cf"; }
+.icon-mortar:before { content: "\f2d0"; }
+.icon-motorcycle10:before { content: "\f2d1"; }
+.icon-motorcycle2:before { content: "\f2d2"; }
+.icon-motorcycle3:before { content: "\f2d3"; }
+.icon-motorcycle4:before { content: "\f2d4"; }
+.icon-new27:before { content: "\f2d5"; }
+.icon-news17:before { content: "\f2d6"; }
+.icon-newspaper20:before { content: "\f2d7"; }
+.icon-ninja7:before { content: "\f2d8"; }
+.icon-ninja8:before { content: "\f2d9"; }
+.icon-non1:before { content: "\f2da"; }
+.icon-numbers16:before { content: "\f2db"; }
+.icon-oil19:before { content: "\f2dc"; }
+.icon-online:before { content: "\f2dd"; }
+.icon-online22:before { content: "\f2de"; }
+.icon-online32:before { content: "\f2df"; }
+.icon-over1:before { content: "\f2e0"; }
+.icon-passengers:before { content: "\f2e1"; }
+.icon-personal7:before { content: "\f2e2"; }
+.icon-pick2:before { content: "\f2e3"; }
+.icon-pickup:before { content: "\f2e4"; }
+.icon-piggy7:before { content: "\f2e5"; }
+.icon-planet1:before { content: "\f2e6"; }
+.icon-plant14:before { content: "\f2e7"; }
+.icon-poker4:before { content: "\f2e8"; }
+.icon-police10:before { content: "\f2e9"; }
+.icon-police19:before { content: "\f355"; }
+.icon-police8:before { content: "\f2ea"; }
+.icon-police9:before { content: "\f2eb"; }
+.icon-policeman1:before { content: "\f2ec"; }
+.icon-policeman2:before { content: "\f2ed"; }
+.icon-present3:before { content: "\f2ee"; }
+.icon-professor8:before { content: "\f2ef"; }
+.icon-public6:before { content: "\f2f0"; }
+.icon-racing:before { content: "\f2f1"; }
+.icon-racing1:before { content: "\f2f2"; }
+.icon-real11:before { content: "\f2f3"; }
+.icon-robber4:before { content: "\f350"; }
+.icon-robot3:before { content: "\f2f4"; }
+.icon-rocket:before { content: "\f2f5"; }
+.icon-rocket10:before { content: "\f2f6"; }
+.icon-rocket16:before { content: "\f2f7"; }
+.icon-rocket20:before { content: "\f2f8"; }
+.icon-rocket5:before { content: "\f2f9"; }
+.icon-royalcrown:before { content: "\f2fa"; }
+.icon-sand15:before { content: "\f2fb"; }
+.icon-school23:before { content: "\f2fc"; }
+.icon-school37:before { content: "\f2fd"; }
+.icon-school47:before { content: "\f2fe"; }
+.icon-school49:before { content: "\f2ff"; }
+.icon-school7:before { content: "\f300"; }
+.icon-science2:before { content: "\f301"; }
+.icon-search15:before { content: "\f302"; }
+.icon-sedan:before { content: "\f303"; }
+.icon-sedan1:before { content: "\f304"; }
+.icon-sedan2:before { content: "\f305"; }
+.icon-sedan3:before { content: "\f306"; }
+.icon-server20:before { content: "\f307"; }
+.icon-set2:before { content: "\f308"; }
+.icon-shield66:before { content: "\f351"; }
+.icon-shop3:before { content: "\f309"; }
+.icon-single17:before { content: "\f30a"; }
+.icon-skyscraper:before { content: "\f30b"; }
+.icon-skyscraper1:before { content: "\f30c"; }
+.icon-skyscrapers:before { content: "\f30d"; }
+.icon-slot-machine:before { content: "\f34a"; }
+.icon-small149:before { content: "\f30e"; }
+.icon-small150:before { content: "\f30f"; }
+.icon-small59:before { content: "\f310"; }
+.icon-smartphone54:before { content: "\f311"; }
+.icon-sniper:before { content: "\f312"; }
+.icon-soldier:before { content: "\f313"; }
+.icon-soldier1:before { content: "\f314"; }
+.icon-soldiers:before { content: "\f315"; }
+.icon-space12:before { content: "\f316"; }
+.icon-space16:before { content: "\f317"; }
+.icon-space32:before { content: "\f318"; }
+.icon-space7:before { content: "\f319"; }
+.icon-spacecraft2:before { content: "\f31a"; }
+.icon-sport8:before { content: "\f31b"; }
+.icon-sport9:before { content: "\f31c"; }
+.icon-sportive19:before { content: "\f31d"; }
+.icon-sportive21:before { content: "\f31e"; }
+.icon-sports2:before { content: "\f31f"; }
+.icon-sports25:before { content: "\f320"; }
+.icon-spy:before { content: "\f321"; }
+.icon-star72:before { content: "\f322"; }
+.icon-stepped:before { content: "\f323"; }
+.icon-suv:before { content: "\f324"; }
+.icon-swiss:before { content: "\f325"; }
+.icon-tai1:before { content: "\f326"; }
+.icon-tall2:before { content: "\f327"; }
+.icon-tall8:before { content: "\f328"; }
+.icon-targets9:before { content: "\f352"; }
+.icon-task:before { content: "\f329"; }
+.icon-taxi1:before { content: "\f32a"; }
+.icon-taxi13:before { content: "\f32b"; }
+.icon-taxi8:before { content: "\f32c"; }
+.icon-telephone34:before { content: "\f32d"; }
+.icon-temple6:before { content: "\f32e"; }
+.icon-thread2:before { content: "\f32f"; }
+.icon-three58:before { content: "\f330"; }
+.icon-torpedo:before { content: "\f331"; }
+.icon-tow:before { content: "\f332"; }
+.icon-tractor4:before { content: "\f333"; }
+.icon-trailer3:before { content: "\f334"; }
+.icon-tram4:before { content: "\f335"; }
+.icon-trolleybus:before { content: "\f336"; }
+.icon-trophy42:before { content: "\f337"; }
+.icon-truck:before { content: "\f338"; }
+.icon-truck13:before { content: "\f339"; }
+.icon-truck14:before { content: "\f33a"; }
+.icon-truck21:before { content: "\f33b"; }
+.icon-truck31:before { content: "\f33c"; }
+.icon-truck5:before { content: "\f33d"; }
+.icon-united3:before { content: "\f33e"; }
+.icon-up74:before { content: "\f33f"; }
+.icon-urban:before { content: "\f340"; }
+.icon-van:before { content: "\f341"; }
+.icon-van11:before { content: "\f342"; }
+.icon-van12:before { content: "\f343"; }
+.icon-van13:before { content: "\f344"; }
+.icon-war5:before { content: "\f345"; }
+.icon-war6:before { content: "\f346"; }
+.icon-white1:before { content: "\f347"; }

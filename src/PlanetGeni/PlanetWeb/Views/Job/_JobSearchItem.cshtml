@@ -1,0 +1,159 @@
+﻿<div class="row ">
+    <div class="col-xs-12" id="searchjobtype">
+        <fieldset>
+            <legend class="text-warning fontsize120">Job Type</legend>
+            <div class="row">
+                <div class="col-xs-12 fontsize90">
+                    <div class="col-xs-6 ">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="searchjobtype" value="'F'"> FullTime
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="searchjobtype" value="'P'"> PartTime
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="searchjobtype" value="'C'"> Contract
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="overtimejobtype" value="0"> OverTime
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </fieldset>
+    </div>
+</div>
+<div class="row padding3centt ">
+    <div class="col-xs-12" id="salaryRange">
+        <fieldset>
+            <legend class="text-warning fontsize120">Salary Range</legend>
+            <div class="row fontsize90">
+                <div class="col-xs-12 ">
+                    <div class="col-xs-6">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="salaryRange" data-lrange="5" data-hrange="9" value="1"> 5 /hr - 9 /hr
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="salaryRange" data-lrange="10" data-hrange="30" value="2">  10 /hr - 30 /hr
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row fontsize90">
+                <div class="col-xs-12">
+                    <div class="col-xs-6">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="salaryRange" data-lrange="30" data-hrange="50" value="3"> 30 /hr - 50 /hr
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="salaryRange" data-lrange="50" data-hrange="70" value="4">  50 /hr - 70 /hr
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row fontsize90">
+                <div class="col-xs-12">
+                    <div class="col-xs-6">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="salaryRange" data-lrange="70" data-hrange="90" value="5"> 70 /hr - 90 /hr
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="salaryRange" data-lrange="90" data-hrange="0" value="6">  90 /hr - &#8734; /hr
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row fontsize90">
+                <div class="col-xs-12">
+                    <div class="col-xs-6">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="salaryRange" data-lrange="0" data-hrange="99999" checked value="6"> Any
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+</div>
+<div class="row padding3centt ">
+    <div class="col-xs-12">
+        <fieldset>
+            <legend class="text-warning fontsize120">Industry</legend>
+            <div id="jobIndustry">
+                <div id="jobindustryCodes" data-bind="foreach: { data: industryCodes}">
+                    <div class="col-xs-6 fontsize90">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="jobIndustry" data-bind="value:IndustryId">
+                                <span data-bind="text:IndustryName"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+</div>
+<div class="row padding3centt ">
+    <div class="col-xs-12">
+        <fieldset>
+            <legend class="text-warning fontsize120">Education Major</legend>
+            <div id="jobMajorCodes">
+                <div data-bind="foreach: { data: majorCodes}">
+                    <div class="col-xs-6 fontsize90">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="jobMajor" data-bind="value:MajorId">
+                                <span data-bind="text:MajorName"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+</div>
+<hr />
+<div class="row padding3centb">
+    <button type="submit" id="searchJob" data-bind="disable: showJobSearchValidation()"
+            data-loading-text='
+        <i class="fa fa-spinner fa-spin"></i> Searching...'
+        class="btn btn-default pull-right"><i class="fa fa-search"></i> Search
+    </button>
+</div>
+

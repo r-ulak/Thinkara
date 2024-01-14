@@ -1,0 +1,31 @@
+﻿<footer class="padding3centt padding3centb">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="col-xs-6 pull-right">
+                <input type="text" placeholder="Add a comment.." class="form-control comment-reply fontsize70 hidden commentbox">
+                <a class="reply-link pull-right" href="#create-comment"><span class="badge fontsize70">Reply</span></a>
+            </div>
+            <div class="col-xs-2">
+                <a title="I Dig It!">
+                    <span class="fontsize90">
+                        <strong class="fa fa-1_25x text-success marginright6 handcursor dig-it" data-bind="css:{'icon-emoticon37': DigType()==1, 'icon-emoticon101': DigType() !=1}, attr:{'data-digtype':DigType()}"></strong><strong data-bind="text:DigIt()"></strong>
+                    </span>
+                </a>
+            </div>
+            <div class="col-xs-2">
+                <a title="That's Cool">
+                    <span class="fontsize90">
+                        <strong class="fa fa-1_25x text-warning marginright6 handcursor cool-it" data-bind="css:{'icon-happy24': DigType()==2, 'icon-happy38': DigType() !=2}, attr:{'data-digtype':DigType()}"></strong><strong data-bind="text:CoolIt()"></strong>
+                    </span>
+                </a>
+            </div>
+            <!-- ko if: ChildCommentCount() > $('article[data-commentId=' + PostCommentId() + '] > article').size() -->
+            <div class="col-xs-2">
+                <a class="morechildcomment fontsize90">
+                    <strong class="fa fa-1_25x  fa-comments text-success marginright6 handcursor"></strong><strong data-bind="text:ChildCommentCount()"></strong>
+                </a>
+            </div>
+            <!-- /ko -->
+        </div>
+    </div>
+</footer>

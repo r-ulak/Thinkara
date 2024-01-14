@@ -1,0 +1,60 @@
+﻿<div class=" row">
+    <div class="col-xs-12">
+        <div class="well well-sm">
+            <div class="row  padding3centb">
+                <div class="col-xs-3 col-md-3 text-center">
+
+                    <div class="row padding3centt">
+                        <div class="col-xs-12">
+                            <i class="fa fa-5x text-info" data-bind="css: ImageFont, title:Name"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-9 section-box">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="col-xs-10">
+                                <h6>
+                                    <label data-bind="text: Name"></label>
+                                </h6>
+                                <small data-bind=" text:Description"></small>
+                            </div>
+                            <div class="col-xs-2">
+                                <input type="text"
+                                       data-bind="attr: {value: MerchandiseCondition , 'data-fgcolor': dialColor(), 'data-index':$index()}"
+                                       data-linecap="round"
+                                       class="dial pull-right">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-xs-12 ">
+                    <div class="col-xs-4">
+                        <u>
+                            <i class="fa icon-money28"></i>
+                            <span class="fontsize90" title="Salary" data-bind="text:numeral(Cost).format('0,0.00a')"></span>
+                        </u>
+                        <p title="total duration of job" class="fontsize70">Current Price</p>
+                    </div>
+                    <div class="col-xs-4">
+                        <u>
+                            <span class="fontsize90" title="Salary" data-bind="text:Quantity"></span>
+                        </u>
+                        <p title="hours paid for each week" class="fontsize70">Quantity</p>
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="pull-right">
+                            <u>
+                                <i class="fa icon-money28"></i>
+                                <span class="fontsize90" title="PurchasedPrice" data-bind="text:numeral(PurchasedPrice).format('0,0.00a')"></span>
+                            </u>
+                            <p title="PurchasedPrice" class="fontsize70">Purchased Price</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

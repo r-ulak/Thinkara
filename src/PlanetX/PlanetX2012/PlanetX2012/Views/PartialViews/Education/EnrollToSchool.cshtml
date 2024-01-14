@@ -1,0 +1,37 @@
+﻿@model DAO.Models.Education
+@using (Ajax.BeginForm("JoinSchool", "Education", new AjaxOptions { OnSuccess = "joinedSchool" }))
+{
+    <div id="errSummaryJoinSchool" class="hidden errors"></div>
+    @Html.ValidationSummary(false)
+    @Html.TextBoxFor(model => model.UniversityId, new { @class = "hidden" })
+    @Html.TextBoxFor(model => model.MajorType, new { @class = "hidden" })
+    @Html.TextBoxFor(model => model.DegreeType, new { @class = "hidden" })
+    <div class="joineducation">
+
+
+        <input type="text" id="university" data-univeristyid="-1" size="35" placeholder="School Name" onkeyup="javascript:universityLookup(this.value);" />
+        <div id="suggestions"></div>
+
+        <div id="degreecodes"></div>
+
+        <div id="majorcodes"></div>
+        <p>
+            <label id="costofDegree">Cost of Degree: 5000</label>
+        </p>
+        <p>
+            <label id="timeofCompletion">Time of Completion: 2/13</label>
+        </p>
+        <p>
+            <label id="costperCredit">Cost Per Credit: 500</label>
+        </p>
+        <p>
+            <label id="totalCredit">Total Credit Requried: 50</label>
+        </p>
+        <img class="businessIndicator" src="../../../../images/charts/TechnicalPriceIndicators.png" />
+        <input type="submit" value="Join School" class="demo-button ui-state-default ui-corner-all" />
+
+    </div>
+}
+
+<script src="../../../../Content/js/school.js"></script>
+

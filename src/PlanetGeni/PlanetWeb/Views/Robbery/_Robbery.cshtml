@@ -1,0 +1,26 @@
+﻿<div id="robbery-container">
+    <ul class="nav nav-pills">
+        <li class="active">
+            <a data-toggle="tab" href="#robbery-snipe" class="active">Snipe Cash</a>
+        </li>
+        <li>
+            <a data-toggle="tab" href="#robbery-property">Lift Property</a>
+        </li>
+        <li>
+            <a data-toggle="tab" href="#robbery-report">Report</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div id="robbery-snipe" class="tab-pane fade in active padding3centt autoheight">
+            @Html.Partial("_SnipeCash")
+        </div>
+        <div id="robbery-property" class="tab-pane fade in padding3centt autoheight">
+            @Html.Partial("_RobProperty")
+        </div>
+        <div id="robbery-report" class="tab-pane fade in padding3centt autoheight">
+            @Html.Partial("_Report")
+        </div>
+    </div>
+</div>
+
+

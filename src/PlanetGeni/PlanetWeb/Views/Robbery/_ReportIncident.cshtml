@@ -1,0 +1,48 @@
+﻿<div id="reportSuspectcontainer">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="panel panel-primary" id="myreportSuspectcontent-box">
+                <div class="panel-heading1 panel-heading">
+                    <div class="flagsprite pull-right btn-link"
+                         data-bind="css: 'flagsprite-' + CountryId().toLowerCase(), click: function(){viewCountryProfile(CountryId().toLowerCase())}"></div>
+                    <span class="fa icon-robber4 marginright6"></span>Report Suspect
+                </div>
+                <div class="panel-body">
+                    @Html.Partial("_ReportIncidentItem")
+                </div>
+                <div class="panel-footer">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <strong>
+                                You can only report 1 Suspect per incident.
+                            </strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-primary hidden" id="myreportSuspectcontent-submit">
+                <div class="panel-heading1 panel-heading">
+                    <span>Report Suspect</span>
+                </div>
+                <div class="panel-body">
+                    <div class="col-xs-12">
+                        <span data-bind="text:Message">
+
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-default backbtn pull-right hidden">
+                <span><i class="fa fa-home"></i> Home</span>
+            </button>
+            <button type="submit" id="reportSuspect"
+                    data-loading-text='
+                <i class="fa fa-spinner fa-spin"></i> Reporting...'
+                class="btn btn-default pull-right">
+            <i class="fa icon-targets9"></i>
+            Report Suspect
+            </button>
+        </div>
+    </div>
+</div>

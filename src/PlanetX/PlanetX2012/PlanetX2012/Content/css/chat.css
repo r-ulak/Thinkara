@@ -1,0 +1,98 @@
+﻿
+#chatbottom .tip
+{
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: transparent transparent #5CACEE;
+    border-image: none;
+    border-style: solid;
+    border-width: 10px;
+    height: 0;
+    left: 20px;
+    position: absolute;
+    top: -20px;
+    width: 0;
+}
+
+
+#chatbottom
+{
+    border: 1px solid #5CACEE;
+    padding: 10px;
+    position: relative;
+    clear: both;
+}
+
+.rounded
+{
+    border-radius: 4px 4px 4px 4px;
+}
+
+
+#chatbottom textarea
+{
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #5CACEE #5CACEE #5CACEE #5CACEE;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px;
+    color: #777777;
+    height: 26px;
+    margin-right: 5px;
+    outline: medium none;
+    padding: 0 5px;
+    text-shadow: 1px 1px 0 #E4E4E4;
+    resize: none;
+    width: 70%;
+    height: 70px;
+}
+
+#chatbottom #send
+{
+    background: url("images/button_blue.png") no-repeat scroll 0 0 transparent;
+    border: medium none !important;
+    color: #516D7F !important;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    height: 29px;
+    margin: 0;
+    text-align: center;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
+    width: 75px;
+}
+
+.chatContainer
+{
+    overflow: auto;
+    word-wrap: break-word;
+    height: 175px;
+    width: 70%;
+    float: left;
+    position: relative;
+}
+
+.chatContainerright
+{
+    overflow: auto;
+    word-wrap: break-word;
+    height: 175px;
+}
+
+#ui-tabs-1
+{
+    display: none;
+}
+
+.chatRoomContainer
+{
+    overflow: auto;
+    word-wrap: break-word;
+    height: 175px;
+    width: 70%;
+}

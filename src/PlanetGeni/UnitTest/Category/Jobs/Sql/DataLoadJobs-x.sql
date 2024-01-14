@@ -1,0 +1,7 @@
+SET SQL_SAFE_UPDATES =0;
+Delete From UserJob;
+Delete From JobCountry;
+
+
+LOAD DATA LOCAL INFILE '{0}UserJob-{1}.tsv' INTO TABLE UserJob FIELDS TERMINATED BY '\t';
+LOAD DATA LOCAL INFILE '{0}JobCountry-{1}.tsv' INTO TABLE JobCountry FIELDS TERMINATED BY '\t';

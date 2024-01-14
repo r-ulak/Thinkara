@@ -1,0 +1,75 @@
+﻿@using PlanetGeni.Models
+@using Microsoft.AspNet.Mvc.Facebook
+@using Microsoft.AspNet.Mvc.Facebook.Models
+@model MyAppUser
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-8 column">
+            <div id="myCarousel" class="carousel slide" data-interval="false">
+
+                <!-- Carousel items -->
+                <div class="carousel-inner">
+                    <div class="active item">
+                        @Html.Partial("DashBoard")
+                        <a target="_top"  href="@GlobalFacebookConfiguration.Configuration.AppUrl@Url.Action("GetFriends", "Home")">Test me please</a>
+                        <div class="carousel-caption">
+
+                            <marquee behavior="scroll" direction="left" scrollamount="4">
+                                <p>
+                                    Account Summary
+                                    <i class="fa fa-arrow-right fa-lg "></i>
+                                    <i class="fa fa-money  fa-border colorgreen"></i>
+
+                                    Cash 500,00.02
+                                    <i class="fa fa-ellipsis-h"></i>
+                                    <i class="fa fa-ellipsis-h"></i>
+                                    <i class="fa fa-bar-chart-o  fa-border colorgreen"></i>
+                                    Stock 419,00.02
+                                    <i class="fa fa-ellipsis-h"></i>
+                                    <i class="fa fa-ellipsis-h"></i>
+                                    <i class="fa fa-gift  fa-border coloryellow"></i>
+                                    Merchandise 219,00.02
+                                    <i class="fa fa-ellipsis-h"></i>
+                                    <i class="fa fa-ellipsis-h"></i>
+                                    <i class="fa fa-users  fa-border colorpink"></i>                                        Friedns 20
+                                    <i class="fa fa-ellipsis-h"></i>
+                                    <i class="fa fa-ellipsis-h"></i>
+                                    <i class="fa fa-tasks  fa-border colororange"></i>
+                                    Task 5 Active 2 Completed 3 Pending.
+                                </p>
+
+
+                            </marquee>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-caption">
+                            <div id="detailsDiv">
+                                SlideDeatilsDiv
+                            </div>
+                            <button type="button" class="backbtn btn btn-success">Back</button>
+                            <h3>Slide 2</h3>
+                            <marquee behavior="scroll" direction="left" scrollamount="4"><strong>News Feed:</strong> Please do not forget to register to Vote.For performance reasons, all icons require a base class and individual icon class. To use, place the following code just about anywhere. Be sure to leave a space between the icon and text for proper padding.</marquee>
+                        </div>
+                    </div>
+                    <div class="item">
+
+                        <div class="carousel-caption">
+                            <button type="button" class="backbtn btn btn-success">Back</button>
+                            <h3>Slide 3</h3>
+                            <marquee behavior="scroll" direction="left" scrollamount="4"><strong>News Feed:</strong> Please do not forget to register to Vote.For performance reasons, all icons require a base class and individual icon class. To use, place the following code just about anywhere. Be sure to leave a space between the icon and text for proper padding.</marquee>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+@Html.Hidden("MyFriends", GlobalFacebookConfiguration.Configuration.AppUrl + @Url.Action("GetFriends", "Home"))

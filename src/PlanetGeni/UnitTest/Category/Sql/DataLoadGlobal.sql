@@ -1,0 +1,38 @@
+SET SQL_SAFE_UPDATES =0;
+Delete From TaskType;
+Delete From UserVoteChoice;
+Delete From PostContentType;
+Delete From NotificationType;
+Delete From CountryCode;
+Delete From ElectionPosition;
+Delete From AdsFrequencyType;
+Delete From AdsType;
+Delete From MerchandiseType;
+Delete From Stock;
+Delete From FundTypeCode;
+Delete From AllowedWebUser;
+Delete From ContactProvider;
+Delete From UserActivityLog;
+Delete From CountryTaxByType;
+Delete From CountryTax;
+
+
+ LOAD DATA LOCAL INFILE '{1}AllowedWebUser.tsv' INTO TABLE AllowedWebUser FIELDS TERMINATED BY '\t' ;
+ UPDATE AllowedWebUser SET EmailId = REPLACE(REPLACE(EmailId, '\r', ''), '\n', '');
+ LOAD DATA LOCAL INFILE '{0}ElectionPosition.csv' INTO TABLE ElectionPosition FIELDS TERMINATED BY ',' ;
+ LOAD DATA LOCAL INFILE '{0}TaxCode.csv' INTO TABLE TaxCode FIELDS TERMINATED BY ',' ;
+ LOAD DATA LOCAL INFILE '{0}CountryTax.csv' INTO TABLE CountryTax FIELDS TERMINATED BY ',' ;
+ LOAD DATA LOCAL INFILE '{0}CountryTaxByType.csv' INTO TABLE CountryTaxByType FIELDS TERMINATED BY ',' ;
+ LOAD DATA LOCAL INFILE '{0}TaskType.csv' INTO TABLE TaskType FIELDS TERMINATED BY ',' ;
+ LOAD DATA LOCAL INFILE '{0}country_list.csv' INTO TABLE CountryCode FIELDS TERMINATED BY ',' ;
+ LOAD DATA LOCAL INFILE '{0}UserVoteChoice.csv' INTO TABLE UserVoteChoice FIELDS TERMINATED BY ',' ;
+ LOAD DATA LOCAL INFILE '{0}PostContentType.csv' INTO TABLE PostContentType FIELDS TERMINATED BY ',' ;
+ LOAD DATA LOCAL INFILE '{0}NotificationType.csv' INTO TABLE NotificationType FIELDS TERMINATED BY ',' ;
+ LOAD DATA LOCAL INFILE '{0}AdsFrequencyType.csv' INTO TABLE AdsFrequencyType FIELDS TERMINATED BY ',' ;
+ LOAD DATA LOCAL INFILE '{0}AdsType.csv' INTO TABLE AdsType FIELDS TERMINATED BY ',' ;
+ LOAD DATA LOCAL INFILE '{0}CapitalType.csv' INTO TABLE CapitalType FIELDS TERMINATED BY ',' ;
+ LOAD DATA LOCAL INFILE '{0}MerchandiseType.csv' INTO TABLE MerchandiseType FIELDS TERMINATED BY ',' ;
+ LOAD DATA LOCAL INFILE '{0}Stock.csv' INTO TABLE Stock FIELDS TERMINATED BY ',' ;
+ LOAD DATA LOCAL INFILE '{0}FundTypeCode.csv' INTO TABLE FundTypeCode FIELDS TERMINATED BY ',' ;
+ LOAD DATA LOCAL INFILE '{0}ContactProvider.csv' INTO TABLE ContactProvider FIELDS TERMINATED BY ',' ;
+ LOAD DATA LOCAL INFILE '{1}UserActivityLog.tsv' INTO TABLE UserActivityLog FIELDS TERMINATED BY '\t' ;

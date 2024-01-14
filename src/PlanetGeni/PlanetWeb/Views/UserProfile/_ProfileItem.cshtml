@@ -1,0 +1,104 @@
+﻿@Html.Partial("_ProfileHeaderItem")
+<div class="panel-group accordion padding10centt hidden" id="profileAccordion">
+    <div class="panel panel-default">
+        <div class="panel-heading active">
+            <div class="pull-right">
+                <span class="text-right" data-bind="text:awards().length, visible: awards().length>0"></span>
+            </div>   <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#profileAccordion" href="#awardsprofile">
+                    <i class="fa icon-trophy42 fa-1x"></i> Achievement
+                </a>
+            </h4>
+        </div>
+        <div id="awardsprofile" class="accordionprofile panel-collapse collapse in">
+            <div class="panel-body" data-bind="foreach: { data: profileCodes, afterRender: $root.AfterProfileRenderAction}">
+                @Html.Partial("_AwardProfile")
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="pull-right">
+                <span class="text-right" data-bind="text:partyMembership().length, visible: partyMembership().length>0"></span>
+            </div>  <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#profileAccordion" href="#partyprofile">
+                    <i class="fa icon-candidate fa-1x"></i>  Party MemberShip
+                </a>
+            </h4>
+        </div>
+        <div id="partyprofile" class="accordionprofile panel-collapse collapse">
+            <div class="panel-body" data-bind="foreach: { data: partyMembership, afterRender: $root.afterProfileRenderAction}">
+                @Html.Partial("_PartyProfile")
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="pull-right">
+                <span class="text-right" data-bind="text:jobs().length, visible: jobs().length>0"></span>
+            </div>   <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#profileAccordion" href="#jobprofile">
+                    <i class="fa icon-online32 fa-1x"></i>  Employment
+                </a>
+            </h4>
+        </div>
+        <div id="jobprofile" class="accordionprofile panel-collapse collapse">
+            <div class="panel-body" data-bind="foreach: { data: jobs}">
+                @Html.Partial("_JobProfile")
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="pull-right">
+                <span class="text-right" data-bind="text:property().length, visible: property().length>0"></span>
+            </div> <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#profileAccordion" href="#propertyprofile">
+                    <i class="fa fa-building-o fa-1x"></i>  Property
+                </a>
+            </h4>
+        </div>
+        <div id="propertyprofile" class="accordionprofile panel-collapse collapse">
+            <div class="panel-body" data-bind="foreach: { data: property, afterRender: $root.aftermerchandiseRenderAction}">
+                @Html.Partial("_PropertyProfile")
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="pull-right">
+                <span class="text-right" data-bind="text:education().length, visible: education().length>0"></span>
+            </div>
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#profileAccordion" href="#educationprofile">
+                    <i class="fa icon-graduation22 fa-1x"></i>  Education
+                </a>
+            </h4>
+
+        </div>
+        <div id="educationprofile" class="accordionprofile panel-collapse collapse">
+            <div class="panel-body" data-bind="foreach: { data: education}">
+                @Html.Partial("_EducationProfile")
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="pull-right">
+                <span class="text-right" data-bind="text:friends().length, visible: friends().length>0"></span>
+            </div>
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#profileAccordion" href="#firendsprofile">
+                    <i class="fa fa-users fa-1x"></i>  Friends
+                </a>
+            </h4>
+        </div>
+        <div id="firendsprofile" class="accordionprofile panel-collapse collapse">
+            <div class="panel-body recipients" data-bind="foreach: { data: friends}">
+                @Html.Partial("_FriendProfile")
+            </div>
+        </div>
+    </div>
+</div>
+

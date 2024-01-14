@@ -1,0 +1,113 @@
+﻿
+<div id="userVotingcontainer">
+    <div class="col-xs-12">
+        <div class="panel panel-primary" id="myuserVotingcontent-box">
+            <div class="panel-heading1 panel-heading">
+                <h3 class="panel-title">
+                    <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                    Vote
+                </h3>
+
+            </div>
+            <div class="panel-body col-xs-12">
+                <h4 data-bind="text:ShortDescription"></h4>
+                <fieldset>
+                    <legend class="text-warning fontsize120">Initiator </legend>
+                    <div class="col-xs-12 padding3centb fontsize90 btn-link "
+                         data-bind="attr: {title: FullName}, click: function(){viewUserProfile(InitiatorUserId)}">
+                        <div class="col-xs-6 ">
+                            <img class="img-128responsive margintop-5 pull-left img-rounded thumbnail profilepic" alt="User Avatar"
+                                 data-bind="attr:{src: profilepicContainer + UserPicture()}" />
+                        </div>
+                        <div class="col-xs-6">
+                            <strong class="margintop5" data-bind=" text: FullName"></strong>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend class="text-warning fontsize120">Vote Description </legend>
+                    <div class=" col-xs-12">
+                        <div class="well well-sm">
+                            <div class="row">
+                                <div class="col-xs-3 col-md-3 text-center">
+                                    @*<img data-bind="attr:{src: LogoPicture}" class="img-rounded img-responsive" />*@
+                                    <span data-bind="css: LogoPicture"></span>
+                                </div>
+                                <div class="col-xs-9 col-md-9 section-box fontsize90">
+
+                                    <span data-bind="html:Description"></span>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend class=" text-warning fontsize120">Voting</legend>
+                    <ul data-bind="foreach: Choices" class="list-group fontsize90">
+                        <li class="list-group-item">
+
+                            <!-- ko if: $parent.ChoiceType() ==1 -->
+                            <input type="radio"
+                                   data-bind="attr:{value: ChoiceId },  checked : $root.choiceSelected, click: $parent.choiceClicked" name="vote" />
+                            <span data-bind="text:ChoiceText"></span>
+                            <!-- /ko -->
+                            <!-- ko if: $parent.ChoiceType() == 0 -->
+                            <input type="checkbox"
+                                   data-bind="attr:{value: ChoiceId },  checked : $root.choiceSelected, click: $parent.choiceClicked" name="vote" />
+                            <span data-bind="text:ChoiceText"></span>
+                            <!-- /ko -->
+                            <span class="pull-right" data-bind="css:ChoiceLogo"></span>
+                        </li>
+                    </ul>
+                </fieldset>
+
+
+
+            </div>
+            <div class="clearfix"></div>
+            <div class="panel-footer fontsize80" id="userVoteFooter">
+                <!-- ko if: ChoiceType() == 1 -->
+                <!-- ko if: choiceSelected().length >= 1 -->
+                <span>1</span>
+                <!-- /ko -->
+                <!-- ko if: choiceSelected().length == 0 -->
+                <span>0</span>
+                <!-- /ko -->
+                <!-- /ko -->
+                <!-- ko if: ChoiceType() == 0 -->
+                <span data-bind="text: choiceSelected().length"></span>
+                <!-- /ko -->
+                <span class="text-muted"> choice(s) selected</span>
+                <div class="text-muted fontsize70 pull-right">
+                    <span data-bind="text: MaxChoiceCount"></span>
+                    <span> Choice Allowed</span>
+                </div>
+
+            </div>
+        </div>
+
+        <button type="submit" id="saveVoteResponse" data-bind="disable: showValidation()"
+                data-loading-text='
+            <i class="fa fa-spinner fa-spin"></i> Saving...'
+            class="btn btn-default pull-right">Vote
+        </button>
+        <div class="panel panel-primary hidden" id="myuserVotingcontent-submit">
+            <div class="panel-heading1 panel-heading">
+                <span>Vote</span>
+            </div>
+            <div class="panel-body">
+                <div class="col-xs-12">
+                    <span data-bind="text:Message">
+
+                    </span>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-default backbtn pull-right hidden">
+            <span><i class="fa fa-home"></i> Home</span>
+        </button>
+    </div>
+</div>

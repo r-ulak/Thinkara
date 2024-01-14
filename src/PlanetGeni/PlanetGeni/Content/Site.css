@@ -1,0 +1,71 @@
+﻿body {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.item {
+    color: #666;
+    background: #3b5998;
+    height: 550px;
+}
+
+.carousel {
+    margin-top: 20px;
+}
+
+.carousel-control {
+    top: 50%;
+}
+
+    .carousel-control svg {
+        position: absolute;
+        top: 50%;
+    }
+
+        .carousel-control svg path {
+            fill: white;
+        }
+
+div.centered {
+    text-align: center;
+}
+
+    div.centered table {
+        margin: 0 auto;
+        text-align: left;
+        border: 2px;
+    }
+
+table.dashboard tr td {
+    vertical-align: bottom;
+    padding: 15px;
+}
+
+span.glyphicon-globe {
+    font-size: 15em;
+    color: white;
+}
+
+.colorwhite {
+    color: white;
+}
+
+.colorgreen {
+    color: #00FF00;
+}
+
+.coloryellow {
+    color: #FFFB00;
+}
+
+.colororange {
+    color: #FFA500;
+}
+
+.colorpink {
+    color: #FFC0CB;
+}
+
+.fa:hover {
+    color: #5CB85C;
+}

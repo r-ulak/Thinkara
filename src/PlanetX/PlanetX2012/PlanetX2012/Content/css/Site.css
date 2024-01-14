@@ -1,0 +1,550 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    font: normal .7em arial, Verdana, Arial, Helvetica, Sans-Serif;
+    line-height: 1.6em;
+    color: #333;
+}
+
+#main
+{
+    padding-top: 10px;
+}
+
+a
+{
+    color: #546F92;
+    background: inherit;
+    cursor: pointer;
+    cursor: hand;
+}
+
+    a:hover
+    {
+        color: #808080;
+        background: inherit;
+    }
+
+h1
+{
+    font: bold 2em "Trebuchet MS", Helvetica, Sans-Serif;
+    margin: 0;
+    color: #fff;
+    background-color: transparent;
+}
+
+h2
+{
+    font: bold 1.4em "Trebuchet MS", Helvetica, Sans-Serif;
+}
+
+h3
+{
+    clear: both;
+    font-size: 1.1em;
+    color: #000;
+    background: #fff;
+    padding: 0 14px;
+    margin: 0;
+}
+
+.blue
+{
+    color: #546F92;
+    background: inherit;
+}
+
+.imageWrapper
+{
+    position: relative;
+}
+
+    .imageWrapper .userThumbnailOnline
+    {
+        float: left;
+        border: 4px groove #52f112;
+        padding: 3px;
+        margin: 0 15px 10px 0;
+    }
+
+    .imageWrapper .userThumbnailBusy
+    {
+        float: left;
+        border: 4px groove #FF0000;
+        padding: 3px;
+        margin: 0 15px 10px 0;
+    }
+
+    .imageWrapper .userThumbnailAway
+    {
+        float: left;
+        border: 4px groove #FFCC33;
+        padding: 3px;
+        margin: 0 15px 10px 0;
+    }
+
+    .imageWrapper .userThumbnailOffline
+    {
+        float: left;
+        border: 4px groove #BABABA;
+        padding: 3px;
+        margin: 0 15px 10px 0;
+    }
+
+
+
+    .imageWrapper .imageicon
+    {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        z-index: 2;
+        top: 119px;
+        left: 115px;
+    }
+
+.image
+{
+    float: left;
+    border: 2px solid #e2e2e2;
+    padding: 3px;
+    margin: 0 15px 10px 0;
+}
+
+#friendsList li
+{
+    list-style: none;
+    position: relative;
+}
+
+
+#friendsList .icon
+{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    z-index: 2;
+    top: 47px;
+    left: 42px;
+}
+
+.page
+{
+    width: 991px;
+    margin: 0px auto 0 auto;
+}
+
+#header
+{
+    text-align: right;
+    background: url("../css/images/background-contheader.jpg") repeat-x scroll 0 0 #2E2E2E;
+    height: 40px;
+    width: auto;
+}
+
+#contmain
+{
+    background: url("../css/images/background-cont.jpg") repeat-x scroll 0 0 #3366CC;
+    height: 60px;
+    width: auto;
+}
+
+#logo
+{
+    float: left;
+    padding: 0px 0 10px 10px;
+}
+
+    #logo h1
+    {
+        color: #000;
+        background: #fff;
+    }
+
+#menu
+{
+    float: right;
+    background: #fff url(css/images/barul.gif) no-repeat bottom right;
+    color: #808080;
+    padding: 8px 1px 11px 0;
+    margin: 0;
+}
+
+    #menu li
+    {
+        padding: 14px 18px 14px 18px;
+        color: #444;
+        background: #fff url(css/images/bar.gif) no-repeat bottom left;
+        display: inline;
+    }
+
+        #menu li.active
+        {
+            background: #fff url(css/images/baractive.gif) no-repeat bottom left;
+            color: #8D9CAF;
+            font-weight: bold;
+            padding: 14px 18px 14px 18px;
+            margin: 0 1px 0 0;
+        }
+
+        #menu li a
+        {
+            background: #f8f8f8;
+            color: #808080;
+            text-decoration: none;
+        }
+
+            #menu li a:hover
+            {
+                color: #000;
+                background: #f8f8f8;
+            }
+
+.key
+{
+    text-decoration: underline;
+}
+
+#headerleft
+{
+    clear: left;
+    float: left;
+    width: 250px;
+    background: #8D9CAF url(css/images/leftintrobg.gif) repeat-x;
+    color: #E5EAF2;
+    margin: 0 0 1px 0;
+}
+
+    #headerleft a
+    {
+        color: #fff;
+        background: inherit;
+    }
+
+    #headerleft p
+    {
+        padding: 14px 15px;
+        margin: 0;
+    }
+
+
+#linksbar
+{
+    float: left;
+    margin: 0 0 6px 0;
+    padding: 0 0 1px 0;
+    border-bottom: 2px solid #e2e2e2;
+}
+
+    #linksbar li
+    {
+        list-style: none;
+    }
+
+        #linksbar li a
+        {
+            display: block;
+            color: #3F5B7F;
+            background: #C2CEDE url(css/images/arrow.gif) no-repeat center left;
+            width: 204px;
+            padding: 7px 23px 7px 23px;
+            margin: 0 0 1px 0;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+            #linksbar li a:hover
+            {
+                background: #9EB1C9 url(css/images/arrow.gif) no-repeat center left;
+                color: #fff;
+            }
+
+
+#headerright
+{
+    float: right;
+    width: 430px;
+    padding: 25px 280px 0 20px;
+    color: #547592;
+    margin: 0 0 6px 0;
+    height: 174px;
+    border: 2px solid #e2e2e2;
+}
+
+    #headerright h1
+    {
+        margin: 0 0 20px 0;
+    }
+
+    #headerright .white
+    {
+        color: #FFF;
+        background-color: transparent;
+    }
+
+
+#newsbar
+{
+    float: left;
+    width: 250px;
+}
+
+.box
+{
+    padding: 4px 15px;
+    border: 1px solid #ccc;
+    margin: 0 0 10px 0;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+}
+
+.note
+{
+    padding: 15px 15px 20px 100px;
+    border: 1px solid #CFCB66;
+    margin: 0 0 5px 0;
+    background: #FFFFAD;
+    color: #585616;
+}
+
+#content
+{
+    float: right;
+    width: 733px;
+}
+
+.leftcol
+{
+    float: left;
+    width: 330px;
+    border: #ccc 1px solid;
+    text-align: justify;
+    margin: 0 0 10px 0;
+    padding: 12px 15px;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+}
+
+.rightcol
+{
+    float: right;
+    width: 330px;
+    border: #ccc 1px solid;
+    margin: 0 0 10px 0;
+    padding: 10px 15px;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+}
+
+.column-1
+{
+    float: left;
+    width: 49%;
+    padding-right: 1%;
+}
+
+.column-2
+{
+    float: right;
+    width: 49%;
+    padding-left: 1%;
+}
+
+.special
+{
+    clear: both;
+    margin: 0px 0 20px 0;
+    padding: 5px 20px;
+    color: #444;
+}
+
+#footer
+{
+    clear: both;
+    padding: 5px;
+    border-top: 1px solid #ccc;
+}
+
+#newBusiness
+{
+    width: auto;
+}
+
+.demo-button
+{
+    outline: 0;
+    margin: 0 4px 0 0;
+    padding: .4em 1em;
+    text-decoration: none !important;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    zoom: 1;
+}
+
+.table50-50 td
+{
+    width: 50%;
+}
+
+.container
+{
+    display: table;
+}
+
+.row
+{
+    display: table-row;
+}
+
+.leftcell, .rightcell, .middlecell
+{
+    display: table-cell;
+}
+
+ul
+{
+    padding-left: 0;
+    list-style: none;
+}
+
+    ul li
+    {
+        list-style-position: inside;
+    }
+
+.nameFriendList
+{
+    line-height: 50px;
+    padding-left: 5px;
+}
+
+.hidden
+{
+    display: none;
+}
+
+.hiddenvisibility
+{
+    visibility: hidden;
+}
+
+.friendslistThumbnailOnline
+{
+    border: 4px groove #52f112;
+    padding: 2px;
+    cursor: hand;
+    cursor: pointer;
+}
+
+.friendslistThumbnailBusy
+{
+    border: 4px groove #FF0000;
+    padding: 2px;
+    cursor: hand;
+    cursor: pointer;
+}
+
+.friendslistThumbnailAway
+{
+    border: 4px groove #FFCC33;
+    padding: 2px;
+    cursor: hand;
+    cursor: pointer;
+}
+
+.friendslistThumbnailOffline
+{
+    border: 4px groove #BABABA;
+    padding: 2px;
+    cursor: hand;
+    cursor: pointer;
+}
+
+a img
+{
+    text-decoration: none;
+    border-bottom-style: none;
+}
+
+input.watermark
+{
+    color: #999;
+}
+
+.errors
+{
+    border: 2px solid red;
+    color: red;
+    margin: 5px 0px;
+    padding: 5px;
+}
+
+    .errors ul
+    {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        list-style-image: url('../css/images/error.png');
+    }
+
+.post
+{
+}
+
+.postComment
+{
+}
+
+textarea
+{
+    resize: none;
+}
+
+.collapsible_content
+{
+    width: 100%;
+}
+
+.collapsible_box
+{
+    border: 1px solid #DDDDDD;
+    padding: 5px;
+}
+
+    .collapsible_box img, .collapsible_box embed
+    {
+        max-width: 100%;
+    }
+
+h3.collapsible_title
+{
+    line-height: normal;
+    margin-top: 16px;
+}
+
+h3.collapsible_title
+{
+    background-color: #EEEEEE;
+    border: 1px solid #CCCCCC;
+    color: #1C94C4;
+    cursor: pointer;
+    font-size: smaller;
+    margin-bottom: 0;
+    padding: 5px;
+}
+
+.bbc_wrapper .bbc_header
+{
+    background-color: #990000;
+    background-image: url("/images/bbcnews-header.png");
+    background-position: center top;
+    background-repeat: no-repeat;
+    color: #FFFFFF;
+    font-family: "Arial Black";
+    font-weight: bold;
+    letter-spacing: -0.1em;
+    padding-left: 3px;
+    padding-top: 3px;
+}

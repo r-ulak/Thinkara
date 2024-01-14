@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://web.planetgeni.com/" />
+<title>PartySearch2</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">PartySearch2</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=webUserId</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=webUserId</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=webPassword</td>
+	<td>Kathmandu30</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=#electionvictory &gt; fieldset &gt; legend.text-warning.fontsize120</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@name='partysize'])[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@name='electionvictory'])[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@name='partyworth'])[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@name='membershipFee'])[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@name='partyAgenda'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=searchParty</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@id='partySearchResultcontent-wrapper']/div[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=div.col-xs-6 &gt; h6 &gt; span.label.label-info</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=partyCodesshowmore</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=div.col-xs-6 &gt; h6 &gt; span.label.label-info</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='partySearchResultcontent-wrapper']/div/ul/li[2]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@id='partymemberssearch0']/div/div/fieldset[3]/div/div/div[9]/p</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='partymemberssearch0']/div/div/fieldset[3]/div[2]/div[2]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@id='partymemberssearch0']/div/div/fieldset[3]/div/div/div[11]/p</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='partymemberssearch0']/div/div/fieldset[3]/div[2]/div/h6/span</td>
+	<td>11</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='partySearchResultcontent-wrapper']/div/ul/li/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@id='partysearchagenda0']/div/div/div/div[2]/ul/li[6]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='partysearchagenda0']/div/div/div/div[2]/ul/li[6]/span</td>
+	<td>War is also a means to defend the nation at the same time strengthen the economy of your country.</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='partySearchResultcontent-wrapper']/div[2]/ul/li[2]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@id='partymemberssearch1']/div/div/fieldset/div/div/div/p</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='partymemberssearch1']/div/div/fieldset/div/div/div/p</td>
+	<td>Victor Hayes</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='partymemberssearch1']/div/div/fieldset[3]/div[2]/div/h6/span</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='partySearchResultcontent-wrapper']/div[2]/ul/li/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@id='partysearchagenda1']/div/div/div/div[2]/ul/li[2]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='partysearchagenda1']/div/div/div/div[2]/ul/li[2]/span</td>
+	<td>Establish strong repository of arms and ammunition.</td>
+</tr>
+</tbody></table>
+</body>
+</html>

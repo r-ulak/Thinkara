@@ -1,0 +1,55 @@
+﻿<div id="banksellcontainer">
+    <div class=" row">
+        <div class="col-xs-12">
+            <div class="panel panel-primary" id="banksell-box">
+                <div class="panel-heading1 panel-heading">
+                    <div class="flagsprite pull-right btn-link"
+                         data-bind="css: 'flagsprite-' + CountryId().toLowerCase(), click: function(){viewCountryProfile(CountryId().toLowerCase())}"></div>
+                    <span class="fa icon-piggy7 marginright6"></span> Sell Metal
+
+                </div>
+                <div class="panel-body"
+                     data-bind="foreach: { data: capitalTypecodes, afterRender: $root.afterCapitalRender}">
+                    @Html.Partial("_SellMetalItem")
+                </div>
+                <div class="panel-footer">
+                    <div class="row padding3centt">
+                        <div class="col-xs-6">
+                            <span> Total </span>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="pull-right">
+                                <span class="fa icon-money28 text-success"></span>
+                                <span class="label label-success text-right fontsize110" data-bind="text:numeral(amount()).format('0,0.00')"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-primary hidden" id="banksell-submit">
+                <div class="panel-heading1 panel-heading">
+                    <span>Buy</span>
+                </div>
+                <div class="panel-body">
+                    <div class="col-xs-12">
+                        <span data-bind="text:Message">
+
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-default backbtn pull-right hidden">
+                <span><i class="fa fa-home"></i> Home</span>
+            </button>
+            <button class="btn btn-default  pull-left hidden" id="sellmoremetal">
+                <span><i class="fa fa-home"></i> Sell More</span>
+            </button>
+            <button type="submit" id="sellmetal" data-bind="disable: amount()<=0"
+                    data-loading-text='
+                <i class="fa fa-spinner fa-spin"></i> Selling...'
+                class="btn btn-default pull-right">Sell
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+﻿@using PlanetGeni.Models
+@using Microsoft.AspNet.Mvc.Facebook.Models
+@model MyAppUser
+<article id="content">
+    <h4>Friends with upcoming birthdays</h4>
+    @Html.DisplayFor(m => m.Friends.Data, "Friends")
+</article>

@@ -1,0 +1,16 @@
+﻿<div id="stockForecastcontainer">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="panel panel-primary" id="mystockForecastcontent-box">
+                <div class="panel-heading1 panel-heading">
+                    <div class="flagsprite pull-right btn-link"
+                         data-bind="css: 'flagsprite-' + CountryId().toLowerCase(), click: function(){viewCountryProfile(CountryId().toLowerCase())}"></div>
+                    <span class="fa icon-man254  marginright6"></span>Stock Forecast
+                </div>
+                <div class="panel-body" data-bind="foreach: { data: forecast}">
+                    @Html.Partial("_StockForecastItem")
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

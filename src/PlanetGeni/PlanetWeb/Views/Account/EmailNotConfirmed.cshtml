@@ -1,0 +1,47 @@
+﻿<div class="row ">
+    <div class="col-xs-12 ">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-5">
+            <div class="panel panel-primary register-form">
+                <h3 class="text-center">Thinkara</h3>
+                <div class="panel-heading1 panel-heading">
+                    <div class="row">
+                        <div class="col-xs-10">
+                            <strong>Email has not been confirmed</strong>
+                        </div>
+                        <div class="col-xs-2 text-right">
+                            <strong>
+                                <i class="fa fa-envelope-o fa-2x"></i>
+                            </strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body padding3centt">
+                    <div class="row ">
+                        <div class="col-xs-12 ">
+                            <section>
+                                <span class="fontsize90">Please check your email and confirm your email address.</span>
+                                <form role="login" method="post" action="/Account/SendAccountConfirmEmail" novalidate="novalidate">
+                                    @Html.AntiForgeryToken()
+                                    <div class="input-group  clearfix padding3centt">
+                                        <span class="fontsize90">Send me a confirmation again</span>
+                                        <div class="pull-right">
+                                            <input name="userID" value="@ViewBag.UserId" hidden />
+
+                                            <button class="btn btn-shadow btn-lg btn-success fontsize90" type="submit">
+                                                Send <i class="fa fa-envelope-o"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+        </div>
+    </div>
+</div>

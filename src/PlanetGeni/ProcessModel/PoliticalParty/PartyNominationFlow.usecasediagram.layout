@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="PartyNominationFlow">
+  <useCaseModelRootMoniker Id="3f8176e8-2fbe-4e21-976d-09ab6ee73058" />
+  <nestedChildShapes>
+    <actorShape Id="a89689db-2476-4778-96f3-e9b6646f1763" absoluteBounds="0.75, 0.75, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="ab93eeb6-6a61-4cec-9f85-8030c3ba72c7" LastKnownName="Member/Founder/Cofounder" />
+      <relativeChildShapes />
+    </actorShape>
+    <useCaseShape Id="b70e1f07-6386-49ae-9eca-b97bc92aa8d1" absoluteBounds="2.25, 0.75, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="5b4a8a50-89eb-4c51-a5df-137cbe3c3579" LastKnownName="Requests Nomination" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseDependencyConnector edgePoints="[(1.25 : 1); (2.25 : 1)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
+      <dependencyMoniker Id="fdb025ab-2e01-40fb-850c-6004194c6883" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="a89689db-2476-4778-96f3-e9b6646f1763" />
+        <useCaseShapeMoniker Id="b70e1f07-6386-49ae-9eca-b97bc92aa8d1" />
+      </nodes>
+    </useCaseDependencyConnector>
+  </nestedChildShapes>
+</useCaseDiagram>

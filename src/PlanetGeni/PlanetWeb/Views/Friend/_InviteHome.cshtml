@@ -1,0 +1,37 @@
+﻿<div class="row" id="inviteviewcontainer">
+    <div class="col-xs-12">
+        <div class="panel panel-primary" id="inviteview-box">
+            <div class="panel-heading1 panel-heading">
+                <div class="flagsprite pull-right btn-link"
+                     data-bind="css: 'flagsprite-' + CountryId().toLowerCase(), click: function(){viewCountryProfile(CountryId().toLowerCase())}"></div>
+                <span class="fa fa-envelope marginright6"></span> Send Invite
+            </div>
+            <div class="panel-body">
+                @Html.Partial("_InviteHomeItem")
+            </div>
+        </div>
+        <div class="panel panel-primary hidden" id="inviteview-submit">
+            <div class="panel-heading1 panel-heading">
+                <span>Send Invite</span>
+            </div>
+            <div class="panel-body">
+                <div class="col-xs-12">
+                    <span data-bind="text:Message">
+
+                    </span>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-default backbtn pull-right hidden">
+            <span><i class="fa fa-home"></i> Home</span>
+        </button>
+        <button type="submit" id="sendInvite" data-bind="disable: emailInviteeId().length==0"
+                data-loading-text='
+                <i class="fa fa-spinner fa-spin"></i> Sending...'
+                class="btn btn-default pull-right">Send
+            </button>
+    </div>
+</div>
+
+
+

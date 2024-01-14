@@ -1,0 +1,53 @@
+﻿<div class="row">
+    <div class="col-xs-12">
+        <div class="well">
+            <div class="row fontsize90 padding3centb">
+                <div class="col-xs-9">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <img class="img-full" width="28px" height="28px" data-bind="attr: {src: profilepicContainer+Picture() , title: FullName() }, click: function(){viewUserProfile(UserId)}">
+                            <h5 class="btn-link" data-bind="text:FullName(), click: function(){viewUserProfile(UserId)}"></h5>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <strong>Position:  </strong><span data-bind="text:ElectionPositionName()"></span>
+                            <div class="flagsprite pull-right btn-link"
+                                 data-bind="css: 'flagsprite-' + CountryId().toLowerCase(), click: function(){viewCountryProfile(CountryId().toLowerCase())}"></div>
+                            <!-- ko if: CandidateTypeId() == 'P' -->
+                            <p class="padding3centt">
+                                <strong>PartyName: </strong>
+                                <a data-bind="text:PartyName()"></a>
+                            </p>
+                            <!-- /ko -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-3 padding3centt">
+                    <!-- ko if: LogoPictureId().indexOf(".")==-1  -->
+                    <i class="fa-5x text-info pull-right" data-bind="css: LogoPictureId()"></i>
+                    <!-- /ko -->
+                    <!-- ko if: LogoPictureId().indexOf(".") != -1 -->
+                    <img class="pull-right img-responsive img-64 " data-bind="attr:{src:LogoPictureId, title: PartyName}" />
+                    <!-- /ko -->
+                </div>
+
+
+            </div>
+            <fieldset>
+                <legend class="text-warning fontsize120">Election</legend>
+                @Html.Partial("_ElectionDate")
+            </fieldset>
+
+            <div class="row padding3centt">
+                <div class="col-xs-12">
+                    <fieldset>
+                        <legend class="text-warning fontsize120">Agenda</legend>
+                        @Html.Partial("_CandidateAgenda")
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

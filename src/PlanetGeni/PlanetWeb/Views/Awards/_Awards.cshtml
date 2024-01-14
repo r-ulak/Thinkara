@@ -1,0 +1,51 @@
+﻿<div class="container">
+    <div class="row pricing-table pricing-three-column">
+        <div class="span4 plan">
+
+            <div class="plan-name-bronze">
+                <h4>Awards</h4>
+                <div class="icon">
+                    <i class="fa fa-trophy fa-5x"></i>
+                </div>
+
+            </div>
+            <ul class=" text-left" id="awardSummary">
+                <li class="plan-feature">Completed Level : <span data-bind="text: Level"></span> </li>
+                <li class="plan-feature">Total Achivement : <span data-bind="text: TotalAchivement"></span> </li>
+                <li class="plan-feature">Total Score : <span data-bind="text: Score"></span> </li>
+            </ul>
+        </div>
+    </div>
+    <hr />
+
+    <div id="awardsCarousel" class="owl-carousel owl-theme">
+        <div>
+            Business Awards
+            <div class="row width101" id="businessAchievement" data-bind="foreach: BusinessAchievement">
+                @Html.Partial("_Trophies")
+            </div>
+        </div>
+        <div>
+            Education Awards
+            <div class="row width101" id="educationAchievement" data-bind="foreach: EducationAchievement">
+                @Html.Partial("_Trophies")
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(function () {
+
+        var owl = $("#awardsCarousel");
+        owl.owlCarousel({
+            navigation: true, // Show next and prev buttons
+            slideSpeed: 300,
+            paginationSpeed: 400,
+            singleItem: true,
+            transitionStyle: "backSlide"
+
+        });
+
+    });
+
+</script>

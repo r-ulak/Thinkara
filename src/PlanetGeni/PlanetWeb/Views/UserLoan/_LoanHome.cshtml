@@ -1,0 +1,20 @@
+﻿<div id="loan-container">
+    <ul class="nav nav-pills">
+        <li class="active">
+            <a data-toggle="tab" href="#loan-viewloan" class="active">My Loans</a>
+        </li>
+        <li>
+            <a data-toggle="tab" href="#loan-request">Request Loan</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div id="loan-viewloan" class="tab-pane fade in active padding3centt autoheight">
+            @Html.Partial("_ViewLoans")
+        </div>
+        <div id="loan-request" class="tab-pane fade padding3centt autoheight">
+            @Html.Partial("_AskForLoanHome")
+        </div>
+    </div>
+</div>
+
+

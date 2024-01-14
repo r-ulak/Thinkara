@@ -1,0 +1,23 @@
+﻿<div id="stock-container">
+    <ul class="nav nav-pills">
+        <li class="active">
+        <a data-toggle="tab" href="#stock-buy" class="active">Buy</a></li>
+        <li><a data-toggle="tab" href="#stock-sell">Sell</a></li>
+        <li><a data-toggle="tab" href="#stock-order">Order History</a></li>
+        <li><a data-toggle="tab" href="#stock-summary">Summary</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="stock-buy" class="tab-pane fade in active padding3centt autoheight">
+            @Html.Partial("_BuyStock")
+        </div>
+        <div id="stock-sell" class="tab-pane fade padding3centt autoheight">
+            @Html.Partial("_SellStock")
+        </div>
+        <div id="stock-order" class="tab-pane fade padding3centt autoheight">
+            @Html.Partial("_StockOrder")
+        </div>
+        <div id="stock-summary" class="tab-pane fade padding3centt autoheight">
+            @Html.Partial("_Summary")
+        </div>
+    </div>
+</div>

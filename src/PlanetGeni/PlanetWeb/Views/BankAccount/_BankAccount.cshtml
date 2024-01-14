@@ -1,0 +1,32 @@
+﻿<div id="bank-container">
+    <ul class="nav nav-pills">
+        <li class="active">
+            <a data-toggle="tab" href="#bank-summary">Summary</a>
+        </li>
+        <li>
+            <a data-toggle="tab" href="#bank-buymetal">Buy Metal</a>
+        </li>
+        <li>
+            <a data-toggle="tab" href="#bank-sellmetal">Sell Metal</a>
+        </li>
+        <li>
+            <a data-toggle="tab" href="#bank-stmt">Transaction</a>
+        </li>
+        <li>
+            <a data-toggle="tab" href="#bank-rich">Richest</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div id="bank-summary" class="tab-pane fade in active padding3centt autoheight">
+            @Html.Partial("_BankAccountHome")
+        </div>
+        <div id="bank-buymetal" class="tab-pane fade in  padding3centt autoheight">
+        </div>
+        <div id="bank-sellmetal" class="tab-pane fade padding3centt autoheight">
+        </div>
+        <div id="bank-stmt" class="tab-pane fade padding3centt autoheight">
+        </div>
+        <div id="bank-rich" class="tab-pane fade padding3centt autoheight">
+        </div>
+    </div>
+</div>

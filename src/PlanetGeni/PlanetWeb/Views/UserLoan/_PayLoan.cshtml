@@ -1,0 +1,92 @@
+﻿<div id="payLoancontainer">
+    <div class=" row">
+        <div class="col-xs-12">
+            <div class="panel panel-primary" id="mypayLoancontent-box">
+                <div class="panel-heading1 panel-heading">
+                    <span class="fa icon-businessman90 marginright6">
+                    </span> Pay Loan
+                </div>
+                <div class="panel-body">
+                    @Html.Partial("_LoanItemContent")
+                    <hr />
+                    <div class="well">
+                        <fieldset>
+                            <legend class="text-warning fontsize120">Pay Remaining Amount</legend>
+                            <div class="row margintop5">
+                                <div class="col-xs-12 validation-group ">
+                                    <div class="input-group bottomMarging15 ">
+                                        <span class="input-group-addon">
+                                            <input id="radiopayFull" type="radio" name="loanType">
+                                        </span>
+                                        <input disabled type="text" data-bind="attr:{placeholder: LeftAmount}"
+                                               class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend class="text-warning fontsize120">Pay Other</legend>
+                            <div class="row">
+                                <div class="col-xs-12 validation-group">
+                                    <div class="input-group bottomMarging15 ">
+                                        <span class="input-group-addon">
+                                            <input id="radiopayOther" type="radio" name="loanType">
+                                        </span>
+                                        <input disabled type="text" placeholder="Pay Other Amount"
+                                               class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row margintop5">
+                                <div class="col-xs-2"></div>
+                                <div class="col-xs-10 validation-group ">
+                                    <div class="input-group bottomMarging15 ">
+                                        <span class="input-group-addon">
+                                            <i class="fa icon-money28  fa-1x"></i>
+                                        </span>
+                                        <input type="text" id="payloanAmount" name="payloanAmount">
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>
+                                You will need to Pay Loan from 720hrs of getting a loan to avoid any penalties.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-primary hidden" id="mypayLoancontent-submit">
+                <div class="panel-heading1 panel-heading">
+                    <span>Pay Loan</span>
+                </div>
+                <div class="panel-body">
+                    <div class="col-xs-12">
+                        <span data-bind="text:Message">
+
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-default backbtn pull-right hidden">
+                <span><i class="fa fa-home"></i> Home</span>
+            </button>
+            <button class="btn btn-default  pull-left hidden" id="payotherloan">
+                <span><i></i> Pay Other Loans</span>
+            </button>
+
+            <button type="submit" id="payloan"
+                    data-loading-text='
+                <i class="fa fa-spinner fa-spin"></i> Saving...'
+                class="btn btn-default pull-right">Pay Loan
+            </button>
+        </div>
+    </div>
+</div>

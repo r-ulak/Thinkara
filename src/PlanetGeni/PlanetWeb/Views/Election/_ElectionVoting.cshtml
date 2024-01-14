@@ -1,0 +1,54 @@
+﻿<div class="row" id="elevotingcontainer">
+    <div class="col-xs-12">
+        <div class="panel panel-primary" id="elevoting-box">
+            <div class="panel-heading1 panel-heading">
+                <div class="flagsprite pull-right btn-link"
+                     data-bind="css: 'flagsprite-' + CountryId().toLowerCase(), click: function(){viewCountryProfile(CountryId().toLowerCase())}"></div>
+                <span class="fa icon-man371  marginright6"></span> Votings
+            </div>
+            <div class="panel-body">
+                @Html.Partial("_VotingItem")
+            </div>
+            <div class="panel-footer " id="elevoting-box-footer">
+                <div class="row padding3centt">
+                    <div class="col-xs-1">
+                        <span class="label label-info" data-bind="text: candidates().length"></span>
+                    </div>
+                    <div class="col-xs-11 fontsize80">
+                        <span class="text-muted" data-bind="text:votingCandidates().length"> Agenda selected</span>
+                        <span class="text-muted"> Candidates selected</span>
+                        <!-- ko if:  votingCandidates().length < 5 -->
+                        <span class="text-warning fontsize90 pull-right">Can Vote Upto 5 Candidates</span>
+                        <!-- /ko -->
+                        <!-- ko if:  votingCandidates().length >= 5 -->
+                        <span class="text-danger fontsize90 pull-right">Only 5 Votes Allowed</span>
+                        <!-- /ko -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-primary hidden" id="elevoting-submit">
+            <div class="panel-heading1 panel-heading">
+                <span>Vote</span>
+            </div>
+            <div class="panel-body">
+                <div class="col-xs-12">
+                    <span data-bind="text:Message">
+
+                    </span>
+                </div>
+            </div>
+        </div><button class="btn btn-default backbtn pull-right hidden">
+            <span><i class="fa fa-home"></i> Home</span>
+        </button>
+        <button type="submit" id="elevote"
+                data-loading-text='
+            <i class="fa fa-spinner fa-spin"></i> Voting...'
+            class="btn btn-default pull-right">Vote
+        </button>
+    </div>
+</div>
+
+
+

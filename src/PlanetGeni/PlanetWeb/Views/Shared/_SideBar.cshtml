@@ -1,0 +1,11 @@
+﻿<div class="column col-sm-2 col-xs-1 sidebar-offcanvas hidden-xs" id="sidebar">
+    <ul class="nav hidden-xs" id="lg-menu" data-bind="foreach: friendDetailsDTO">
+        @Html.Partial("../Friend/_FriendSideBar")
+    </ul>
+    <div class=" guide hidden" data-bind="visible: friendDetailsDTO().length< 2">
+        <button class="btn btn-default btn-lg marginleft15 fontsize90 btn-shadow " id="demo" type="button">
+            <i class="fa icon-doubledecker fa-2x marginright6"></i>
+            Show Me around...
+        </button>
+    </div>
+</div>

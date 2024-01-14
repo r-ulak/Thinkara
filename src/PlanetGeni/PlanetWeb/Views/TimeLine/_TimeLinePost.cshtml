@@ -1,0 +1,26 @@
+﻿<div class="timeline-panel timeline-post ">
+    <div class="timeline-heading">
+        <a class="btn-link" data-bind="click: function(){viewUserProfile(UserId())}">
+            <img data-bind="attr:{src: profilepicContainer + Picture()}" class="avatar" alt="" />
+            <h5 class="timeline-title" data-bind="text: FullName()">            
+            </h5>
+            <small class="text-muted pull-right" data-bind="text: moment.utc(CreatedAt()).local().fromNow(), attr:{title:moment.utc(CreatedAt()).local().format()}">
+            </small>
+        </a>
+    </div>
+    <div class="timeline-body">
+        <div data-bind="visible: ImageName().length>0" class="pull-left marginright16 thumbnail margintop10 ">
+            <img data-bind="attr:{src:adspicContainer + ImageName()}" />
+        </div>
+        <div class="clearfix"></div>
+        <div class="padding3centt fontsize85">
+            <p data-bind="text:PostContent()" class=" marginright16"></p>
+        </div>
+
+        <hr>
+        @Html.Partial("../TimeLine/_TimeLineShare")
+    </div>
+</div>
+<div class="row marginbottom15"></div>
+<aside class="comments post-atribut hidden"></aside>
+@Html.Partial("../TimeLine/_AddComment")

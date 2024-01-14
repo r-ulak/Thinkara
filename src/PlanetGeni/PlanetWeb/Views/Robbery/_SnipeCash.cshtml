@@ -1,0 +1,51 @@
+﻿<div id="snipeCashcontainer">
+    <div class=" row">
+        <div class="col-xs-12">
+            <div class="panel panel-primary" id="mysnipeCashcontent-box">
+                <div class="panel-heading1 panel-heading">
+                    <div class="flagsprite pull-right btn-link"
+                         data-bind="css: 'flagsprite-' + CountryId().toLowerCase(), click: function(){viewCountryProfile(CountryId().toLowerCase())}"></div>
+                    <span class="fa icon-robber4  marginright6"></span> Cash Snipper
+                </div>
+                <div class="panel-body">
+                    @Html.Partial("_SnipeCashItem")
+                </div>
+                <div class="panel-footer fontsize90">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>
+                                If you get caught doing this you can face jail time and loose 90% of your asset.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-primary hidden" id="mysnipeCashcontent-submit">
+                <div class="panel-heading1 panel-heading">
+                    <span>Cash Snipper</span>
+                </div>
+                <div class="panel-body">
+                    <div class="col-xs-12">
+                        <span data-bind="text:Message">
+
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-default backbtn pull-right hidden">
+                <span><i class="fa fa-home"></i> Home</span>
+            </button>
+            <button class="btn btn-default  pull-left hidden" id="snipeMoreCash">
+                <span><i></i> Snipe More Cash</span>
+            </button>
+            <button type="submit" id="saveCashSnipe"
+                    data-loading-text='
+                <i class="fa fa-spinner fa-spin"></i> Sniping...'
+                class="btn btn-default pull-right">
+            <i class="fa icon-targets9"></i>
+            Snipe Cash
+            </button>
+        </div>
+    </div>
+</div>

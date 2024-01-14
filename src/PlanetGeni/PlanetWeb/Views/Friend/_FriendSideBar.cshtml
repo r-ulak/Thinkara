@@ -1,0 +1,20 @@
+﻿<li class="active">
+    <a class="btn-link pull-right " data-bind="click: function(){viewCountryProfile(CountryId.toLowerCase())}">
+        <div class="flagsprite btn-link" data-bind="css: 'flagsprite-' + CountryId.toLowerCase(), attr:{title: getCountryName(CountryId)}"></div>
+    </a>
+    <a class="btn-link" data-bind="click: function(){viewUserProfile(FriendUserId)}">
+        <i data-bind="css: 'user-status' + OnlineStatus" class="pull-left"></i>
+        <img width="28px" height="28px" data-bind="attr: {src: profilepicContainer+Picture, title: FullName}">
+        <span data-bind="text: FullName, attr:{title: FullName}"></span>
+        <!-- ko if: RelationDirection=='FD' -->
+        <i class="fa fa-long-arrow-right" title="Your Follower"></i>
+        <!-- /ko -->
+        <!-- ko if: RelationDirection=='FG' -->
+        <i class="fa fa-long-arrow-left" title="You are Following"></i>
+        <!-- /ko -->
+        <!-- ko if: RelationDirection=='B' -->
+        <i class="fa fa-arrows-h" title="You are Following and you are Followed"></i>
+        <!-- /ko -->
+    </a>
+</li>
+

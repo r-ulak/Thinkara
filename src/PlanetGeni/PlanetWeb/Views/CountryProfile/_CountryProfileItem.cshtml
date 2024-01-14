@@ -1,0 +1,89 @@
+﻿@Html.Partial("_CountryProfileHeaderItem")
+<div class="panel-group accordion padding10centt hidden" id="countryProfileAccordion">
+    <div class="panel panel-default">
+        <div class="panel-heading active">
+            <div class="pull-right">
+                <span class="text-right" data-bind="text:budget().length, visible: budget().length>0"></span>
+            </div>   <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#countryProfileAccordion" href="#budgetcountryProfile">
+                    <i class="fa icon-budget fa-1x"></i> Budget Allocation
+                </a>
+            </h4>
+        </div>
+        <div id="budgetcountryProfile" class="accordioncountryProfile panel-collapse collapse in">
+            <div class="panel-body" data-bind="foreach: { data: budget}">
+                @Html.Partial("_BudgetProfile")
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="pull-right">
+                <span class="text-right" data-bind="text:revenue().length, visible: revenue().length>0"></span>
+            </div>  <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#countryProfileAccordion" href="#revenuecountryProfile">
+                    <i class="fa icon-man249 fa-1x"></i>  Revenue Sources
+                </a>
+            </h4>
+        </div>
+        <div id="revenuecountryProfile" class="accordioncountryProfile panel-collapse collapse">
+            <div class="panel-body" data-bind="foreach: { data: revenue}">
+                @Html.Partial("_RevenueProfile")
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="pull-right">
+                <span class="text-right" data-bind="text:ranks().length, visible: ranks().length>0"></span>
+            </div>   <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#countryProfileAccordion" href="#rankscountryProfile">
+                    <i class="fa icon-online32 fa-1x"></i>  Ranking
+                </a>
+            </h4>
+        </div>
+        <div id="rankscountryProfile" class="accordioncountryProfile panel-collapse collapse">
+            <div class="panel-body" data-bind="foreach: { data: ranks}">
+                @Html.Partial("_RankProfile")
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="pull-right">
+                <span class="text-right" data-bind="text:securityAsset().length, visible: securityAsset().length>0"></span>
+                <!-- ko if: securityAsset().length==25 -->
+                <span class="text-right fa fa-plus"></span>
+                <!-- /ko -->
+            </div> <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#countryProfileAccordion" href="#securityAssetcountryProfile">
+                    <i class="fa icon-base1 fa-1x"></i>  Security Asset
+                </a>
+            </h4>
+        </div>
+        <div id="securityAssetcountryProfile" class="accordioncountryProfile panel-collapse collapse">
+            <div class="panel-body" data-bind="foreach: { data: securityAsset}">
+                @Html.Partial("_SecurityProfile")
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="pull-right">
+                <span class="text-right" data-bind="text:leaders().length, visible: leaders().length>0"></span>
+            </div>
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#countryProfileAccordion" href="#leaderscountryProfile">
+                    <i class="fa icon-man371 fa-1x"></i>  Leaders
+                </a>
+            </h4>
+        </div>
+        <div id="leaderscountryProfile" class="accordioncountryProfile panel-collapse collapse">
+            <div class="panel-body" data-bind="foreach: { data: leaders}">
+                @Html.Partial("_LeadersProfile")
+            </div>
+        </div>
+    </div>
+</div>
+

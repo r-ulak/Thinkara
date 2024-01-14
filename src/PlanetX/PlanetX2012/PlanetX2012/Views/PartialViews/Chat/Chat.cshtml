@@ -1,0 +1,36 @@
+﻿<div>
+    <div class="chatContainer" id ="chatContainer_@(ViewBag.friendUserID)">
+        <ul id="messagelist_@(ViewBag.friendUserID)">
+            @{if (ViewBag.message != null)
+              {
+                <li>@ViewBag.message</li>
+              }
+            }
+        </ul>
+    </div>
+
+    <div class="chatContainerright" id ="chatContainerright_@(ViewBag.friendUserID)">
+        <img id="Image@(ViewBag.friendUserID)" src="@Href(@ViewBag.imageUrl)"  class="friendslistThumbnailOnline image"               
+                 alt="Image" width="50px" height="50px" />
+        <span class="hiddenvisibility">
+            <img src="../../../Content/css/images/typing.jpg" width="16px" height="16px" />...
+        </span>
+        <p>Has 20 Friends</p>
+        <p>Owns 2 Bussines</p>
+        <p>Total Worth of 10000 D</p>
+
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $("#chatContainer_@(ViewBag.friendUserID)").mCustomScrollbar({
+
+            mouseWheel: true,
+            updateOnContentResize: true,
+            theme: "dark-thick"
+
+        });
+
+        console.log("Work Now Boy");
+    });
+</script>

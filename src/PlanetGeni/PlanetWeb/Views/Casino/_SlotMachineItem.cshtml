@@ -1,0 +1,78 @@
+﻿<div class="row">
+    <div class="col-xs-12 machineContainer">
+        <div class="well">
+            <div class="row padding2centb">
+                <div class="col-xs-12">
+                    <button type="submit" id="spinSlot" data-bind="disable: $root.showSlotValidation"
+                            data-loading-text='
+                <i class="fa fa-spinner fa-spin"></i> Spining...'
+                class="btn btn-default pull-right">Spin
+            </button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class=" col-xs-4">
+                        <div id="machine1" class="slotMachine" data-bind="foreach:{data:slot3List.SlotMachineList()}">
+                            <div class="slot "><i class="fa-5x" data-bind="css:ImageFont()"></i></div>
+                        </div>
+                    </div>
+                    <div class=" col-xs-4">
+                        <div id="machine2" class="slotMachine" data-bind="foreach:{data:slot3List.SlotMachineList()}">
+                            <div class="slot "><i class="fa-5x" data-bind="css:ImageFont()"></i></div>
+                        </div>
+                    </div>
+                    <div class=" col-xs-4">
+                        <div id="machine3" class="slotMachine" data-bind="foreach:{data:slot3List.SlotMachineList()}">
+                            <div class="slot "><i class="fa-5x" data-bind="css:ImageFont()"></i></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row margintop10 padding3centt">
+                <div class="col-xs-12">
+                    <div class="input-group">
+                        <input type="text" id="slotbet" data-bind="value:betAmount">
+                    </div>
+                </div>
+            </div>
+            <div class="row margintop10 padding3centt">
+                <div class="col-xs-12">
+                    <fieldset>
+                        <legend class="text-warning fontsize120">Win Chart</legend>
+                        <div data-bind="foreach:{data:slot3List.SlotMachineList}">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="col-xs-2"><i class="fa-1x" data-bind="css:ImageFont()"></i></div>
+                                    <div class="col-xs-2"><i class="fa-1x" data-bind="css:ImageFont()"></i></div>
+                                    <div class="col-xs-2"><i class="fa-1x" data-bind="css:ImageFont()"></i></div>
+
+                                    <div class="col-xs-6 text-right">
+                                        <i class="fa fa-1_5x icon-money28 text-success marginright6"></i>
+                                        <span data-bind="text:numeral( $root.betAmount() * $root.slot3List.Match3Factor() * MatchNumber()).format('0,0.00')"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="col-xs-6">
+                                    <span>Any two matches</span>
+                                </div>
+                                <div class="col-xs-6 text-right">
+                                    <i class="fa fa-1_5x icon-money28 text-success marginright6"></i>
+                                    <span data-bind="text: $root.betAmount() * $root.slot3List.Match2Factor() "></span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+

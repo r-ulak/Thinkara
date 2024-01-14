@@ -1,0 +1,28 @@
+1,1,Approve,fa fa-thumbs-up text-success
+2,1,Deny,fa fa-thumbs-down text-danger
+3,2,Approve,fa fa-thumbs-up text-success
+4,2,Deny,fa fa-thumbs-down text-danger
+5,3,Approve,fa fa-thumbs-up text-success
+6,3,Deny,fa fa-thumbs-down text-danger
+7,4,Approve,fa fa-thumbs-up text-success
+8,4,Deny,fa fa-thumbs-down text-danger
+9,6,Yea,fa fa-thumbs-up text-success
+10,6,Nay,fa fa-thumbs-down text-danger
+11,7,Yea,fa fa-thumbs-up text-success
+12,7,Nay,fa fa-thumbs-down text-danger
+13,8,Yea,fa fa-thumbs-up text-success
+14,8,Nay,fa fa-thumbs-down text-danger
+15,9,Yea,fa fa-thumbs-up text-success
+16,9,Nay,fa fa-thumbs-down text-danger
+17,10,Yea,fa fa-thumbs-up text-success
+18,10,Nay,fa fa-thumbs-down text-danger
+19,11,Accept,fa fa-thumbs-up text-success
+20,11,Reject,fa fa-thumbs-down text-danger
+21,12,Accept,fa fa-thumbs-up text-success
+22,12,Reject,fa fa-thumbs-down text-danger
+23,13,I Support,fa fa-thumbs-up text-success
+24,13,I Do Not Support,fa fa-thumbs-down text-danger
+25,14,I Support,fa fa-thumbs-up text-success
+26,14,I Do Not Support,fa fa-thumbs-down text-danger
+27,5,Accept,fa fa-thumbs-up text-success
+28,5,Reject,fa fa-thumbs-down text-danger

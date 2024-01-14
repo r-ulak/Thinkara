@@ -1,0 +1,101 @@
+﻿<div id="manageprofile">
+    <div class="row padding3centt ">
+        <div class="col-xs-12">
+            <fieldset>
+                <legend class=" text-warning fontsize120">Profile Picture Upload</legend>
+                <form role="form" id="manageprofilepicform" class="form-horizontal fontsize90">
+                    <div class="well">
+                        <div class="form-group paddingl14 paddingr14">
+                            <div class="row padding10centt">
+
+                            </div>
+                            <div class="row dividertop">
+                                <div class="col-xs-12 ">
+                                    <div id="profilepicprw" class="col-xs-5">
+                                        <img data-bind="attr: {src: profilepicContainer + personpeopleInfo.Picture() , title: personpeopleInfo.FullName() }">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-group padding2centt">
+                                <span class="input-group-addon">
+                                    <i class="fa fa-user fa-1x"></i>
+                                </span>
+                                <input type="text" data-bind="value:uploadprofilePicObj.fileName()" class="form-control" placeholder="Upload Profile Picture">
+                                <span class="input-group-btn">
+                                    <span class="btn btn-default btn-file">
+                                        Browse… <input type="file" id="managepicfileupload">
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </fieldset>
+        </div>
+    </div>
+    <div data-bind="foreach: profileUploadManageList">
+        <div class="row">
+            <div class="col-xs-12 fontsize90 ">
+                <div class="alert alert-success">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+                        ×
+                    </button>
+                    <p class="fontsize90">
+                        <span>Upload Successfully Done</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <span title="Upload Image" id="manageprofilepicupload" data-loading-text="uploading..." class="btn btn-shadow btn-success btn-sm pull-right"><i class="fa  fa-upload"></i> Upload </span>
+        </div>
+    </div>
+    <div class="row padding3centt ">
+        <div class="col-xs-12">
+            <fieldset>
+                <legend class=" text-warning fontsize120">Name Details</legend>
+                <form role="form" id="manageprofileform" class="form-horizontal fontsize90">
+                    <div class="well">
+                        <div class="form-group paddingl14 paddingr14">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="fa fa-user fa-1x"></i>
+                                </span>
+                                <input type="text" title="First Name" class="form-control" name="firstName" maxlength="45" data-bind="value:personpeopleInfo.NameFirst" placeholder="First Name">
+                            </div>
+                        </div>
+                        <div class="form-group paddingl14 paddingr14">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="fa fa-user fa-1x"></i>
+                                </span>
+                                <input type="text" data-bind="value:personpeopleInfo.NameLast" title="Last Name"  class="form-control" name="lastName" maxlength="45" placeholder="LastName">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </fieldset>
+        </div>
+    </div>
+    <div data-bind="foreach: nameManageList">
+        <div class="row">
+            <div class="col-xs-12 fontsize90 ">
+                <div class="alert alert-success">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+                        ×
+                    </button>
+                    <p class="fontsize90">
+                        <span>Updates Submitted Successfully</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <span title="Apply Changes" id="managenamesave" data-loading-text="saving..." class="btn btn-shadow btn-success btn-sm pull-right"><i class="fa  fa-floppy-o"></i> Save </span>
+        </div>
+    </div>
+</div>

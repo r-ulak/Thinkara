@@ -1,0 +1,37 @@
+﻿<div class="col-md-12 col-xs-12 productbox">
+    <div class="row">
+        <div class="col-xs-6">
+            <div class="pull-left">
+                <span class="fa fa-info-circle fa-2x" data-toggle="popover"
+                      data-bind="attr:{'data-content':Description}"></span>
+            </div><span class="fa fa-10x " data-bind="css: ImageFont"></span>
+        </div>
+        <div class="col-xs-6 ">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="pull-right" title="Cost of property">
+                        <i class="fa icon-money28  text-danger fa-1x"></i>
+                        <span class="text-danger fa-1x" data-bind="text:numeral(Cost).format('0,0.00')"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-10">
+            <span class="text-info fa-2x" data-bind="text:Name"></span>
+        </div>
+        <div class="col-xs-2 ">
+            <div class="pull-right">
+                <span class="text-info fa-2x" data-bind="text:Quantity()"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row padding3centt">
+        <div class="col-xs-12">
+            <input type="text" class="capitalType" value="0" data-data-slider-step="2"
+                   data-bind="attr:{'data-index': $index, 'data-typeid':CapitalTypeId, 'data-cost': Cost}">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+﻿<div id="myjobcontainer">
+    <div class=" row">
+        <div class="col-xs-12">
+            <div class="panel panel-primary" id="jobMycontent-box">
+                <div class="panel-heading1 panel-heading">
+                    <div class="flagsprite pull-right btn-link"
+                         data-bind="css: 'flagsprite-' + CountryId().toLowerCase(), click: function(){viewCountryProfile(CountryId().toLowerCase())}"></div>
+                    <span class="fa icon-online32 marginright6 "></span> My Job
+
+                </div>
+                <div class="panel-body">
+                    @Html.Partial("_MyJobHomeItem")
+                </div>
+                <div class="panel-footer">
+                    <div class="row padding3centt">
+                        <div class="col-xs-6">
+                            <span class="label label-info" data-bind="text: jobCodes().length"></span>
+                        </div>
+                        <div class="col-xs-3"></div>
+                        <div class="col-xs-3">
+                            <span id="jobrefresh" class="btn btn-shadow btn-success btn-sm pull-right"><i class="fa fa-refresh"></i> </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-primary hidden" id="jobMycontent-submit">
+                <div class="panel-heading1 panel-heading">
+                    <span>Quit Job</span>
+                </div>
+                <div class="panel-body">
+                    <div class="col-xs-12">
+                        <span data-bind="text:Message">
+
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-default backbtn pull-right hidden">
+                <span><i class="fa fa-home"></i> Home</span>
+            </button>
+            <button class="btn btn-default  pull-left hidden" id="quitmorejob">
+                <span><i class="fa icon-online32 marginright6"></i> Quit More</span>
+            </button>
+            <button type="submit" id="quitjob" data-bind="disable: showQuitJobValidation()"
+                    data-loading-text='
+                <i class="fa fa-spinner fa-spin"></i> Quitting...'
+                class="btn btn-default pull-right">Quiting <span class="text-success" data-bind="text: quitingItems().length"></span> Job
+            </button>
+        </div>
+    </div>
+</div>

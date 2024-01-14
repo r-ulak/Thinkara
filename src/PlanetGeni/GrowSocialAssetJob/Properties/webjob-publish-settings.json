@@ -1,0 +1,8 @@
+﻿{
+  "$schema": "http://schemastore.org/schemas/json/webjob-publish-settings.json",
+  "webJobName": "GrowSocialAssetJob",
+  "startTime": "2015-10-18T00:00:00-06:00",
+  "jobRecurrenceFrequency": "Day",
+  "interval": 3,
+  "runMode": "Scheduled"
+}

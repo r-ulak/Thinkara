@@ -1,0 +1,129 @@
+﻿<div class="row">
+    <div class="col-md-12">
+        <div class="well hidden">
+            <fieldset id="capitalgiftTotal" class="padding3centb">
+                <legend class="text-warning fontsize120">
+                    @Html.Partial("_GiftRate")
+                </legend>
+                <form role="form" id="capitalgiftform" class="form-horizontal fontsize80">
+                    <div class="row">
+                        <div class="col-xs-12 validation-group">
+                            <div class="input-group bottomMarging15 ">
+                                <span class="input-group-addon">
+                                    <input id="checkboxGold" checked type="checkbox" name="giftType">
+                                </span>
+                                <input type="text" id="giftGold" name="giftGold">
+                            </div>
+                            <input type="text" id="totalgiftgold" data-bind="value:TotalGold" class="hidden" name="totalgiftgold">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 validation-group">
+                            <div class="input-group bottomMarging15 ">
+                                <span class="input-group-addon">
+                                    <input id="checkboxSilver" checked type="checkbox" name="giftType">
+                                </span>
+                                <input type="text" id="giftSilver" name="giftSilver">
+                            </div>
+                            <input type="text" id="totalgiftsilver" data-bind="value:TotalSilver" class="hidden" name="totalgiftsilver">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 validation-group">
+                            <div class="input-group bottomMarging15 ">
+                                <span class="input-group-addon">
+                                    <input id="checkboxCash" checked type="checkbox" name="giftType">
+                                </span>
+                                <input type="text" id="giftCash" name="giftCash">
+                            </div>
+                            <input type="text" id="totalgiftCash" data-bind="value:TotalGiftInCash" class="hidden" name="totalgiftCash">
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="col-xs-5">
+                                <strong class="fa-1x ">Cash Left</strong>
+                            </div>
+                            <div class="col-xs-7">
+                                <div class="pull-right" data-bind="css:TotalGiftInCashCss">
+                                    <i class="fa icon-money28  fa-1x"></i>
+                                    <span class="fontsize105" data-bind="text:numeral(TotalCashLeft()).format('0,0.00')	"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="col-xs-5">
+                                <strong class="fa-1x "> Gold Left </strong>
+                            </div>
+                            <div class="col-xs-7">
+                                <div class="pull-right" data-bind="css:TotalGoldCss">
+                                    <i class="fa fa-inbox  fa-1x"></i>
+                                    <span class="fontsize105" data-bind="text:TotalGold().toFixed(2)"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="col-xs-5">
+                                <strong class="fa-1x ">Silver Left</strong>
+                            </div>
+                            <div class="col-xs-7">
+                                <div class="pull-right" data-bind="css:TotalSilverCss">
+                                    <i class="fa fa-inbox  fa-1x"></i>
+                                    <span class="fontsize105" data-bind="text:TotalSilver().toFixed(2)"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="col-xs-5">
+                                <strong class="fontsize120">Total Tax </strong>
+                            </div>
+                            <div class="col-xs-7">
+                                <div class="pull-right">
+                                    <i class="fa fa-inbox  text-success fa-1x"></i>
+                                    <span class="fontsize120" data-bind="text:numeral(TotalTax()).format('0,0.00')"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="col-xs-5">
+                                <strong class="fontsize120">Total InCash </strong>
+                            </div>
+                            <div class="col-xs-7">
+                                <div class="pull-right">
+                                    <i class="fa fa-inbox  text-success fa-1x"></i>
+                                    <span class="fontsize120" data-bind="text:numeral(TotalGiftInCash()).format('0,0.00')"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                </form>
+            </fieldset>
+            <fieldset>
+                <legend class="text-warning fontsize120">
+                    Select Recipent Friends
+                </legend>
+                @Html.Partial("_FriendList")
+            </fieldset>
+            <fieldset>
+                <legend class="text-warning fontsize120">
+                    Select Recipent Nation
+                </legend>
+                @Html.Partial("_CountryList")
+            </fieldset>
+
+        </div>
+    </div>
+</div>
+
+

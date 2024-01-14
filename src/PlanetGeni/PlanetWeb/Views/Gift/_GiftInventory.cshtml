@@ -1,0 +1,92 @@
+﻿<div id="merchandisegiftcontainer">
+    <div class=" row">
+        <div class="col-xs-12">
+            <div class="panel panel-primary" id="merchandiseGiftcontent-box">
+                <div class="panel-heading1 panel-heading">
+                    <div class="flagsprite pull-right btn-link"
+                         data-bind="css: 'flagsprite-' + CountryId().toLowerCase(), click: function(){viewCountryProfile(CountryId().toLowerCase())}"></div>
+                    <span class="fa icon-present3 marginright6"></span> Send Gift
+                </div>
+                <div class="panel-body">
+                    @Html.Partial("_InventoryItem")
+                    <div id="merchandiseGiftfooter" data-bind="visible:showView()">
+                        <div class="row padding3centt">
+                            <div class="col-xs-12">
+                                <div class="col-xs-6">
+                                    <div class="pull-left">
+                                        <div class="pull-left">
+                                            <span class="text-left fontsize70 label label-info"
+                                                  data-bind="text: merchandiseCodes().length"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-3">
+                                </div>
+                                <div class="col-xs-3 pull-right">
+                                    <span id="merchandisegiftshowmore" class="marginright16 btn btn-shadow btn-success btn-sm pull-right"><i class="fa fa-plus"></i> </span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    <div id="merchandiseGiftTotalfooter" data-bind="visible:showView()" class="padding3centb">
+                        <div class="row padding3centt">
+                            <div class="col-xs-12">
+                                <div class="col-xs-5">
+                                    <strong class="fontsize80">Total Tax </strong>
+                                </div>
+                                <div class="col-xs-7">
+                                    <div class="pull-right">
+                                        <i class="fa fa-inbox  text-success fontsize90"></i>
+                                        <span class="fontsize80" data-bind="text:numeral(TotalTax()).format('0,0.00')"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row padding3centt">
+                            <div class="col-xs-12">
+                                <div class="col-xs-5 ">
+                                    <strong class="fontsize80"> Total Cash Left </strong>
+                                </div>
+                                <div class="col-xs-7">
+                                    <div class="pull-right" data-bind="css:TotalGiftLeftCashCss">
+                                        <i class="fa icon-money28  fontsize90"></i>
+                                        <span class="fontsize80" data-bind="text:numeral(TotalCashLeft()).format('0,0.00')"></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <fieldset class="hidden">
+                        <legend class="text-warning fontsize120 ">
+                            Select Recipent Friends
+                        </legend>
+                        @Html.Partial("_FriendListMerchandise")
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="panel panel-primary hidden" id="merchandiseGiftcontent-submit">
+                <div class="panel-heading1 panel-heading">
+                    <span>Send Gift</span>
+                </div>
+                <div class="panel-body">
+                    <div class="col-xs-12">
+                        <span data-bind="text:Message">
+
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-default backbtn pull-right hidden">
+                <span><i class="fa fa-home"></i> Home</span>
+            </button>
+            <button type="submit" id="sendmerchandise" data-bind="disable: showSendValidation()"
+                    data-loading-text='
+                <i class="fa fa-spinner fa-spin"></i> Sending...'
+                class="btn btn-default pull-right">Send Gift
+            </button>
+        </div>
+    </div>
+</div>

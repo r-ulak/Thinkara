@@ -1,0 +1,84 @@
+﻿<div id="countryBudgetcontainer">
+    <div class=" row">
+        <div class="col-xs-12">
+            <div class="panel panel-primary" id="mycountryBudgetcontent-box">
+                <div class="panel-heading1 panel-heading">
+                    <div class="flagsprite pull-right btn-link"
+                         data-bind="css: 'flagsprite-' + CountryId().toLowerCase(), click: function(){viewCountryProfile(CountryId().toLowerCase())}"></div> <div class="pull-right">
+                        <span class="fontsize80 marginright6"> Allocate </span>
+                        <span class="fa icon-money28 text-success marginright6"></span>
+                        <span class="fontsize110 marginright6" data-bind="text:  numeral(AmountLeft()).format('0,0.00')"></span>
+                    </div>
+                    <span class="fa icon-budget marginright6"></span> Budget Allocation
+                </div>
+                <div class="panel-body" data-bind="foreach: { data: BudgetType, afterRender: AfterRenderAction}">
+                    <div class="row padding3centt">
+                        <div class="input-group col-xs-12">
+                            <span class="input-group-addon">
+                                <i class="fa fa-1x" data-bind="css: ImageFont"></i>
+                            </span>
+                            <input type="text" class="budgetType"
+                                   data-bind="attr:{'data-index': $index}">
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <span> Total</span>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="pull-right">
+                                <span class="fa icon-money28 text-success"></span>
+                                <span class="label label-success text-right
+                                  fontsize110" data-bind="text: numeral(TotalAmount() - AmountLeft()).format('0,0.00')"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ko if: AllowEdit() == false -->
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <span class="fontsize90 pull-right text-warning padding3centt">
+                                Not Allowed To Update
+                            </span>
+                        </div>
+                    </div>
+                    <!-- /ko -->
+                    <div class="row" data-bind="visible: !IsTotalValid() ">
+                        <div class="col-xs-12">
+                            <span class="fontsize90 pull-right text-warning padding3centt">
+                                Total Not Valid, Change Allocation
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="panel panel-primary hidden" id="mycountryBudgetcontent-submit">
+                <div class="panel-heading1 panel-heading">
+                    <span>Budget Submisson</span>
+                </div>
+                <div class="panel-body">
+                    <div class="col-xs-12">
+                        <span data-bind="text:Message">
+
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-default backbtn pull-right hidden">
+                <span><i class="fa fa-home"></i> Home</span>
+            </button>
+
+            <button type="submit" id="savebudget" data-content="You need to be a country leader to adjust Country's budget rate."
+                    data-toggle="popover" title="National Budget"
+                    data-loading-text='
+                <i class="fa fa-spinner fa-spin"></i> Saving...'
+                class="btn btn-default pull-right">Submit Budget
+            </button>
+        </div>
+    </div>
+</div>

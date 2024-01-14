@@ -1,0 +1,38 @@
+﻿@model DAO.DAO.FinanceContent
+<fieldset>
+    <legend>Current Balance</legend>
+    <table>
+        <tr>
+            <td>
+                Credit
+            </td>
+            <td>
+                @Model.creditTotal
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Debit
+            </td>
+            <td>
+                @Model.debitTotal
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Loan from Business
+            </td>
+            <td>
+                @Model.businessLoanTotal
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Loan from Friends
+            </td>
+            <td>
+                @Model.personLoanTotal
+            </td>
+        </tr>
+    </table>
+</fieldset>

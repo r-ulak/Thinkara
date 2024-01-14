@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://web.planetgeni.com/" />
+<title>ElectionValidation</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">ElectionValidation</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=webUserId</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=webUserId</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=webPassword</td>
+	<td>Kathmandu6</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//a[@id='nav-election']/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=i.pull-left.user-status0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=nav-election</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Run For Office</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Run For Office</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@id='electionAgenda']/ul/li[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=radioIndependet</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=applyelection</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=candidateParty</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='electionfriendsFooter']/span[3]</td>
+	<td>10 Nomaination Requried</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='electionAgendaFooter']/span[3]</td>
+	<td>3 Agenda Requried</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='electionapply-box']/div[2]/div/div/fieldset/div/div[2]/span</td>
+	<td>Select Office to Run For</td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>id=candidateParty</td>
+	<td>Flashpoint</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=radioParty</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>id=eleFriends</td>
+	<td></td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td></td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

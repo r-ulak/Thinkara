@@ -1,0 +1,30 @@
+﻿<div id="viewpartycontainer">
+    <div class=" row">
+        <div class="col-xs-12">
+            <div class="panel panel-primary" id="partyViewcontent-box">
+                <div class="panel-heading1 panel-heading">
+                    <div class="flagsprite pull-right btn-link"
+                         data-bind="css: 'flagsprite-' + CountryId().toLowerCase(), click: function(){viewCountryProfile(CountryId().toLowerCase())}"></div>
+                    <span class="fa icon-candidate  marginright6"></span> Party  Info
+                </div>
+                <div class="panel-body">
+                    @Html.Partial("_ViewPartyItem")
+                </div>
+                <div class="panel-footer">
+                    <div class="row padding3centt">
+                        <div class="col-xs-6">
+
+                        </div>
+                        <div class="col-xs-3"></div>
+                        <div class="col-xs-3">
+                            <button id="viewpartyrefresh" class="btn btn-success btn-sm form-control pull-right">
+                                <i class="fa fa-refresh"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

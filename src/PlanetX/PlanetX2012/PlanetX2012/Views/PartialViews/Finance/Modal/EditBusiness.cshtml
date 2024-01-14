@@ -1,0 +1,137 @@
+﻿@model  PlanetX2012.Models.ContentModel.ManageBusinessContent
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(false)
+    <div id="businessList" class="accord">
+        @foreach (var business in Model.BusinessList)
+        {
+            <h2>
+                <a>
+                    @business.BusinessName
+                </a>
+            </h2>
+            <div id="business_@(business.BusinessId)">
+                <div id="errSummary@(business.BusinessId)" class="hidden errors"></div>
+                <table>
+                    <tr>
+                        <td>Running Cost By vMonth                        
+                        </td>
+                        <td>
+                            @business.RunningCost
+                        </td>
+                        <td rowspan="6">
+                            <img class="businessIndicator" src="../../../../images/charts/TechnicalPriceIndicators.png" />
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Net Profit
+                        </td>
+                        <td>
+                            @business.NetProfit
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Location
+                        </td>
+                        <td>
+                            @business.CityId
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Location
+                        </td>
+                        <td>
+                            @business.CityId
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Location
+                        </td>
+                        <td>
+                            @business.CityId
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Location
+                        </td>
+                        <td>
+                            @business.CityId
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            @Ajax.ActionLink(
+                                "Buy Ads",
+                                "Create",
+                                "Event",
+                                null,
+                                new AjaxOptions
+                                {
+                                    UpdateTargetId = "BuyAdsmodal-dialog",
+                                    OnBegin = "Dialog.Opening({id: 'BuyAdsmodal-dialog'})",
+                                    OnSuccess = "Dialog.Open({title: 'Buy Ads'})"
+                                },
+                                new
+                                {
+                                    @class = "demo-button ui-state-default ui-corner-all"
+                                }
+                            )
+                        </td>
+                        <td>
+                            <a class="removeBusiness demo-button ui-state-default ui-corner-all" data-businessid="@business.BusinessId">Close Business </a>
+
+
+                        </td>
+
+                    </tr>
+                </table>
+
+
+
+            </div>
+        }
+    </div>
+}
+
+<script type="text/javascript">
+    $(function () {
+        $("#businessList").accordion({
+            autoHeight: false,
+            animated: 'bounceslide',
+            icons: { "header": "ui-icon-plus", "headerSelected": "ui-icon-minus" }
+        });
+
+
+        $('.removeBusiness').click(function (e) {
+            console.log("Event fired for remove" + $(this).data("businessid"));
+
+            $.ajax({
+                async: false,
+                type: 'POST',
+                url: '@Url.Action("Remove", "Finance")',
+                contentType: 'application/json; charset=utf-8',
+                data: JSON.stringify({
+                    id: $(this).data("businessid")
+                }),
+                success: function (result, data) {
+                    if (result.success == "1") {
+                        $("#business_" + result.businessId).prev('h2').andSelf().fadeOut(1000, function () { $(this).remove(); })
+                    }
+                    else {
+                        $("#errSummary" + result.businessId).html(result.ex);
+                        $("#errSummary" + result.businessId).show();
+
+                    }
+
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+
+                }
+            })
+        });
+
+
+    });
+</script>

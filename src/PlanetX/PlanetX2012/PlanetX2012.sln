@@ -1,0 +1,117 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlanetX2012", "PlanetX2012\PlanetX2012.csproj", "{F222A8F1-BFCA-4CA6-BBA4-510365BFF6F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChartService", "ChartService\ChartService.csproj", "{5B6C65F1-4FF2-4EC9-AD3D-9FD43F2F62DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAO", "DAO\DAO.csproj", "{CADD3F16-6F4D-419E-A8BC-90BA10EAE0F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FetchWebContentService", "FetchWebContentService\FetchWebContentService.csproj", "{1D717FD1-B2C4-4BE1-AE4D-F8EA5F2156FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BROLibrary", "BROLibrary\BROLibrary.csproj", "{14556AA7-35D3-40C0-B219-DFD693FFAF60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrendingService", "TrendingService\TrendingService.csproj", "{33FA5CFA-4753-4253-8F63-92E5A405CC32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{4DEBBA20-5F7C-40A7-878D-6639A430AEBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchService", "SearchService\SearchService.csproj", "{04EA1B1A-E6C6-4D89-AA47-AAA70249A17D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedisAutoCompleteIndexer", "RedisAutoCompleteIndexer\RedisAutoCompleteIndexer.csproj", "{2D381CD8-4D7E-487A-90D7-DF4EB2840EC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{A255D1D0-F28A-4E2E-B2B2-68EDB489324D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DB", "DB", "{9E548FFB-5036-4CA7-91C5-C188A2ECDD29}"
+	ProjectSection(SolutionItems) = preProject
+		DB\Business.csv = DB\Business.csv
+		DB\BusinessSubtypes.csv = DB\BusinessSubtypes.csv
+		DB\BusinessTypes.csv = DB\BusinessTypes.csv
+		DB\city_list.csv = DB\city_list.csv
+		DB\citylist.csv = DB\citylist.csv
+		DB\country_list.csv = DB\country_list.csv
+		DB\country_list.sql = DB\country_list.sql
+		DB\Data.sql = DB\Data.sql
+		DB\DegreeType.csv = DB\DegreeType.csv
+		DB\ELMAH-1.2-db-MySql.sql = DB\ELMAH-1.2-db-MySql.sql
+		DB\facebook DB.jpg = DB\facebook DB.jpg
+		DB\Friend.csv = DB\Friend.csv
+		DB\MajorCode.csv = DB\MajorCode.csv
+		DB\new_city_list.csv = DB\new_city_list.csv
+		DB\Planetx.mwb = DB\Planetx.mwb
+		DB\Planetx.mwb.bak = DB\Planetx.mwb.bak
+		DB\Planetx.mwb.beforefix = DB\Planetx.mwb.beforefix
+		DB\PlanetX.sql = DB\PlanetX.sql
+		DB\PlanetXBasicCommands.txt = DB\PlanetXBasicCommands.txt
+		DB\PlanetXDec2012.sql = DB\PlanetXDec2012.sql
+		DB\Post.csv = DB\Post.csv
+		DB\PostComment.csv = DB\PostComment.csv
+		DB\PostUserACL.csv = DB\PostUserACL.csv
+		DB\readme.txt = DB\readme.txt
+		DB\sns.7.0-.mwb = DB\sns.7.0-.mwb
+		DB\sns.7.0-.mwb.bak = DB\sns.7.0-.mwb.bak
+		DB\sns.7.0.png = DB\sns.7.0.png
+		DB\sns.yml = DB\sns.yml
+		DB\StoredProcedure.sql = DB\StoredProcedure.sql
+		DB\temp.sql = DB\temp.sql
+		DB\test.csv = DB\test.csv
+		DB\TopicTag.csv = DB\TopicTag.csv
+		DB\Triggers.sql = DB\Triggers.sql
+		DB\unique_city_list.csv = DB\unique_city_list.csv
+		DB\University.csv = DB\University.csv
+		DB\us_city_list.csv = DB\us_city_list.csv
+		DB\Webuser list.txt = DB\Webuser list.txt
+		DB\Webuser.csv = DB\Webuser.csv
+		DB\worldcitiespop.txt = DB\worldcitiespop.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F222A8F1-BFCA-4CA6-BBA4-510365BFF6F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F222A8F1-BFCA-4CA6-BBA4-510365BFF6F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F222A8F1-BFCA-4CA6-BBA4-510365BFF6F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F222A8F1-BFCA-4CA6-BBA4-510365BFF6F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B6C65F1-4FF2-4EC9-AD3D-9FD43F2F62DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B6C65F1-4FF2-4EC9-AD3D-9FD43F2F62DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B6C65F1-4FF2-4EC9-AD3D-9FD43F2F62DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B6C65F1-4FF2-4EC9-AD3D-9FD43F2F62DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CADD3F16-6F4D-419E-A8BC-90BA10EAE0F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CADD3F16-6F4D-419E-A8BC-90BA10EAE0F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CADD3F16-6F4D-419E-A8BC-90BA10EAE0F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CADD3F16-6F4D-419E-A8BC-90BA10EAE0F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D717FD1-B2C4-4BE1-AE4D-F8EA5F2156FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D717FD1-B2C4-4BE1-AE4D-F8EA5F2156FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D717FD1-B2C4-4BE1-AE4D-F8EA5F2156FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D717FD1-B2C4-4BE1-AE4D-F8EA5F2156FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14556AA7-35D3-40C0-B219-DFD693FFAF60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14556AA7-35D3-40C0-B219-DFD693FFAF60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14556AA7-35D3-40C0-B219-DFD693FFAF60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14556AA7-35D3-40C0-B219-DFD693FFAF60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33FA5CFA-4753-4253-8F63-92E5A405CC32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33FA5CFA-4753-4253-8F63-92E5A405CC32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33FA5CFA-4753-4253-8F63-92E5A405CC32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33FA5CFA-4753-4253-8F63-92E5A405CC32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DEBBA20-5F7C-40A7-878D-6639A430AEBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DEBBA20-5F7C-40A7-878D-6639A430AEBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DEBBA20-5F7C-40A7-878D-6639A430AEBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DEBBA20-5F7C-40A7-878D-6639A430AEBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04EA1B1A-E6C6-4D89-AA47-AAA70249A17D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04EA1B1A-E6C6-4D89-AA47-AAA70249A17D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04EA1B1A-E6C6-4D89-AA47-AAA70249A17D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04EA1B1A-E6C6-4D89-AA47-AAA70249A17D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D381CD8-4D7E-487A-90D7-DF4EB2840EC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D381CD8-4D7E-487A-90D7-DF4EB2840EC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D381CD8-4D7E-487A-90D7-DF4EB2840EC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D381CD8-4D7E-487A-90D7-DF4EB2840EC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A255D1D0-F28A-4E2E-B2B2-68EDB489324D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A255D1D0-F28A-4E2E-B2B2-68EDB489324D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A255D1D0-F28A-4E2E-B2B2-68EDB489324D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A255D1D0-F28A-4E2E-B2B2-68EDB489324D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

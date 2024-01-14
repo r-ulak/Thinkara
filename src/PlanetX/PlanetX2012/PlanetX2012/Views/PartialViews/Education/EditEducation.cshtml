@@ -1,0 +1,132 @@
+﻿@model  PlanetX2012.Models.ContentModel.ManageEducationContent
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(false)
+    <div id="educationList" class="accord">
+        @foreach (var education in Model.EducationList)
+        {
+            <h2>
+                <a>
+                    @education.Major
+                </a>
+            </h2>
+            <div id="education_@(education.EducationId)">
+                <div id="errSummary@(education.EducationId)" class="hidden errors"></div>
+                <table>
+                    <tr>
+                        <td>Major Type                      
+                        </td>
+                        <td>
+                            @education.Major
+                        </td>
+                        <td rowspan="6">
+                            <img class="educationIndicator" src="../../../../images/charts/TechnicalPriceIndicators.png" />
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>University Name
+                        </td>
+                        <td>
+                            @education.UniversityName
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Completed Credits
+                        </td>
+                        <td>50 Credits
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Remaining Credit
+                        </td>
+                        <td>
+                          60 Credits
+                        </td>
+                    </tr>
+
+                    
+                    <tr>
+                        <td>Currenlty Enrolled Credits
+                        </td>
+                        <td>
+                          60 Credits
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            @Ajax.ActionLink(
+                                "Enroll Classes",
+                                "Create",
+                                "Event",
+                                null,
+                                new AjaxOptions
+                                {
+                                    UpdateTargetId = "EnrollClassesmodal-dialog",
+                                    OnBegin = "Dialog.Opening({id: 'EnrollClassesmodal-dialog'})",
+                                    OnSuccess = "Dialog.Open({title: 'Enroll Classes'})"
+                                },
+                                new
+                                {
+                                    @class = "demo-button ui-state-default ui-corner-all"
+                                }
+                            )
+                        </td>
+                        <td>
+                            <a class="removeEducation demo-button ui-state-default ui-corner-all" data-educationid="@education.EducationId">Drop Class</a>
+
+
+                        </td>
+
+                    </tr>
+                </table>
+
+
+
+            </div>
+        }
+    </div>
+}
+
+<script type="text/javascript">
+    $(function () {
+        $("#educationList").accordion({
+            autoHeight: false,
+            animated: 'bounceslide',
+            icons: { "header": "ui-icon-plus", "headerSelected": "ui-icon-minus" }
+        });
+
+
+        $('.removeEducation').click(function (e) {
+            console.log("Event fired for remove" + $(this).data("educationid"));
+
+            $.ajax({
+                async: false,
+                type: 'POST',
+                url: '@Url.Action("Remove", "Education")',
+                contentType: 'application/json; charset=utf-8',
+                data: JSON.stringify({
+                    id: $(this).data("educationid")
+                }),
+                success: function (result, data) {
+                    if (result.success == "1") {
+                        $("#education_" + result.educationId).prev('h2').andSelf().fadeOut(1000, function () { $(this).remove(); })
+                    }
+                    else {
+                        $("#errSummary" + result.educationId).html(result.ex);
+                        $("#errSummary" + result.educationId).show();
+
+                    }
+
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+
+                }
+            })
+        });
+
+
+    });
+</script>

@@ -1,0 +1,32 @@
+﻿#university
+{
+    font-size: 14px;
+    padding: 5px 0 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.joineducation
+{
+    height: auto;
+}
+
+#degreecodes
+{
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+#majorcodes
+{
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.educationIndicator
+{
+    height: 150px;
+    width: 225px;
+    border: 2px solid #e2e2e2;
+    padding: 3px;
+    margin: 0 15px 10px 0;
+}

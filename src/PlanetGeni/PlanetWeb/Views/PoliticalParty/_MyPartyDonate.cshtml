@@ -1,0 +1,42 @@
+﻿<div >
+    <div class="row padding3centt">
+        <div class="col-xs-12 validation-group">
+            <div class="col-xs-9">
+                <div class="input-group bottomMarging15 ">
+                    <input type="text" class="donateCash fontsize80" data-bind="attr:{'data-index': $index()}" name="donateCash">
+                </div>
+            </div>
+            <div class="col-xs-3 pull-right">
+                <strong class="text-warning1 fontsize80 text-right " data-bind="text:numeral($root.AmountLeft()).format('0,0.00')"></strong>
+            </div>
+        </div>
+    </div>
+    <div class="padding3centt" data-bind="foreach: DonationList">
+        <div class="row">
+            <div class="col-xs-12 fontsize90 ">
+                <div class="alert alert-success">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+                        ×
+                    </button>
+                    <p class="fontsize90">
+                        <span>Donation For </span>
+                        <i class="fa icon-money28 text-success"></i>
+                        <span data-bind="text:' ' + Amount">
+                        </span>
+                        <span>Submitted Successfully</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 ">
+            <button type="submit" data-bind="attr:{'data-index':$index()} "
+                    data-loading-text='
+                <i class="fa fa-spinner fa-spin"></i> Donating...'
+                class="btn btn-default pull-right donateCashbtn">Donate
+            </button>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,33 @@
+﻿<div class="padding3centt" id="inviteFounderParty">
+    <hr />
+    <div class="col-xs-12">
+        <div class="panel panel-default recipients">
+            <div class="panel-heading">
+                <span class="button-checkbox pull-right invitepartyFriends">
+                    <button type="button" class="btn btn-sm" data-color="default">All</button>
+                    <input type="checkbox" id="partyinvitefriendall" class="hidden" />
+                </span>
+                <span>
+                    Send PartyJoin Invite
+                </span>
+            </div>
+            <div class="panel-body col-xs-12" id="partyinvitefriends" data-bind="foreach: friendDetailsDTO">
+                <div class="recipient col-xs-4" data-bind="attr: {title: FullName}, click: $parent.clickfoundersinvite">
+                    <i data-bind="css: 'user-status' + OnlineStatus" class="pull-left"></i>
+                    <img width="28px" height="28px" class="img-check"
+                         data-bind="attr: {src: profilepicContainer+Picture , title: NameFirst }">
+                    <span data-bind="text: FullName"></span>
+                    <input type="checkbox" data-bind="value: FriendUserId" class="hidden">
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="panel-footer fontsize80" id="partyfriendsFooter">
+                <span data-bind="text: founderInviteSelected().length"></span>
+                <span class="text-muted"> friend(s) selected</span>
+
+                <span class="text-muted fontsize70 pull-right">10 Members Requried To Start Party</span>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,8 @@
+﻿<li data-bind="attr:{'data-child': ChildCommentCount(), 'data-postId': PostId()}" class="post">
+    <!-- ko if: (PostContentTypeId() >0) -->
+    @Html.Partial("../TimeLine/_TimeLineNews")
+    <!-- /ko -->
+    <!-- ko if: (PostContentTypeId() ==0) -->
+    @Html.Partial("../TimeLine/_TimeLinePost")
+    <!-- /ko -->
+</li>

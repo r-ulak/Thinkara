@@ -1,0 +1,66 @@
+1,Northrop YB -35,Flying Wing Bomber,icon-airplane24,50,A,1.05,105
+2,P-38 Lightning,Superfast Fighter Aircraft,icon-airplane25,60,A,1.1,110
+3,Mig29-1-674 polygons,A poweful fighter Aircraft,icon-airplane26,40,A,0.9,90
+4,F16- 859Polygons,Compact Fighter Aircraft,icon-airplane27,30,A,0.85,85
+5,P-51 Mustang,Single Seat Fighter Aircraft,icon-airplane29,40,A,0.95,95
+6,Eurofighter,Jet Fighter Aircraft,icon-airplane30,60,A,1.15,115
+7,C130 hercules,Small Transport Aircraft,icon-airplane31,70,A,1.2,120
+8,F-22 Raptor,Tactical Fighter Aircraft,icon-airplane32,50,A,1,100
+9,C17 Globemaster,Large Transport Aircraft,icon-airplane33,50,A,1.05,105
+10,Sea Harrier,Attack Aircraft with vertical take off/landing,icon-airplane34,40,A,0.95,95
+11,F-35 JSF,Single seat Multirole Attack/Defense Aircraft,icon-airplane35,50,A,1.05,105
+12,Bomber,Attack Aircraft,icon-airplane36,70,A,1.25,125
+13,C18 Globemaster,Medium Transport Aircraft,icon-airplane37,40,A,0.9,90
+14,Heikel-HE-162,Jet Powered Fighter Aircraft,icon-airplane38,10,A,0.65,65
+15,Boeing,Fixed Wing Aircraft,icon-airplane52,10,A,0.6,60
+16,Douglas C54,Four Engined Transport Aircraft,icon-commerical9,10,A,0.68,68
+17,MesserschmittM,War Aircraft,icon-passengers,20,A,0.72,72
+18,P-47 Thunderbolt,Largest Figther Aircraft,icon-army,40,A,0.9,90
+19,Gazelle AH,Multipurpose Army Helicopter,icon-army1,40,A,0.95,95
+20,F-15 Strike Eagle,All Weather Fighter Aircraft,icon-army2,50,A,1,100
+21,F22 Raptor,Single Seat Tactical Fighter Aircraft,icon-army3,50,A,1.05,105
+22,Tornado G3,Advanced Trainer Aircraft,icon-army4,50,A,1.06,106
+23,Agusta Westland AW 149,Medium Lift Military Helicopter,icon-helicopter8,40,A,0.9,90
+24,Lynx AH7,Commando helicopter,icon-helicopter9,20,A,0.7,70
+25,Huey1- 559 polygons,Superior Helicopter,icon-helicopter10,30,A,0.8,80
+26,Aerospatiale SA341,Utility helicopter,icon-helicopter11,50,A,1,100
+27,Apache-1045 polygons,Explosive offensive and Defensive Aircraft,icon-helicopter12,40,A,0.95,95
+28,Black Hawk AH,Missile Attack Helicopter,icon-helicopter13,50,A,1.05,105
+29,Bell 212- AH,A poweful fighter Aircraft for all type of weather,icon-military7,20,A,0.7,70
+30,Stealth - 542 Polygon,Super Fast Flying Machine,icon-military3,30,A,0.85,85
+31,Eurofighter,swing-role combat aircraft ,icon-military6,40,A,0.95,95
+32,F- 35 JSF,Strike Fighter Aircraft,icon-fighter3,70,A,1.25,125
+33,Apollo,Highest Power Rocket,icon-rocket10,70,A,1.5,150
+34,Atlas,World Class Rocket,icon-rocket16,70,A,1.55,155
+35,Athena,One Cool Rocket,icon-rocket20,70,A,1.6,160
+36,Titan,Liquid Propelled Rocket,icon-rocket5,70,A,1.65,165
+37,Anastasia,Spaceship cum aeroplane,icon-space12,80,A,1.9,190
+38,Explorer,For Exploration of unknown,icon-space16,80,A,2,200
+39,Eagle,Affordable and Reliable Spacecraft,icon-space7,90,A,2.05,205
+40,Niravana,Spacecraft beyond your imagination,icon-space32,90,A,2.1,210
+41,Space Fighter,A fighter Spacecraft capable of wide range of things,icon-spacecraft2,100,A,2.15,215
+42,Combat Pistol,Easier to conceal light to carry,icon-gun2,35000,L,0.35,0.035
+43,Tactical Pistol,More accurate reduced felt recoil,icon-gun7,20000,L,0.02,0.02
+44,Single Action Revolver,Army`s Standard Sidearm,icon-gun9,150000,L,0.15,0.15
+45,Semi Automatic Pistol,A self loading pistol,icon-police8,25000,L,0.025,0.025
+46,Military Revolvers,A giant leap forward for reliability,icon-police9,30000,L,0.03,0.03
+47,Remington 870,Ultimate stregth durability and sleek ,icon-police10,30000,L,0.03,0.03
+48,Assualt Rifle,Standard Service Rifles,icon-rocket,40000,L,0.04,0.04
+49,Sniper Rifle,Precision Rifle for Precise Target,icon-sniper,50000,L,0.05,0.05
+50,Mortar,For Projective Firing of Explosives,icon-mortar,55000,L,0.055,0.055
+51,Air Gun,AKA Pellet Gun,icon-blunderbush1,60000,L,0.06,0.06
+52,Nuclear Missile,The ultimate Offensive and Defensive Weapon,icon-missile3,50000000,L,50,50
+53,Chemical Missile,Long range smart cruise missile,icon-missile1,20000000,L,20,20
+54,Torpedo,Underwater Missile,icon-torpedo,15000000,L,15,15
+55,Biological Missile ,Weapon used throughout the history of warfare,icon-swiss,17500000,L,17.5,17.5
+56,Atom Bomb,Weapon with great explosive power,icon-bomb3,100000,L,0.1,0.1
+57,Nuclear Bomb,Weapon of Mass Destruction,icon-bomb4,500000,L,0.5,0.5
+58,Hand Grenade,Small Hand Explosives,icon-bomb5,175000,L,0.175,0.175
+59,Cannon,Artilarry Using Gun Powder,icon-canon,500000,L,0.5,0.5
+60,Cannon,Weapon of choice during ancient era,icon-cannon1,750000,L,0.75,0.75
+61,Dynamnite,Nitroglycerin based explosive,icon-dynamite,200000,L,0.2,0.2
+62,Solider,Trained Army personeels,icon-male104,750000,L,0.75,0.75
+63,Combat Soldier,Extensively Trained  Army Personnel,icon-male106,1000000,L,1,1
+64,Navy Officer,Highly Trained Sea Soldiers,icon-soldier1,2000000,L,2,2
+65,Tank,Armoured Fighting Vehicle,icon-war5,2500000,L,2.5,2.5
+66,Sherman Tank,Exclusive with large calibre cannon mounted,icon-war6,3000000,L,3,3

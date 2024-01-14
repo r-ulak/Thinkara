@@ -1,0 +1,39 @@
+﻿<div id="casinoSlotcontainer">
+    <div class=" row">
+        <div class="col-xs-12">
+            <div class="panel panel-primary" id="mycasinoSlotcontent-box">
+                <div class="panel-heading1 panel-heading">
+                    <div class="flagsprite pull-right btn-link"
+                         data-bind="css: 'flagsprite-' + CountryId().toLowerCase(), click: function(){viewCountryProfile(CountryId().toLowerCase())}"></div>
+
+                    <span class="fa fa-cube  marginright6"></span> Slot Machine
+                </div>
+                <div class="panel-body">
+                    @Html.Partial("_SlotMachineItem")
+                </div>
+                <div class="panel-footer fontsize90">
+                    <div class="row padding3centt">
+                        <div class="col-xs-6">
+                            <strong> Avaliable Cash </strong>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="pull-right">
+                                <i class="fa icon-money28 text-success"></i>
+                                <strong class="fontsize110" data-bind="text: numeral(AmountAvailable()).format('0,0.00')"></strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <span class="fontsize90 pull-right text-warning padding3centt" data-bind="visible: ShowValidation()">
+                                Not Enough Money to Play Slot Machine
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>

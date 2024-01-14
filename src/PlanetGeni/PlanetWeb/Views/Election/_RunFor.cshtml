@@ -1,0 +1,26 @@
+﻿<div class="row">
+    <div class="col-md-12">
+        <fieldset>
+            <legend class="text-warning fontsize120">For </legend>
+            <div class="col-xs-12">
+                <div id="electionPositions" class="wrapper-dropdown-3 backwhite" tabindex="1">
+                    <span class="disableColor text-warning">Select Office</span>
+                    <ul class="dropdown" data-bind="foreach: electionPositions">
+                        <li data-bind="attr: { 'data-id' : PositionTypeId }">
+                            <a>
+                                <i class="fa icon-candidate fa-lg">
+                                </i>
+                                <span data-bind="text: ElectionPositionName"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- ko if:  runforSelected() == 0 -->
+                <div class="padding3centt">
+                    <span class="text-danger fontsize90 pull-right">Select Office to Run For</span>
+                </div>
+                <!-- /ko -->
+            </div>
+        </fieldset>
+    </div>
+</div>

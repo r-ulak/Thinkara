@@ -1,0 +1,101 @@
+﻿<div class="navbar navbar-blue navbar-static-top">
+    <div class="navbar-header">
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle</span>
+            <span class="fa icon-bar"></span>
+            <span class="fa icon-bar"></span>
+            <span class="fa icon-bar"></span>
+        </button>
+        <a class="navbar-brand  backbtn" id="backbtn" title="back">
+            <img width="32px" class="thumbnail" src="https://thinkaraimages.blob.core.windows.net/misc/Briefcaseonly.png" />
+        </a>
+    </div>
+    <nav class="collapse navbar-collapse" role="navigation">
+        <div class="navbar-form navbar-left">
+            <div class="input-group input-group-sm">
+                <input class="form-control" placeholder="Search By Name or Email" name="srch-term" id="srch-term" type="text">
+                <div class="input-group-btn">
+                    <button class="btn btn-default" id="autosearch"><i class="glyphicon glyphicon-search"></i></button>
+                </div>
+            </div>
+            <div id="ddsearchresult" class="wrapper-dropdown-3 pull-left" tabindex="1">
+                <ul class="dropdown" data-bind="foreach: webuserList">
+                    <li>
+                        <a>
+                            <div class="flagsprite pull-right handcursor" data-bind="css: 'flagsprite-' + CountryId.toLowerCase(),click: function(){viewCountryProfile(CountryId.toLowerCase())}"></div>
+                            <img class="handcursor" width="28px" height="28px" data-bind="attr: {src: profilepicContainer+Picture }, click: function(){viewUserProfile(UserId)}">
+                            <span class="handcursor" data-bind="text: NameFirst + ' ' + NameLast, click: function(){viewUserProfile(UserId)}"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li id="sendemailinvite">
+                <a class="btn-link paddingleft8 " onclick="sendemailInvites()" title="Import/Invite Friends">
+                    <i class="fa fa-envelope fa-lg marginright6"></i>
+                    <span class="fontsize70">Social</span>
+                </a>
+            </li>
+            <li id="tour">
+                <a class="btn-link paddingleft8 " onclick="startTour()" title="Show me around...">
+                    <i class="fa icon-doubledecker fa-lg marginright6"></i>
+                    <span class="fontsize70">Tour</span>
+                </a>
+            </li>
+            <li>
+                <a class="btn-link paddingleft8" onclick="accountViewClick('@Url.Action("GetBankAcount", "BankAccount")', 1)" title="Available Fiat" id="accountnav">
+                    <i class="fa icon-money28 fa-lg"></i>
+                    <span class="fontsize70" data-bind="text: numeral(Cash()).format('0,0.00')"></span>
+                </a>
+            </li>
+            <li>
+                <a class="btn-link paddingleft8" title="New Notifications" onclick="userNotificationViewClick('@Url.Action("GetUserNotifications", "UserNotification")', 17)" id="notifbadge">
+                    <i class="fa fa-bell-o fa-lg"></i>
+                    <span class="badge badge-notify fontsize70" data-bind="text: userNotificationDTO().length"></span>
+                </a>
+            </li>
+            <li>
+                <a class="btn-link paddingleft8" title="New Tasks" onclick="usertaskViewClick('@Url.Action("GetUserTasks", "UserTask")', 9)" id="taskbadge">
+                    <i class="fa icon-task  fa-lg"></i>
+                    <span class="badge badge-notify fontsize70" data-bind="text: userTaskMyDetailsDTO().length"></span>
+                </a>
+            </li>
+
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" id="webinfonav" href="">
+                    <img class="img-32responsive" data-bind="attr:{src: profilepicContainer+Picture()}" />
+                    <span class="user-info fontsize70 ">
+                        Hello
+                        <small data-bind="text:FullName(), attr:{title:FullName()}"></small>
+                    </span>
+                    <i class="fa fa-caret-down"></i>
+                </a>
+                <ul class="dropdown-menu text-left" role="menu">
+                    <li>
+                        <a class="btn-link"
+                           onclick="manageProfile()">
+                            <i class="marginright6 fa fa-cog"></i>
+                            Manage
+                        </a>
+                    </li>
+                    <li>
+                        <a class="btn-link" onclick="viewMyProfile()">
+                            <i class="marginright6 fa fa-user"></i>
+                            Profile
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a class="btn-link" id="logoff" href="/Account/LogOff">
+                            <i class="marginright6 fa fa-power-off"></i>
+                            Log off
+
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</div>

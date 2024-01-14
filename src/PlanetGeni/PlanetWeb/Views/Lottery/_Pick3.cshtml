@@ -1,0 +1,110 @@
+﻿<div id="lotteryPick3container">
+    <div class=" row">
+        <div class="col-xs-12">
+            <div class="panel panel-primary" id="mylotteryPick3content-box">
+                <div class="panel-heading1 panel-heading">
+                    <div class="flagsprite pull-right btn-link"
+                         data-bind="css: 'flagsprite-' + CountryId().toLowerCase(), click: function(){viewCountryProfile(CountryId().toLowerCase())}"></div>
+
+                    <span class="fa fa-cube  marginright6"></span> Find Your Luck
+                </div>
+                <div class="panel-body">
+                    @Html.Partial("_Pick3Item")
+                    <div id="pick3Orders" class="padding3centt" data-bind="foreach: pick3Orders">
+                        <div class="row">
+                            <div class="col-xs-12 fontsize90 ">
+                                <div class="alert alert-success">
+                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+                                        ×
+                                    </button>
+                                    <p class="fontsize90 ">
+                                        <span>Purchase Order For </span>
+                                        <span data-bind="text:' ' + Number1">
+                                        </span>
+                                        <span data-bind="text:' ' + Number2">
+                                        </span>
+                                        <span data-bind="text:' ' + Number3">
+                                        </span>
+                                        <span>Submitted Successfully</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer fontsize90">
+                    <div class="row padding3centt padding3centb  nextDrawing">
+                        <div class="col-xs-6">
+                            <strong> Drawing On</strong>
+                        </div>
+                        <div class="col-xs-6" data-bind="foreach: { data: NextDrawing}">
+                            <!-- ko if: LotteryType() =='T' -->
+                            <strong class="pull-right paddingleft5px " data-bind="text: ' ' + moment.utc(NextDrawingDate()).local().calendar()"> </strong>
+                            <i class="pull-right  fa fa-clock-o"></i>
+                            <!-- /ko -->
+                        </div>
+                    </div>
+                    <div class="row padding3centt dividertop">
+                        <div class="col-xs-6">
+                            <strong> Total</strong>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="pull-right" data-bind="foreach: { data: NextDrawing}">
+                                <!-- ko if: LotteryType() =='T' -->
+                                <i class="fa icon-money28 text-success"></i>  <strong class="label label-success text-right
+                                  fontsize110" data-bind="text: numeral(LotteryPrice()).format('0,0.00')"></strong>
+                                <!-- /ko -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row padding3centt">
+
+                        <div class="col-xs-6">
+                            <strong> Avaliable Cash </strong>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="pull-right">
+                                <i class="fa icon-money28 text-success"></i>
+                                <strong class="fontsize110" data-bind="text: numeral(AmountAvailable()).format('0,0.00')"></strong>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <span class="fontsize90 pull-right text-warning padding3centt" data-bind="visible: ShowValidation()">
+                                Not Enough Money to Pick3
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-primary hidden" id="mylotteryPick3content-submit">
+                <div class="panel-heading1 panel-heading">
+                    <span>Pick3</span>
+                </div>
+                <div class="panel-body">
+                    <div class="col-xs-12">
+                        <span data-bind="text:Message">
+
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-default backbtn pull-right hidden">
+                <span><i class="fa fa-home"></i> Home</span>
+            </button>
+            <button class="btn btn-default  pull-left hidden" id="morelotteryPick3">
+                <span><i class="fa fa-home"></i>More Pick3 </span>
+            </button>
+            <button type="submit" id="savelotteryPick3" data-bind="disable: showPick3Validation()"
+                    data-loading-text='
+                <i class="fa fa-spinner fa-spin"></i> Buying...'
+                class="btn btn-default pull-right">Buy
+            </button>
+        </div>
+    </div>
+</div>

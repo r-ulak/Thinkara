@@ -1,0 +1,28 @@
+﻿@model PlanetWeb.Models.ExternalLoginListViewModel
+@using Microsoft.Owin.Security
+
+@{
+    var loginProviders = Context.GetOwinContext().Authentication.GetExternalAuthenticationTypes();
+    using (Html.BeginForm("ExternalLogin", "Account", new { ReturnUrl = Model.ReturnUrl }))
+    {
+        @Html.AntiForgeryToken()
+    <div class="or-box">
+        <span class="or">OR</span>
+          <div class="row padding3centt">
+              <div class="col-xs-12">
+                  @foreach (AuthenticationDescription p in loginProviders)
+                  {
+                      <div class="col-xs-2">
+                          <button type="submit" id="@p.AuthenticationType"
+                                  class="btn btn-social-icon btn-md btn-@p.AuthenticationType.ToLower()" value="@p.AuthenticationType"
+                                  name="provider" title="Log in using your @p.Caption account">
+                              <i class="social fa fa-@p.AuthenticationType.ToLower()"></i>
+                          </button>
+                      </div>
+                  }
+              </div>
+            </div>
+        </div>
+        }
+        }
+

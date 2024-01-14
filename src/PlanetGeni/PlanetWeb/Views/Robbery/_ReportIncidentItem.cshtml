@@ -1,0 +1,128 @@
+﻿<div class="row">
+    <div class="col-md-12">
+        <div class="well">
+            <form role="form" class="form-horizontal">
+                <fieldset>
+                    <legend class="text-warning fontsize120">Your Suspect</legend>
+                    <div class="row margintop5">
+                        <div class="col-xs-12 validation-group ">
+                            <div class="input-group bottomMarging15 ">
+                                <span class="input-group-addon">
+                                    <i class="fa icon-shop3"></i>
+                                </span>
+                                <div id="ddincident" class="wrapper-dropdown-3 backwhite" tabindex="1">
+                                    <span class="text-warning">Select Suspect</span>
+                                    <ul class="dropdown" data-bind="foreach:{data: friendDetailsDTO()}">
+                                        <li data-bind="attr: { 'data-id' : FriendUserId,
+    'data-countrycode' : CountryId,'data-onlinestatus' : OnlineStatus,'data-picture' : Picture,'data-fullname' : FullName }">
+                                            <a>
+                                                <div class="flagsprite pull-right" data-bind="css: 'flagsprite-' + CountryId.toLowerCase()"></div>
+                                                <i data-bind="css: 'user-status' + OnlineStatus" class="pull-left"></i>
+                                                <img width="28px" height="28px" data-bind="attr: {src: profilepicContainer+Picture }">
+                                                <span data-bind="text: FullName"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row " id="selectedSuspect" data-bind="visible:suspectId()>0">
+                        <div class="col-xs-12">
+                            <div class="col-xs-4">
+                                <a class="btn-link" data-bind="click: function(){viewUserProfile(suspectId())}">
+                                    <i data-bind="css: 'user-status' + suspectOnlineStatus" class="pull-left"></i>
+                                    <img width="56px" data-bind="attr: {src: profilepicContainer + suspectPicture(), title: suspectFullName}">
+                                </a>
+                            </div>
+                            <div class="col-xs-7">
+                                <a class="btn-link" data-bind="click: function(){viewUserProfile(suspectId())}">
+                                    <span data-bind="text: suspectFullName, attr:{title: suspectFullName}"></span>
+                                </a>
+                                <p>
+                                    <span class="marginright6">Net Worth: </span>
+                                    <i class="fa icon-money28"> </i>
+                                    <strong class="fontsize110" data-bind="text: numeral(suspectNetWorth()).format('0,0.00'), attr:{title:numeral(suspectNetWorth()).format('0,0.00a')}"></strong>
+                                </p>
+                            </div>
+                            <div class="col-xs-1">
+                                <a class="btn-link pull-right " data-bind="click: function(){viewCountryProfile(suspectCountryCode().toLowerCase())}">
+                                    <div class="flagsprite btn-link" data-bind="css: 'flagsprite-' + suspectCountryCode().toLowerCase(), attr:{title: getCountryName(suspectCountryCode())}"></div>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                </fieldset>
+                <div class="panel panel-default" id="propertysuspect" data-bind="visible: property().length>0">
+                    <div class="panel-heading">
+                        <div class="pull-right">
+                            <span class="text-right" data-bind="text:property().length, visible: property().length>0"></span>
+                        </div> <h4 class="panel-title">
+                            <i class="fa fa-building-o fa-1x"></i>  Property
+                        </h4>
+                    </div>
+                    <div class="panel-body" data-bind="foreach: { data: property}">
+                        @Html.Partial("../UserProfile/_PropertyProfile")
+                    </div>
+                </div>
+                <fieldset id="incidentInfo">
+                    <legend>
+                        Incident Report
+                    </legend>
+                    <div class="row">
+                        <div class="col-xs-3 col-md-3 text-center">
+                            <i class="fa fa-4x text-info" data-bind="css: ImageFont()"></i>
+                        </div>
+                        <div class="col-xs-7 col-md-7 section-box">
+                            <div class="row">
+                                <div class="col-xs-10">
+                                    <h5>
+                                        <label data-bind="text: Name()"></label>
+                                    </h5>
+                                </div>
+                                <div class="col-xs-2">
+                                    <span class="pull-right" data-bind="text: Quantity()"></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <p data-bind="text:Description()" class="fontsize90"> </p>
+                                </div>
+                            </div>
+                            <hr />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="row rating-desc">
+                            <div class="col-xs-12">
+                                <div class="col-xs-3">
+                                    <span class="merchandisetitle">
+                                        <!-- ko if: MerchandiseTypeCode() == 1 -->
+                                        Auto Mobile
+                                        <!-- /ko -->
+                                        <!-- ko if: MerchandiseTypeCode() == 2 -->
+                                        Real State
+                                        <!-- /ko -->
+                                        <!-- ko if: MerchandiseTypeCode() == 0 -->
+                                        Cash
+                                        <!-- /ko -->
+                                    </span>
+                                </div>
+                                <div class="col-xs-3">
+                                    <small class="text-info" data-bind="text: moment.utc(IncidentDate()).local().fromNow(), attr:{title:moment.utc(IncidentDate()).local().format()}">
+                                    </small>
+                                </div>
+                                <div class="col-xs-6 text-right">
+                                    <i class="fa icon-money28"> </i>
+                                    <strong class="fontsize110" data-bind="text: numeral(Amount()).format('0,0.00')" title="Value of the Amount robbed"></strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>

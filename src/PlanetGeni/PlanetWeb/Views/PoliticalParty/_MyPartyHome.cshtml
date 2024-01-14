@@ -1,0 +1,42 @@
+﻿<div id="mypartycontainer">
+    <div class=" row">
+        <div class="col-xs-12">
+            <div class="panel panel-primary" id="partyMycontent-box">
+                <div class="panel-heading1 panel-heading">
+                    <div class="flagsprite pull-right btn-link"
+                         data-bind="css: 'flagsprite-' + CountryId().toLowerCase(), click: function(){viewCountryProfile(CountryId().toLowerCase())}"></div>
+                    <span class="fa icon-candidate  marginright6"></span> My Party
+                </div>
+                <div class="panel-body">
+                    @Html.Partial("_MyPartyHomeItem")
+                </div>
+                <div class="panel-footer">
+                    <div class="row padding3centt">
+                        <div class="col-xs-6">
+                            <span class="label label-info" title="total parties" data-bind="text: partyCodes().length"></span>
+                        </div>
+                        <div class="col-xs-3"></div>
+                        <div class="col-xs-3">
+                            <span id="partyrefresh" class="btn btn-shadow btn-success btn-sm pull-right"><i class="fa fa-refresh"></i> </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-primary hidden" id="partyMycontent-submit">
+                <div class="panel-heading1 panel-heading">
+                    <span>Leave Party</span>
+                </div>
+                <div class="panel-body">
+                    <div class="col-xs-12">
+                        <span data-bind="text:Message">
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-default backbtn pull-right hidden">
+                <span><i class="fa fa-home"></i> Home</span>
+            </button>
+        </div>
+    </div>
+</div>

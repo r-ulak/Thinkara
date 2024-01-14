@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{42853F20-8520-4CE2-9493-01109332B33B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Core</RootNamespace>
+    <AssemblyName>Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cache\MerchandiseCache.cs" />
+    <Compile Include="Cache\WebUserCache.cs" />
+    <Compile Include="CustomModel\BudgetTypeByCountry.cs" />
+    <Compile Include="Models\CrimeReport.cs" />
+    <Compile Include="Models\InJail.cs" />
+    <Compile Include="Models\CrimeIncidentSuspect.cs" />
+    <Compile Include="Models\SlotMachineThree.cs" />
+    <Compile Include="Models\UserDig.cs" />
+    <Compile Include="Models\AllowedWebUser.cs" />
+    <Compile Include="Models\ContactSource.cs" />
+    <Compile Include="Models\CreditScore.cs" />
+    <Compile Include="Models\DegreeCheckJob.cs" />
+    <Compile Include="Models\ElectionVoter.cs" />
+    <Compile Include="Models\ElectionVoting.cs" />
+    <Compile Include="Models\NextLotteryDrawing.cs" />
+    <Compile Include="Models\AdsFrequencyType.cs" />
+    <Compile Include="Models\AdsType.cs" />
+    <Compile Include="Models\Avatar.cs" />
+    <Compile Include="Models\Blog.cs" />
+    <Compile Include="Models\Bookmark.cs" />
+    <Compile Include="Models\BookmarkCategory.cs" />
+    <Compile Include="Models\BookmarkInfo.cs" />
+    <Compile Include="Models\BookmarkSubCategory.cs" />
+    <Compile Include="Models\BudgetCode.cs" />
+    <Compile Include="Models\BusinessCode.cs" />
+    <Compile Include="Models\BusinessSubCode.cs" />
+    <Compile Include="Models\CandidateAgenda.cs" />
+    <Compile Include="Models\CapitalTransactionLog.cs" />
+    <Compile Include="Models\CapitalType.cs" />
+    <Compile Include="Models\Chat.cs" />
+    <Compile Include="Models\CityCode.cs" />
+    <Compile Include="Models\Club.cs" />
+    <Compile Include="Models\ClubMember.cs" />
+    <Compile Include="Models\CountryBudget.cs" />
+    <Compile Include="Models\CountryBudgetByType.cs" />
+    <Compile Include="Models\CountryCode.cs" />
+    <Compile Include="Models\CountryLeader.cs" />
+    <Compile Include="Models\CountryRevenue.cs" />
+    <Compile Include="Models\CountryTax.cs" />
+    <Compile Include="Models\CountryTaxByType.cs" />
+    <Compile Include="Models\CountryWeapon.cs" />
+    <Compile Include="Models\DegreeCode.cs" />
+    <Compile Include="Models\Education.cs" />
+    <Compile Include="Models\Election.cs" />
+    <Compile Include="Models\ElectionAgenda.cs" />
+    <Compile Include="Models\ElectionCandidate.cs" />
+    <Compile Include="Models\ElectionDonation.cs" />
+    <Compile Include="Models\ElectionPosition.cs" />
+    <Compile Include="Models\Event.cs" />
+    <Compile Include="Models\EventCode.cs" />
+    <Compile Include="Models\EventLocation.cs" />
+    <Compile Include="Models\EventMembership.cs" />
+    <Compile Include="Models\Feed.cs" />
+    <Compile Include="Models\FeedCategory.cs" />
+    <Compile Include="Models\FeedInfo.cs" />
+    <Compile Include="Models\FeedSubCategory.cs" />
+    <Compile Include="Models\Friend.cs" />
+    <Compile Include="Models\GeneralLog.cs" />
+    <Compile Include="Models\Gift.cs" />
+    <Compile Include="Models\Goverment.cs" />
+    <Compile Include="Models\GovermentProvince.cs" />
+    <Compile Include="Models\GroupMembership.cs" />
+    <Compile Include="Models\HoldingsTransaction.cs" />
+    <Compile Include="Models\IndustryCode.cs" />
+    <Compile Include="Models\ItemCode.cs" />
+    <Compile Include="Models\JobCode.cs" />
+    <Compile Include="Models\JobCountry.cs" />
+    <Compile Include="Models\JobPayCheck.cs" />
+    <Compile Include="Models\FundTypeCode.cs" />
+    <Compile Include="Models\LeaderCode.cs" />
+    <Compile Include="Models\MajorCode.cs" />
+    <Compile Include="Models\MerchandiseType.cs" />
+    <Compile Include="Models\Message.cs" />
+    <Compile Include="Models\PartyEjection.cs" />
+    <Compile Include="Models\PartyCloseRequest.cs" />
+    <Compile Include="Models\PartyNomination.cs" />
+    <Compile Include="Models\PickFive.cs" />
+    <Compile Include="Models\PickFiveWinner.cs" />
+    <Compile Include="Models\PickFiveWinNumber.cs" />
+    <Compile Include="Models\PickThree.cs" />
+    <Compile Include="Models\PickThreeWinner.cs" />
+    <Compile Include="Models\PickThreeWinNumber.cs" />
+    <Compile Include="Models\PostContentType.cs" />
+    <Compile Include="Models\PartyAgenda.cs" />
+    <Compile Include="Models\PartyInvite.cs" />
+    <Compile Include="Models\PartyJoinRequest.cs" />
+    <Compile Include="Models\UserJob.cs" />
+    <Compile Include="Models\UserNotification.cs" />
+    <Compile Include="Models\NotificationType.cs" />
+    <Compile Include="Models\PartyMember.cs" />
+    <Compile Include="Models\Advertisement.cs" />
+    <Compile Include="Models\PoliticalParty.cs" />
+    <Compile Include="Models\Post.cs" />
+    <Compile Include="Models\PostClubACL.cs" />
+    <Compile Include="Models\PostComment.cs" />
+    <Compile Include="Models\PostTag.cs" />
+    <Compile Include="Models\PostUserACL.cs" />
+    <Compile Include="Models\PostWebContent.cs" />
+    <Compile Include="Models\Privacy.cs" />
+    <Compile Include="Models\PrivacyType.cs" />
+    <Compile Include="Models\RequestWarKey.cs" />
+    <Compile Include="Models\RsvpStatusCode.cs" />
+    <Compile Include="Models\Status.cs" />
+    <Compile Include="Models\Stock.cs" />
+    <Compile Include="Models\StockHistory.cs" />
+    <Compile Include="Models\StockTrade.cs" />
+    <Compile Include="Models\StockTradeHistory.cs" />
+    <Compile Include="Models\TaskReminder.cs" />
+    <Compile Include="Models\TaskType.cs" />
+    <Compile Include="Models\TaxCode.cs" />
+    <Compile Include="Models\ThumbUpDown.cs" />
+    <Compile Include="Models\TopicTag.cs" />
+    <Compile Include="Models\UserBankAccount.cs" />
+    <Compile Include="Models\UserChatroom.cs" />
+    <Compile Include="Models\UserConnection.cs" />
+    <Compile Include="Models\UserGroup.cs" />
+    <Compile Include="Models\UserLoan.cs" />
+    <Compile Include="Models\UserMerchandise.cs" />
+    <Compile Include="Models\UserStock.cs" />
+    <Compile Include="Models\UserTask.cs" />
+    <Compile Include="Models\UserActivityLog.cs" />
+    <Compile Include="Models\UserVoteChoice.cs" />
+    <Compile Include="Models\UserVoteSelectedChoice.cs" />
+    <Compile Include="Models\WeaponType.cs" />
+    <Compile Include="Models\WebJob.cs" />
+    <Compile Include="Models\WebJobHistory.cs" />
+    <Compile Include="Models\WebUser.cs" />
+    <Compile Include="Models\ContactProvider.cs" />
+    <Compile Include="Models\WebUserContact.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

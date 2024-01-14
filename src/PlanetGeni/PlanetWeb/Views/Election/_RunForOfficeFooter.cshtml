@@ -1,0 +1,21 @@
+﻿@Html.Partial("_ElectionDate")
+<hr />
+<div class="row">
+    <div class="col-xs-6 fontsize90">
+        <span> Election Fee</span>
+    </div>
+    <div class="col-xs-6">
+        <div class="pull-right">
+            <span class="fa icon-money28 text-success"></span>
+            <span class="label label-success text-right
+                                  fontsize90" data-bind="text: numeral(electiontermFee()).format('0,0.00')"></span>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <span class="fontsize90 pull-right text-warning padding3centt" data-bind="visible: cash() < electiontermFee()">
+            Not Enough Money to Run For Election
+        </span>
+    </div>
+</div>

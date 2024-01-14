@@ -1,0 +1,36 @@
+﻿<div id="party-container">
+    <ul class="nav nav-pills">
+        <li class="active">
+            <a data-toggle="tab" href="#party-search" class="active">Search</a>
+        </li>
+        <li>
+            <a data-toggle="tab" href="#party-myparty">My</a>
+        </li>
+        <li>
+            <a data-toggle="tab" href="#party-history">History</a>
+        </li>
+        <li>
+            <a data-toggle="tab" href="#party-summary">Summary</a>
+        </li>
+        <li><a data-toggle="tab" href="#party-startparty">Start Party </a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="party-search" class="tab-pane fade in active padding3centt autoheight">
+            @Html.Partial("_PartySearch")
+        </div>
+        <div id="party-myparty" class="tab-pane fade padding3centt autoheight">
+            @Html.Partial("_MyPartyHome")
+        </div>
+        <div id="party-history" class="tab-pane fade padding3centt autoheight">
+            @Html.Partial("_MyHistoryParty")
+        </div>
+        <div id="party-summary" class="tab-pane fade padding3centt autoheight">
+            @Html.Partial("_PartySummary")
+        </div>
+        <div id="party-startparty" class="tab-pane fade padding3centt autoheight">
+            @Html.Partial("_StartParty")
+        </div>
+    </div>
+</div>
+
+

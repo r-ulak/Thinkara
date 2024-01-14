@@ -1,0 +1,60 @@
+﻿<div class="row padding3centt padding3centb">
+    <div class="col-xs-12">
+        <fieldset>
+            <legend class=" text-warning fontsize120">Party Founder</legend>
+            <div class="row">
+                <div class="col-xs-12 padding3centb" data-bind="foreach: AllPartyMembers.Founder">
+                    <div class="recipient col-xs-6 padding3centt" data-bind="attr: {title: FullName}">
+                        <img class="img-full btn-link" width="28px" height="28px" data-bind="attr: {src: profilepicContainer+Picture , title: FullName }, click: function(){viewUserProfile(UserId)}">
+                        <p class="text-ellipsis btn-link" data-bind="text: FullName, click: function(){viewUserProfile(UserId)}"></p>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend class=" text-warning fontsize120">Party CoFounder</legend>
+            <div class="row">
+                <div class="col-xs-12" data-bind="foreach: AllPartyMembers.CoFounder">
+                    <div class="recipient col-xs-6 padding3centt" data-bind="attr: {title: FullName}">
+                        <img class="img-full btn-link" width="28px" height="28px" data-bind="attr: {src: profilepicContainer+Picture , title: FullName }, click: function(){viewUserProfile(UserId)}">
+                        <p class="text-ellipsis btn-link" data-bind="text: FullName, click: function(){viewUserProfile(UserId)}"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row padding3centt">
+                <div class="col-xs-2 ">
+                    <h6>
+                        <span class="label label-info" data-bind="text: AllPartyMembers.CoFounder().length"></span>
+                    </h6>
+                </div>
+
+                <div class="col-xs-10 ">
+                    <span data-bind="attr:{'data-index':$index}, click: $root.clickgetmoreCoFounders" class="btn btn-shadow btn-success btn-sm pull-right"><i class="fa fa-plus"></i> </span>
+                </div>
+            </div>
+
+        </fieldset>
+        <fieldset>
+            <legend class=" text-warning fontsize120">Party Members</legend>
+            <div class="row">
+                <div class="col-xs-12" data-bind="foreach: AllPartyMembers.Members">
+                    <div class="recipient col-xs-6 padding3centt btn-link" data-bind="attr: {title: FullName}, click: function(){viewUserProfile(UserId)}">
+                        <img class="img-full btn-link" width="28px" height="28px" data-bind="attr: {src: profilepicContainer+Picture , title: FullName }">
+                        <p class="text-ellipsis btn-link" data-bind="text: FullName"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row padding3centt">
+                <div class="col-xs-2 ">
+                    <h6>
+                        <span class="label label-info" data-bind="text: AllPartyMembers.Members().length"></span>
+                    </h6>
+                </div>
+                <div class="col-xs-10 ">
+                    <span data-bind="attr:{'data-index':$index}, click: $root.clickgetmoreMembers" class="btn btn-shadow btn-success btn-sm pull-right"><i class="fa fa-plus"></i> </span>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+</div>

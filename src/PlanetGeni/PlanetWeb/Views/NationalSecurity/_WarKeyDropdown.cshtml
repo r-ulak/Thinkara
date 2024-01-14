@@ -1,0 +1,12 @@
+﻿<div id="ddCountrycd" class="wrapper-dropdown-3 backwhite bottomMarging15">
+    <span class="text-warning">Select A Country</span>
+    <ul class="dropdown" data-bind="foreach: countryCodewithoutownViewModel">
+        <li data-bind="attr: { 'data-id' : CountryId, 'data-name':Code }">
+            <a >
+                <div class="flagsprite pull-right btn-link"
+                     data-bind="css: 'flagsprite-' + CountryId, title: Code"></div>
+                <span data-bind="text: Code"></span>
+            </a>
+        </li>
+    </ul>
+</div>

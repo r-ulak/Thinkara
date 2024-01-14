@@ -1,0 +1,39 @@
+﻿<div id="lottery-container">
+    <ul class="nav nav-pills">
+        <li class="active">
+            <a data-toggle="tab" href="#lottery-pick3" class="active">Pick3</a>
+        </li>
+        <li>
+            <a data-toggle="tab" href="#lottery-pick5">Pick5</a>
+        </li>
+        <li>
+            <a data-toggle="tab" href="#lottery-pick3wins">Pick3Wins</a>
+        </li>
+        <li>
+            <a data-toggle="tab" href="#lottery-pick5wins">Pick5Wins</a>
+        </li>
+        <li>
+            <a data-toggle="tab" href="#lottery-howtoplay">How?</a>
+        </li>
+       
+    </ul>
+    <div class="tab-content">
+        <div id="lottery-pick3" class="tab-pane fade in active padding3centt autoheight">
+            @Html.Partial("_Pick3")
+        </div>
+        <div id="lottery-pick5" class="tab-pane fade padding3centt autoheight">
+            @Html.Partial("_Pick5")
+        </div>
+        <div id="lottery-pick3wins" class="tab-pane fade padding3centt autoheight">
+            @Html.Partial("_MyPick3Win")
+        </div>
+        <div id="lottery-pick5wins" class="tab-pane fade padding3centt autoheight">
+            @Html.Partial("_MyPick5Win")
+        </div>
+        <div id="lottery-howtoplay" class="tab-pane fade padding3centt autoheight">
+            @Html.Partial("_HowToPlay")
+        </div>
+    </div>
+</div>
+
+

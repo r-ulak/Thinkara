@@ -1,0 +1,41 @@
+﻿@model IEnumerable<DAO.DAO.FriendsInfo>
+<h3>Friends</h3>
+<ul id="friendsList">
+    @foreach (var friend in Model)
+    {
+        string className = string.Empty;
+        string onClickAction = "addTab('" + @friend.NameFirst + " " + @friend.NameLast + "', '" +
+            @Url.Action("AddChat", "Chat", new { friendUserID = friend.FriendUserId }) + "', " + @friend.FriendUserId + ")";
+        switch (friend.OnlineStatus)
+        {
+            case 0:
+                className = "friendslistThumbnailOffline";
+                break;
+            case 1:
+                className = "friendslistThumbnailOnline";
+                break;
+            case 2:
+                className = "friendslistThumbnailAway";
+                break;
+            case 3:
+                className = "friendslistThumbnailBusy";
+                break;
+            default:
+                break;
+        }
+        
+        <li>
+
+            <img id="Image@(friend.FriendUserId)" src="@Href(@friend.Picture)"  
+                onclick="@onClickAction" class="@className"
+                 alt="Image" width="50px" height="50px" />
+            <img  class="icon" src="/Content/css/images/Arrow.png" 
+                id="userChatMenu@(friend.FriendUserId)" />
+
+            <a href ="javascript:@onClickAction">
+                <span class="nameFriendList">@(friend.NameFirst + " " + friend.NameLast)</span>
+            </a>
+            <div id="target@(friend.FriendUserId)" ></div>
+        </li>
+    }
+</ul>

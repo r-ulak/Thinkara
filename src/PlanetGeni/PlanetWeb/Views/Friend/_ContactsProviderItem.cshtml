@@ -1,0 +1,35 @@
+﻿<form method="post" action="/Manage/LinkLoginContacts?ReturnUrl=%2F">
+    @Html.AntiForgeryToken()
+    <div data-bind="foreach: {data:conatctsProviderDTO}">
+        <div class=" row">
+            <div class="col-xs-12">
+                <div class="row  padding3centb">
+                    <div class="col-xs-2 col-md-2 text-center">
+                        <span class="btn btn-social-icon btn-lg" data-bind="css:'btn-' + ImageFont">
+                            <i class="fa " data-bind="css:'fa-' + ImageFont"></i>
+                        </span>
+                    </div>
+                    <div class="col-xs-7">
+                        <h5>
+                            <label data-bind="text: ProviderName"></label>
+                        </h5>
+                        <p>
+                            <small data-bind="text: 'Imported ' + Total() + ' contacts'"></small>
+                        </p>
+                        <!-- ko if: UpdatedAt() !='' -->
+                        <p>
+                            <small data-bind="text: 'Last Updated ' + moment.utc(UpdatedAt()).local().fromNow()"></small>
+                        </p>
+                        <!-- /ko -->
+                    </div>
+                    <div class="col-xs-3 pull-right">
+                        <button class="btn btn-default pull-right" name="provider" data-bind="value:ProviderName, attr:{'title': 'Import contacts from '+ ProviderName}">
+                            <i class="fa fa-cloud-download marginright6"></i> Import
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</form>

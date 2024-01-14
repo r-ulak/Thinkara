@@ -1,0 +1,94 @@
+﻿<div class="row">
+    <div class="col-md-12">
+        <fieldset>
+            <legend class="text-warning fontsize120">For </legend>
+            <div class="col-xs-12">
+                <div class="wrapper-dropdown-3 backwhite electionPositions" tabindex="1">
+                    <span class="disableColor text-warning">Select Office</span>
+                    <ul class="dropdown" data-bind="foreach: electionPositions">
+                        <li data-bind="attr: { 'data-id' : PositionTypeId }">
+                            <a>
+                                <i class="fa icon-candidate fa-lg">
+                                </i>
+                                <span data-bind="text: ElectionPositionName"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+</div>
+
+<div class="row padding3centt">
+    <div class="col-xs-12">
+        <fieldset>
+            <legend class="text-warning fontsize120">Candidates</legend>
+            <div data-bind="foreach: { data: candidates}" class="candidates col-xs-12">
+                <!-- ko if: $root.candidates().length >0 -->
+                <div class=" row marginbottom5">
+                    <div class="well well-sm margintop5">
+                        <div class="row">
+                            <div class="col-xs-9">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <img class="img-full btn-link" width="28px" height="28px" data-bind="attr: {src: profilepicContainer+Picture , title: FullName }, click: function(){viewUserProfile(UserId)}">
+                                        <h5 class="btn-link" data-bind="text:FullName, click: function(){viewUserProfile(UserId)}"></h5>
+                                    </div>
+                                </div>
+                                <hr />
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <strong>Position:  </strong><span data-bind="text:ElectionPositionName"></span>
+                                        <div class="flagsprite pull-right btn-link"
+                                             data-bind="css: 'flagsprite-' + CountryId.toLowerCase(), click: function(){viewCountryProfile(CountryId.toLowerCase())}"></div>
+                                        <!-- ko if: CandidateTypeId == 'P' -->
+                                        <p class="padding3centt">
+                                            <strong>PartyName: </strong>
+                                            <a class="btn-link" data-bind="text:PartyName, click: function(){getPartyInfo(PartyId)}"></a>
+                                        </p>
+                                        <!-- /ko -->
+                                        <!-- ko if: CandidateTypeId == 'I' -->
+                                        <p class="padding3centt">
+                                            <span>Independent </span>
+                                        </p>
+                                        <!-- /ko -->
+                                        <p>
+                                            <a class="btn-link" data-bind=" click: function(){getRunforOffice(TaskId)}">Agendas</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-3 padding3centt">
+                                <!-- ko if: LogoPictureId.indexOf(".")==-1  -->
+                                <i class="fa-6x text-info pull-right" data-bind="css: LogoPictureId"></i>
+                                <!-- /ko -->
+                                <!-- ko if: LogoPictureId.indexOf(".") != -1 -->
+                                <img class="pull-right img-responsive img-64 " data-bind="attr:{src:LogoPictureId, title: PartyName}" />
+                                <!-- /ko -->
+                                <div class="checkbox pull-right">
+                                    <label>
+                                        <input type="checkbox" title="Vote" data-bind="checked: $root.votingCandidates, checkedValue:UserId, click: $root.countCheck">
+                                    </label>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /ko -->
+            </div>
+            <div class="candidates">
+                <!-- ko if: $root.candidates().length == 0 -->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <p>
+                            <h5>Voting Peroid has not started </h5>
+                        </p>
+                    </div>
+                </div>
+                <!-- /ko -->
+            </div>
+        </fieldset>
+    </div>
+</div>

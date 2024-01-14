@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://web.planetgeni.com/" />
+<title>SubmitAdsValidation</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">SubmitAdsValidation</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=webUserId</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=webUserId</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=webPassword</td>
+	<td>Kathmandu29</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=img[title=&quot;Ruby&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[@id='nav-question-circle']/i)[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=postContent</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=saveads</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>css=span.help-block.fontsize90</td>
+	<td>You must check at least 1 box</td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>//form[@id='adsform']/div[2]/fieldset/div/span</td>
+	<td>Enter a Title</td>
+</tr>
+<tr>
+	<td></td>
+	<td>//form[@id='adsform']/div[2]/fieldset/div/span[2]</td>
+	<td>Provide a Message</td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>css=div.col-xs-9 &gt; div.form-group.has-error &gt; span.help-block.fontsize90</td>
+	<td>Provide a Time</td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>//form[@id='adsform']/div[4]/fieldset/div[2]/div[2]/div/span</td>
+	<td>Provide a StartDate</td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>//form[@id='adsform']/div[4]/fieldset/div[3]/div[2]/div/span</td>
+	<td>Provide a EndDate</td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>//form[@id='adsform']/div[4]/fieldset/div[4]/div[2]/div/span</td>
+	<td>Provide a Frequency</td>
+</tr>
+</tbody></table>
+</body>
+</html>

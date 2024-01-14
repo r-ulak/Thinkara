@@ -1,0 +1,36 @@
+﻿<div class="timeline-panel timeline-news">
+    <div class="timeline-news-heading padding2centb">
+        <div class="row padding2centt">
+            <div class="col-xs-12">
+                <div class="col-xs-1">
+                    <span class="fa fa-star fa-2x text-left" data-bind="css:FontCss"></span>
+
+                </div>
+                <div class="col-xs-10 text-center">
+                    <strong class="fa-1_5x " data-bind="css:FontCss"> The Planet Post</strong>
+                </div>
+                <div class="col-xs-1">
+                    <span class="fa fa-star fa-2x text-right" data-bind="css:FontCss"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="hr-newsborder0" />
+    <hr class="hr-newsborder1" />
+    <div class="timeline-body padding3centt padding3centb">
+        <p class="text-left">
+            <div class="text-right"><span class="fa-4x text-danger text-right" data-bind="css:ImageFont"> </span></div>
+            <strong data-bind="text: ShortDescription, css:FontCss"> </strong>
+        </p>
+        <p class="text-right ">
+            <small class="text-info" data-bind="text: moment.utc(CreatedAt()).local().fromNow(), attr:{title:moment.utc(CreatedAt()).local().format()}">
+            </small>
+        </p>
+        <div class="dropCap padding3centt fontsize90" data-bind="html:PostContent()"></div>
+    </div>
+    <hr />
+    @Html.Partial("../TimeLine/_TimeLineShare")
+</div>
+<div class="row marginbottom15"></div>
+<aside class="comments post-atribut hidden"></aside>
+@Html.Partial("../TimeLine/_AddComment")

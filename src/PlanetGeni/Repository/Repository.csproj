@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6DB7152E-7464-4335-99BF-7BC0827431F0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Repository</RootNamespace>
+    <AssemblyName>Repository</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Interface\IAdvertisementDetailsDTORepository.cs" />
+    <Compile Include="Interface\ICasinoDTORepository.cs" />
+    <Compile Include="Interface\ILotteryDTORepository.cs" />
+    <Compile Include="Interface\IPartyDTORepository.cs" />
+    <Compile Include="Interface\IIndustryCodeRepository.cs" />
+    <Compile Include="Interface\ICountryTaxDetailsDTORepository.cs" />
+    <Compile Include="Interface\ICountryBudgetDetailsDTORepository.cs" />
+    <Compile Include="Interface\ITaskTypeRepository.cs" />
+    <Compile Include="Interface\ICountryLeaderRepository.cs" />
+    <Compile Include="Interface\IUserNotificationDetailsDTORepository.cs" />
+    <Compile Include="Interface\IWebUserDTORepository.cs" />
+    <Compile Include="Interface\IUserLoanDTORepository.cs" />
+    <Compile Include="Interface\IGiftDTORepository.cs" />
+    <Compile Include="Interface\IUserBankAccountDTORepository.cs" />
+    <Compile Include="Interface\IWarRequestRepository.cs" />
+    <Compile Include="Interface\IMerchandiseDetailsDTORepository.cs" />
+    <Compile Include="Interface\IWeaponDetailsDTORepository.cs" />
+    <Compile Include="Interface\IPostCommentDTORepository.cs" />
+    <Compile Include="Interface\IUserTaskDetailsDTORepository.cs" />
+    <Compile Include="Interface\IUserVoteDTORepository.cs" />
+    <Compile Include="Interface\IEducationDTORepository.cs" />
+    <Compile Include="Interface\IAwardDetailsDTORepository.cs" />
+    <Compile Include="Interface\IFriendDetailsDTORepository.cs" />
+    <Compile Include="Interface\IElectionDTORepository.cs" />
+    <Compile Include="Interface\IStockDTORepository.cs" />
+    <Compile Include="Interface\IJobDTORepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\AutoCompleteRepository.cs" />
+    <Compile Include="Repository\AdvertisementDetailsDTORepository.cs" />
+    <Compile Include="Repository\RobberyDTORepository.cs" />
+    <Compile Include="Repository\CasinoDTORepository.cs" />
+    <Compile Include="Repository\WebJobRepository.cs" />
+    <Compile Include="Repository\LotteryDTORepository.cs" />
+    <Compile Include="Repository\PartyDTORepository.cs" />
+    <Compile Include="Repository\IndustryCodeRepository.cs" />
+    <Compile Include="Repository\CountryTaxDetailsDTORepository.cs" />
+    <Compile Include="Repository\CountryCodeRepository.cs" />
+    <Compile Include="Repository\CountryBudgetDetailsDTORepository.cs" />
+    <Compile Include="Interface\ICountryCodeRepository.cs" />
+    <Compile Include="Repository\JobDTORepository.cs" />
+    <Compile Include="Repository\TaskTypeRepository.cs" />
+    <Compile Include="Repository\CountryLeaderRepository.cs" />
+    <Compile Include="Repository\UserNotificationDetailsDTORepository.cs" />
+    <Compile Include="Repository\WebUserDTORepository.cs" />
+    <Compile Include="Repository\UserLoanDetailsDTORepository.cs" />
+    <Compile Include="Repository\GiftDTORepository.cs" />
+    <Compile Include="Repository\UserBankAccountDTORepository.cs" />
+    <Compile Include="Repository\WarRequestRepository.cs" />
+    <Compile Include="Repository\MerchandiseDetailsDTORepository.cs" />
+    <Compile Include="Repository\WeaponDetailsDTORepository.cs" />
+    <Compile Include="Repository\PostCommentDTORepository.cs" />
+    <Compile Include="Repository\UserTaskDetailsDTORepository.cs" />
+    <Compile Include="Repository\UserVoteDTORepository.cs" />
+    <Compile Include="Repository\EducationDTORepository.cs" />
+    <Compile Include="Repository\AwardDetailsDTORepository.cs" />
+    <Compile Include="Repository\FriendDetailsDTORepository.cs" />
+    <Compile Include="Repository\ElectionDTORepository.cs" />
+    <Compile Include="Repository\StockDTORepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{3385d0b1-f587-4fdb-9687-2d82dc78b65a}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ContactsManager\ContactsManager.csproj">
+      <Project>{97033f57-91a3-41e3-8893-5ef4e9ef5635}</Project>
+      <Name>ContactsManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{42853f20-8520-4ce2-9493-01109332b33b}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{d461cc3c-8d7b-4b74-a35f-c1f8cb865033}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{ca9c0cc6-8fb1-4217-81cf-406b8c20405d}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

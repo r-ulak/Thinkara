@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Login";
+    Layout = null;
+}
+<h2>Login</h2>
+@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+{
+    <span>
+        Current UTC Time MM/DD/YYYY: @DateTime.UtcNow
+    </span>
+    <br />
+    @(Html.TextBox("webUserId"))
+    <br />
+    <br />
+    @Html.Password("webPassword")
+    <br />
+    <br />
+    <input type="submit" value="Login" id="loginsubmit" />
+}

@@ -1,0 +1,21 @@
+﻿<div class="col-xs-4 col-md-4 text-center">
+    <div class="padding3centt">
+        <div class="row">
+            <div class="col-xs-12">
+                <!-- ko if: LogoPictureId.indexOf(".")==-1  -->
+                <i class="fa-5x fa fa-users text-info" data-bind=" attr:{title: PartyName}"></i>
+                <!-- /ko -->
+                <!-- ko if: LogoPictureId.indexOf(".") != -1 -->
+                <img class="img-64responsive thumbnail" data-bind="attr:{src:partypicContainer + LogoPictureId, title: PartyName}" />
+                <!-- /ko -->
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-xs-12 fontsize70">
+                <span data-bind="text: moment.utc(StartDate).local().fromNow()"></span>
+
+            </div>
+        </div>
+    </div>
+</div>

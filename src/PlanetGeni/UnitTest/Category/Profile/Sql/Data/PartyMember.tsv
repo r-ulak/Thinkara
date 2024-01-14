@@ -1,0 +1,4 @@
+PartyId	UserId	MemberType	MemberStatus	MemberStartDate	MemberEndDate	DonationAmount
+7b80127f-8b05-41cc-bd54-9c26baacea2c	1	C		2013-02-26 00:00:00	\N	37808.00
+b813ef5d-1f80-47f9-912f-05a68ca176d5	1	M	Q	2013-02-01 00:00:00	2013-06-12 00:00:00	61788.00
+0dca8472-0998-414c-aae6-1ad2e3148197	1	M	Q	2012-07-25 00:00:00	2013-05-30 00:00:00	45167.00

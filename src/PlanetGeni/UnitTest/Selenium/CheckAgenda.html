@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://web.planetgeni.com/" />
+<title>CheckAgenda</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">CheckAgenda</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=webUserId</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=webUserId</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=webPassword</td>
+	<td>Kathmandu34</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=#electionvictory &gt; fieldset &gt; legend.text-warning.fontsize120</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@name='partysize'])[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@name='electionvictory'])[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@name='partyworth'])[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@name='membershipFee'])[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=searchParty</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@id='partySearchResultcontent-wrapper']/div/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=div.col-xs-6 &gt; h6 &gt; span.label.label-info</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='partySearchResultcontent-wrapper']/div/ul/li/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=ul.list-styled &gt; li</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=li &gt; span.fontsize80</td>
+	<td>Our National Defence must be very strong to deter and foil any unfriendly nations.</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='partySearchResultcontent-wrapper']/div[3]/ul/li/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=#partysearchagenda2 &gt; div.row.padding3centt &gt; div.col-xs-12 &gt; div.row &gt; div.col-xs-11</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='partysearchagenda2']/div/div/div/div[2]/ul/li[5]/span</td>
+	<td>We believe that best defended of the nation is to have aggressive foreign policy.</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=My</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@id='partyMyItemcontent-wrapper']/div/ul/li/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='partyMyItemcontent-wrapper']/div/ul/li/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=#partymyagenda0 &gt; div.row.padding3centt &gt; div.col-xs-12 &gt; div.row &gt; div.col-xs-11 &gt; ul.list-styled &gt; li</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#partymyagenda0 &gt; div.row.padding3centt &gt; div.col-xs-12 &gt; div.row &gt; div.col-xs-11 &gt; ul.list-styled &gt; li &gt; span.fontsize80</td>
+	<td>Our National Defence must be very strong to deter and foil any unfriendly nations.</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=History</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@id='partyMyHistoryItemcontent-wrapper']/div/ul/li/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='partyMyHistoryItemcontent-wrapper']/div/ul/li/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@id='partymyHistoryagenda0']/div/div/div/div[2]/ul/li[2]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='partymyHistoryagenda0']/div/div/div/div[2]/ul/li[2]/span</td>
+	<td>Taking War to other nation is best policy than to have to defend one from unfriendly nations.</td>
+</tr>
+</tbody></table>
+</body>
+</html>

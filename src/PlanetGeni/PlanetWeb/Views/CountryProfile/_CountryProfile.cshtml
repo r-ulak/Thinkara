@@ -1,0 +1,17 @@
+﻿<div class="row" id="countryProfileviewcontainer">
+    <div class="col-xs-12">
+        <div class="panel panel-primary" id="countryProfileview-box">
+            <div class="panel-heading1 panel-heading">
+                <div class="flagsprite pull-left marginright6"
+                     data-bind="css: 'flagsprite-' + CountryId().toLowerCase()"></div>
+                Profile
+            </div>
+            <div class="panel-body">
+                @Html.Partial("_CountryProfileItem")
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

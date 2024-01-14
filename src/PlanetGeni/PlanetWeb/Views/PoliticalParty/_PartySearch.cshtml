@@ -1,0 +1,86 @@
+﻿<div id="partysearchcontainer">
+    <div class=" row">
+        <div class="col-xs-12">
+            <div class="panel panel-primary" id="mypartysearchcontent-box">
+                <div class="panel-heading1 panel-heading">
+                    <div class="flagsprite pull-right btn-link"
+                         data-bind="css: 'flagsprite-' + CountryId().toLowerCase(), click: function(){viewCountryProfile(CountryId().toLowerCase())}"></div>
+
+                    <span class="fa icon-candidate  marginright6"></span> Search Party's
+                </div>
+                <div class="panel-body">
+                    <div class="panel-group accordion" id="partysearchAccordion">
+                        <div class="panel panel-default">
+                            <div class="panel-heading active">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#partysearchAccordion" href="#partySearch">
+                                        <i class="fa fa-search fa-1x"></i>   Search
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="partySearch" class="accordionpartysearch panel-collapse collapse in">
+                                <div class="panel-body">
+                                    @Html.Partial("_PartySearchItem")
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#partysearchAccordion" href="#partySearchResult">
+                                        <i class="fa icon-candidate marginright6 fa-1x"></i> Search Result
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="partySearchResult" class="accordionpartysearch panel-collapse collapse">
+                                <div class="panel-body ">
+                                    @Html.Partial("_PartySearchResultItem")
+                                </div>
+                                <div class="panel-footer">
+                                    <div class="row ">
+                                        <div class="col-xs-6">
+                                            <h6>
+                                                <span class="label label-info" data-bind="text: partyCodes().length"></span>
+                                            </h6>
+                                        </div>
+                                        <div class="col-xs-3">
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <span id="partyCodesshowmore" class="btn btn-shadow btn-success btn-sm pull-right"><i class="fa fa-plus"></i> </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-primary hidden" id="mypartysearchcontent-submit">
+                <div class="panel-heading1 panel-heading">
+                    <span>Party Apply</span>
+                </div>
+                <div class="panel-body">
+                    <div class="col-xs-12">
+                        <span data-bind="text:Message">
+
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-default backbtn pull-right hidden">
+                <span><i class="fa fa-home"></i> Home</span>
+            </button>
+            <button class="btn btn-default  pull-left hidden" id="partymorepartysearch">
+                <span><i class="fa fa-search"></i> Search More</span>
+            </button>
+            <button type="submit" id="joinPartyRequest" data-bind="disable: showJoinValidation()"
+                    data-loading-text='
+                <i class="fa fa-spinner fa-spin"></i> Saving...'
+                class="btn btn-default pull-right">Apply For <span class="text-success" data-bind="text: applyingItems().length"></span> Party
+            </button>
+        </div>
+    </div>
+</div>

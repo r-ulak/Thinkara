@@ -1,0 +1,36 @@
+﻿@model DAO.Models.BusinessLocation
+<table class="table50-50">
+    <tr> 
+        <td>
+            @Html.LabelFor(model => model.CityCode.City)
+        </td>
+        <td>
+            @Html.EditorFor(model => model.CityCode.City)<br />
+            @Html.ValidationMessageFor(model => model.CityCode.City)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.LabelFor(model => model.ProvinceCode.Province)
+        </td>
+        <td>
+            @Html.EditorFor(model => model.ProvinceCode.Province)<br />
+            @Html.ValidationMessageFor(model => model.ProvinceCode.Province)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.LabelFor(model => model.CountryCode.Code)
+        </td>
+        <td>
+            
+            @Html.ValidationMessageFor(model => model.CountryCode)
+        </td>
+    </tr>
+</table>
+<script type="text/javascript">
+
+    $("#Location_CityCode_city").autocomplete({ source: '@Url.Action("CityList", "Location")' });
+    $("#Location_ProvinceCode_province").autocomplete({ source: '@Url.Action("ProvinceList", "Location")' });  
+  
+</script>

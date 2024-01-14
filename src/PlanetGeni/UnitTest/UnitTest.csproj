@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{47C8F40E-DE59-475A-BD26-1E4C96796814}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UnitTest</RootNamespace>
+    <AssemblyName>UnitTest</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebDriver, Version=2.46.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Selenium.WebDriver.2.46.0\lib\net40\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=2.46.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Selenium.Support.2.46.0\lib\net40\WebDriver.Support.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Category\AutoComplete\AutoCompleteUnitTest.cs" />
+    <Compile Include="Category\ContactExtract\ContactExtractorUnitTest.cs" />
+    <Compile Include="Category\ContactExtract\BudgetSpender\BudgetSpenderUnitTest.cs" />
+    <Compile Include="Category\Loan\LoanUnitTestWA.cs" />
+    <Compile Include="Category\Jobs\JobsUnitTestWA.cs" />
+    <Compile Include="Category\Profile\ProfileUnitTestWA.cs" />
+    <Compile Include="Category\BankAc\BankAcUnitTest.cs" />
+    <Compile Include="Category\BankAc\BankAcUnitTestWA.cs" />
+    <Compile Include="Category\Jobs\JobsUnitTest.cs" />
+    <Compile Include="Category\Stock\StockUnitTest.cs" />
+    <Compile Include="Category\Stock\StockUnitTestWA.cs" />
+    <Compile Include="Category\Ads\AdsUnitTest.cs" />
+    <Compile Include="Category\Ads\AdsUnitTestWA.cs" />
+    <Compile Include="Category\Election\ElectionUnitTest.cs" />
+    <Compile Include="Category\Election\ElectionUnitTestWA.cs" />
+    <Compile Include="Category\PoliticalParty\PoliticalPartyUnitTestWA.cs" />
+    <Compile Include="Category\PoliticalParty\PoliticalPartyUnitTest.cs" />
+    <Compile Include="Category\UnitTestFixture.cs" />
+    <Compile Include="Category\UnitUtility.cs" />
+    <Compile Include="Model\Voters.cs" />
+    <Compile Include="Persistence.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Category\ContactExtract\BudgetSpender\Sql\Data\CountryBudgetByTypeExpected.csv" />
+    <None Include="Category\ContactExtract\BudgetSpender\Sql\Data\JobCountryExpected.csv" />
+    <None Include="Category\ContactExtract\BudgetSpender\Sql\Data\UserBankAccountExpected.csv" />
+    <None Include="Category\ContactExtract\BudgetSpender\Sql\Data\StockTradeExpected.csv" />
+    <None Include="Category\ContactExtract\BudgetSpender\Sql\Data\CountryBudgetExpected.csv" />
+    <None Include="Category\ContactExtract\BudgetSpender\Sql\Data\CountryLeader.tsv" />
+    <None Include="Category\ContactExtract\BudgetSpender\Sql\Data\CountryBudgetByType.tsv" />
+    <None Include="Category\ContactExtract\BudgetSpender\Sql\Data\CountryBudget.tsv" />
+    <None Include="Category\ContactExtract\BudgetSpender\Sql\Data\Education.tsv" />
+    <None Include="Category\ContactExtract\BudgetSpender\Sql\Data\JobCountry.tsv" />
+    <None Include="Category\ContactExtract\BudgetSpender\Sql\Data\UserBankAccount.tsv" />
+    <None Include="Category\ContactExtract\BudgetSpender\Sql\Data\WebUser.tsv" />
+    <None Include="Category\Election\Sql\Data\ElectionVoting-2.tsv" />
+    <None Include="Category\Loan\Sql\Data\UserLoan.tsv" />
+    <None Include="Category\Loan\Sql\Data\CreditScore.tsv" />
+    <None Include="Category\Loan\Sql\Data\Friend.tsv" />
+    <None Include="Category\Loan\Sql\Data\UserBankAccount.tsv" />
+    <None Include="Category\Loan\Sql\Data\WebUser.tsv" />
+    <None Include="Category\AutoComplete\Sql\Data\WebUser.tsv" />
+    <None Include="Category\Sql\Data\AllowedWebUser.tsv" />
+    <None Include="Category\Sql\Data\UserActivityLog.tsv" />
+    <None Include="Category\Jobs\Sql\Data\JobCountry.tsv" />
+    <None Include="Category\Jobs\Sql\Data\JobCountry-1.tsv" />
+    <None Include="Category\Jobs\Sql\Data\Education.tsv" />
+    <None Include="Category\Jobs\Sql\Data\UserJob.tsv" />
+    <None Include="Category\Profile\Sql\Data\CountryLeader.tsv" />
+    <None Include="Category\Profile\Sql\Data\CountryWeapon.tsv" />
+    <None Include="Category\Profile\Sql\Data\CountryRevenue.tsv" />
+    <None Include="Category\Profile\Sql\Data\CountryBudgetByType.tsv" />
+    <None Include="Category\Profile\Sql\Data\CountryBudget.tsv" />
+    <None Include="Category\Profile\Sql\Data\Education.tsv" />
+    <None Include="Category\Profile\Sql\Data\UserJob.tsv" />
+    <None Include="Category\Profile\Sql\Data\Friend.tsv" />
+    <None Include="Category\Profile\Sql\Data\PartyMember.tsv" />
+    <None Include="Category\Profile\Sql\Data\PoliticalParty.tsv" />
+    <None Include="Category\Profile\Sql\Data\UserBankAccount.tsv" />
+    <None Include="Category\Profile\Sql\Data\UserLoan.tsv" />
+    <None Include="Category\Profile\Sql\Data\UserMerchandise.tsv" />
+    <None Include="Category\Profile\Sql\Data\UserStock.tsv" />
+    <None Include="Category\Profile\Sql\Data\WebUser.tsv" />
+    <None Include="Category\BankAc\Sql\Data\Friend.tsv" />
+    <None Include="Category\BankAc\Sql\Data\CapitalTransactionLog.tsv" />
+    <None Include="Category\BankAc\Sql\Data\UserStock.tsv" />
+    <None Include="Category\BankAc\Sql\Data\UserLoan.tsv" />
+    <None Include="Category\BankAc\Sql\Data\UserBankAccount.tsv" />
+    <None Include="Category\BankAc\Sql\Data\UserMerchandise.tsv" />
+    <None Include="Category\BankAc\Sql\Data\WebUser.tsv" />
+    <None Include="Category\Jobs\Sql\Data\ExpectedUserJob-1.csv" />
+    <None Include="Category\Jobs\Sql\Data\UserJob-1.tsv" />
+    <None Include="Category\Jobs\Sql\Data\WebUser.tsv" />
+    <None Include="Category\Sql\Data\AspNetUsers.tsv" />
+    <None Include="Category\Stock\Sql\Data\ExpectedStockTradeHistory-2.csv" />
+    <None Include="Category\Stock\Sql\Data\ExpectedUserBankAccount-2.csv" />
+    <None Include="Category\Stock\Sql\Data\ExpectedUserBankAccount-1.csv" />
+    <None Include="Category\Stock\Sql\Data\ExpectedStockTrade-2.csv" />
+    <None Include="Category\Stock\Sql\Data\ExpectedStockTradeHistory-1.csv" />
+    <None Include="Category\Stock\Sql\Data\ExpectedUserStock-2.csv" />
+    <None Include="Category\Stock\Sql\Data\ExpectedUserStock-1.csv" />
+    <None Include="Category\Stock\Sql\Data\Stock.tsv" />
+    <None Include="Category\Stock\Sql\Data\ExpectedStockTrade-1.csv" />
+    <None Include="Category\Stock\Sql\Data\StockTrade-2.tsv" />
+    <None Include="Category\Stock\Sql\Data\UserStock-2.tsv" />
+    <None Include="Category\Stock\Sql\Data\UserStock.tsv" />
+    <None Include="Category\Stock\Sql\Data\StockTrade.tsv" />
+    <None Include="Category\Stock\Sql\Data\UserStock-1.tsv" />
+    <None Include="Category\Stock\Sql\Data\StockTrade-1.tsv" />
+    <None Include="Category\Stock\Sql\Data\Friend.tsv" />
+    <None Include="Category\Stock\Sql\Data\UserBankAccount.tsv" />
+    <None Include="Category\Stock\Sql\Data\WebUser.tsv" />
+    <None Include="Category\Ads\Sql\Data\Friend.tsv" />
+    <None Include="Category\Ads\Sql\Data\UserBankAccount.tsv" />
+    <None Include="Category\Ads\Sql\Data\WebUser.tsv" />
+    <None Include="Category\Election\Sql\Data\CandidateAgenda.tsv" />
+    <None Include="Category\Election\Sql\Data\ElectionVoter.tsv" />
+    <None Include="Category\Election\Sql\Data\ElectionCandidate-1.tsv" />
+    <None Include="Category\Election\Sql\Data\ElectionVoting-1.tsv" />
+    <None Include="Category\Election\Sql\Data\ElectionVoting.tsv" />
+    <None Include="Category\Election\Sql\Data\Election.tsv" />
+    <None Include="Category\Election\Sql\Data\ElectionCandidate.tsv" />
+    <None Include="Category\Election\Sql\Data\ElectionAgenda.tsv" />
+    <None Include="Category\Election\Sql\Data\Friend.tsv" />
+    <None Include="Category\Election\Sql\Data\PartyAgenda.tsv" />
+    <None Include="Category\Election\Sql\Data\PartyMember.tsv" />
+    <None Include="Category\Election\Sql\Data\PoliticalParty.tsv" />
+    <None Include="Category\Election\Sql\Data\UserBankAccount.tsv" />
+    <None Include="Category\Election\Sql\Data\WebUser.tsv" />
+    <None Include="Category\PoliticalParty\Sql\Data\PartyAgenda.tsv" />
+    <None Include="Category\PoliticalParty\Sql\Data\ElectionAgenda.tsv" />
+    <None Include="Category\PoliticalParty\Sql\Data\PartyCloseRequest.tsv" />
+    <None Include="Category\PoliticalParty\Sql\Data\UserBankAccount.tsv" />
+    <None Include="Category\PoliticalParty\Sql\Data\Friend.tsv" />
+    <None Include="Category\PoliticalParty\Sql\Data\PartyEjection.tsv" />
+    <None Include="Category\PoliticalParty\Sql\Data\PartyInvite.tsv" />
+    <None Include="Category\PoliticalParty\Sql\Data\PartyMember.tsv" />
+    <None Include="Category\PoliticalParty\Sql\Data\PartyNomination.tsv" />
+    <None Include="Category\PoliticalParty\Sql\Data\PoliticalParty.tsv" />
+    <None Include="Category\PoliticalParty\Sql\Data\TaskReminder.tsv" />
+    <None Include="Category\PoliticalParty\Sql\Data\UserNotification.tsv" />
+    <None Include="Category\PoliticalParty\Sql\Data\WebUserContact.tsv" />
+    <None Include="Category\PoliticalParty\Sql\Data\UserTask.tsv" />
+    <None Include="Category\PoliticalParty\Sql\Data\UserVoteSelectedChoice.tsv" />
+    <None Include="Category\PoliticalParty\Sql\Data\WebUser.tsv" />
+    <None Include="Category\Sql\ApplySPCU.bat" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Selenium\BankAccount" />
+    <None Include="Selenium\ClosePartyTS" />
+    <None Include="Selenium\ElectionTS" />
+    <None Include="Selenium\ManageParty" />
+    <None Include="Selenium\PartyInvites" />
+    <None Include="Selenium\PartyViewById" />
+    <None Include="Selenium\QuitParty" />
+    <None Include="Selenium\StartPartyTS" />
+    <None Include="Selenium\SubmitAds" />
+    <None Include="Selenium\UserProfileTS" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AzureServices\AzureServices.csproj">
+      <Project>{3303f22b-ed81-4ef8-9887-d89436f3b596}</Project>
+      <Name>AzureServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{3385d0b1-f587-4fdb-9687-2d82dc78b65a}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ContactsManager\ContactsManager.csproj">
+      <Project>{97033f57-91a3-41e3-8893-5ef4e9ef5635}</Project>
+      <Name>ContactsManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{42853f20-8520-4ce2-9493-01109332b33b}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{d461cc3c-8d7b-4b74-a35f-c1f8cb865033}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{ca9c0cc6-8fb1-4217-81cf-406b8c20405d}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Manager\Manager.csproj">
+      <Project>{0076d510-1c82-4253-91c2-9005641701d7}</Project>
+      <Name>Manager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Repository\Repository.csproj">
+      <Project>{6db7152e-7464-4335-99bf-7bc0827431f0}</Project>
+      <Name>Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Category\ContactExtract\BudgetSpender\Sql\DataLoadCountryBudget.sql" />
+    <Content Include="Category\ContactExtract\BudgetSpender\Sql\DropSchema.sql" />
+    <Content Include="Category\Election\Sql\DataLoadElectionVotingJob.sql" />
+    <Content Include="Category\Loan\Sql\DataLoadLoan.sql" />
+    <Content Include="Category\Loan\Sql\DropSchema.sql" />
+    <Content Include="Category\AutoComplete\Sql\DataLoadAutoComplete.sql" />
+    <Content Include="Category\AutoComplete\Sql\DropSchema.sql" />
+    <Content Include="Category\Profile\Sql\DataLoadProfile.sql" />
+    <Content Include="Category\Profile\Sql\DropSchema.sql" />
+    <Content Include="Category\BankAc\Sql\DataLoadBankAc.sql" />
+    <Content Include="Category\BankAc\Sql\DropSchema.sql" />
+    <Content Include="Category\Jobs\Sql\DataLoadJobs-x.sql" />
+    <Content Include="Category\Jobs\Sql\DataLoadJobs.sql" />
+    <Content Include="Category\Jobs\Sql\DropSchema.sql" />
+    <Content Include="Category\Sql\DataLoadGlobalidentity.sql" />
+    <Content Include="Category\Sql\Data\UserIdentityCreate.sql" />
+    <Content Include="Category\Stock\Pic\Capture.PNG" />
+    <Content Include="Category\Stock\Sql\DataLoadStock-x.sql" />
+    <Content Include="Category\Stock\Sql\DataLoadStock.sql" />
+    <Content Include="Category\Stock\Sql\DropSchema.sql" />
+    <Content Include="Category\Ads\Pic\Capture.PNG" />
+    <Content Include="Category\Ads\Sql\DataLoadAds.sql" />
+    <Content Include="Category\Ads\Sql\DropSchema.sql" />
+    <Content Include="Category\Election\Pic\Capture.PNG" />
+    <Content Include="Category\Election\Sql\DataLoadElectionCandidate-1.sql" />
+    <Content Include="Category\Election\Sql\DataLoadElection.sql" />
+    <Content Include="Category\Election\Sql\DropSchema.sql" />
+    <Content Include="Category\PoliticalParty\Pic\Capture.PNG" />
+    <Content Include="Category\PoliticalParty\Sql\DataLoadPoliticalParty.sql" />
+    <Content Include="Category\PoliticalParty\Sql\DropSchema.sql" />
+    <Content Include="Category\Sql\DataLoadGlobal.sql" />
+    <Content Include="Selenium\BanAccountSummary.html" />
+    <Content Include="Selenium\BuyMerchandise.html" />
+    <Content Include="Selenium\CheckAgenda.html" />
+    <Content Include="Selenium\CheckNotifications.html" />
+    <Content Include="Selenium\CheckStartPartyApproved.html" />
+    <Content Include="Selenium\CloseParty.html" />
+    <Content Include="Selenium\CountryProfile.html" />
+    <Content Include="Selenium\CustomFont.html" />
+    <Content Include="Selenium\ElectionCandidate.html" />
+    <Content Include="Selenium\ElectionTS.html" />
+    <Content Include="Selenium\ElectionValidation.html" />
+    <Content Include="Selenium\ElectionVoting.html" />
+    <Content Include="Selenium\ForgotPassword.html" />
+    <Content Include="Selenium\Login.html" />
+    <Content Include="Selenium\ManageParty.html" />
+    <Content Include="Selenium\ManagePartyValidations.html" />
+    <Content Include="Selenium\ManageProfile.html" />
+    <Content Include="Selenium\NotficationCheck.html" />
+    <Content Include="Selenium\PageLoad.html" />
+    <Content Include="Selenium\PartyInvite.html" />
+    <Content Include="Selenium\PartySearch.html" />
+    <Content Include="Selenium\PartySearch1.html" />
+    <Content Include="Selenium\PartySearch2.html" />
+    <Content Include="Selenium\PartySearchNoResult.html" />
+    <Content Include="Selenium\PartyViewClickById.html" />
+    <Content Include="Selenium\QuitParty.html" />
+    <Content Include="Selenium\Register.html" />
+    <Content Include="Selenium\ResetPassword.html" />
+    <Content Include="Selenium\RunForOfficeticket.html" />
+    <Content Include="Selenium\SendInvite.html" />
+    <Content Include="Selenium\StartParty.html" />
+    <Content Include="Selenium\StartPartyValidation.html" />
+    <Content Include="Selenium\StockOrder.html" />
+    <Content Include="Selenium\SubmitAds.html" />
+    <Content Include="Selenium\SubmitAdsCalculation.html" />
+    <Content Include="Selenium\SubmitAdsUploadPic.html" />
+    <Content Include="Selenium\SubmitAdsValidation.html" />
+    <Content Include="Selenium\UploadLogoManageparty.html" />
+    <Content Include="Selenium\UserLogin.html" />
+    <Content Include="Selenium\UserProfile.html" />
+    <Content Include="Selenium\WebDrivers\chromedriver.exe" />
+    <Content Include="Selenium\WebDrivers\IEDriverServer.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

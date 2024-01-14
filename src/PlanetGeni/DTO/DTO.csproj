@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CA9C0CC6-8FB1-4217-81CF-406B8C20405D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DTO</RootNamespace>
+    <AssemblyName>DTO</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Custom\ExpiringUserJobDTO.cs" />
+    <Compile Include="Custom\UserEmailDTO.cs" />
+    <Compile Include="Custom\ReportIncidentDTO.cs" />
+    <Compile Include="Custom\CrimeIncidentDTO.cs" />
+    <Compile Include="Custom\HistoricalStockDTO.cs" />
+    <Compile Include="Custom\RouletteDTO.cs" />
+    <Compile Include="Custom\SlotMachineThreeDTO.cs" />
+    <Compile Include="Custom\SlotNumber.cs" />
+    <Compile Include="Custom\StockForecastDTO.cs" />
+    <Compile Include="Custom\UserByNotification.cs" />
+    <Compile Include="Custom\SpotIMPostDTO.cs" />
+    <Compile Include="Custom\SpotIMDTO.cs" />
+    <Compile Include="Custom\FriendSuggestDTO.cs" />
+    <Compile Include="Custom\AutoCompleteDTO.cs" />
+    <Compile Include="Custom\BuySpotDTO.cs" />
+    <Compile Include="Custom\BlobSasUrlDTO.cs" />
+    <Compile Include="Custom\SasUrlDTO.cs" />
+    <Compile Include="Custom\VoteCountingDTO.cs" />
+    <Compile Include="Custom\UserTaskDTO.cs" />
+    <Compile Include="Custom\AppliedJobDTO.cs" />
+    <Compile Include="Custom\JobMatchScoreDTO.cs" />
+    <Compile Include="Custom\LotteryMatch.cs" />
+    <Compile Include="Custom\PayMeDTO.cs" />
+    <Compile Include="Custom\PayNationDTO.cs" />
+    <Compile Include="Custom\MerchandiseCodeSearchDTO.cs" />
+    <Compile Include="Custom\EmailInviteDTO.cs" />
+    <Compile Include="Custom\CountryLeaderProfileDTO.cs" />
+    <Compile Include="Custom\CountryRichestCitizenDTO.cs" />
+    <Compile Include="Custom\CountryLiteracyDTO.cs" />
+    <Compile Include="Custom\CountrySalaryDTO.cs" />
+    <Compile Include="Custom\CountrySafestDTO.cs" />
+    <Compile Include="Custom\CountryOffenseAssetDTO.cs" />
+    <Compile Include="Custom\CountryDefenseAssetDTO.cs" />
+    <Compile Include="Custom\CountryRankDTO.cs" />
+    <Compile Include="Custom\CountryRevenuePercentDTO.cs" />
+    <Compile Include="Custom\CountryBudgetPercentDTO.cs" />
+    <Compile Include="Custom\CountryBudgetDTO.cs" />
+    <Compile Include="Custom\CountryPoulationDTO.cs" />
+    <Compile Include="Custom\InitializeWebUser.cs" />
+    <Compile Include="Custom\PartyProfileDTO.cs" />
+    <Compile Include="Custom\JobProfileDTO.cs" />
+    <Compile Include="Custom\EducationProfileDTO.cs" />
+    <Compile Include="Custom\SecurityProfileDTO.cs" />
+    <Compile Include="Custom\PropertyProfileDTO.cs" />
+    <Compile Include="Custom\CountryProfileDTO.cs" />
+    <Compile Include="Custom\UserProfileDTO.cs" />
+    <Compile Include="Custom\CapitalTransactionDTO.cs" />
+    <Compile Include="Custom\BankViewDTO.cs" />
+    <Compile Include="Custom\StockPriceDTO.cs" />
+    <Compile Include="Custom\CandidateAgendaDTO.cs" />
+    <Compile Include="Custom\CandidateVotingDTO.cs" />
+    <Compile Include="Custom\CandidateSearchDTO.cs" />
+    <Compile Include="Custom\ElectionVotingDTO.cs" />
+    <Compile Include="Custom\PayWithTaxDTO.cs" />
+    <Compile Include="Custom\QuitElectionDTO.cs" />
+    <Compile Include="Custom\RunForOfficeTicketDTO.cs" />
+    <Compile Include="Custom\RunForOfficeDTO.cs" />
+    <Compile Include="Custom\TopTenUserCapital.cs" />
+    <Compile Include="Custom\UniquePartyDTO.cs" />
+    <Compile Include="Custom\QuitPartyDTO.cs" />
+    <Compile Include="Custom\InviteeDTO.cs" />
+    <Compile Include="Custom\PartyInviteDTO.cs" />
+    <Compile Include="Custom\UserRent.cs" />
+    <Compile Include="Custom\WebUserIndexDTO.cs" />
+    <Compile Include="Custom\WebUserInfoDTO.cs" />
+    <Compile Include="Custom\WebUserInfo.cs" />
+    <Compile Include="Custom\UserDTO.cs" />
+    <Compile Include="Custom\JoinRequestPartyDTO.cs" />
+    <Compile Include="Custom\ClosePartyDTO.cs" />
+    <Compile Include="Custom\ContentProviderResult.cs" />
+    <Compile Include="Custom\JobSearchDTO.cs" />
+    <Compile Include="Custom\JobOverTimeCheckInDTO.cs" />
+    <Compile Include="Custom\EducationBoostDTO.cs" />
+    <Compile Include="Custom\EnrollDegreeDTO.cs" />
+    <Compile Include="Custom\FilesStatus.cs" />
+    <Compile Include="Custom\PartyNameDTO.cs" />
+    <Compile Include="Custom\NominationPartyDTO.cs" />
+    <Compile Include="Custom\GetPartyMemberTypeDTO.cs" />
+    <Compile Include="Custom\StartPartyDTO.cs" />
+    <Compile Include="Custom\PostResponseDTO.cs" />
+    <Compile Include="Custom\TopTenDegreeHolderDTO.cs" />
+    <Compile Include="Custom\TopTenUserSalary.cs" />
+    <Compile Include="Custom\TopTenStockOwnerDTO.cs" />
+    <Compile Include="Custom\TopTenWeaponStackCountryDTO.cs" />
+    <Compile Include="Custom\TopTenPropertyOwnerDTO.cs" />
+    <Compile Include="Custom\ExecuteTradeDTO.cs" />
+    <Compile Include="Custom\ChoiceCountDTO.cs" />
+    <Compile Include="Custom\WarTargetCountry.cs" />
+    <Compile Include="Db\ArrestUserDTO.cs" />
+    <Compile Include="Db\ContactSourceDTO.cs" />
+    <Compile Include="Db\BuySellMetalDTO.cs" />
+    <Compile Include="Db\CrimeReportDTO.cs" />
+    <Compile Include="Db\DegreeCheckDTO.cs" />
+    <Compile Include="Custom\FollowAllDTO.cs" />
+    <Compile Include="Db\FriendRelationDTO.cs" />
+    <Compile Include="Db\InJailDTO.cs" />
+    <Compile Include="Db\UserDigDTO.cs" />
+    <Compile Include="Db\VotingCandidateDTO.cs" />
+    <Compile Include="Db\ElectionCandidateDTO.cs" />
+    <Compile Include="Db\Pick5WinDTO.cs" />
+    <Compile Include="Db\Pick3WinDTO.cs" />
+    <Compile Include="Db\MyPoliticalPartyDTO.cs" />
+    <Compile Include="Db\TemplateTypeDTO.cs" />
+    <Compile Include="Db\AdvertisementPostDTO.cs" />
+    <Compile Include="Db\AdvertisementDTO.cs" />
+    <Compile Include="Custom\EjectPartyDTO.cs" />
+    <Compile Include="Db\BuySellStockDTO.cs" />
+    <Compile Include="Db\BuySellMerchandiseDTO.cs" />
+    <Compile Include="Db\CommentDTO.cs" />
+    <Compile Include="Custom\ApplyJobCodeDTO.cs" />
+    <Compile Include="Db\GetPostDTO.cs" />
+    <Compile Include="Db\JobSummaryStatusDTO.cs" />
+    <Compile Include="Db\JobSummaryDTO.cs" />
+    <Compile Include="Db\DonatePartyDTO.cs" />
+    <Compile Include="Db\PartyAgendaDTO.cs" />
+    <Compile Include="Db\PartyMemberStructDTO.cs" />
+    <Compile Include="Db\PoliticalPartyDTO.cs" />
+    <Compile Include="Db\UserJobDTO.cs" />
+    <Compile Include="Db\JobCodeDTO.cs" />
+    <Compile Include="Db\EducationDTO.cs" />
+    <Compile Include="Db\MajorCodeDTO.cs" />
+    <Compile Include="Db\CountryTaxDetailsDTO.cs" />
+    <Compile Include="Db\CountryBudgetDetailsDTO.cs" />
+    <Compile Include="Db\CountryTaxTypeDTO.cs" />
+    <Compile Include="Db\CountryBudgetTypeDTO.cs" />
+    <Compile Include="Db\GiftDetailsDTO.cs" />
+    <Compile Include="Db\GiftRateDTO.cs" />
+    <Compile Include="Db\EducationSummaryDTO.cs" />
+    <Compile Include="Db\StockSummaryDTO.cs" />
+    <Compile Include="Db\StockTradeDTO.cs" />
+    <Compile Include="Db\UserStockDTO.cs" />
+    <Compile Include="Db\UserBankAccount.cs" />
+    <Compile Include="Db\PostCommentDTO.cs" />
+    <Compile Include="Db\GiftDTO.cs" />
+    <Compile Include="Db\PostDTO.cs" />
+    <Compile Include="Db\RequestLoanDTO.cs" />
+    <Compile Include="Db\UserLoanDTO.cs" />
+    <Compile Include="Db\UserNotificationDetailsDTO.cs" />
+    <Compile Include="Db\UserTaskDetailsDTO.cs" />
+    <Compile Include="Db\VoteResponseDTO.cs" />
+    <Compile Include="Db\UserVoteDTO.cs" />
+    <Compile Include="Db\AchievementDTO.cs" />
+    <Compile Include="Db\AwardSummaryDTO.cs" />
+    <Compile Include="Db\FriendDetailsDTO.cs" />
+    <Compile Include="Custom\PartySearchDTO.cs" />
+    <Compile Include="Db\MyPartyDetailsDTO.cs" />
+    <Compile Include="Db\ElectionWinLossDTO.cs" />
+    <Compile Include="Db\PartyMemberDTO.cs" />
+    <Compile Include="Db\UserPartyDTO.cs" />
+    <Compile Include="Db\BuyWeaponDTO.cs" />
+    <Compile Include="Db\MerchandiseInventoryDTO.cs" />
+    <Compile Include="Db\WeaponInventoryDTO.cs" />
+    <Compile Include="Db\MerchandiseSummaryDTO.cs" />
+    <Compile Include="Db\PartySummaryDTO.cs" />
+    <Compile Include="Db\WeaponSummaryDTO.cs" />
+    <Compile Include="Db\MerchandiseTypeDTO.cs" />
+    <Compile Include="Db\WeaponTypeDTO.cs" />
+    <Compile Include="Db\ContactDTO.cs" />
+    <Compile Include="Db\WebUserContactDTO.cs" />
+    <Compile Include="Db\WebUserDTO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{3385d0b1-f587-4fdb-9687-2d82dc78b65a}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{42853f20-8520-4ce2-9493-01109332b33b}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

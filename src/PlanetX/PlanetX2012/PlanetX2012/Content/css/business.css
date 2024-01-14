@@ -1,0 +1,54 @@
+﻿.newbusinessContainer
+{
+    width: auto;
+}
+
+.newbusinessContainerleft
+{
+    padding-right: 10px;
+    float: left;
+    position: relative;
+}
+
+.newbusinessContainerright
+{
+    float: right;
+}
+
+
+#businessGraph
+{
+    height: 150px;
+    width: 225px;
+    border: 2px solid #e2e2e2;
+    padding: 3px;
+    margin: 0 15px 10px 0;
+}
+
+
+.businessIndicator
+{
+    height: 150px;
+    width: 225px;
+    border: 2px solid #e2e2e2;
+    padding: 3px;
+    margin: 0 15px 10px 0;
+}
+
+#businessCodes
+{
+    padding-bottom: 10px;
+}
+
+#businessSubCodes
+{
+    padding-bottom: 10px;
+}
+
+#Business_BusinessName
+{
+    font-size: 14px;
+    padding: 5px 0 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}

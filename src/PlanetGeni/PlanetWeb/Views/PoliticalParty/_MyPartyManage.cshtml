@@ -1,0 +1,149 @@
+﻿<div class="manageparty">
+    <div class="row padding3centt ">
+        <div class="col-xs-12">
+            <fieldset>
+                <legend class=" text-warning fontsize120">Party Details</legend>
+                <form role="form" id="managepartyform" class="form-horizontal fontsize90">
+                    <div class="well">
+                        <div class="form-group paddingl14 paddingr14">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="fa fa-users fa-1x"></i>
+                                </span>
+                                <input type="text" class="form-control" name="partyName" maxlength="60" data-bind="value:PartyName" placeholder="Party Name">
+                            </div>
+                        </div>
+                        <div class="form-group paddingl14 paddingr14">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="fa fa-users fa-1x"></i>
+                                </span>
+                                <input type="text" data-bind="value:Motto" class="form-control" name="partyMotto" maxlength="250" placeholder="Party Motto">
+                            </div>
+                        </div>
+                        <div class="form-group paddingl14 paddingr14">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="fa fa-users fa-1x"></i>
+                                </span>
+                                <input id="managepartymembershipFee" type="text" data-bind="value:MembershipFee" name="partymembershipFee">
+                            </div>
+                        </div>
+                        <div class="row padding3centt ">
+                            <div class="col-xs-12  " id="managepartyAgenda">
+                                <fieldset>
+                                    <legend class="text-warning fontsize120">Agenda</legend>
+                                    <div id="managepartyagendaCodes" class="fontsize80 row form-group">
+                                        <div class="col-xs-12 input-group">
+                                            @Html.Partial("_PartyAgendaCheckbox")
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </fieldset>
+        </div>
+    </div>
+    <div data-bind="foreach: PartyManageList">
+        <div class="row">
+            <div class="col-xs-12 fontsize90 ">
+                <div class="alert alert-success">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+                        ×
+                    </button>
+                    <p class="fontsize90">
+                        <span>Updates Submitted Successfully</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <span title="Apply Changes" id="managepartysave" data-loading-text="saving..." class="btn btn-shadow btn-success btn-sm pull-right"><i class="fa  fa-floppy-o"></i> Save </span>
+        </div>
+    </div>
+    <div class="row padding3centt ">
+        <div class="col-xs-12">
+            <fieldset>
+                <legend class=" text-warning fontsize120">Logo Upload</legend>
+                <form role="form" id="managepartyform" class="form-horizontal fontsize90">
+                    <div class="well">
+                        <div class="form-group paddingl14 paddingr14">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="fa fa-users fa-1x"></i>
+                                </span>
+                                <input type="text" class="form-control" placeholder="Upload Party Logo">
+                                <span class="input-group-btn">
+                                    <span class="btn btn-default btn-file">
+                                        Browse… <input type="file" id="managepartyfileupload">
+                                    </span>
+                                </span>
+                            </div>
+                            <div class="input-group">
+                                <div id="partymanagepicprw" data-bind="visible: uploadprofilePicObj.blobSasUrl().length>0" class="pull-left marginright16  margintop10">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </fieldset>
+        </div>
+    </div>
+    <div data-bind="foreach: PartyUploadManageList">
+        <div class="row">
+            <div class="col-xs-12 fontsize90 ">
+                <div class="alert alert-success">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+                        ×
+                    </button>
+                    <p class="fontsize90">
+                        <span>Upload Submitted Successfully</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <span title="Upload Image" id="managepartyupload" data-loading-text="saving..." class="btn btn-shadow btn-success btn-sm pull-right"><i class="fa  fa-upload"></i> Upload </span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <fieldset>
+                <legend class=" text-warning fontsize120">Close Party</legend>
+                <div class="well">
+                    <span class="fontsize80">
+                        As a Founder you have power to close the party. You will need 85% approval for this request to go through. Party fund will be distributed among all party Members based on their vote count.
+                    </span>
+                </div>
+                <!-- ko if: Status =='A' -->
+                <span title="Close Party" id="managepartyclose" data-loading-text="saving..." class="btn btn-shadow btn-danger btn-sm pull-right"><i class="fa  fa-close"></i> Close </span>
+                <!-- /ko -->
+                <!-- ko if: Status !='A' -->
+                <div class="well">
+                    <span class="fontsize80">
+                        Party currently not in Approved Status. Party must be in apprvoed status to be requested for closure.
+                    </span>
+                </div>
+                <!-- /ko -->
+                <div class="row hidden closerequest">
+                    <div class="col-xs-12 fontsize90 ">
+                        <div class="alert alert-success">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+                                ×
+                            </button>
+                            <p class="fontsize90">
+                                <span>Close Request Submitted Successfully</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</div>

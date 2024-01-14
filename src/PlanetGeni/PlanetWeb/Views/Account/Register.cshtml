@@ -1,0 +1,128 @@
+﻿@using PlanetWeb.Models
+@model PlanetWeb.Models.RegisterViewModel
+<div class="row ">
+    <div class="col-xs-12 ">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-5">
+            @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                <div class="panel panel-primary register-form">
+                    <img width="66%" align="middle" src="https://thinkaraimages.blob.core.windows.net/misc/Logo.png" />
+                    <h3 class="text-center"> Create Your Account</h3>
+                    <div class="panel-heading1 panel-heading">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <strong>Register</strong>
+                            </div>
+                            <div class="col-xs-6 text-right">
+                                <strong><i class="fa fa-pencil-square-o fa-2x"></i> </strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-12 fontsize90">
+                                <section>
+                                    @Html.AntiForgeryToken()
+                                    @Html.ValidationSummary("", new { @class = "text-danger" })
+                                    <div class="form-group">
+                                        <div class="col-md-3">
+                                            <label for="CountryCode" class="col-md-2 control-label">Represent</label>
+                                        </div>
+                                        <div class="col-md-9">
+                                            @Html.TextBoxFor(m => m.CountryCode, new { @class = "form-control hidden", id = "countrycode" })
+                                            <div id="ddCountrycdregister" class="wrapper-dropdown-3 backwhite bottomMarging15">
+                                                <span class="text-warning marginright6">Select A Country</span>
+                                                <div class="flagsprite"
+                                                     data-bind="css: 'flagsprite-' + selectedCountryId(), title: Code"></div>
+                                                <ul class="dropdown" data-bind="foreach: countries">
+                                                    <li data-bind="attr: { 'data-id' : CountryId, 'data-name':Code }">
+                                                        <a>
+                                                            <div class="flagsprite pull-right "
+                                                                 data-bind="css: 'flagsprite-' + CountryId, title: Code"></div>
+                                                            <span data-bind="text: Code"></span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-3">
+                                            @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+                                        </div>
+                                        <div class="col-md-9">
+                                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-3">
+                                            @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+                                        </div>
+                                        <div class="col-md-9">
+                                            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-3">
+                                            @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
+                                        </div>
+                                        <div class="col-md-9">
+                                            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-3">
+                                            @Html.LabelFor(m => m.FirstName, new { @class = "col-md-2 control-label" })
+                                        </div>
+                                        <div class="col-md-9">
+                                            @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-3">
+                                            @Html.LabelFor(m => m.LastName, new { @class = "col-md-2 control-label" })
+                                        </div>
+                                        <div class="col-md-9">
+                                            @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-footer ">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="input-group fontsize90">
+                                    <div class="checkbox">
+                                        @Html.CheckBoxFor(m => m.IAgree)
+                                        <label for="iAgree" class="colorwhite">I agree to the Planet <a href='#' target="_blank" class="btn-link">terms and conditions</a></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <button type="submit"  value="Register" class="btn btn-shadow pull-right btn-lg btn-success fontsize90">
+                        Register <i class="fa fa-pencil-square-o"></i>
+                    </button>
+                </div>
+            }
+            <div class="row">
+                <section id="socialLoginForm">
+                    @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
+                </section>
+            </div>
+
+        </div>
+        <div class="col-md-4">
+        </div>
+    </div>
+</div>
+<script src="https://ajax.aspnetcdn.com/ajax/knockout/knockout-3.0.0.js"></script>
+@Scripts.Render("~/bundles/login")
+@Styles.Render("~/Content/register")

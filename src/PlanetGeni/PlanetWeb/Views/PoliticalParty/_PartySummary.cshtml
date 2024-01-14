@@ -1,0 +1,17 @@
+﻿<div id="partySummarycontainer">
+    <div class=" row">
+        <div class="col-xs-12">
+            <div class="panel panel-primary" id="mypartysummarycontent-box">
+                <div class="panel-heading1 panel-heading">
+                    <div class="flagsprite pull-right btn-link"
+                         data-bind="css: 'flagsprite-' + CountryId().toLowerCase(), click: function(){viewCountryProfile(CountryId().toLowerCase())}"></div>
+                    <span class="fa icon-candidate">
+                    </span> Party Summary
+                </div>
+                <div class="panel-body">
+                    @Html.Partial("_PartySummaryItem")
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

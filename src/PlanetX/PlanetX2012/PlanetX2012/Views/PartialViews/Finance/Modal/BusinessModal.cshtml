@@ -1,0 +1,29 @@
+﻿@model PlanetX2012.Models.ContentModel.BusinessContent
+<div id="accordion" class="accord">
+    <h2>
+        <a href="#">Start New Business</a></h2>
+
+    <div>
+        @Html.Partial("../PartialViews/Finance/Modal/NewBusiness")
+    </div>
+    <h2 id="manageBusiness">
+        <a href="#">Manage Business</a></h2>
+    <div>
+       @* @Html.Partial("../PartialViews/Finance/Modal/EditBusiness", ViewData["BusinessContent"] ?? new PlanetX2012.Models.ContentModel.BusinessContent())*@
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $("#accordion").accordion({
+            autoHeight: false,
+            animated: 'bounceslide',
+            icons: { "header": "ui-icon-plus", "headerSelected": "ui-icon-minus" }
+        });
+
+        $("#manageBusiness").click(function () {
+            $(this).next().load('/Finance/Manage' );
+        });
+    });
+
+
+</script>

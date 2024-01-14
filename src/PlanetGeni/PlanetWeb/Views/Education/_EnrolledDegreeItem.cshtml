@@ -1,0 +1,124 @@
+﻿<div class="container padding3centt" id="educationEnrolledItemcontent-box">
+    <div id="educationEnrolledcontent-wrapper" data-bind="foreach: { data: userEducationDegreeCodes, afterRender: $root.AfterEducationRenderAction}">
+        <!-- ko if: Status() =='I' -->
+        <div class="col-md-12 col-xs-12 productbox">
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="pull-left">
+                        <span class="fa fa-info-circle fa-2x" data-toggle="popover" data-bind="attr:{'data-content':Description()}"></span>
+                    </div><span class="fa fa-10x " data-bind="css: ImageFont"></span>
+                </div>
+                <div class="col-xs-6 ">
+                    <div class="row">
+                        <div class="col-xs-12 ">
+
+                            <div class="pull-right">
+                                <input type="text"
+                                       data-bind="attr: {value: CompletionPercent() , 'data-fgcolor': KnobColor(),   'data-index': $index}"
+                                       data-linecap="round"
+                                       class="dial">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <span class="text-info fa-2x" data-bind="text:MajorName()"></span>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="col-xs-6 fontsize80">
+                        <span>Attendance Cost</span>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="pull-right" title="PurchasedPrice of degree">
+                            <i class="fa icon-money28  text-danger fa-1x"></i>
+                            <span class="text-danger fontsize80" data-bind="text:numeral(CompletionCost()).format('0,0.00')">            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="col-xs-6 fontsize80">
+                        <span>Needed Hours</span>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="pull-right">
+                            <i class="fa fa-clock-o"></i>
+                            <span class="pull-right paddingleft5px fontsize80" data-bind="text: Duration()"> </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row padding3centt">
+                <div class="col-xs-12">
+                    <div class="col-xs-6 fontsize80">
+                        <span> Enrolled On</span>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="pull-right">
+                            <i class=" fa fa-clock-o"></i>
+                            <span class="pull-right paddingleft5px fontsize80" data-bind="text: ' ' + moment.utc(CreatedAt()).local().format('MM/DD/YY HH:mm')"> </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="col-xs-6 fontsize80">
+                        <span> Expected Completion</span>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="pull-right">
+                            <i class=" fa fa-clock-o"> </i>
+                            <span class="pull-right paddingleft5px fontsize80" data-bind="text: moment.utc(ExpectedCompletion()).local().format('MM/DD/YY HH:mm')"> </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="col-xs-6 fontsize80">
+                        <span> Next Boost At</span>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="pull-right">
+                            <i class="fa fa-clock-o"></i>
+                            <span class="pull-right paddingleft5px fontsize80" data-bind="text: moment.utc(NextBoostAt()).local().format('MM/DD/YY HH:mm')"> </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row padding3centt">
+                <div class="col-xs-12">
+                    <div class="col-xs-4">
+                        <span class="pull-left fa-2x" data-bind="css:DegreeImageFont(), attr:{title: DegreeName()}"></span>
+                    </div>
+                    <div class="pull-right">
+                        <!-- ko if:  moment.utc(NextBoostAt())<= moment.utc()  -->
+                        <button class="btn btn-default  pull-right degreeBoost " title="Boost will help complete the course faster, you can travel time faster for few mins."
+                                data-loading-text='
+                            <i class="fa fa-bolt text-success fa-spin"></i> Boosting...'
+                            data-bind="attr:{'data-index': $index}, click:$root.ApplyEducationBoost">
+                            <span><i class="fa fa-bolt text-success"></i> Boost</span>
+                        </button>
+                        <!-- /ko -->
+                        <!-- ko if:  moment.utc(NextBoostAt())> moment.utc()  -->
+                        <button class="btn btn-default  pull-right " title="Charging for next boost...">
+                            <span><i class="fa fa-refresh fa-spin text-success"></i> Charging</span>
+                        </button>
+                        <!-- /ko -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /ko -->
+    </div>
+</div>
+

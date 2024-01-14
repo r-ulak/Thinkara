@@ -1,0 +1,56 @@
+﻿<div id="jobhistorycontainer">
+    <div class=" row">
+        <div class="col-xs-12">
+            <div class="panel panel-primary" id="jobHistorycontent-box">
+                <div class="panel-heading1 panel-heading">
+                    <div class="flagsprite pull-right btn-link"
+                         data-bind="css: 'flagsprite-' + CountryId().toLowerCase(), click: function(){viewCountryProfile(CountryId().toLowerCase())}"></div>
+                    <span class="fa icon-online32 marginright6 "></span> History Job
+
+                </div>
+                <div class="panel-body">
+                    @Html.Partial("_JobHistoryItem")
+                </div>
+                <div class="panel-footer">
+
+                    <div class="row padding3centt">
+                        <div class="col-xs-6">
+                            <h6>
+                                <span class="label label-info" data-bind="text: jobCodes().length"></span>
+                            </h6>
+                        </div>
+                        <div class="col-xs-6">
+                            <span id="jobhistoryrefresh" class="btn btn-shadow btn-success btn-sm pull-right"><i class="fa fa-refresh"></i> </span>
+                            <span id="jobhistoryshowmore" class="marginright16 btn btn-shadow btn-success btn-sm pull-right"><i class="fa fa-plus"></i> </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-primary hidden" id="jobHistorycontent-submit">
+                <div class="panel-heading1 panel-heading">
+                    <span class="fa fa-signal"></span> History Job
+                </div>
+                <div class="panel-body">
+                    <div class="col-xs-12">
+                        <span data-bind="text:Message">
+
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-default backbtn pull-right hidden">
+                <span><i class="fa fa-home"></i> Home</span>
+            </button>
+            <button class="btn btn-default  pull-left hidden" id="historymorejob">
+                <span><i class="fa icon-online32 marginright6"></i> Withdraw More</span>
+            </button>
+            <button type="submit" id="historyjob" data-bind="disable: showHistoryValidation()"
+                    data-loading-text='
+                <i class="fa fa-spinner fa-spin"></i> Withdrawing...'
+                class="btn btn-default pull-right">Withdraw
+                <span class=" text-warning " data-bind="text: jobHistoryWithdrawList().length"></span> Job
+            </button>
+        </div>
+    </div>
+</div>

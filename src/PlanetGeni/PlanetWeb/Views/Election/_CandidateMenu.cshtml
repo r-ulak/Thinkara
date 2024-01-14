@@ -1,0 +1,33 @@
+﻿<ul class="navigation">
+    <li class="" data-bind="visible: Status=='A' && ElectionResult !='Withdrawn'">
+        <a data-bind="attr:{href:'#eledonate' + $index(),'data-index':$index}, click:$root.clickDonate" data-toggle="tab">
+            <span class="fa icon-donation2 fa-2x "></span>
+            <p class="fontsize70">Donate</p>
+        </a>
+    </li>
+    <li>
+        <a data-bind="attr:{href:'#eleresult' + $index(),'data-index':$index}, click:$root.clickResult" data-toggle="tab">
+            <span class="fa icon-candidates fa-2x "></span>
+            <p class="fontsize70">Result</p>
+        </a>
+    </li>
+    <li class="">
+        <a data-bind="attr:{href:'#eleagenda' + $index(),'data-index':$index}, click:$root.clickAgenda" data-toggle="tab">
+            <span class="fa fa-newspaper-o fa-2x"></span>
+            <p class="fontsize70">Agenda</p>
+        </a>
+    </li>
+</ul>
+<div class="ele-body">
+    <div class="tab-content">
+        <div data-bind="attr:{id:'eledonate' + $index()},visible: Status=='A' && ElectionResult !='Withdrawn'" class="tab-pane ">
+            @Html.Partial("../PoliticalParty/_MyPartyDonate")
+
+        </div>
+        <div data-bind="attr:{id:'eleresult' + $index()}" class="tab-pane">
+        </div>
+        <div data-bind="attr:{id:'eleagenda' + $index()}" class="tab-pane">
+            @Html.Partial("_CandidateAgenda")
+        </div>
+    </div>
+</div>

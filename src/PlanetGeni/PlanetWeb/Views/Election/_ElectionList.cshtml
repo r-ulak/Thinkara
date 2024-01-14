@@ -1,0 +1,11 @@
+﻿<div class="wrapper-dropdown-3 backwhite bottomMarging15" id="electioncandidatedd">
+    <span class="text-warning">Select A Election</span>
+    <ul class="dropdown" data-bind="foreach: electionList">
+        <li data-bind="attr: { 'data-id' : ElectionId, 'data-index':$index }">
+            <a>
+                <i class="fa icon-man371  marginright6"></i>
+                <span data-bind="text: ElectionName"></span>
+            </a>
+        </li>
+    </ul>
+</div>

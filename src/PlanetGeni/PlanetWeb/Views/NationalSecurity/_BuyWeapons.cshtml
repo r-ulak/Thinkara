@@ -1,0 +1,124 @@
+﻿<div id="securitycontainer">
+    <div class=" row">
+        <div class="col-xs-12">
+            <div class="panel panel-primary" id="mysecuritycontent-box">
+                <div class="panel-heading1 panel-heading">
+                    <div class="flagsprite pull-right btn-link"
+                         data-bind="css: 'flagsprite-' + CountryId().toLowerCase(), click: function(){viewCountryProfile(CountryId().toLowerCase())}"></div>
+                    <span class="fa icon-base1 marginright6"></span> National Defense
+                </div>
+                <div class="panel-body">
+                    <div class="panel-group accordion" id="securityAccordion">
+                        <div class="panel panel-default">
+                            <div class="panel-heading active">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#securityAccordion" href="#air">
+                                        <i class="fa icon-airplane24 fa-1x"></i>   Air
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="air" class="accordionsecurity panel-collapse collapse in">
+                                <div class="panel-body" data-bind="foreach: { data: weaponCodes, afterRender: $root.AfterWeaponRenderAction}">
+                                    <!-- ko if: WeaponTypeCode().indexOf("A") > -1 -->
+                                    @Html.Partial("_WeaponItem")
+                                    <!-- /ko -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default hidden">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#securityAccordion" href="#sea">
+                                        <i class="fa fa-desktop fa-1x"></i>  Sea
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="sea" class="accordionsecurity panel-collapse collapse">
+                                <div class="panel-body" data-bind="foreach: { data: weaponCodes, afterRender: $root.AfterWeaponRenderAction}">
+                                    <!-- ko if: WeaponTypeCode().indexOf("S") > -1 -->
+                                    @Html.Partial("_WeaponItem")
+                                    <!-- /ko -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#securityAccordion" href="#land">
+                                        <i class="fa icon-war5 fa-1x"></i>  Land
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="land" class="accordionsecurity panel-collapse collapse">
+                                <div class="panel-body" data-bind="foreach: { data: weaponCodes, afterRender: $root.AfterWeaponRenderAction}">
+                                    <!-- ko if: WeaponTypeCode().indexOf("L") > -1 -->
+                                    @Html.Partial("_WeaponItem")
+                                    <!-- /ko -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <strong> Total</strong>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="pull-right">
+                                <span class="fa icon-money28 text-success"></span>
+                                <strong class="label label-success text-right
+                                  fontsize110" data-bind="text:  numeral(Amount()).format('0,0.00')"></strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row padding3centt">
+
+                        <div class="col-xs-6">
+                            <strong> Avaliable Cash </strong>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="pull-right">
+                                <span class="fa icon-money28 text-success"></span>
+                                <span class="fontsize110" data-bind="text: numeral(AmountAvailable()).format('0,0.00')"></span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <span class="fontsize90 pull-right text-warning padding3centt" data-bind="visible: ShowValidation()">
+                                Not Enough Money to Buy
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="panel panel-primary hidden" id="mysecuritycontent-submit">
+                <div class="panel-heading1 panel-heading">
+                    <span>Buy</span>
+                </div>
+                <div class="panel-body">
+                    <div class="col-xs-12">
+                        <span data-bind="text:Message">
+
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-default backbtn pull-right hidden">
+                <span><i class="fa fa-home"></i> Home</span>
+            </button>
+
+            <button type="submit" id="savesecurity" data-bind="disable: ShowValidation()"
+                    data-loading-text='
+                <i class="fa fa-spinner fa-spin"></i> Saving...'
+                class="btn btn-default pull-right">Buy Weapons
+            </button>
+        </div>
+    </div>
+</div>

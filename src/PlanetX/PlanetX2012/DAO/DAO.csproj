@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CADD3F16-6F4D-419E-A8BC-90BA10EAE0F3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DAO</RootNamespace>
+    <AssemblyName>DAO</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BookSleeve">
+      <HintPath>..\packages\BookSleeve.1.3.38\lib\BookSleeve.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\packages\MySql.Data.6.7.4\lib\net40\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity">
+      <HintPath>..\packages\MySQL.Data.Entities.6.7.4.1\lib\net40\MySql.Data.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAO\ComplexType\ContentProviderResult.cs" />
+    <Compile Include="DAO\ComplexType\FriendAndClub.cs" />
+    <Compile Include="DAO\ComplexType\SearchResult.cs" />
+    <Compile Include="DAO\ComplexType\TrendingTopics.cs" />
+    <Compile Include="DAO\ContentModel\BusinessContent.cs" />
+    <Compile Include="DAO\ContentModel\ManageBusinessContent.cs" />
+    <Compile Include="DAO\ContentModel\ManageEducationContent.cs" />
+    <Compile Include="DAO\ContentModel\PostContent.cs" />
+    <Compile Include="DAO\DataManager\UserStatusManager.cs" />
+    <Compile Include="DAO\ComplexType\CityCountry.cs" />
+    <Compile Include="DAO\ComplexType\FinanceContent.cs" />
+    <Compile Include="DAO\ComplexType\FriendsInfo.cs" />
+    <Compile Include="DAO\ComplexType\ProfileSummary.cs" />
+    <Compile Include="DAO\DataCache\DefaultCacheProvider.cs" />
+    <Compile Include="DAO\ComplexType\EnumClass.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DAO\ComplexType\FriendStatus.cs" />
+    <Compile Include="DAO\ContentModel\HomeContent.cs" />
+    <Compile Include="DAO\DataManager\TopicManager.cs" />
+    <Compile Include="DAO\Extensions\Education.cs" />
+    <Compile Include="DAO\Repository\BusinessCodeRepository.cs" />
+    <Compile Include="DAO\Repository\BusinessSubCodeRepository.cs" />
+    <Compile Include="DAO\Repository\CityCodeRepository.cs" />
+    <Compile Include="DAO\Repository\CountryCodeRepository.cs" />
+    <Compile Include="DAO\Repository\DegreeCodeRepository.cs" />
+    <Compile Include="DAO\Repository\FriendClubRepository.cs" />
+    <Compile Include="DAO\Repository\MajorCodeRepository.cs" />
+    <Compile Include="DAO\Repository\Redis\RedisAutoCompleteRepository.cs" />
+    <Compile Include="DAO\Repository\Redis\RedisRepository.cs" />
+    <Compile Include="DAO\Repository\Redis\SignalRConnectionRepository.cs" />
+    <Compile Include="DAO\Repository\Redis\TrendingServiceRepository.cs" />
+    <Compile Include="DAO\Repository\UniversityCodeRepository.cs" />
+    <Compile Include="DAO\StoredProcedure\StoredProcedure.cs" />
+    <Compile Include="Models\Asset.cs" />
+    <Compile Include="Models\Avatar.cs" />
+    <Compile Include="Models\Blog.cs" />
+    <Compile Include="Models\Bookmark.cs" />
+    <Compile Include="Models\BookmarkCategory.cs" />
+    <Compile Include="Models\BookmarkInfo.cs" />
+    <Compile Include="Models\BookmarkSubCategory.cs" />
+    <Compile Include="Models\Business.cs" />
+    <Compile Include="Models\BusinessCode.cs" />
+    <Compile Include="Models\BusinessLocation.cs" />
+    <Compile Include="Models\BusinessSubCode.cs" />
+    <Compile Include="Models\Card.cs" />
+    <Compile Include="Models\Chat.cs" />
+    <Compile Include="Models\CityCode.cs" />
+    <Compile Include="Models\Club.cs" />
+    <Compile Include="Models\ClubMember.cs" />
+    <Compile Include="Models\CountryCode.cs" />
+    <Compile Include="Models\DegreeCode.cs" />
+    <Compile Include="Models\Education.cs" />
+    <Compile Include="Models\Employment.cs" />
+    <Compile Include="Models\Event.cs" />
+    <Compile Include="Models\EventCode.cs" />
+    <Compile Include="Models\EventLocation.cs" />
+    <Compile Include="Models\EventMembership.cs" />
+    <Compile Include="Models\Feed.cs" />
+    <Compile Include="Models\FeedCategory.cs" />
+    <Compile Include="Models\FeedInfo.cs" />
+    <Compile Include="Models\FeedSubCategory.cs" />
+    <Compile Include="Models\Friend.cs" />
+    <Compile Include="Models\GeneralLog.cs" />
+    <Compile Include="Models\Goverment.cs" />
+    <Compile Include="Models\GovermentProvince.cs" />
+    <Compile Include="Models\GroupMembership.cs" />
+    <Compile Include="Models\ItemCode.cs" />
+    <Compile Include="Models\Lang.cs" />
+    <Compile Include="Models\LeaderCode.cs" />
+    <Compile Include="Models\LoanCode.cs" />
+    <Compile Include="Models\LoanFromBusiness.cs" />
+    <Compile Include="Models\LoanFromPerson.cs" />
+    <Compile Include="Models\MajorCode.cs" />
+    <Compile Include="Models\Mapping\AssetMap.cs" />
+    <Compile Include="Models\Mapping\AvatarMap.cs" />
+    <Compile Include="Models\Mapping\BlogMap.cs" />
+    <Compile Include="Models\Mapping\BookmarkCategoryMap.cs" />
+    <Compile Include="Models\Mapping\BookmarkInfoMap.cs" />
+    <Compile Include="Models\Mapping\BookmarkMap.cs" />
+    <Compile Include="Models\Mapping\BookmarkSubCategoryMap.cs" />
+    <Compile Include="Models\Mapping\BusinessCodeMap.cs" />
+    <Compile Include="Models\Mapping\BusinessLocationMap.cs" />
+    <Compile Include="Models\Mapping\BusinessMap.cs" />
+    <Compile Include="Models\Mapping\BusinessSubCodeMap.cs" />
+    <Compile Include="Models\Mapping\CardMap.cs" />
+    <Compile Include="Models\Mapping\ChatMap.cs" />
+    <Compile Include="Models\Mapping\CityCodeMap.cs" />
+    <Compile Include="Models\Mapping\ClubMap.cs" />
+    <Compile Include="Models\Mapping\ClubMemberMap.cs" />
+    <Compile Include="Models\Mapping\CountryCodeMap.cs" />
+    <Compile Include="Models\Mapping\DegreeCodeMap.cs" />
+    <Compile Include="Models\Mapping\EducationMap.cs" />
+    <Compile Include="Models\Mapping\EmploymentMap.cs" />
+    <Compile Include="Models\Mapping\EventCodeMap.cs" />
+    <Compile Include="Models\Mapping\EventLocationMap.cs" />
+    <Compile Include="Models\Mapping\EventMap.cs" />
+    <Compile Include="Models\Mapping\EventMembershipMap.cs" />
+    <Compile Include="Models\Mapping\FeedCategoryMap.cs" />
+    <Compile Include="Models\Mapping\FeedInfoMap.cs" />
+    <Compile Include="Models\Mapping\FeedMap.cs" />
+    <Compile Include="Models\Mapping\FeedSubCategoryMap.cs" />
+    <Compile Include="Models\Mapping\FriendMap.cs" />
+    <Compile Include="Models\Mapping\GeneralLogMap.cs" />
+    <Compile Include="Models\Mapping\GovermentMap.cs" />
+    <Compile Include="Models\Mapping\GovermentProvinceMap.cs" />
+    <Compile Include="Models\Mapping\GroupMembershipMap.cs" />
+    <Compile Include="Models\Mapping\ItemCodeMap.cs" />
+    <Compile Include="Models\Mapping\LangMap.cs" />
+    <Compile Include="Models\Mapping\LeaderCodeMap.cs" />
+    <Compile Include="Models\Mapping\LoanCodeMap.cs" />
+    <Compile Include="Models\Mapping\LoanFromBusinessMap.cs" />
+    <Compile Include="Models\Mapping\LoanFromPersonMap.cs" />
+    <Compile Include="Models\Mapping\MajorCodeMap.cs" />
+    <Compile Include="Models\Mapping\MerchandiseMap.cs" />
+    <Compile Include="Models\Mapping\MessageMap.cs" />
+    <Compile Include="Models\Mapping\MilitaryForceMap.cs" />
+    <Compile Include="Models\Mapping\my_aspnet_applicationsMap.cs" />
+    <Compile Include="Models\Mapping\my_aspnet_membershipMap.cs" />
+    <Compile Include="Models\Mapping\my_aspnet_profilesMap.cs" />
+    <Compile Include="Models\Mapping\my_aspnet_rolesMap.cs" />
+    <Compile Include="Models\Mapping\my_aspnet_sessioncleanupMap.cs" />
+    <Compile Include="Models\Mapping\my_aspnet_sessionsMap.cs" />
+    <Compile Include="Models\Mapping\my_aspnet_usersinrolesMap.cs" />
+    <Compile Include="Models\Mapping\my_aspnet_usersMap.cs" />
+    <Compile Include="Models\Mapping\NotificationMap.cs" />
+    <Compile Include="Models\Mapping\PostClubACLMap.cs" />
+    <Compile Include="Models\Mapping\PostCommentMap.cs" />
+    <Compile Include="Models\Mapping\PostMap.cs" />
+    <Compile Include="Models\Mapping\PostTagMap.cs" />
+    <Compile Include="Models\Mapping\PostUserACLMap.cs" />
+    <Compile Include="Models\Mapping\PostWebContentMap.cs" />
+    <Compile Include="Models\Mapping\PrivacyMap.cs" />
+    <Compile Include="Models\Mapping\PrivacyTypeMap.cs" />
+    <Compile Include="Models\Mapping\ProfileMap.cs" />
+    <Compile Include="Models\Mapping\ProvinceCodeMap.cs" />
+    <Compile Include="Models\Mapping\RsvpStatusCodeMap.cs" />
+    <Compile Include="Models\Mapping\StatusMap.cs" />
+    <Compile Include="Models\Mapping\StockCodeMap.cs" />
+    <Compile Include="Models\Mapping\StockMap.cs" />
+    <Compile Include="Models\Mapping\StocksTransactionMap.cs" />
+    <Compile Include="Models\Mapping\ThumbUpDownMap.cs" />
+    <Compile Include="Models\Mapping\TopicTagMap.cs" />
+    <Compile Include="Models\Mapping\UniversityCodeMap.cs" />
+    <Compile Include="Models\Mapping\UniversityLocationMap.cs" />
+    <Compile Include="Models\Mapping\UserBankAccountMap.cs" />
+    <Compile Include="Models\Mapping\UserChatroomMap.cs" />
+    <Compile Include="Models\Mapping\UserConnectionMap.cs" />
+    <Compile Include="Models\Mapping\UserGroupMap.cs" />
+    <Compile Include="Models\Mapping\UserStockMap.cs" />
+    <Compile Include="Models\Mapping\WebUserLocationMap.cs" />
+    <Compile Include="Models\Mapping\WebUserMap.cs" />
+    <Compile Include="Models\Mapping\WebUserUpdateMap.cs" />
+    <Compile Include="Models\Merchandise.cs" />
+    <Compile Include="Models\Message.cs" />
+    <Compile Include="Models\MilitaryForce.cs" />
+    <Compile Include="Models\my_aspnet_applications.cs" />
+    <Compile Include="Models\my_aspnet_membership.cs" />
+    <Compile Include="Models\my_aspnet_profiles.cs" />
+    <Compile Include="Models\my_aspnet_roles.cs" />
+    <Compile Include="Models\my_aspnet_sessioncleanup.cs" />
+    <Compile Include="Models\my_aspnet_sessions.cs" />
+    <Compile Include="Models\my_aspnet_users.cs" />
+    <Compile Include="Models\my_aspnet_usersinroles.cs" />
+    <Compile Include="Models\Notification.cs" />
+    <Compile Include="Models\PlanetXContext.cs" />
+    <Compile Include="Models\Post.cs" />
+    <Compile Include="Models\PostClubACL.cs" />
+    <Compile Include="Models\PostComment.cs" />
+    <Compile Include="Models\PostTag.cs" />
+    <Compile Include="Models\PostUserACL.cs" />
+    <Compile Include="Models\PostWebContent.cs" />
+    <Compile Include="Models\Privacy.cs" />
+    <Compile Include="Models\PrivacyType.cs" />
+    <Compile Include="Models\Profile.cs" />
+    <Compile Include="Models\ProvinceCode.cs" />
+    <Compile Include="Models\RsvpStatusCode.cs" />
+    <Compile Include="Models\Status.cs" />
+    <Compile Include="Models\Stock.cs" />
+    <Compile Include="Models\StockCode.cs" />
+    <Compile Include="Models\StocksTransaction.cs" />
+    <Compile Include="Models\ThumbUpDown.cs" />
+    <Compile Include="Models\TopicTag.cs" />
+    <Compile Include="Models\UniversityCode.cs" />
+    <Compile Include="Models\UniversityLocation.cs" />
+    <Compile Include="Models\UserBankAccount.cs" />
+    <Compile Include="Models\UserChatroom.cs" />
+    <Compile Include="Models\UserConnection.cs" />
+    <Compile Include="Models\UserGroup.cs" />
+    <Compile Include="Models\UserStock.cs" />
+    <Compile Include="Models\WebUser.cs" />
+    <Compile Include="Models\WebUserLocation.cs" />
+    <Compile Include="Models\WebUserUpdate.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,161 @@
+﻿#personPopupContainer
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    z-index: 20000;
+}
+
+.personPopupPopup
+{
+}
+
+#personPopupContent
+{
+    background-color: #FFF;
+    min-width: 175px;
+    min-height: 50px;
+    border: 1px solid #CCCCCC;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.personPopupPopup .personPopupImage
+{
+    margin: 5px;
+    margin-right: 15px;
+}
+
+.personPopupPopup .corner
+{
+    width: 19px;
+    height: 15px;
+}
+
+.personPopupPopup .topLeft
+{
+    background: url(../css/images/balloon_topLeft.png) no-repeat;
+}
+
+.personPopupPopup .bottomLeft
+{
+    background: url(../css/images/balloon_bottomLeft.png) no-repeat;
+}
+
+.personPopupPopup .left
+{
+    background: url(../css/images/balloon_left.png) repeat-y;
+}
+
+.personPopupPopup .right
+{
+    background: url(../css/images/balloon_right.png) repeat-y;
+}
+
+.personPopupPopup .topRight
+{
+    background: url(../css/images/balloon_topRight.png) no-repeat;
+}
+
+.personPopupPopup .bottomRight
+{
+    background: url(../css/images/balloon_bottomRight.png) no-repeat;
+}
+
+.personPopupPopup .top
+{
+    background: url(../css/images/balloon_top.png) repeat-x;
+}
+
+.personPopupPopup .bottom
+{
+    background: url(../css/images/balloon_bottom.png) repeat-x;
+    text-align: center;
+}
+
+
+
+
+
+/* Status Form */
+.statusForm
+{
+    width: 140px;
+    border: 1px solid .899caa;
+    border-radius: 3px 0 3px 3px;
+    -moz-border-radius: 3px 0 3px 3px;
+    margin-top: -1px;
+    background: .d2e0ea;
+    padding: 6px;
+}
+
+    .statusForm fieldset
+    {
+        margin: 0 0 12px 0;
+        display: block;
+        border: 0;
+        padding: 0;
+    }
+
+        .statusForm fieldset legend
+        {
+            padding-bottom: 8px;
+        }
+
+fieldset.body
+{
+    background: .fff;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    padding: 10px 13px;
+    margin: 0;
+}
+
+.statusForm .checkbox
+{
+    width: auto;
+    margin: 1px 9px 0 0;
+    float: left;
+    padding: 0;
+    border: 0;
+    *margin: -3px 9px 0 0; /* IE7 Fix */
+}
+
+.statusForm .body a
+{
+    display: block;
+    float: none;
+    margin: 0 0 6px 0;
+}
+
+/* Default Input */
+.statusForm input
+{
+    width: 92%;
+    border: 1px solid .899caa;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    color: .3a454d;
+    font-weight: bold;
+    padding: 8px 8px;
+    box-shadow: inset 0px 1px 3px .bbb;
+    -webkit-box-shadow: inset 0px 1px 3px .bbb;
+    -moz-box-shadow: inset 0px 1px 3px .bbb;
+    font-size: 12px;
+}
+
+
+/* Forgot your password */
+.statusForm span
+{
+    text-align: center;
+    display: block;
+    padding: 7px 0 4px 0;
+}
+
+    .statusForm span a
+    {
+        color: .3a454d;
+        text-shadow: 1px 1px .fff;
+        font-size: 12px;
+    }

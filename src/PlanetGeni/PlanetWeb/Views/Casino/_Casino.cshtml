@@ -1,0 +1,20 @@
+﻿<div id="casino-container">
+    <ul class="nav nav-pills">
+        <li class="active">
+            <a data-toggle="tab" href="#casino-slot" class="active">Easy Money</a>
+        </li>
+        <li >
+            <a data-toggle="tab" href="#casino-spin" >Spining Money</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div id="casino-slot" class="tab-pane fade in active padding3centt autoheight">
+            @Html.Partial("_SlotMachine")
+        </div>
+        <div id="casino-spin" class="tab-pane fade in padding3centt autoheight">
+            @Html.Partial("_Roulet")
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,38 @@
+﻿@model PlanetX2012.Models.ContentModel.HomeContent
+@{
+    string className = string.Empty;
+    string datauserSetStatus = "true";
+    switch (Model.useraccount.OnlineStatus)
+    {
+        case 0:
+            className = "userThumbnailOffline";
+            break;
+        case 1:
+            className = "userThumbnailOnline";
+            datauserSetStatus = "false";
+            break;
+        case 2:
+            className = "userThumbnailAway";
+            break;
+        case 3:
+            className = "userThumbnailBusy";
+            break;
+        default:
+            break;
+    }
+    <div class="box">
+        <h2>
+            @(Model.useraccount.NameFirst + " " + Model.useraccount.NameLast)</h2>
+        <div class="imageWrapper">
+            <img src="@Href(@Model.useraccount.Picture)"  class="@className" data-userSetStatus="@datauserSetStatus"
+                            height="120px" width="120px" alt="Image" id="userProfileImage" />
+            <img class="imageicon personPopupTrigger" src="/Content/css/images/Arrow.png" />
+        </div>
+        <p>
+            <b><a href="http://www.blendworld.net/">11th Feb</a> &middot; Moonlight 1.0 Release</b><br />
+            I am excited to announce that Novell today released version 1.0 of Moonlight, and
+                        is making it available for download at no cost with support for most major Linux
+                        distro’s.
+        </p>
+    </div>
+}

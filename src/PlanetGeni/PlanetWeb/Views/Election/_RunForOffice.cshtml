@@ -1,0 +1,42 @@
+﻿<div class="row" id="electionapplycontainer">
+    <div class="col-md-12">
+        <div class="panel panel-primary" id="electionapply-box">
+            <div class="panel-heading1 panel-heading">
+                <div class="flagsprite pull-right btn-link"
+                     data-bind="css: 'flagsprite-' + CountryId().toLowerCase(), click: function(){viewCountryProfile(CountryId().toLowerCase())}"></div>
+                <span class="fa icon-man371  marginright6"></span> Apply
+            </div>
+            <div class="panel-body">
+                @Html.Partial("_RunFor")
+                @Html.Partial("_RunAs")
+                @Html.Partial("_Agenda")
+                @Html.Partial("_RequestNomination")
+            </div>
+            <div class="panel-footer" id="electionapply-box-footer">
+                @Html.Partial("_RunForOfficeFooter")
+            </div>
+        </div>
+        <div class="panel panel-primary hidden" id="electionapply-submit">
+            <div class="panel-heading1 panel-heading">
+                <span>Apply</span>
+            </div>
+            <div class="panel-body">
+                <div class="col-xs-12">
+                    <span data-bind="text:Message">
+
+                    </span>
+                </div>
+            </div>
+        </div><button class="btn btn-default backbtn pull-right hidden">
+            <span><i class="fa fa-home"></i> Home</span>
+        </button>
+        <button type="submit" id="applyelection"
+                data-loading-text='
+            <i class="fa fa-spinner fa-spin"></i> Applying...'
+            class="btn btn-default pull-right">Apply To Run
+        </button>
+    </div>
+</div>
+
+
+

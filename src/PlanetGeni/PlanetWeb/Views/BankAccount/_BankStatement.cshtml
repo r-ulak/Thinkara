@@ -1,0 +1,33 @@
+﻿<div class="row" id="bankstmtcontainer">
+    <div class="col-xs-12">
+        <div class="panel panel-primary" id="bankstmt-box">
+            <div class="panel-heading1 panel-heading">
+                <div class="flagsprite pull-right btn-link"
+                     data-bind="css: 'flagsprite-' + CountryId().toLowerCase(), click: function(){viewCountryProfile(CountryId().toLowerCase())}"></div>
+                <span class="fa icon-piggy7 marginright6"></span> Transactions
+            </div>
+            <div class="panel-body">
+                @Html.Partial("_BankStatementItem")
+            </div>
+            <div class="panel-footer">
+                <div class="row ">
+                    <div class="col-xs-6">
+                        <h6>
+                            <span class="label label-info" data-bind="text: bankstmtlist().length"></span>
+                        </h6>
+                    </div>
+                    <div class="col-xs-3">
+                    </div>
+                    <div class="col-xs-3">
+                        <span id="bankstmtshowmore" class="btn btn-shadow btn-success btn-sm pull-right"><i class="fa fa-plus"></i> </span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,7 @@
+PartyId	PartyName	PartyFounder	TotalValue	StartDate	EndDate	PartySize	CoFounderSize	LogoPictureId	MembershipFee	ElectionVictory	Motto	Status	CountryId
+7b80127f-8b05-41cc-bd54-9c26baacea2c	Flashpoint	9930	173936.11	2013-03-28 19:46:50	\N	10	2		7717.33	86	Praesent blandit.	A	az
+b813ef5d-1f80-47f9-912f-05a68ca176d5	Jabberstorm	9856	250924.46	2013-08-04 10:38:34	\N	17	4	icon icon-candidate 	1842.99	74	Proin eu mi.	A	fr
+0dca8472-0998-414c-aae6-1ad2e3148197	Roodel	9876	452953.08	2013-11-13 08:36:05	\N	11	2	icon icon-candidate 	6258.96	10	Quisque arcu libero	A	us		
+0634560a-68b2-4199-953f-60c5cc28f171	Jatri	80	755429.23	2013-11-10 17:35:59	\N	1	1	icon icon-candidate 	7785.17	94	Vestibulum rutrum rutrum neque.	A	do
+01732875-0ea9-470e-8e16-f9ddb828cc0b	Kazio	9931	8247760.59	2013-04-06 16:17:25	\N	9	2	icon icon-candidate 	500.57	44	Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis.	A	fr
+f1aa3425-3d76-4248-84d2-5c7402e2a5a2	Ainyx	9837	421513.06	2013-07-27 07:23:07	\N	1	0	icon icon-candidate 	9196.87	63	Suspendisse potenti.	P	az

@@ -1,0 +1,20 @@
+﻿<div class="row partyInvitediv">
+    <div class="col-xs-12">
+        @Html.Partial("_FriendList")
+        @Html.Partial("_WebContactList")
+    </div>
+    <div class="row">
+        <div class="col-xs-12 ">
+            <button type="submit" data-bind="attr:{'data-index':$index()} "
+                    data-loading-text='
+                <i class="fa fa-spinner fa-spin"></i> Inviting...'
+                class="btn btn-default pull-right partyInvitebtn">Invite
+            </button>
+        </div>
+    </div>
+</div>
+<div class="row hidden padding3centt padding3centb partyInvitemsg">
+    <div class="col-xs-12 ">
+        <span class="fontsize80 paddingl10" data-bind="text: SubmitInviteResponse()"></span>
+    </div>
+</div>

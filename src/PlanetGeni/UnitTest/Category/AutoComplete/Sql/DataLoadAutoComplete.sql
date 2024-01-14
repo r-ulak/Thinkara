@@ -1,0 +1,4 @@
+SET SQL_SAFE_UPDATES =0;
+Delete From WebUser;
+ LOAD DATA LOCAL INFILE '{0}WebUser.tsv' INTO TABLE WebUser FIELDS TERMINATED BY '\t' ;
+ 

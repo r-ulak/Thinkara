@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://web.planetgeni.com/" />
+<title>StartParty</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">StartParty</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPageToLoad</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=webUserId</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=webUserId</td>
+	<td>3</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=webPassword</td>
+	<td>Kathmandu35</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=party-search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Start Party</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=div.recipient.col-xs-4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=partyName</td>
+	<td>kazio5</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>name=partyName</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=partyMotto</td>
+	<td>Hello motto</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=partymembershipFee</td>
+	<td>30000</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.col-xs-12.input-group &gt; ul.checkbox.list-unstyled &gt; li &gt; input[name=&quot;partyAgenda&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@name='partyAgenda'])[10]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>xpath=(//img[@title='Elizabeth'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=partyfileupload</td>
+	<td>C:\Users\ulak\Desktop\Capture.PNG</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='startpartyinviteemailcontacts']/div/div/div[2]/div[2]/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='startpartyinviteemailcontacts']/div/div/div[2]/div[4]/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='startpartyinviteemailcontacts']/div/div/div[2]/div/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=startPartysubmit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=#startPartycontent-submit &gt; div.panel-body &gt; div.col-xs-12 &gt; span</td>
+	<td>Party Application Successfully Submitted</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#startPartycontent-submit &gt; div.panel-body &gt; div.col-xs-12 &gt; span</td>
+	<td>Party Application Successfully Submitted</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=partyrefresh</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=img[title=&quot;kazio5&quot;]</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

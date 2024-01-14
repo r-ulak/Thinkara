@@ -1,0 +1,29 @@
+﻿<div class=" row padding3centt">
+    <div class="col-xs-12">
+        <div class="panel panel-default recipients">
+            <div class="panel-heading">
+                <span class="button-checkbox pull-right invitepartyFriends">
+                    <button type="button" class="btn btn-sm" data-color="default">All</button>
+                    <input type="checkbox" id="partyinvitefriendsall" class="hidden" />
+                </span>
+                <span class="colorwhite">
+                    Friends
+                </span>
+            </div>
+            <div class="panel-body col-xs-12 partyinvitefriendList" data-bind="foreach: friendDetailsDTO">
+                <div class="recipient col-xs-6" data-bind="attr: {title: FullName}, click: $parent.clickpartyinvitefriends">
+                    <i data-bind="css: 'user-status' + OnlineStatus" class="pull-left"></i>
+                    <img class="img-check" width="28px" height="28px" data-bind="attr: {src: profilepicContainer+Picture , title: NameFirst }">
+                    <p data-bind="text: FullName"></p>
+                    <input type="checkbox" data-bind="value: FriendUserId" class="hidden">
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="panel-footer fontsize80 friendListFooter">
+                <span data-bind="text: InviteeId().length"></span>
+                <span class="text-muted"> friend(s) selected</span>
+            </div>
+
+        </div>
+    </div>
+</div>

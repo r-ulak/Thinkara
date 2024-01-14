@@ -1,0 +1,93 @@
+﻿<div class="row" id="startpartycontainer">
+    <div class="col-md-12">
+        <div class="panel panel-primary" id="startPartycontent-box">
+            <div class="panel-heading1 panel-heading">
+                <div class="flagsprite pull-right btn-link"
+                     data-bind="css: 'flagsprite-' + CountryId().toLowerCase(), click: function(){viewCountryProfile(CountryId().toLowerCase())}"></div>
+                <span class="fa icon-candidate  marginright6"></span> Start Party
+            </div>
+            <div class="panel-body">
+                <form role="form" id="startpartyform" class="form-horizontal">
+                    <div class="well">
+
+                        <div class="form-group paddingl14 paddingr14">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="fa fa-users fa-1x"></i>
+                                </span>
+                                <input type="text" class="form-control" name="partyName" maxlength="60" placeholder="Party Name">
+                            </div>
+                        </div>
+
+                        <div class="form-group paddingl14 paddingr14">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="fa fa-users fa-1x"></i>
+                                </span>
+                                <input type="text" class="form-control" name="partyMotto" maxlength="250" placeholder="Party Motto">
+                            </div>
+                        </div>
+                        <div class="form-group paddingl14 paddingr14">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="fa fa-users fa-1x"></i>
+                                </span>
+                                <input id="partymembershipFee" type="text" value="500" name="partymembershipFee">
+                            </div>
+                        </div>
+                        <div class="form-group paddingl14 paddingr14">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="fa fa-users fa-1x"></i>
+                                </span>
+                                <input type="text" class="form-control" placeholder="Upload Party Logo">
+                                <span class="input-group-btn">
+                                    <span class="btn btn-default btn-file">
+                                        Browse… <input type="file" id="partyfileupload">
+                                    </span>
+                                </span>
+                            </div>
+                            <div class="input-group">
+                                <div id="partypicprw" class="pull-left marginright16 margintop10">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row padding3centt ">
+                            <div class="col-xs-12  " id="startpartyAgenda">
+                                <fieldset>
+                                    <legend class="text-warning fontsize120">Agenda</legend>
+                                    <div id="startpartyagendaCodes" class="fontsize80 row form-group">
+                                        <div class="col-xs-12 input-group">
+                                            @Html.Partial("_PartyAgendaCheckbox")
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row padding3centt padding3centb">
+                        @Html.Partial("_PartyFounders")
+                        @Html.Partial("_WebContactListStartParty")
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="panel panel-primary hidden" id="startPartycontent-submit">
+            <div class="panel-heading1 panel-heading">
+                <span>Start Party</span>
+            </div>
+            <div class="panel-body">
+                <div class="col-xs-12">
+                    <span data-bind="text:Message">
+
+                    </span>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-default backbtn pull-right hidden">
+            <span><i class="fa fa-home"></i> Home</span>
+        </button>
+        <button type="submit" id="startPartysubmit" class="btn btn-default pull-right">Start Party</button>
+    </div>
+</div>
+

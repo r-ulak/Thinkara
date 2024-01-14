@@ -1,0 +1,48 @@
+﻿<!-- ko if: $parent.UserId != UserId-->
+<span class="show-menu">
+    <span class="fa fa-1x fa-chevron-circle-right text-black"></span>
+</span>
+<ul class="list-group-submenu" data-bind="attr:{'data-userid':UserId, 'data-index':$index, 'data-pindex':$parentContext.$index,'data-memberType':MemberType,'data-statusdisabled':MemberStatusDisabled()}">
+    <li class="list-group-submenu-item success">
+        @*// TODO memberprofile*@
+        <button data-loading-text='
+            <i class="fa fa-spinner fa-spin"></i>' class="btn  btn-shadow btn-sm" data-bind="click:$root.clickmemberProfile">
+            <span class="fa fa-user" title="View Profile"></span>
+        </button>
+    </li>
+    <!-- ko if: $parent.MemberEndDate == null -->
+    <!-- ko if: $parent.MemberType == 'F' || $parent.MemberType == 'C'-->
+    <li class="list-group-submenu-item success">
+        <button data-loading-text='
+            <i class="fa fa-spinner fa-spin"></i>'
+            class="btn btn-shadow btn-sm fa fa-eject" title="Request Ejection "
+            data-bind="click:$root.clickejectMember, css: MemberStatusDisabledCss()">
+        </button>
+    </li>
+    <!-- /ko -->
+    <!-- ko if: (MemberType !='M')-->
+    <li class="list-group-submenu-item success">
+        <button data-loading-text='
+            <i class="fa fa-spinner fa-spin"></i>'
+            class="btn btn-sm  btn-shadow fa fa-hand-o-up" title="Nominate Member" data-bind="click:$root.clicknominateMember, css: MemberStatusDisabledCss()">
+        </button>
+    </li>
+    <!-- /ko -->
+    <!-- ko if: (MemberType !='F')-->
+    <li class="list-group-submenu-item success">
+        <button data-loading-text='
+            <i class="fa fa-spinner fa-spin"></i>'
+            class="btn btn-sm  btn-shadow fa fa-hand-o-up" title="Nominate Founder" data-bind="click:$root.clicknominateFounder, css: MemberStatusDisabledCss()">
+        </button>
+    </li>
+    <!-- /ko -->
+    <!-- ko if: (MemberType !='C')  -->
+    <li class="list-group-submenu-item success">
+        <button data-loading-text='
+            <i class="fa fa-spinner fa-spin"></i>' class="btn btn-shadow  btn-sm fa fa-hand-o-up" title="Nominate CoFounder" data-bind="click:$root.clicknominateCoFounder, css: MemberStatusDisabledCss()">
+        </button>
+    </li>
+    <!-- /ko -->
+    <!-- /ko -->
+</ul>
+<!-- /ko -->

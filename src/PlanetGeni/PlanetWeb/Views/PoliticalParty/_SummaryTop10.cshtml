@@ -1,0 +1,29 @@
+﻿<fieldset>
+    <legend>Top 10 Party</legend>
+    <div class=" row  padding3centt" data-bind="foreach:partyTopN">
+        <div class="row padding3centt">
+            <div class="col-xs-12 fontsize90">
+                <div class="col-xs-2">
+                    <span data-bind="text: Rank" class="fa-1x">
+                    </span>
+                </div>
+                <div class="col-xs-1 text-right text-success">
+                    <div class="flagsprite pull-right btn-link"
+                         data-bind="css: 'flagsprite-' + CountryId(), click: function(){viewCountryProfile(CountryId().toLowerCase())}"></div>
+                </div>
+                <div class="col-xs-5">
+                    <a class="btn-link text-ellipsis " data-bind="click: function(){getPartyInfo(PartyId())}">
+                                    <span class="text-right paddingleft5px" data-bind="text: PartyName">
+                        </span>
+                    </a>
+                </div>
+                <div class="col-xs-3 text-right text-success">
+                    <i class="fa-1x fa fa-users"></i>
+                    <span data-bind="text: PartySize">
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</fieldset>
+

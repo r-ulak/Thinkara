@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="3f8176e8-2fbe-4e21-976d-09ab6ee73058" name="PartyNominationFlow" linkedPackageId="cf7bd612-fd2c-48be-a288-291a48ee1865" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="c5ca42d0-160a-4bce-9fe6-c1d6d5ee45dd">
+      <profileInstance Id="d0f29d6a-dcda-4fa2-9855-dd58aae23e90" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="3f1f79a4-7a9d-44a8-a848-2dc4ac70f34e">
+      <profileInstance Id="5566650b-6e32-46ec-b9b8-7bbad912f815" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="ab93eeb6-6a61-4cec-9f85-8030c3ba72c7" name="Member/Founder/Cofounder" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="15f5f72c-00a4-47d4-87a4-38028b59122f" />
+        <suppliersInternal>
+          <dependency Id="fdb025ab-2e01-40fb-850c-6004194c6883">
+            <useCaseMoniker Id="5b4a8a50-89eb-4c51-a5df-137cbe3c3579" LastKnownName="Requests Nomination" />
+            <elementDefinition Id="93468602-9d2b-486b-8275-b8640a4f648f" />
+          </dependency>
+        </suppliersInternal>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="5b4a8a50-89eb-4c51-a5df-137cbe3c3579" name="Requests Nomination" isAbstract="false" isLeaf="false">
+        <referencesInternal>
+          <reference Id="72d691a9-1852-4fd3-a78f-a70482fb6b90" handle="%studioearth.com\DefaultCollection#b1c235b6-ea1b-41ea-9194-799cd55b811e$135" tag="Work Item Reference">
+            <elementDefinition Id="9828bd78-7540-4ce3-9fcf-c764d7292412" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="25efcacd-f226-4573-9274-c743868b1239" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="cf7bd612-fd2c-48be-a288-291a48ee1865" name="ProcessModel">
+    <elementDefinition Id="c3eaab6d-fc30-4981-927c-dc74138bb415" />
+  </package>
+</useCaseModelRoot>

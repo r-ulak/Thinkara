@@ -1,0 +1,24 @@
+#!/bin/bash
+mysql -h UbuntuServer1 -u root -psqlapps planetgeni < /home/planetx/DbScripts/DropSchemaPlanetgeni.sql
+
+mysql -h UbuntuServer1 -u root -psqlapps planetgeni < /home/planetx/DbScripts/Create/AdsCreate.sql
+mysql -h UbuntuServer1 -u root -psqlapps planetgeni < /home/planetx/DbScripts/Create/BaseCreate.sql
+mysql -h UbuntuServer1 -u root -psqlapps planetgeni < /home/planetx/DbScripts/Create/CountryBudgetCreate.sql
+mysql -h UbuntuServer1 -u root -psqlapps planetgeni < /home/planetx/DbScripts/Create/CountryTaxCreate.sql
+mysql -h UbuntuServer1 -u root -psqlapps planetgeni < /home/planetx/DbScripts/Create/EducationCreate.sql
+mysql -h UbuntuServer1 -u root -psqlapps planetgeni < /home/planetx/DbScripts/Create/GiftCreate.sql
+mysql -h UbuntuServer1 -u root -psqlapps planetgeni < /home/planetx/DbScripts/Create/JobCreate.sql
+mysql -h UbuntuServer1 -u root -psqlapps planetgeni < /home/planetx/DbScripts/Create/LotteryCreate.sql
+mysql -h UbuntuServer1 -u root -psqlapps planetgeni < /home/planetx/DbScripts/Create/MerchandiseCreate.sql
+mysql -h UbuntuServer1 -u root -psqlapps planetgeni < /home/planetx/DbScripts/Create/PoliticalPartyCreate.sql
+mysql -h UbuntuServer1 -u root -psqlapps planetgeni < /home/planetx/DbScripts/Create/SecurityCreate.sql
+mysql -h UbuntuServer1 -u root -psqlapps planetgeni < /home/planetx/DbScripts/Create/StockCreate.sql
+mysql -h UbuntuServer1 -u root -psqlapps planetgeni < /home/planetx/DbScripts/Create/UserLoanCreate.sql
+mysql -h UbuntuServer1 -u root -psqlapps planetgeni < /home/planetx/DbScripts/Create/WebJobCreate.sql
+
+
+
+
+mysql -h UbuntuServer1 -u root -psqlapps planetgeni < /home/planetx/DbScripts/StoredProcedure/StoredProcedure.sql
+mysql -h UbuntuServer1 -u root -psqlapps planetgeni < /home/planetx/DbScripts/StoredProcedure/CURDStoredProcedure.sql
+mysql -h UbuntuServer1 -u root -psqlapps planetgeni < /home/planetx/DbScripts/Data/DataLoadAzure.sql

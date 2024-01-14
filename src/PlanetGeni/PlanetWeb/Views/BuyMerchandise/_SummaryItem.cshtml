@@ -1,0 +1,80 @@
+﻿<div class="container padding3centt well" id="merchandiseSummarycontent-box" data-bind="visible:merchandiseSummaryDTO().length>0">
+    <div id="merchandiseSummarycontent-wrapper" data-bind="foreach: merchandiseSummaryDTO">
+        <div class=" row padding3centb padding3centt">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="col-xs-4 section-box">
+                        <h4>
+                            <label class="merchandisetitle">
+                                <!-- ko if: MerchandiseTypeCode == 1 -->
+                                Auto Mobile
+                                <!-- /ko -->
+                                <!-- ko if: MerchandiseTypeCode == 2 -->
+                                Real State
+                                <!-- /ko -->
+                            </label>
+                        </h4>
+                    </div>
+                    <div class="col-xs-8 text-right">
+                        <i class="fa fa-5x text-info" data-bind="css: ImageFont"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="col-xs-4">
+                    <span class="fontsize90"> Total #</span>
+                </div>
+                <div class="col-xs-8 text-success text-right">
+                    <span class="fa fa-tasks  fa-1x"></span>
+                    <span class="" data-bind="text: TotalQty"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row padding3centt">
+            <div class="col-xs-12">
+                <div class="col-xs-4">
+                    <span class="fontsize90"> Total Value</span>
+                </div>
+                <div class="col-xs-8 text-success text-right">
+                    <span class="fa icon-money28 fa-1x"></span>
+                    <span class="" data-bind="text: numeral(TotalPrice).format('0,0.00a')"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row padding3centt">
+            <div class="col-xs-12">
+                <div class="col-xs-4">
+                    <span class="fontsize90"> Ranking</span>
+                </div>
+                <div class="col-xs-8 text-success text-right">
+                    <span class="fa fa-times-circle-o fa-1x"></span>
+                    <span class="" data-bind="text: TotalQty"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row padding3centt">
+            <div class="col-xs-12">
+                <div class="col-xs-4">
+                    <span class="fontsize90"> Condition</span>
+                </div>
+                <div class="col-xs-8 text-success text-right">
+                    <input type="text"
+                           data-bind="attr: {value: parseInt(AverageCondition) , 'data-fgcolor': dialColor()}"
+                           data-fgcolor="#9ABC32"
+                           data-width="36"
+                           class="dial pull-right">
+                </div>
+            </div>
+        </div>
+        <!-- ko if: ($index() != ($parent.merchandiseSummaryDTO().length -1))-->
+        <hr />
+        <!-- /ko -->
+    </div>
+</div>
+<div id="merchandiseTopNSummary" class="well">
+    @Html.Partial("_SummaryTop10")
+</div>
+

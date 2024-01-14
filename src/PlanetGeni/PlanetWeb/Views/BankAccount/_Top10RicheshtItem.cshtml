@@ -1,0 +1,32 @@
+﻿<div class="well well-sm">
+    <fieldset>
+        <legend>Top 25 Richest Persons</legend>
+        <div class=" row rich padding3centt" data-bind="foreach:assetTopN">
+            <div class="row padding3centt">
+                <div class="col-xs-12 fontsize90">
+                    <div class="col-xs-2">
+                        <span data-bind="text: Rank" class="fa-1x">
+                        </span>
+                    </div>
+                    <div class="col-xs-1 text-right text-success">
+                        <div class="flagsprite pull-right btn-link"
+                             data-bind="css: 'flagsprite-' + CountryId, click: function(){viewCountryProfile(CountryId.toLowerCase())}"></div>
+                    </div>
+                    <div class="col-xs-5">
+                        <a class="btn-link text-ellipsis " data-bind="click: function(){viewUserProfile(UserId)}">
+                            <i data-bind="css: 'user-status' + OnlineStatus" class="pull-left"></i>
+                            <img class="pull-left" width="28px"
+                                 data-bind="attr: {src: profilepicContainer+Picture , title: FullName }, click: function(){viewUserProfile(UserId)}">
+                            <span class="text-right paddingleft5px" data-bind="text: FullName">
+                            </span>
+                        </a>
+                    </div>
+                    <div class="col-xs-3 text-right text-success">
+                        <i class="fa icon-money28"></i>
+                        <span class="text-left" data-bind="text:numeral(TotalWorth).format('0,0.00a'),css:cashTextCss(TotalWorth), attr:{title: TotalWorth}"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</div>

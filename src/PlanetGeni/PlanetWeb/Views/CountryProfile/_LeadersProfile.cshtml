@@ -1,0 +1,32 @@
+﻿<div class=" row">
+    <div class="col-xs-12">
+            <div class="row  padding3centb">
+                <div class="col-xs-4 text-center">
+                    <div class="row padding3centt">
+                        <div class="col-xs-12">
+                            <a class="btn-link" data-bind="attr:{title: FullName}, click: function(){viewUserProfile(UserId)}">
+                                <img class="img-64responsive thumbnail " data-bind="attr:{src: profilepicContainer+Picture}" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-8 section-box">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="col-xs-10">
+                                <h5>
+                                    <label class="btn-link " data-bind="text:FullName, click: function(){viewUserProfile(UserId)}"></label>
+                                </h5>
+                                <strong data-bind="text:ElectionPositionName"></strong>
+                            </div>
+                            <div class="col-xs-2">
+                                <div class="flagsprite pull-right btn-link"
+                                     data-bind="css: 'flagsprite-' + CountryId.toLowerCase(), click: function(){viewCountryProfile(CountryId.toLowerCase())}"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <hr />
+    </div>
+</div>

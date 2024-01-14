@@ -1,0 +1,764 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F222A8F1-BFCA-4CA6-BBA4-510365BFF6F5}</ProjectGuid>
+    <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PlanetX2012</RootNamespace>
+    <AssemblyName>PlanetX2012</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>true</MvcBuildViews>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <MvcProjectUpgradeChecked>true</MvcProjectUpgradeChecked>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExcludeGeneratedDebugSymbol>true</ExcludeGeneratedDebugSymbol>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="BookSleeve">
+      <HintPath>..\packages\BookSleeve.1.3.38\lib\BookSleeve.dll</HintPath>
+    </Reference>
+    <Reference Include="Elmah">
+      <HintPath>..\packages\elmah.corelibrary.1.2.2\lib\Elmah.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.1.1.2\lib\net40\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Owin, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Owin.1.1.2\lib\net40\Microsoft.AspNet.SignalR.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Redis">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Redis.1.1.2\lib\net40\Microsoft.AspNet.SignalR.Redis.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.1.1.2\lib\net40\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.1.0.1\lib\net40\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\packages\MySql.Data.6.7.4\lib\net40\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity">
+      <HintPath>..\packages\MySQL.Data.Entities.6.7.4.1\lib\net40\MySql.Data.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Web">
+      <HintPath>..\packages\MySql.Web.6.7.4\lib\net40\MySql.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.IO">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.3\lib\net40\System.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=2.2.13.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.13\lib\net40\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.13\lib\net40\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.13\lib\net40\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest, Version=2.2.13.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.13\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.3\lib\net40\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Threading.Tasks">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.3\lib\net40\System.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.WebPages.Deployment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Abstractions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Routing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebGrease">
+      <HintPath>..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AjaxValidationFilter.cs" />
+    <Compile Include="Controllers\Home\ChatController.cs" />
+    <Compile Include="Controllers\Home\ClubController.cs" />
+    <Compile Include="Controllers\Home\EducationController.cs" />
+    <Compile Include="Controllers\Home\EventController.cs" />
+    <Compile Include="Controllers\Home\FinanceController.cs" />
+    <Compile Include="Controllers\Home\FriendController.cs" />
+    <Compile Include="Controllers\Home\HomeController.cs" />
+    <Compile Include="Controllers\Home\LocationController.cs" />
+    <Compile Include="Controllers\Home\PostController.cs" />
+    <Compile Include="Controllers\Home\TopicController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Hubs\SignaRHub.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Readme\Elmah.MySql.sql" />
+    <Content Include="App_Readme\Elmah.MySql.txt" />
+    <Content Include="App_Readme\Elmah.txt" />
+    <Content Include="Content\css\business.css" />
+    <Content Include="Content\css\chat.css" />
+    <Content Include="Content\css\images\Arrow.png" />
+    <Content Include="Content\css\images\balloon_bottom.png" />
+    <Content Include="Content\css\images\balloon_bottomLeft.png" />
+    <Content Include="Content\css\images\balloon_bottomRight.png" />
+    <Content Include="Content\css\images\balloon_left.png" />
+    <Content Include="Content\css\images\balloon_right.png" />
+    <Content Include="Content\css\images\balloon_tail.png" />
+    <Content Include="Content\css\images\balloon_top.png" />
+    <Content Include="Content\css\images\balloon_topLeft.png" />
+    <Content Include="Content\css\images\balloon_topRight.png" />
+    <Content Include="Content\css\images\bar.png" />
+    <Content Include="Content\css\images\bg-scrollbar-thumb-y.png" />
+    <Content Include="Content\css\images\bg-scrollbar-track-y.png" />
+    <Content Include="Content\css\images\bg-scrollbar-trackend-y.png" />
+    <Content Include="Content\css\images\button_blue.png" />
+    <Content Include="Content\css\images\calendar.gif" />
+    <Content Include="Content\css\images\error.png" />
+    <Content Include="Content\css\images\mCSB_buttons.png" />
+    <Content Include="Content\css\images\money_bag.png" />
+    <Content Include="Content\css\images\server_edit.jpg" />
+    <Content Include="Content\css\images\typing.jpg" />
+    <Content Include="Content\css\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\css\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="Content\css\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="Content\css\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Content\css\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\css\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="Content\css\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Content\css\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Content\css\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="Content\css\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\css\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="Content\css\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="Content\css\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\css\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Content\css\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="Content\css\jquery-ui.css" />
+    <Content Include="Content\css\jquery.jqplot.css" />
+    <Content Include="Content\css\jquery.mCustomScrollbar.css" />
+    <Content Include="Content\css\jquery.tagit.css" />
+    <Content Include="Content\css\location.css" />
+    <Content Include="Content\css\popover.css" />
+    <Content Include="Content\css\school.css" />
+    <Content Include="Content\css\Site.css" />
+    <Content Include="Content\css\images\arrow.gif" />
+    <Content Include="Content\css\images\background-cont.jpg" />
+    <Content Include="Content\css\images\background-contheader.jpg" />
+    <Content Include="Content\css\images\bar.gif" />
+    <Content Include="Content\css\images\baractive.gif" />
+    <Content Include="Content\css\images\barul.gif" />
+    <Content Include="Content\css\images\bg.gif" />
+    <Content Include="Content\css\images\h3bg.gif" />
+    <Content Include="Content\css\images\image.gif" />
+    <Content Include="Content\css\images\intro.jpg" />
+    <Content Include="Content\css\images\leftintrobg.gif" />
+    <Content Include="Content\css\images\package.gif" />
+    <Content Include="Content\js\ajax-dialogs.js" />
+    <Content Include="Content\js\chat.js" />
+    <Content Include="Content\js\cityCountryLookup.js" />
+    <Content Include="Content\js\index.js" />
+    <Content Include="Content\js\jquery-ui.js" />
+    <Content Include="Content\js\jquery.ddslick.js" />
+    <Content Include="Content\js\jquery.idle-timer.js" />
+    <Content Include="Content\js\jquery.js" />
+    <Content Include="Content\js\jquery.mCustomScrollbar.concat.min.js" />
+    <Content Include="Content\js\jquery.typing-0.2.0.min.js" />
+    <Content Include="Content\js\jquery.unobtrusive-ajax.js" />
+    <Content Include="Content\js\jquery.validate.js" />
+    <Content Include="Content\js\jquery.validate.unobtrusive.js" />
+    <Content Include="Content\js\dropDown.js" />
+    <Content Include="Content\js\openNewBusiness.js" />
+    <Content Include="Content\js\popover.js" />
+    <Content Include="Content\js\school.js" />
+    <Content Include="Content\js\tag-it.js" />
+    <Content Include="Content\js\tag-it.min.js" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Global.asax" />
+    <Content Include="images\accessories.png" />
+    <Content Include="images\ajax-loader.gif" />
+    <Content Include="images\basket.jpg" />
+    <Content Include="images\bbcnews-header.png" />
+    <Content Include="images\bbcnews-masthead.png" />
+    <Content Include="images\charts\TechnicalPriceIndicators.png" />
+    <Content Include="images\computer.png" />
+    <Content Include="images\electronics.png" />
+    <Content Include="images\flags\flag_afghanistan.png" />
+    <Content Include="images\flags\flag_airfield_vehicle_safety.png" />
+    <Content Include="images\flags\flag_albania.png" />
+    <Content Include="images\flags\flag_algeria.png" />
+    <Content Include="images\flags\flag_american_samoa.png" />
+    <Content Include="images\flags\flag_andorra.png" />
+    <Content Include="images\flags\flag_angola.png" />
+    <Content Include="images\flags\flag_anguilla.png" />
+    <Content Include="images\flags\flag_antigua_and_barbuda.png" />
+    <Content Include="images\flags\flag_argentina.png" />
+    <Content Include="images\flags\flag_armenia.png" />
+    <Content Include="images\flags\flag_aruba.png" />
+    <Content Include="images\flags\flag_australia.png" />
+    <Content Include="images\flags\flag_austria.png" />
+    <Content Include="images\flags\flag_azerbaijan.png" />
+    <Content Include="images\flags\flag_bahamas.png" />
+    <Content Include="images\flags\flag_bahrain.png" />
+    <Content Include="images\flags\flag_bangladesh.png" />
+    <Content Include="images\flags\flag_barbados.png" />
+    <Content Include="images\flags\flag_belarus.png" />
+    <Content Include="images\flags\flag_belgium.png" />
+    <Content Include="images\flags\flag_belize.png" />
+    <Content Include="images\flags\flag_benin.png" />
+    <Content Include="images\flags\flag_bermuda.png" />
+    <Content Include="images\flags\flag_bhutan.png" />
+    <Content Include="images\flags\flag_blue.png" />
+    <Content Include="images\flags\flag_bolivia.png" />
+    <Content Include="images\flags\flag_bosnia.png" />
+    <Content Include="images\flags\flag_botswana.png" />
+    <Content Include="images\flags\flag_boy_scout.png" />
+    <Content Include="images\flags\flag_brazil.png" />
+    <Content Include="images\flags\flag_british_indian_ocean.png" />
+    <Content Include="images\flags\flag_british_virgin_islands.png" />
+    <Content Include="images\flags\flag_brunei.png" />
+    <Content Include="images\flags\flag_bulgaria.png" />
+    <Content Include="images\flags\flag_burkina_faso.png" />
+    <Content Include="images\flags\flag_burma.png" />
+    <Content Include="images\flags\flag_burundi.png" />
+    <Content Include="images\flags\flag_cambodia.png" />
+    <Content Include="images\flags\flag_cameroon.png" />
+    <Content Include="images\flags\flag_canada.png" />
+    <Content Include="images\flags\flag_cayman_islands.png" />
+    <Content Include="images\flags\flag_central_african_republic.png" />
+    <Content Include="images\flags\flag_chad.png" />
+    <Content Include="images\flags\flag_chile.png" />
+    <Content Include="images\flags\flag_china.png" />
+    <Content Include="images\flags\flag_colombia.png" />
+    <Content Include="images\flags\flag_comoros.png" />
+    <Content Include="images\flags\flag_congo_democratic_republic.png" />
+    <Content Include="images\flags\flag_congo_republic.png" />
+    <Content Include="images\flags\flag_cook_islands.png" />
+    <Content Include="images\flags\flag_cope_verde.png" />
+    <Content Include="images\flags\flag_costa_rica.png" />
+    <Content Include="images\flags\flag_cote_divoire.png" />
+    <Content Include="images\flags\flag_croatia.png" />
+    <Content Include="images\flags\flag_cuba.png" />
+    <Content Include="images\flags\flag_cyprus.png" />
+    <Content Include="images\flags\flag_czech_republic.png" />
+    <Content Include="images\flags\flag_denmark.png" />
+    <Content Include="images\flags\flag_djibouti.png" />
+    <Content Include="images\flags\flag_dominica.png" />
+    <Content Include="images\flags\flag_dominican_republic.png" />
+    <Content Include="images\flags\flag_east_timor.png" />
+    <Content Include="images\flags\flag_egypt.png" />
+    <Content Include="images\flags\flag_el_salvador.png" />
+    <Content Include="images\flags\flag_england.png" />
+    <Content Include="images\flags\flag_equador.png" />
+    <Content Include="images\flags\flag_equatorial_guinea.png" />
+    <Content Include="images\flags\flag_eritrea.png" />
+    <Content Include="images\flags\flag_estonia.png" />
+    <Content Include="images\flags\flag_ethiopia.png" />
+    <Content Include="images\flags\flag_european_union.png" />
+    <Content Include="images\flags\flag_falkland_islands.png" />
+    <Content Include="images\flags\flag_faroe_islands.png" />
+    <Content Include="images\flags\flag_fiji.png" />
+    <Content Include="images\flags\flag_finish.png" />
+    <Content Include="images\flags\flag_finland.png" />
+    <Content Include="images\flags\flag_france.png" />
+    <Content Include="images\flags\flag_french_polynesia.png" />
+    <Content Include="images\flags\flag_gabon.png" />
+    <Content Include="images\flags\flag_gambia.png" />
+    <Content Include="images\flags\flag_georgia.png" />
+    <Content Include="images\flags\flag_germany.png" />
+    <Content Include="images\flags\flag_ghana.png" />
+    <Content Include="images\flags\flag_gibraltar.png" />
+    <Content Include="images\flags\flag_great_britain.png" />
+    <Content Include="images\flags\flag_greece.png" />
+    <Content Include="images\flags\flag_green.png" />
+    <Content Include="images\flags\flag_greenland.png" />
+    <Content Include="images\flags\flag_grenada.png" />
+    <Content Include="images\flags\flag_guam.png" />
+    <Content Include="images\flags\flag_guatemala.png" />
+    <Content Include="images\flags\flag_guernsey.png" />
+    <Content Include="images\flags\flag_guinea.png" />
+    <Content Include="images\flags\flag_guinea_bissau.png" />
+    <Content Include="images\flags\flag_guyana.png" />
+    <Content Include="images\flags\flag_haiti.png" />
+    <Content Include="images\flags\flag_honduras.png" />
+    <Content Include="images\flags\flag_hong_kong.png" />
+    <Content Include="images\flags\flag_hot.png" />
+    <Content Include="images\flags\flag_hungary.png" />
+    <Content Include="images\flags\flag_iceland.png" />
+    <Content Include="images\flags\flag_india.png" />
+    <Content Include="images\flags\flag_indonesia.png" />
+    <Content Include="images\flags\flag_iran.png" />
+    <Content Include="images\flags\flag_iraq.png" />
+    <Content Include="images\flags\flag_ireland.png" />
+    <Content Include="images\flags\flag_isle_of_man.png" />
+    <Content Include="images\flags\flag_israel.png" />
+    <Content Include="images\flags\flag_italy.png" />
+    <Content Include="images\flags\flag_jamaica.png" />
+    <Content Include="images\flags\flag_japan.png" />
+    <Content Include="images\flags\flag_jersey.png" />
+    <Content Include="images\flags\flag_jordan.png" />
+    <Content Include="images\flags\flag_kazakhstan.png" />
+    <Content Include="images\flags\flag_kenya.png" />
+    <Content Include="images\flags\flag_kiribati.png" />
+    <Content Include="images\flags\flag_kuwait.png" />
+    <Content Include="images\flags\flag_kyrgyzstan.png" />
+    <Content Include="images\flags\flag_laos.png" />
+    <Content Include="images\flags\flag_latvia.png" />
+    <Content Include="images\flags\flag_lebanon.png" />
+    <Content Include="images\flags\flag_lesotho.png" />
+    <Content Include="images\flags\flag_liberia.png" />
+    <Content Include="images\flags\flag_libya.png" />
+    <Content Include="images\flags\flag_liechtenstein.png" />
+    <Content Include="images\flags\flag_lithuania.png" />
+    <Content Include="images\flags\flag_luxembourg.png" />
+    <Content Include="images\flags\flag_macau.png" />
+    <Content Include="images\flags\flag_macedonia.png" />
+    <Content Include="images\flags\flag_madagascar.png" />
+    <Content Include="images\flags\flag_malawi.png" />
+    <Content Include="images\flags\flag_malaysia.png" />
+    <Content Include="images\flags\flag_maledives.png" />
+    <Content Include="images\flags\flag_mali.png" />
+    <Content Include="images\flags\flag_malta.png" />
+    <Content Include="images\flags\flag_marshall_islands.png" />
+    <Content Include="images\flags\flag_martinique.png" />
+    <Content Include="images\flags\flag_mauretania.png" />
+    <Content Include="images\flags\flag_mauritius.png" />
+    <Content Include="images\flags\flag_mexico.png" />
+    <Content Include="images\flags\flag_micronesia.png" />
+    <Content Include="images\flags\flag_moldova.png" />
+    <Content Include="images\flags\flag_monaco.png" />
+    <Content Include="images\flags\flag_mongolia.png" />
+    <Content Include="images\flags\flag_montserrat.png" />
+    <Content Include="images\flags\flag_morocco.png" />
+    <Content Include="images\flags\flag_mozambique.png" />
+    <Content Include="images\flags\flag_namibia.png" />
+    <Content Include="images\flags\flag_nato.png" />
+    <Content Include="images\flags\flag_nauru.png" />
+    <Content Include="images\flags\flag_nepal.png" />
+    <Content Include="images\flags\flag_netherlands.png" />
+    <Content Include="images\flags\flag_netherlands_antilles.png" />
+    <Content Include="images\flags\flag_new.png" />
+    <Content Include="images\flags\flag_new_zealand.png" />
+    <Content Include="images\flags\flag_nicaragua.png" />
+    <Content Include="images\flags\flag_niger.png" />
+    <Content Include="images\flags\flag_nigeria.png" />
+    <Content Include="images\flags\flag_niue.png" />
+    <Content Include="images\flags\flag_norfolk_islands.png" />
+    <Content Include="images\flags\flag_northern_mariana_islands.png" />
+    <Content Include="images\flags\flag_north_korea.png" />
+    <Content Include="images\flags\flag_norway.png" />
+    <Content Include="images\flags\flag_olympic.png" />
+    <Content Include="images\flags\flag_oman.png" />
+    <Content Include="images\flags\flag_orange.png" />
+    <Content Include="images\flags\flag_pakistan.png" />
+    <Content Include="images\flags\flag_palau.png" />
+    <Content Include="images\flags\flag_panama.png" />
+    <Content Include="images\flags\flag_papua_new_guinea.png" />
+    <Content Include="images\flags\flag_paraquay.png" />
+    <Content Include="images\flags\flag_peru.png" />
+    <Content Include="images\flags\flag_philippines.png" />
+    <Content Include="images\flags\flag_pink.png" />
+    <Content Include="images\flags\flag_pitcairn_islands.png" />
+    <Content Include="images\flags\flag_poland.png" />
+    <Content Include="images\flags\flag_portugal.png" />
+    <Content Include="images\flags\flag_puerto_rico.png" />
+    <Content Include="images\flags\flag_purple.png" />
+    <Content Include="images\flags\flag_qatar.png" />
+    <Content Include="images\flags\flag_red.png" />
+    <Content Include="images\flags\flag_red_cross.png" />
+    <Content Include="images\flags\flag_romania.png" />
+    <Content Include="images\flags\flag_russia.png" />
+    <Content Include="images\flags\flag_rwanda.png" />
+    <Content Include="images\flags\flag_saint_helena.png" />
+    <Content Include="images\flags\flag_saint_kitts_and_nevis.png" />
+    <Content Include="images\flags\flag_saint_lucia.png" />
+    <Content Include="images\flags\flag_saint_pierre_and_miquelon.png" />
+    <Content Include="images\flags\flag_saint_vincent_and_grenadines.png" />
+    <Content Include="images\flags\flag_samoa.png" />
+    <Content Include="images\flags\flag_san_marino.png" />
+    <Content Include="images\flags\flag_sao_tome_and_principe.png" />
+    <Content Include="images\flags\flag_saudi_arabia.png" />
+    <Content Include="images\flags\flag_scotland.png" />
+    <Content Include="images\flags\flag_senegal.png" />
+    <Content Include="images\flags\flag_serbia_montenegro.png" />
+    <Content Include="images\flags\flag_seychelles.png" />
+    <Content Include="images\flags\flag_sierra_leone.png" />
+    <Content Include="images\flags\flag_singapore.png" />
+    <Content Include="images\flags\flag_slovakia.png" />
+    <Content Include="images\flags\flag_slovenia.png" />
+    <Content Include="images\flags\flag_solomon_islands.png" />
+    <Content Include="images\flags\flag_somalia.png" />
+    <Content Include="images\flags\flag_south_africa.png" />
+    <Content Include="images\flags\flag_south_georgia.png" />
+    <Content Include="images\flags\flag_south_korea.png" />
+    <Content Include="images\flags\flag_spain.png" />
+    <Content Include="images\flags\flag_sri_lanka.png" />
+    <Content Include="images\flags\flag_sudan.png" />
+    <Content Include="images\flags\flag_suriname.png" />
+    <Content Include="images\flags\flag_swaziland.png" />
+    <Content Include="images\flags\flag_sweden.png" />
+    <Content Include="images\flags\flag_switzerland.png" />
+    <Content Include="images\flags\flag_syria.png" />
+    <Content Include="images\flags\flag_taiwan.png" />
+    <Content Include="images\flags\flag_tajikistan.png" />
+    <Content Include="images\flags\flag_tanzania.png" />
+    <Content Include="images\flags\flag_thailand.png" />
+    <Content Include="images\flags\flag_tibet.png" />
+    <Content Include="images\flags\flag_togo.png" />
+    <Content Include="images\flags\flag_tonga.png" />
+    <Content Include="images\flags\flag_trinidad_and_tobago.png" />
+    <Content Include="images\flags\flag_tunisia.png" />
+    <Content Include="images\flags\flag_turkey.png" />
+    <Content Include="images\flags\flag_turkmenistan.png" />
+    <Content Include="images\flags\flag_turks_and_caicos_islands.png" />
+    <Content Include="images\flags\flag_tuvalu.png" />
+    <Content Include="images\flags\flag_uganda.png" />
+    <Content Include="images\flags\flag_ukraine.png" />
+    <Content Include="images\flags\flag_unesco.png" />
+    <Content Include="images\flags\flag_united_arab_emirates.png" />
+    <Content Include="images\flags\flag_united_nations.png" />
+    <Content Include="images\flags\flag_united_states.png" />
+    <Content Include="images\flags\flag_uruquay.png" />
+    <Content Include="images\flags\flag_uzbekistan.png" />
+    <Content Include="images\flags\flag_vanuatu.png" />
+    <Content Include="images\flags\flag_vatican_city.png" />
+    <Content Include="images\flags\flag_venezuela.png" />
+    <Content Include="images\flags\flag_vietnam.png" />
+    <Content Include="images\flags\flag_virgin_islands.png" />
+    <Content Include="images\flags\flag_wales.png" />
+    <Content Include="images\flags\flag_wallis_and_futuna.png" />
+    <Content Include="images\flags\flag_wto.png" />
+    <Content Include="images\flags\flag_wwf.png" />
+    <Content Include="images\flags\flag_yellow.png" />
+    <Content Include="images\flags\flag_yemen.png" />
+    <Content Include="images\flags\flag_zambia.png" />
+    <Content Include="images\flags\flag_zimbabwe.png" />
+    <Content Include="images\foodbeverages.png" />
+    <Content Include="images\Gas-pump.png" />
+    <Content Include="images\gasstation.png" />
+    <Content Include="images\grocery.jpg" />
+    <Content Include="images\images.jpg" />
+    <Content Include="images\jeans.png" />
+    <Content Include="images\jewellery.jpg" />
+    <Content Include="images\kidaccessories.png" />
+    <Content Include="images\kidapparel.png" />
+    <Content Include="images\kids.png" />
+    <Content Include="images\kidsshoes.png" />
+    <Content Include="images\mensaccessories.png" />
+    <Content Include="images\mensapparel.png" />
+    <Content Include="images\miscellaneous.png" />
+    <Content Include="images\sandals.png" />
+    <Content Include="images\shoes.png" />
+    <Content Include="images\shop_closed.png" />
+    <Content Include="images\shop_open.png" />
+    <Content Include="images\tvdvd.png" />
+    <Content Include="images\university.png" />
+    <Content Include="images\womensapparel.png" />
+    <Content Include="images\womenshoes.png" />
+    <Content Include="PlanetX2012.Publish.xml" />
+    <Content Include="README.jQuery.vsdoc.txt" />
+    <Content Include="Scripts\jqplot\jquery.jqplot.js" />
+    <Content Include="Scripts\jqplot\minified\jquery.jqplot.min.js" />
+    <Content Include="Scripts\jquery.signalR-1.1.2.js" />
+    <Content Include="Scripts\jquery.signalR-1.1.2.min.js" />
+    <None Include="Scripts\jquery-1.5.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.5.1.js" />
+    <Content Include="Scripts\jquery-1.5.1.min.js" />
+    <Content Include="Scripts\jquery-1.8.3.js" />
+    <Content Include="Scripts\jquery-1.8.3.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.11.js" />
+    <Content Include="Scripts\jquery-ui-1.8.11.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\modernizr-1.7.js" />
+    <Content Include="Scripts\modernizr-1.7.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Event\Index.cshtml" />
+    <Content Include="Views\Event\Details.cshtml" />
+    <Content Include="Views\Event\Create.cshtml" />
+    <Content Include="Views\Event\Edit.cshtml" />
+    <Content Include="Views\Event\Delete.cshtml" />
+    <Content Include="Views\PartialViews\Friend\FriendList.cshtml" />
+    <Content Include="Views\PartialViews\Chat\Chat.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
+    <None Include="Properties\PublishProfiles\Profile1.pubxml" />
+    <Content Include="Views\PartialViews\Chat\UserChatMenu.cshtml" />
+    <Content Include="Views\PartialViews\User\UserStatusPopover.cshtml" />
+    <Content Include="Views\PartialViews\User\Avatar.cshtml" />
+    <Content Include="Views\PartialViews\Address\CityCountry.cshtml" />
+    <Content Include="Views\PartialViews\Finance\Modal\BusinessGraph.cshtml" />
+    <Content Include="Views\Event\ViewUserControl1.cshtml" />
+    <Content Include="Views\PartialViews\Education\EnrollToSchool.cshtml" />
+    <Content Include="Views\PartialViews\Education\EducationModal.cshtml" />
+    <Content Include="Views\PartialViews\Education\EditEducation.cshtml" />
+    <Content Include="Views\PartialViews\Post\Post.cshtml" />
+    <Content Include="Views\PartialViews\Topics\TrendingTopics.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\PartialViews\Finance\Finance.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\PartialViews\Finance\Modal\NewBusiness.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BROLibrary\BROLibrary.csproj">
+      <Project>{14556aa7-35d3-40c0-b219-dfd693ffaf60}</Project>
+      <Name>BROLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAO\DAO.csproj">
+      <Project>{cadd3f16-6f4d-419e-a8bc-90ba10eae0f3}</Project>
+      <Name>DAO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\PartialViews\Address\LocationViewUserControl.cshtml" />
+    <Content Include="Views\PartialViews\Finance\Modal\EditBusiness.cshtml" />
+    <Content Include="Views\PartialViews\Finance\Modal\BusinessModal.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\PartialViews\User\Summary.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>4967</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.8\tools\Microsoft.Bcl.Build.targets" />
+</Project>

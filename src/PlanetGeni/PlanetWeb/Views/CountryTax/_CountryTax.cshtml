@@ -1,0 +1,74 @@
+﻿<div id="countryTaxcontainer">
+    <div class=" row">
+        <div class="col-xs-12">
+            <div class="panel panel-primary" id="mycountryTaxcontent-box">
+                <div class="panel-heading1 panel-heading">
+                    <div class="flagsprite pull-right btn-link"
+                         data-bind="css: 'flagsprite-' + CountryId().toLowerCase(), click: function(){viewCountryProfile(CountryId().toLowerCase())}"></div>
+                    <span class="fa icon-man249 marginright6"></span> Tax Rate
+                </div>
+                <div class="panel-body" data-bind="foreach: { data: TaxType, afterRender: AfterRenderAction}">
+                    <div class="row padding fontsize100 hidden">
+                        <div class="col-xs-5">
+                            <i class="fa text-success text-left" data-bind="css: ImageFont()"></i>
+                            <span data-bind="text: Description"></span>
+                        </div>
+                        <div class="col-xs-5">
+                            <input type="text" class="taxType" data-slider-range="0,100" data-slider-step="1"
+                                   data-bind="attr:{'data-index': $index,  value: TaxPercent()/100}">
+                        </div>
+                        <div class="col-xs-2">
+                            <span class="label label-warning" data-bind="text: TaxPercent() + '%'"></span>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="panel-footer">
+                    <div class="row">
+                        <div class="col-xs-10">
+                            <span> Total</span>
+                        </div>
+                        <div class="col-xs-2">
+                            <div class="pull-right">
+                                <span class=" fontsize105 text-right label label-warning" data-bind="text: Total() +'%'"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ko if: AllowEdit() == false -->
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <span class="fontsize90 pull-right text-warning padding3centt">
+                                Not Allowed To Update
+                            </span>
+                        </div>
+                    </div>
+                    <!-- /ko -->
+                </div>
+
+            </div>
+
+            <div class="panel panel-primary hidden" id="mycountryTaxcontent-submit">
+                <div class="panel-heading1 panel-heading">
+                    <span>Tax Submisson</span>
+                </div>
+                <div class="panel-body">
+                    <div class="col-xs-12">
+                        <span data-bind="text:Message">
+
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-default backbtn pull-right hidden">
+                <span><i class="fa fa-home"></i> Home</span>
+            </button>
+            <button type="submit" id="savetax" data-content="You need to be a country leader to adjust Country's tax rate."
+                    data-toggle="popover" title="National Tax Rate" data-loading-text='
+                <i class="fa fa-spinner fa-spin"></i> Saving...'
+                class="btn btn-default pull-right">Adjust Tax Rate
+            </button>
+        </div>
+    </div>
+</div>

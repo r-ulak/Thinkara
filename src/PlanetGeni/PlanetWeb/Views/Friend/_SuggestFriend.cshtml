@@ -1,0 +1,40 @@
+﻿<div class="row padding3centt">
+    <div class="col-xs-12">
+        <div class="panel panel-primary recipients fontsize120" data-bind="visible: suggestlist().length>0">
+            <div class="panel-heading1 panel-heading">
+                <span class="btn btn-default btn-sm margintop-5 pull-right" title="follow all" data-bind="click:followallsuggestfriend" data-loading-text="updating...">
+                    <i class="fa fa-user-plus"></i> Follow All
+                </span>
+                <span>
+                    Suggestions
+                </span>
+            </div>
+            <div class="panel-body recipients" id="firendsuggestprofile" data-bind="foreach: { data: suggestlist}">
+                @Html.Partial("_FriendRow")
+                <div class="col-xs-1">
+                    <span class="btn btn-default  btn-sm  pull-right" title="Ignore suggestions" data-loading-text="updating..." data-bind="click: function(){Ignorefriendsuggestion(UserId)
+}, attr:{'data-userid': UserId}">
+                        <i class="fa fa-times text-danger"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="panel-footer">
+                <div class="row ">
+                    <div class="row ">
+                        <div class="col-xs-6">
+                            <h6 class="marginleft15">
+                                <span class="label label-info" data-bind="text: suggestlist().length"></span>
+                            </h6>
+                        </div>
+                        <div class="col-xs-6">
+                            <span id="suggestshowmore" class="marginright16 hidden btn btn-shadow btn-success btn-sm pull-right"><i class="fa fa-plus"></i> </span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,55 @@
+﻿<div id="userNotificationcontainer">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="panel panel-primary" id="myuserNotificationcontent-box">
+                <div class="panel-heading1 panel-heading">
+                    <div class="flagsprite pull-right btn-link"
+                         data-bind="css: 'flagsprite-' + CountryId().toLowerCase(), click: function(){viewCountryProfile(CountryId().toLowerCase())}"></div>
+                    <span class="fa fa-bell-o"></span> Notification
+                </div>
+                <div class="panel-body">
+                    <ul class="list-group" data-bind="foreach: userNotificationDTO()">
+                        <li class="list-group-item">
+                            <div class="pull-right action-buttons">
+                                <!-- ko if: OnClickUrl != null -->
+                                <a class="jsaction" data-bind="attr: {onclick: OnClickUrl}">
+                                    <i class=" fa fa-pencil-square-o">
+                                    </i>
+                                </a>
+                                <!-- /ko -->
+                                <a class="trash btn-link" data-bind="attr:{'data-index': $index}, click: function(){ markNotificationRead(NotificationId) }">
+                                    <span class="glyphicon glyphicon-trash colorred"></span>
+                                </a>
+                            </div>
+                            <div class="itemnotification">
+                                <div class="notificationdetails">
+                                    <span class="fa fa-2x" data-bind="css: ImageFont"></span>
+                                    <span data-bind="text: ShortDescription"></span>
+                                    <p class="fontsize80" data-bind="html:Description">
+                                    </p>
+                                    <p class="fontsize80 text-right" data-bind="text:DisplayDate">
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="panel-footer">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <h6>
+                                <span class="label label-info" title="Total Count" data-bind="text: userNotificationDTO().length"></span>
+                            </h6>
+                        </div>
+                        <div class="col-xs-6">
+                            <span id="notificationsrefresh" title="refresh all" class="btn btn-shadow btn-success btn-sm pull-right"><i class="fa fa-refresh"></i> </span>
+                            <span id="notificationshowmore" title="show more..." class="marginright16 btn btn-shadow btn-success btn-sm pull-right"><i class="fa fa-plus"></i> </span>
+                            <span id="notifcationdeleteall" title="clear all notification" class="marginright16 btn btn-shadow btn-danger btn-sm pull-right"><i class="fa fa-trash-o"></i> </span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,4 @@
+"C:\Program Files (x86)\MySQL\MySQL Workbench CE 6.0.8\mysql" -h 85.10.205.173 -u planetgeni -psqlapps planetgeni < "D:\\Home\CodeBack\\PlanetGeni\\DAL\\DbScripts\\PlanetXDec2012.sql"
+"C:\Program Files (x86)\MySQL\MySQL Workbench CE 6.0.8\mysql" -h 85.10.205.173 -u planetgeni -psqlapps planetgeni < "D:\\Home\CodeBack\\PlanetGeni\\DAL\\DbScripts\\StoredProcedure.sql"
+"C:\Program Files (x86)\MySQL\MySQL Workbench CE 6.0.8\mysql" -h 85.10.205.173 -u planetgeni -psqlapps planetgeni < "D:\\Home\CodeBack\\PlanetGeni\\DAL\\DbScripts\\CURDStoredProcedure.sql"
+"C:\Program Files (x86)\MySQL\MySQL Workbench CE 6.0.8\mysql" -h 85.10.205.173 -u planetgeni -psqlapps planetgeni < "D:\\Home\CodeBack\\PlanetGeni\\DAL\\DbScripts\\DataLoad.sql"

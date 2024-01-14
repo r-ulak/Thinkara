@@ -1,0 +1,90 @@
+﻿<div class="container">
+    <div class="row padding3centb" id="facebookinvite" data-bind="visible:LoginProvider() == 'facebook'">
+        <fieldset>
+            <legend class="text-warning fontsize120">Invite on Facebook</legend>
+            <div class="col-xs-7 col-md-7">
+                <a onclick="sendFbmsg(); return false;" class="btn btn-block btn-social btn-facebook"><i class="fa fa-facebook"></i>Send Facebook Invite</a>
+            </div>
+        </fieldset>
+    </div>
+
+    <div class="row padding3centt" id="emailcontacts">
+        <fieldset>
+            <legend class="text-warning fontsize120">Address Book</legend>
+            <div class="col-xs-12">
+                <div class="panel panel-default recipients">
+                    <div class="panel-heading">
+                        <span class="button-checkbox pull-right invitepartyEmail">
+                            <button type="button" class="btn btn-sm" data-color="default">All</button>
+                            <input type="checkbox" id="friendinvitewebcontactall" class="hidden" />
+                        </span>
+                        <span class="colorwhite">
+                            Contacts
+                        </span>
+                    </div>
+                    <div class="panel-body col-xs-12 invitemyfriends fontsize120" data-bind="foreach: emailInviteeIdList">
+                        <div class="recipient col-xs-6" data-bind="attr: {title: FriendEmailId}, click: clickinviteemailcontact">
+                            <i class="fa fa-user fa-3x img-check web-contact pull-left text-success" data-bind="attr: {title: FriendEmailId }"> </i>
+                            <p>
+                                <span class="text-ellipsis" data-bind="text: FullName"></span>
+                                <!-- ko if: FullName.length<2 -->
+                                <span>N/A</span>
+                                <!-- /ko -->
+                            <p>
+                            <p>
+                                <span class="text-ellipsis" data-bind="text: FriendEmailId"></span>
+                            </p>
+                                <input type="checkbox" data-bind="attr: {title: FriendEmailId }, value: FriendEmailId" class="hidden">
+                        </div>
+                    </div>
+                    <div class="panel-footer fontsize80 emailListFooter">
+                        <div class="row ">
+                            <div class="col-xs-12">
+                                <span class="marginright6" data-bind="text: emailInviteeId().length"></span>/
+                                <span data-bind="text: emailInviteeIdList().length"></span>
+                                <span class="text-muted"> contact(s) selected</span>
+                                <span class="btn btn-shadow btn-success btn-sm pull-right" id="webContactshowmore"><i class="fa fa-plus"></i> </span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend class="text-warning fontsize120">Add Friends </legend>
+            <div class="form-group padding14">
+                <div class="input-group">
+                    <input type="text" class="form-control addemail" id="addemails" placeholder="friend@provider.com, emailme@provider.com...">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" id="addemail">
+                            <i class="fa  fa-user-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend class="text-warning fontsize120">Message </legend>
+            <div class="form-group padding14">
+                <textarea placeholder="Your message" maxlength="1000"
+                          data-bind="value:previewContent"
+                          class="form-control margintop5"></textarea>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend class="text-warning fontsize120">Preview </legend>
+            <div class="timeline-panel">
+                <div class="timeline-body fontsize80">
+                    <img width='28px' height='28px' class="marginright6" data-bind="attr:{src: profilepicContainer + picture()}"> <span class='text-ellipsis' data-bind="text:fullName()"></span> invited you to connect on Thinkara network. Thinkara is a social game involving various aspects of social capital and management of virtual wealth using different features in the game.Come compete with other players in network to position your portfolio and help advance your country's ranking in Thinkara.
+                    <p class="padding3centt"> Message</p>
+                    <div class="padding3centt" data-bind="html:previewContent()">
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+</div>

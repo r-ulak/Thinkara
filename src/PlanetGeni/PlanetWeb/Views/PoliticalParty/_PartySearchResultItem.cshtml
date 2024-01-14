@@ -1,0 +1,58 @@
+﻿<div class="container padding3centt" id="partySearchResultItemcontent-box">
+    <div id="partySearchResultcontent-wrapper" data-bind="foreach: partyCodes">
+        <div class=" row marginbottom5">
+            <div class="well well-sm margintop5">
+                <div class="row padding3centt">
+                    @Html.Partial("_PartyItemHeader")
+                    <div class="col-xs-8 section-box">
+                        @Html.Partial("_PartyItemBody")
+                        <div class="row padding3centt">
+                            <div class="col-xs-12">
+                                <div class="col-xs-9 ">
+                                    <div class="">
+                                        <span class="fa icon-money28 fa-1x  text-success"></span>
+                                        <span class="text-success fa-1x" data-bind="text:TotalValue"></span>
+                                        <p class="fontsize70  ">Worth</p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-3">
+                                    <div></div>
+                                    <input type="checkbox" class="pull-right" data-bind="attr:{'data-jid': PartyId}, checked: $root.applyingItems, checkedValue:PartyId" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                @Html.Partial("_PartyItemFooter")
+            </div>
+
+            <ul class="navigation">
+                <li class="">
+                    <a data-bind="attr:{href:'#partysearchagenda' + $index(),'data-index':$index},click:$root.clickgetagenda" data-toggle="tab">
+                        <span class="fa fa-newspaper-o fa-2x"></span>
+                        <p class="fontsize70">Agenda</p>
+                    </a>
+                </li>
+                <li>
+                    <a data-bind="attr:{href:'#partymemberssearch' + $index(),'data-index':$index}, click:$root.clickgetAllMembers" data-toggle="tab">
+                        <span class="fa fa-users fa-2x "></span>
+                        <p class="fontsize70">Members</p>
+                    </a>
+                </li>
+            </ul>
+            <div class="partysearch-body">
+                <div class="tab-content">
+                    <div data-bind="attr:{id:'partysearchagenda' + $index()}" class="tab-pane ">
+                        @Html.Partial("_PartyAgenda")
+                    </div>
+                    <div data-bind="attr:{id:'partymemberssearch' + $index()}" class="tab-pane">
+                        @Html.Partial("_PartyMembers")
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+

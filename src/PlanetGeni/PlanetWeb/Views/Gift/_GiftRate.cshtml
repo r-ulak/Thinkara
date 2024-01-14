@@ -1,0 +1,28 @@
+﻿<div class="row" id="giftRate">
+    <div class="col-xs-12">
+        <div class="col-xs-6">
+            <span class="text-warning">
+                
+            </span>
+        </div>
+        <div class="col-xs-2">
+            <span class="fa icon-gold2 goldcolor fa-1x"
+                  data-bind="attr:{'data-content':numeral(bankAccountViewModel.GiftRate.CurrentGoldValue()).format('0,0.00')}"
+                  data-toggle="popover" title="Gold Value">
+            </span>
+        </div>
+        <div class="col-xs-2">
+            <span class="fa icon-coins2 silvercolor fa-1x"
+                  data-bind="attr:{'data-content':numeral(bankAccountViewModel.GiftRate.CurrentSilverValue()).format('0,0.00')}"
+                  data-toggle="popover" title="Silver Value">
+            </span>
+
+        </div>
+        <div class="col-xs-2">
+            <span class="fa icon-money28 text-success fa-1x"
+                  data-bind="attr:{'data-content':numeral(bankAccountViewModel.GiftRate.TaxRate()).format('0,0.00') + '%'}"
+                  data-toggle="popover" title="Gift Tax Rate">
+            </span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+﻿<div id="securitySummarycontainer">
+    <div class=" row">
+        <div class="col-xs-12">
+            <div class="panel panel-primary" id="mysecuritysummarycontent-box">
+                <div class="panel-heading1 panel-heading">
+                    <div class="flagsprite pull-right btn-link"
+                         data-bind="css: 'flagsprite-' + CountryId().toLowerCase(), click: function(){viewCountryProfile(CountryId().toLowerCase())}"></div>
+                    <span class="fa icon-base1 marginright6"></span>  National Defense Summary
+                </div>
+                <div class="panel-body">
+                    @Html.Partial("_SummaryItem")
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
